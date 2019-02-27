@@ -167,8 +167,7 @@
   }
 }
 
-.title_section .subtitle {
-  display: block;
+.subtitle_section {
   font-size: 12px;
   font-weight: 400;  
   margin-top: 8px;
@@ -250,7 +249,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .title_section .subtitle {
+  .subtitle_section {
     font-size: 14px;
   }
 }
@@ -300,10 +299,6 @@
 @media screen and (min-width: 1200px) {
   .btn-action {
     min-width: 180px;
-  }
-  
-  .title_section .subtitle {
-    display: inline-block;
   }
 
   .account {
