@@ -754,7 +754,6 @@ input[type='number']{
    padding-right: 0;
 }
 
-
 #account_settings_cities_1c,
 #account_settings_cities_2c,
 #account_settings_cities_3c,
@@ -788,7 +787,16 @@ input[type='number']{
 #filter_propertyType,
 #search_filter_amenities,
 #search_filter_propertyType,
-#ib-check-sf-types #search_filter_propertyType{
+#ib-check-sf-types #search_filter_propertyType,
+#search_filter_commercial_propertyType,
+.search_filter_commercial_propertyType,
+#search_filter_commercial_saleType,
+.search_filter_commercial_saleType,
+#search_filter_commercial_features,
+.search_filter_commercial_features,
+#search_filter_commercial_commercialAmenities,
+.search_filter_commercial_commercialAmenities,
+.ms-chk-items{
     label{
         color: #494949;
         cursor: pointer;
@@ -848,7 +856,8 @@ input[type='number']{
 .itemWiew,
 .itemResult,
 #filter_saleType,
-#search_filter_saleType{
+#search_filter_saleType,
+#force_registration_forceRegistrationForced{
     label{
         color: #494949;
         cursor: pointer;
@@ -1408,4 +1417,11 @@ table#myFilters{
   .btn-dgt-grs{
     height: 45px;
   }
+}
+
+
+#idxboost_registration_settings_form{
+    .form-item.actions{
+        margin: 0;
+    }
 }

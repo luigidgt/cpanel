@@ -167,11 +167,11 @@
   }
 }
 
-.subtitle_section {
+.title_section .subtitle {
+  display: block;
   font-size: 12px;
   font-weight: 400;  
   margin-top: 8px;
-  margin-bottom: 30px;
 }
 
 .sender-email-accounts {
@@ -250,7 +250,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .subtitle_section {
+  .title_section .subtitle {
     font-size: 14px;
   }
 }
@@ -300,6 +300,10 @@
 @media screen and (min-width: 1200px) {
   .btn-action {
     min-width: 180px;
+  }
+  
+  .title_section .subtitle {
+    display: inline-block;
   }
 
   .account {

@@ -2214,3 +2214,210 @@ form[name="account_social_networks"]{
 .list_content .list-items>li .item-information h2 {
   padding-right: 90px;
 }
+
+
+/*----------------------------------------------------------------------------------*/
+/* FORCE REGISTRATION
+/*----------------------------------------------------------------------------------*/
+#force_registration_forceRegistration{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+
+	label{
+		display: flex;
+		height: 48px;
+		font-size: 14px;
+		align-items: center;
+		justify-content: center;
+		width: 48%;
+		background-color: #a4a4a4;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 0;
+		border-radius: 4px;
+		overflow: hidden;
+		color: #FFF;
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: linear-gradient(to right, #fa6630, #be155e);
+			transition: opacity .4s;
+			opacity: 0;
+		}
+	}
+
+	input:checked+label{
+		&:before{
+			opacity: 1;
+		}
+	}
+}
+
+.ms-label-text{
+	font-size: 13px;
+	color: #3f3f3f;
+	margin: 5px 0 15px 0;
+	font-weight: 600;
+	display: block;
+}
+
+.ms-item-flex{
+	margin: 30px 0;
+}
+
+.ms-mx-title{
+	font-size: 15px;
+	color: #c51e59;
+	text-transform: uppercase;
+	font-weight: 600;
+	&.ms-hand{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+}
+
+.form-item.actions{
+	margin-top: 15px;
+}
+
+.ms-item-flex{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+
+	.ms-hand{
+		margin-bottom: 5px;
+		width: 100%;
+		@media screen and (min-width: 600px){
+			width: auto;
+		}
+
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 23px;
+			height: 38px;
+			background-image: url('../images/hand.png');
+			background-position: center;
+			margin-right: 10px;
+		}
+	}
+
+	.ms-item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		@media screen and (min-width: 600px){
+			width: 50%;
+		}
+	}
+
+	.select2.select2-container {
+		height: 50px;
+		width: 64% !important;
+		border: 1px solid #eb9aa3;
+		flex-shrink: 0;
+		@media screen and (min-width: 600px){
+			width: 56% !important;
+			height: 58px;
+		}
+	}
+
+	.select2-container{
+		.select2-selection--single,
+		.select2-selection__rendered {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 0 !important;
+		}
+	}
+
+	@media screen and (min-width: 600px){
+		align-items: center;
+		.ms-hand{
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+#force_registration_forceRegistrationForced{
+	label{
+		font-weight: 600;
+		&:after{
+			background: linear-gradient(to right, #fa6630, #be155e);
+		}
+	}
+
+	.ms-label-text{
+		margin-left: -30px;
+	}
+}
+
+#idxboost_registration_settings_form{
+	width: 100%;
+	max-width: 540px;
+	position: relative;
+	
+	@media screen and (min-width: 1340px){
+		&:after{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			right: -500px;
+			width: 447px;
+			height: 504px;
+			background-image: url('../images/login.png');
+			background-position: 0 0;
+			top: 0;
+		}
+	}
+
+
+	.ms-chk-items{
+		margin-top: 30px;
+		
+		margin-bottom: 10px; 
+		@media screen and (min-width: 600px){
+			margin-top: 60px;
+			max-width: 380px;
+		}
+		
+		.form-item.actions .btn-dgt-def{
+			margin: 0 !important;
+		}
+
+	}
+	
+	input[type="text"]{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 48px;
+		margin-top: 10px;
+	}
+}
+
+.rs-content-wrapper.ms-bg.w{
+	background-color: #FFF;
+}
+
+.ms-min-text{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 14px;
+}
