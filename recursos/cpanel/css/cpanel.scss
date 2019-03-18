@@ -160,6 +160,9 @@ html{
 						&.ico-analytics:before{
 							content:"\e91b";
 						}
+						&.ico-comment:before{
+							content:"\e900";
+						}
 					}
 				}
 				&.active{
@@ -2902,4 +2905,21 @@ form[name="featured_listings"]{
 
 .galery_img span.remove_image{
 	z-index: 99;
+}
+
+.ms-lg{
+	width: 15px !important;
+	height: 15px !important;
+	display: inline-block !important;
+	background-image: url('../images/register-icons.png');
+	background-size: cover;
+	&.icon-fc{
+		background-position: 0 0;
+	}
+	&.icon-gp{
+		background-position: 0 -15px;
+	}
+	&.icon-em{
+		background-position: 0 -30px;
+	}
 }
