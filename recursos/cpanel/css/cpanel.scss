@@ -436,6 +436,12 @@ html{
 						}
 					}
 
+					&.ico-comment{
+						&:before{
+							content: "\e900";
+						}
+					}
+
 					&.ico-marketing{
 						&:before{
 							content: "";
@@ -2206,6 +2212,15 @@ span.txt_defi_user,
 	}
 }
 
+.idx-active-maintenance{
+	overflow: hidden;
+	height: 100vh;
+	#modal-maintenance{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
 @media screen and (min-width: 768px){
 	.idx-modal-content{
 		#idxboost_support_contact{
@@ -2230,7 +2245,6 @@ span.txt_defi_user,
 		}
 	}
 }
-
 
 .idx-loader{
 	position: fixed;

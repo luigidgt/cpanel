@@ -2421,3 +2421,37 @@ form[name="account_social_networks"]{
 	margin-left: 10px;
 	font-size: 14px;
 }
+
+.ms-flex-box{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.sublist-title{
+		width: 100% !important;
+	}
+	input[type=text],
+	select{
+		width: 100% !important;
+		margin-bottom: 10px;
+		@media screen and (min-width: 380px){
+			width: 48% !important;
+		}
+	}
+}
+
+.rs-navbar nav .header-nav .user_nav>a{
+	height: 100% !important
+}
+
+.ms-icon-maintenance{
+	width: auto;
+	max-width: 100%;
+	display: block;
+	margin: 20px auto;
+}
+
+@media screen and (min-width: 640px){
+	.idx-modal-content.idx-two-style .idx-header-modal h2 {
+	  font-size: 40px;
+	}
+}
