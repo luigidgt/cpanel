@@ -2450,8 +2450,31 @@ form[name="account_social_networks"]{
 	margin: 20px auto;
 }
 
+
+.content_galery_img.ui-sortable .txt_name{
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+
+
 @media screen and (min-width: 640px){
 	.idx-modal-content.idx-two-style .idx-header-modal h2 {
 	  font-size: 40px;
+	}
+}
+
+@media (max-width: 767px){
+	.rs-navbar nav .header-nav .search_nav #help {
+		width: 100% !important;
+	}
+	.rs-navbar nav .header-nav .user_nav>a {
+		height: auto !important;
+	}
+	.rs-navbar nav .header-nav .search_nav.active{
+		max-height: auto !important
+	}
+	.rs-navbar nav .header-nav #list_nav.active {
+		display: none !important;
 	}
 }

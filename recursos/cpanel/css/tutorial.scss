@@ -224,7 +224,7 @@
 		height: 26px;
 		@media screen and (min-width: 768px){
 			display: block;
-			top: 490px;
+			top: 618px;
 		}
 	}
 
@@ -286,7 +286,7 @@ body{
 	&.idx-tutorial-step-access{
 		.idx-tutorial-active{
 			&:after{
-				top: 480px;
+				top: 610px;
 			}
 		}
 	}
@@ -294,7 +294,7 @@ body{
 	&.idx-tutorial-step-email{
 		.idx-tutorial-active{
 			&:after{
-				top: 360px;
+				top: 430px;
 			}
 		}
 	}
@@ -302,7 +302,7 @@ body{
 	&.idx-tutorial-step-buildings{
 		.idx-tutorial-active{
 			&:after{
-				top: 305px;
+				top: 370px;
 			}
 		}
 	}
@@ -310,7 +310,7 @@ body{
 	&.idx-tutorial-step-filters{
 		.idx-tutorial-active{
 			&:after{
-				top: 247px;
+				top: 310px;
 			}
 		}
 	}
@@ -318,7 +318,7 @@ body{
 	&.idx-tutorial-step-listings{
 		.idx-tutorial-active{
 			&:after{
-				top: 185px;
+				top: 250px;
 			}
 		}
 	}
@@ -326,7 +326,7 @@ body{
 	&.idx-tutorial-step-settings{
 		.idx-tutorial-active{
 			&:after{
-				top: 135px;
+				top: 190px;
 				/*background-position: -306px -1px;
 				width: 54px;
 				height: 22px;*/
@@ -340,7 +340,7 @@ body{
 	&.idx-tutorial-step-account{
 		.idx-tutorial-active{
 			&:after{
-				top: 77px;
+				top: 140px;
 				/*background-position: -306px -1px;
 				width: 54px;
 				height: 22px;*/

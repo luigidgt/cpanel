@@ -31,12 +31,22 @@ $(document).ready(function() {
             });
             //LEER EL COMENTARIO O ESCRIBIR
             $(".read").click(function() {
-                var comment = $(this).attr('data-comment');
+              var comment = $(this).attr('data-comment');
+              //$("#"+comment).slideDown(350);
+
+              var $this = $(this);
+              if ($this.hasClass('active')) {
+                $("#"+comment).slideUp(350);
+                $this.removeClass('active');
+              } else {
                 $("#"+comment).slideDown(350);
+                $this.addClass('active');
+              }
             });
             //CANCELAR LA REDACCIÓN DEL COMMENTARIO
             $(".cancel_cm").click(function() {
                 $(this).parent().parent().slideUp(350);
+                $(this).parents('.info_detail').find(".read").removeClass('active');
             });
             //ANIMACIÓN PARA CAMBIAR LOS COLORES DEL DROPDOWN
             $(".read_m .dropdown-menu a").click(function() {
@@ -62,4 +72,4 @@ $(document).ready(function() {
 			  }
 			});
 
-        });
+    });

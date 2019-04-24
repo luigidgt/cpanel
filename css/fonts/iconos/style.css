@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?rvchsa');
-  src:  url('fonts/icomoon.eot?rvchsa#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?rvchsa') format('truetype'),
-    url('fonts/icomoon.woff?rvchsa') format('woff'),
-    url('fonts/icomoon.svg?rvchsa#icomoon') format('svg');
+  src:  url('fonts/iconos/icomoon.eot?6mpbt');
+  src:  url('fonts/iconos/icomoon.eot?6mpbt#iefix') format('embedded-opentype'),
+    url('fonts/iconos/icomoon.ttf?6mpbt') format('truetype'),
+    url('fonts/iconos/icomoon.woff?6mpbt') format('woff'),
+    url('fonts/iconos/icomoon.svg?6mpbt#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,60 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-tutorial:before {
-  content: "\e920";
+.icon-trash-o:before {
+  content: "\e922";
 }
-.icon-play-tutorial:before {
-  content: "\e921";
+.icon-instagram:before {
+  content: "\e912";
 }
-.icon-tutorial:before {
-  content: "\e91e";
-  color: #4f4f4f;
-}
-.icon-rocket:before {
-  content: "\e917";
-}
-.icon-brand:before {
-  content: "\e918";
-}
-.icon-wordpress:before {
-  content: "\e918";
-}
-.icon-editar:before {
-  content: "\e919";
-}
-.icon-mail:before {
-  content: "\e916";
-}
-.icon-email:before {
-  content: "\e916";
-}
-.icon-letter:before {
-  content: "\e916";
-}
-.icon-envelope:before {
-  content: "\e916";
-}
-.icon-contact:before {
-  content: "\e916";
-}
-.icon-list:before {
-  content: "\e90e";
-}
-.icon-menu:before {
-  content: "\e90e";
-}
-.icon-dropdown:before {
-  content: "\e90e";
-}
-.icon-options:before {
-  content: "\e90e";
-}
-.icon-grid:before {
-  content: "\e90f";
-}
-.icon-icons:before {
-  content: "\e90f";
+.icon-youtube:before {
+  content: "\e913";
 }
 .icon-view:before {
   content: "\e915";
@@ -145,6 +99,61 @@
 .icon-lupa:before {
   content: "\e903";
 }
+.icon-arrow-tutorial:before {
+  content: "\e920";
+}
+.icon-play-tutorial:before {
+  content: "\e921";
+}
+.icon-tutorial:before {
+  content: "\e91e";
+  color: #4f4f4f;
+}
+.icon-rocket:before {
+  content: "\e917";
+}
+.icon-brand:before {
+  content: "\e918";
+}
+.icon-wordpress:before {
+  content: "\e918";
+}
+.icon-editar:before {
+  content: "\e919";
+}
+.icon-mail:before {
+  content: "\e916";
+}
+.icon-email:before {
+  content: "\e916";
+}
+.icon-letter:before {
+  content: "\e916";
+}
+.icon-envelope:before {
+  content: "\e916";
+}
+.icon-contact:before {
+  content: "\e916";
+}
+.icon-list:before {
+  content: "\e90e";
+}
+.icon-menu:before {
+  content: "\e90e";
+}
+.icon-dropdown:before {
+  content: "\e90e";
+}
+.icon-options:before {
+  content: "\e90e";
+}
+.icon-grid:before {
+  content: "\e90f";
+}
+.icon-icons:before {
+  content: "\e90f";
+}
 .icon-chat_bubble_outline:before {
   content: "\e914";
 }
@@ -174,10 +183,4 @@
 }
 .icon-bubble2:before {
   content: "\e96e";
-}
-.icon-instagram:before {
-  content: "\e912";
-}
-.icon-youtube:before {
-  content: "\e913";
 }
