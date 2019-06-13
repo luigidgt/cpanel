@@ -2478,3 +2478,48 @@ form[name="account_social_networks"]{
 		display: none !important;
 	}
 }
+
+.ms-info-bubble{
+	position: absolute;
+	background: #FFF;
+	padding: 10px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 600;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+	border-top: 5px solid #fa6630;
+	margin-top: -52px;
+	z-index: -1;
+	opacity: 0;
+	transition: all .6s;
+	top: -12%;
+	&:before{
+		content: "";
+		display: block;
+		width: 33px;
+		height: 33px;
+		background-image: url('../images/icons.png');
+		background-position: -1px -382px;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+.ib-wrap-header-email{
+	.ib-item{
+		&:hover{
+			.ms-info-bubble{
+				top: -100%;
+				opacity: 1;
+				z-index: 0;
+			}
+		}
+
+		.form-item{
+			position: relative;
+			z-index: 1;
+		}
+	}
+}

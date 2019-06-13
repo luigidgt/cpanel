@@ -58,40 +58,82 @@
 			</nav>
 		</header>
 
-		<aside class="rs-sidebar">
-			<div class="title-rs-sidebar">Main menu</div>
-			<button id="closeMenu">Close</button>
-			<ul>
-				<li><a href="#" title="My Leads" class="item_nav ico-leads active">My Leads <span class="gb">19</span></a></li>
-				<li>
-					<a href="javascript:void(0)" title="Account" class="item_nav ico-account sub-items">My Account</a>
-					<ul class="sub_item_nav">
-						<li><a href="#" title="Registration Key">Registration Key</a></li>
-						<li><a href="#" title="My Account">My Account</a></li>
-						<li><a href="#" title="Change Password">Change Password</a></li>
-						<li><a href="#" title="Billing Information">Billing Information</a></li>
-						<li><a href="#" title="MLS Setup">MLS Setup</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:void(0)" title="IDX Settings" class="item_nav ico-setting sub-items">IDX Settings</a>
-					<ul class="sub_item_nav">
-						<li><a href="#" title="Advanced Settings">Advanced Settings</a></li>
-						<li><a href="#" title="Quick Search Settings">Quick Search Settings</a></li>
-					</ul>	
-				</li>
-				<li><a href="javascript:void(0)" title="My Listings" class="item_nav ico-listing">My Listings</a></li>
-				<li><a href="javascript:void(0)" title="Filters" class="item_nav ico-filters">Filters</a></li>
-				<li>
-					<a href="#" title="Buildings" class="item_nav ico-buildings sub-items">Buildings</a>
-					<ul class="sub_item_nav">
-						<li><a href="#" title="My Buildings">My Buildings</a></li>
-						<li><a href="#" title="My Buildings Groups">My Buildings Groups</a></li>
-					</ul>		
-				</li>
-				<li><a href="#" title="IDX Analytics" class="item_nav ico-analytics">IDX Analytics</a></li>
-			</ul>
-		</aside>
+<aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul>
+            <li><a href="/" title="My Leads" class="item_nav ico-leads ">My Leads <span class="gb">96</span></a></li>
+            <li><a href="/my/submissions/all" title="Form Inquiries" class="item_nav ico-comment ">Form Inquiries <span class="gb">2</span></a></li>
+
+            <li><a href="/my/submissions/agents" title="Form Agents" class="item_nav ico-comment ">Form Agents <span class="gb">0</span></a></li>
+
+            <li>
+                <a href="#" title="My Account" class="item_nav ico-account sub-items ">My Account</a>
+                <ul class="sub_item_nav ">
+                    <li><a href="/settings/account" title="My Account">My Account</a></li>
+                    <li><a href="/settings/applications" title="Registration Key">Registration Key</a></li>
+                    <li><a href="/settings/password" title="Change Password">Change Password</a></li>
+                    <li><a href="/settings/billing" title="Billing Information">Billing Information</a></li>
+                    <li><a href="/settings/boards" title="MLS Setup">MLS Setup</a></li>
+                    <li><a href="/settings/analytics" title="Analytics Integration">Analytics Integration</a></li>
+                    <li><a href="/settings/crm_integrator" title="CRM Integration">CRM Integration</a></li>
+                    <li><a href="/settings/social_networks" title="Social Networks">Social Networks</a></li>
+                    <li><a href="/settings/terms_conditions" title="Terms y Conditions">Terms and Conditions</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="IDX Settings" class="item_nav ico-setting sub-items ">IDX Settings</a>
+                <ul class="sub_item_nav ">
+                    <li><a href="/settings/cities" title="Cities">Cities</a></li>
+                    <li><a href="/settings/preferences" title="Display Preferences">Display Preferences</a></li>
+                    <li><a href="/settings/registration" title="Registration Settings">Registration Settings</a></li>
+                </ul>
+            </li>
+            <li><a href="#" title="My Listings" class="item_nav ico-listing sub-items ">My Listings</a>
+                <ul class="sub_item_nav " "="">
+            <li><a href="/my-exclusive-listings" title="Exclusive Listings">Exclusive Listings</a></li>
+            <li><a href="/my-sold-properties" title="Sold Properties">Sold Properties</a></li>
+            <li><a href="/custom/property" class="item_nav ico-filters  " title="Custom Property Detail">Custom Property Detail</a></li>
+        </ul>
+        </li>
+
+        <li>
+            <a href="#" title="Filters" class="item_nav ico-filters sub-items ">Filters</a>
+            <ul class="sub_item_nav ">
+                <li><a href="/filters" title="Browse Filters" class="item_nav ico-filters ">Browse Filters</a></li>
+                                <li><a href="/search-filters" title="Search Filters">Search Filters</a></li>
+                                            </ul>
+        </li>
+
+        <li>
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items ">Buildings</a>
+            <ul class="sub_item_nav ">
+                <li><a href="/buildings" title="My buildings">My Buildings</a></li>
+                <li><a href="/buildings/groups" title="My Building Groups">Building Groups</a></li>
+                <li class="building_import_idxboost"><a href="/buildings/import" title="Import Buildings">Import Buildings</a></li>
+            </ul>
+        </li>
+        
+        <li>
+            <a href="#" title="Email Settings" class="item_nav ico-email sub-items ">Email Settings</a>
+            <ul class="sub_item_nav " "="">
+                <li><a href="/settings/notifications" class="" title="Email Settings">Email Header</a></li>
+                <li><a href="/settings/smtp" class="" title="Smtp Settings">Email Sender</a></li>
+            </ul>
+        </li>
+
+
+                
+
+                    <li><a class="ico-marketing " href="/marketing" title="Marketing">Marketing</a></li>
+                <li><a class="item_nav ico-tutorial  active" href="/getting_started" title="IDX Analytics">Tutorials</a></li>
+        <li class="group-cpanel-btn">
+                            <a target="_blank" href="https://tracygalya.com" title="Go to my Website" class="group-btn ico-rocket">Go to my Website<span></span></a>
+                <a target="_blank" href="https://tracygalya.com/wp-admin/admin.php?page=flex-idx" title="Go to my WP Dashboard" class="group-btn ico-wordpress">Go to my WP Dashboard<span></span></a>
+                <a target="_blank" href="https://tracygalya.com/wp-admin/customize.php" title="Go to my WP Customizer" class="group-btn ico-editing">Go to my WP Customizer<span></span></a>
+                    </li>
+        </ul>
+    </aside>
 
 		<section class="rs-content-wrapper">
 
@@ -154,15 +196,16 @@
 						</div>
 						<div class="ib-wrap-company-contat">
 							<div class="ib-item">
-								<input type="text" value="(786) 271-4832" name="email_phone" class="form-item ib-text-ed" placeholder="Enter your Phone number" data-text="ib-email-phone">
+								<input type="text" value="" name="email_phone" class="form-item ib-text-ed ms-id-phone" placeholder="Enter your Phone number" data-text="ib-email-phone">
 								<input class="jscolor {position:'top'}" value="" placeholder="Select the text color" data-text="ib-email-phone">
 								<div class="ib-btn-act">
 									<button class="ib_edit"></button>
 									<button class="ib_close"></button>
 								</div>
+								<div class="ms-info-bubble">This format (+1999.473.7998) helps keep your emails from going to spam</div>
 							</div>
 							<div class="ib-item">
-								<input type="text" value="www.goihmangroup.com" name="email_web" class="form-item ib-text-ed" placeholder="Enter your Url Site" data-text="ib-email-url">
+								<input type="text" value="www.goihmangroup.com" name="email_web" class="form-item ib-text-ed" placeholder="Enter your Url Site" data-text="ib-email-url" id="cpanelbundle_confignotification_phoneNumber">
 								<input class="jscolor {position:'top'}" value="" placeholder="Select the text color" data-text="ib-email-url">
 								<div class="ib-btn-act">
 									<button class="ib_edit"></button>
@@ -185,6 +228,7 @@
 				</div>
 			</div>
 
+<input id="phone" type="text" />
 		</section>
 	</div>
 	<div id="rs-screen-overlay"></div>
@@ -195,7 +239,12 @@
 	<script type="text/javascript" src="../../js/main.js"></script>
 	<script type="text/javascript" src="../../js/jscolor.js"></script>
 
+	<script type="text/javascript" src="../../js/jquery.maskedinput.js"></script>
+
 	<script type="text/javascript">
+
+		//jQuery("#cpanelbundle_confignotification_phoneNumber").inputmask({"mask": "+1999.999.9999"});
+		jQuery(".ms-id-phone").mask("+1999.999.9999");
 
 		jQuery(".ib-btn-tab").on("click", function() {
 			jQuery(".ib-btn-tab").removeClass("active");
@@ -223,7 +272,6 @@
 			console.log(value);
 		}).keyup();
 
-
 		jQuery(".jscolor").change(function () {
 			var value = $(this).val();
 			var editText = $(this).attr("data-text");
@@ -233,7 +281,6 @@
 				jQuery("#"+editText).css({'background-color':'#'+value});
 			}
 		});
-
 	</script>
 </body>
 </html>
