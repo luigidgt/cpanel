@@ -2937,3 +2937,50 @@ form[name="featured_listings"]{
 		background-position: 0 -30px;
 	}
 }
+
+#cpanelbundle_subarea_typeFilter{
+	margin-bottom: 20px;
+
+	display: flex;
+	justify-content: space-between;
+
+	label{
+		font-weight: 600;
+		width: 48%;
+		border-radius: 4px;
+		height: 45px;
+		padding: 0 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #333;
+		background-color: #c8c8c8;
+		transition: all .3s;
+
+		&:after,
+		&:before{
+			display: none;
+		}
+
+		&:hover{
+			background-color: #333;
+			color: #FFF;
+		}
+	}
+
+	input{
+		&:checked+label{
+			background-color: #333;
+			color: #FFF;
+		}
+	}
+
+	@media screen and (min-width: 768px){
+		justify-content: flex-start;
+		label{
+			width: auto;
+			min-width: 25%;
+			margin-right: 10px;
+		}
+	}
+}

@@ -1,0 +1,341 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* CRM LEAD
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-crm-lead{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	.ms-lead-item{
+		border-radius: 4px;
+		background-color: #FFF;
+		border: 1px solid #d6d5da;
+		box-shadow: 0 0 16px #ccc;
+		display: flex;
+		//align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		/*.ms-wrap{
+			flex-grow: 1;
+		}*/
+	}
+
+	.ms-item{
+		&.ms-chk{
+			label{
+				text-indent: -999999px;
+				margin: 0;
+				position: relative;
+				background-color: #FFF;
+				overflow: hidden;
+				width: 40px;
+				height: 100%;
+				&:before{
+					content: "";
+					display: block;
+					border-radius: 4px;
+					border: 2px solid #cccccc;
+					background-color: #FFF;
+					width: 20px;
+					height: 20px;
+					text-indent: 0;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					right: 0;
+					margin: -10px auto auto;
+				}
+			}
+		}
+	}
+
+	.content_dropdown{
+		margin: 0;
+		.dropdown{
+			position: relative;
+			margin-left: auto;
+			margin-right: 0;
+
+			.dropdown-menu {
+				position: absolute;
+				top: 100%;
+				border: 1px solid #dfe0e0;
+			}
+		}
+	}
+}
+
+.ms-user-avatar{
+	border-radius: 100%;
+	overflow: hidden;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	background-color: #989898;
+	color: #FFF;
+	text-decoration: none;
+	
+	text-align: center;
+	line-height: 35px;
+	font-size: 24px;
+	width: 50px;
+	height: 50px;
+	flex-shrink: 0;
+
+	display: none;
+}
+
+.ms-user-info{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0 10px 0 5px;
+	width: 100%;
+	.ms-title{
+		font-weight: 600;
+		font-size: 14px;
+		display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+	}
+
+	.ms-sub-item{
+		width: 100%;
+	}
+}
+
+.ms-user-acces{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	a{
+		color: #333;
+		transition: all .3s;
+		font-size: 12px;
+		&:hover{
+			color: #157edc;
+		}
+	}
+
+	.ms-icon{
+		text-indent: -999999px;
+		display: block;
+		overflow: hidden;
+		width: 15px;
+		height: 15px;
+		position: relative;
+		margin-right: 5px;
+		border-radius: 2px;
+		&.ms-facebook{
+			background-color: #3f51b5;
+			&:before{
+				content: "\ea90";
+				display: flex;
+				font-size: 9px;
+				position: absolute;
+				text-indent: 0;
+				font-family: 'icomoon'!important;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				color: #FFF;
+				padding-top: 3px;
+			}
+		}
+	}
+}
+
+.ms-inquire{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: auto;
+	padding: 10px 5px;
+	font-size: 12px;
+	background: linear-gradient(to right, #fa6630, #be155e);
+	color: #FFF;
+	span{
+		display: block;
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+
+.ms-status{
+	text-indent: -999999px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	flex-shrink: 0;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-color: #d60a0a;
+		position: absolute;
+		top: 50%;
+		margin-top: -5px;
+		right: 0;
+	}
+
+	&.ms-logged-in{
+		&:before{
+			background-color: #1dcb00;
+		}
+	}
+}
+
+.ms-wrap{
+	width: 100%;
+	display: flex;
+	&.ms-user-name{
+		justify-content: space-between;
+		padding: 5px;
+		border-bottom: 1px solid #dfe0e0;
+		.ms-chk{
+			margin-left: -5px;
+		}
+
+		/*.ms-item{
+			flex-grow: 1;
+		}*/
+	}
+}
+
+.ms-last-visit{
+	padding: 10px 10px 10px 40px; 
+	font-size: 12px;
+	margin: 0;
+	color: #909090;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: auto;
+	position: relative;
+	min-height: 54px;
+	span{
+		color: #333;
+		font-size: 12px;
+		font-weight: 700;
+		display: block;
+	}
+
+	.ms-arrow{
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 35px;
+		height: 100%;
+		text-indent: -999999px;
+		overflow: hidden;
+		background-color: #FFF;
+		color: #858687;
+		&:before{
+			content: "\e901";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+			font-family: 'icomoon'!important;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-indent: 0;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.ms-actions{
+	height: 100%;
+	align-items: center;
+	width: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	.ms-btn{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+    width: 45px;
+    height: 40px;
+    margin-right: 5px;
+    flex-shrink: 0;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #157edc;
+    span{
+    	display: block;
+    	color: #303030;
+    }
+	}
+}
+
+.ms-activity{
+	display: flex;
+	align-items: center;
+	padding: 7px 0;
+	border-top: 1px solid #dfe0e0;
+	.ms-item{
+		flex-grow: 1;
+		width: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 12px;
+		color: #979797;
+		//font-weight: 600;
+		padding: 5px;
+		border-right: 1px solid #dfe0e0;
+		span{
+			display: block;
+			font-weight: 700;
+			color: #157edc;
+			font-size: 14px;
+		}
+
+		&:last-child{
+			border-right: 0;
+		}
+	}
+}
+
+.ms-activity-actions{
+	font-size: 12px;
+	color: #979797;
+	text-align: center;
+	padding: 10px 5px;
+	width: 32%;
+	flex-grow: 1;
+	border-top: 1px solid #dfe0e0;
+	background-color: #FFF;
+	span{
+		font-weight: 700;
+		color: #333;
+		display: block;
+	}
+	.ms-bg-text{
+		text-transform: uppercase;
+	}
+}
+
+.ms-icon-rocket{
+	display: block;
+	margin: 0 auto;
+	width: 36px;
+	height: 37px;
+	background-image: url('../images/crm-icons.png');
+	background-size: 182px;
+	background-position: 0 0;
+	background-color: aqua;
+}
