@@ -207,7 +207,6 @@
 				display: flex;
 		    align-items: center;
 		    justify-content: space-between;
-		    margin: 5px 0;
 
 		    .ms-name{
 		    	width: 90%;
@@ -238,13 +237,13 @@
 			@media screen and (min-width: 375px){
 				margin-left: 0;
 				.ms-title{
-					font-size: 16px;
+					font-size: 15px;
 				}
 			}
 
 			@media screen and (min-width: 480px){
 				.ms-title{
-					font-size: 18px;
+					font-size: 15px;
 				}
 			}
 		}
@@ -253,7 +252,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
+			flex-wrap: wrap;
 			a, p{
+				width: 100%;
 				color: #333;
 				transition: all .3s;
 				font-size: 12px;
@@ -721,6 +722,7 @@
 				position: absolute;
 				right: 80px;
 				bottom: 6px;
+				z-index: 0;
 				.dropdown{
 					width: 80px;
 					.btn {
@@ -729,6 +731,10 @@
 						&:after {
 							font-size: 7px;
 						}
+					}
+
+					&.open{
+						z-index: 1;
 					}
 				}
 			}
@@ -769,7 +775,7 @@
 
 			.ms-user-access{
 				a, p{
-					font-size: 13px;
+					font-size: 12px;
 				}
 
 				.ms-icon{
@@ -892,13 +898,15 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%,-50%);
+					//transform: translate(-50%,-50%);
 					text-indent: 0;
 					margin-bottom: 0;
 					width: 21px;
 					height: 23px;
 					background-size: 155px;
 					background-position: 0px 0;
+					margin-top: -11.5px;
+					margin-left: -10.5px;
 
 					&.active{
 						background-position: -42px 0;
@@ -933,14 +941,16 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%,-50%);
+					//transform: translate(-50%,-50%);
 					text-indent: 0;
 					margin-bottom: 0;
 					width: 17px;
 					height: 26px;
+
+					margin-top: -13px;
+					margin-left: -8.5px;
 					background-size: 250px;
 					background-position: 0px -143px;
-
 					&.active{
 						background-position: -51px -143px;
 					}
