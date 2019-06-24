@@ -16,7 +16,7 @@
     <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
   </head>
   <body>
-    <div class="rs-wrapper">
+    <div class="rs-wrapper ms-bg-gray">
       <header class="rs-navbar">
         <h1>Flexidx Cutting-Edge MLS/IDX Search for Wordpress</h1>
         <nav>
@@ -92,6 +92,67 @@
       </aside>
 
       <div class="rs-content-wrapper ms-crm-page">
+
+        <div class="ms-filter-actions">
+          
+          <div class="ms-wrap-filter">
+            <div class="ms-dropdown ms-select-items">
+              <button class="ms-button">Select all</button>
+            </div>
+            
+            <div class="ms-dropdown ms-select-actions">
+              <button class="ms-button">Actions</button>
+              <ul class="ms-dropdown-list">
+                <li>Send To Dialer</li>
+                <li>Send Email</li>
+                <li>Send Text</li>
+                <li>Change Category</li>
+                <li>Add Tag</li>
+                <li>Add Drip</li>
+                <li>Pause Drip</li>
+                <li>Resume Drip</li>
+                <li>Complete To-Dos</li>
+                <li>Unsubscribe e-Alert</li>
+                <li>Send Welcome Email</li>
+                <li>Transfer</li>
+                <li>Export</li>
+              </ul>
+            </div>
+
+            <div class="ms-wrap-input ms-input-search">
+              <input type="search" name="ms_search" id="ms_search" class="ms-search" placeholder="Search leads">
+            </div>
+
+            <div class="ms-dropdown ms-select-filter">
+              <button class="ms-button">Filter Leads</button>
+              <ul class="ms-dropdown-list">
+                <li data-filter="ms-username">User Name</li>
+                <li data-filter="ms-inquires">Inquires</li>
+                <li data-filter="ms-activity">Activity</li>
+                <li data-filter="ms-communication">Communication</li>
+                <li data-filter="ms-todo">To-Dos</li>
+                <li data-filter="ms-actions">Actions</li>
+                <li data-filter="ms-buckets">Buckets</li>
+                <li data-filter="ms-drip">Drip</li>
+                <li data-filter="ms-lastvisit">Last Visit</li>
+                <li data-filter="ms-registered">Registered</li>
+                <li data-filter="ms-assigned">Assigned</li>
+              </ul>
+            </div>
+
+            <div class="ms-dropdown ms-select-leads">
+              <button class="ms-button">Newest Leads</button>
+            </div>
+
+            <button class="ms-new-lead ms-button">Add New Lead</button>
+          </div>
+
+          <div class="ms-top-pag">
+            <span>1-50 of 162 Leads</span>
+            <button class="ms-button ms-prev">prev</button>
+            <button class="ms-button ms-next">next</button>
+          </div>
+        </div>
         
         <div class="ms-wrap-table-crm">
           <ul class="ms-lead-header">
