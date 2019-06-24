@@ -1150,7 +1150,7 @@
 	}
 	
 	@media screen and (min-width: 374px){
-		.ms-select-items,
+
 		.ms-select-actions{
 			width: 27%;
 			.ms-button{
@@ -1165,6 +1165,37 @@
 					vertical-align: middle;
 					transform: rotate(90deg);
 					margin-top: -2px;
+				}
+			}
+		}
+
+		.ms-select-items{
+			width: 27%;
+			.ms-button{
+				&:after{
+					//content: "\e904";
+					content: "";
+					font-family: "icomoon"!important;
+					font-size: 12px;
+					color: #333;
+					width: auto;
+					margin-left: 10px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -2px;
+					border: 1px solid #989898;
+					width: 10px;
+					height: 10px;
+					background-color: #FFF;
+					line-height: 7px;
+					text-align: center;
+					border-radius:2px;
+				}
+
+				&.active{
+					&:after{
+						content: "\e904";
+					}
 				}
 			}
 		}
@@ -1357,8 +1388,99 @@
 	}
 }
 
+.ms-icon-phone{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	&:before{
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    background-image: url('../images/crm-icons.png');
+    width: 14px;
+    height: 14px;
+    text-indent: 0;
+    background-position: -13px -89px;
+    background-size: 180px;
+	}
+}
+
+.ms-icon-email{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	&:before{
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    background-image: url('../images/crm-icons.png');
+    width: 14px;
+    height: 15px;
+    text-indent: 0;
+    background-position: -71px -79px;
+    background-size: 190px;
+	}
+}
+
 .ms-dropdown{
+	position: relative;
 	.ms-dropdown-list{
 		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding: 15px 0;
+		border: 1px solid #cacaca;
+		z-index: 2;
+		background-color: #FFF;
+    min-width: 160px;
+    font-size: 13px;
+    text-align: left;
+    border-radius: 4px;
+		li{
+			a{
+				padding: 5px 15px;
+				color: #333;
+				display: block;
+				cursor: pointer;
+				&:hover,
+				&.active{
+					color: #157edc;
+				}
+			}		
+		}
+	}
+
+	&.active{
+		.ms-dropdown-list{
+			display: block;
+		}
+	}
+}
+
+.ms-wrap-chk{
+	position: relative;
+	width: 100%;
+	label{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		padding: 2px 15px;
+		font-weight: normal;
+		cursor: pointer;
+		&:before{
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+			border-radius: 3px;
+			border: 2px solid #cccccc;
+		}
+
+		&:hover{
+			color: #157edc;
+		}
 	}
 }

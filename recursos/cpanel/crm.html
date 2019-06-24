@@ -96,26 +96,26 @@
         <div class="ms-filter-actions">
           
           <div class="ms-wrap-filter">
-            <div class="ms-dropdown ms-select-items">
-              <button class="ms-button">Select all</button>
+            <div class="ms-select-items">
+              <button class="ms-button" id="select-all-items">Select all</button>
             </div>
             
             <div class="ms-dropdown ms-select-actions">
               <button class="ms-button">Actions</button>
               <ul class="ms-dropdown-list">
-                <li>Send To Dialer</li>
-                <li>Send Email</li>
-                <li>Send Text</li>
-                <li>Change Category</li>
-                <li>Add Tag</li>
-                <li>Add Drip</li>
-                <li>Pause Drip</li>
-                <li>Resume Drip</li>
-                <li>Complete To-Dos</li>
-                <li>Unsubscribe e-Alert</li>
-                <li>Send Welcome Email</li>
-                <li>Transfer</li>
-                <li>Export</li>
+                <li><a>Send To Dialer</a></li>
+                <li><a>Send Email</a></li>
+                <li><a>Send Text</a></li>
+                <li><a>Change Category</a></li>
+                <li><a>Add Tag</a></li>
+                <li><a>Add Drip</a></li>
+                <li><a>Pause Drip</a></li>
+                <li><a>Resume Drip</a></li>
+                <li><a>Complete To-Dos</a></li>
+                <li><a>Unsubscribe e-Alert</a></li>
+                <li><a>Send Welcome Email</a></li>
+                <li><a>Transfer</a></li>
+                <li><a>Export</a></li>
               </ul>
             </div>
 
@@ -126,17 +126,50 @@
             <div class="ms-dropdown ms-select-filter">
               <button class="ms-button">Filter Leads</button>
               <ul class="ms-dropdown-list">
-                <li data-filter="ms-username">User Name</li>
-                <li data-filter="ms-inquires">Inquires</li>
-                <li data-filter="ms-activity">Activity</li>
-                <li data-filter="ms-communication">Communication</li>
-                <li data-filter="ms-todo">To-Dos</li>
-                <li data-filter="ms-actions">Actions</li>
-                <li data-filter="ms-buckets">Buckets</li>
-                <li data-filter="ms-drip">Drip</li>
-                <li data-filter="ms-lastvisit">Last Visit</li>
-                <li data-filter="ms-registered">Registered</li>
-                <li data-filter="ms-assigned">Assigned</li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-1" name="ms-username" data-hidden="ms-user-info">
+                  <label for="ms-filter-1">User Name</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-2" name="ms-inquires" data-hidden="ms-inquires">
+                  <label for="ms-filter-2">Inquires</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-3" name="ms-activity" data-hidden="ms-activity">
+                  <label for="ms-filter-3">Activity</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-4" name="ms-communication" data-hidden="ms-communication">
+                  <label for="ms-filter-4">Communication</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-5" name="ms-todo" data-hidden="ms-todo">
+                  <label for="ms-filter-5">To-Dos</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-6" name="ms-actions" data-hidden="ms-actions">
+                  <label for="ms-filter-6">Actions</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-7" name="ms-buckets" data-hidden="ms-buckets">
+                  <label for="ms-filter-7">Buckets</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-8" name="ms-drip" data-hidden="ms-drip">
+                  <label for="ms-filter-8">Drip</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-9" name="ms-lastvisit" data-hidden="ms-lastvisit">
+                  <label for="ms-filter-9">Last Visit</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-10" name="ms-registered" data-hidden="ms-registered">
+                  <label for="ms-filter-10">Registered</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-11" name="ms-assigned" data-hidden="ms-assigned">
+                  <label for="ms-filter-11">Assigned</label>
+                </li>
               </ul>
             </div>
 
@@ -1322,6 +1355,25 @@
     	$(window).on('load resize', function(){
     		loadWidthTableHeader();
 			});
+
+      jQuery(document).on('click', '.ms-dropdown', function () {
+        if (jQuery(this).hasClass('active')) {
+          jQuery(this).removeClass('active');
+        }else{
+          jQuery(".ms-dropdown").removeClass('active');
+          jQuery(this).toggleClass('active');
+        }
+      });
+
+      jQuery(document).on('click', '#select-all-items', function () {
+        if (jQuery(this).hasClass('active')) {
+          jQuery(this).removeClass('active');
+          jQuery(".ms-lead-body input:checkbox").attr( "checked" , false );
+        }else{
+          jQuery(this).toggleClass('active');
+          jQuery(".ms-lead-body input:checkbox").attr( "checked" , true );
+        }
+      });
 
     </script>
   </body>
