@@ -126,48 +126,48 @@
             <div class="ms-dropdown ms-select-filter">
               <button class="ms-button">Filter Leads</button>
               <ul class="ms-dropdown-list">
-                <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-1" name="ms-username" data-hidden="ms-user-info">
+                <li class="ms-wrap-chk ms-disabled">
+                  <input type="checkbox" id="ms-filter-1" name="ms-username" data-hidden="ms-user-info" class="ms-hidden-chk" disabled>
                   <label for="ms-filter-1">User Name</label>
                 </li>
-                <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-2" name="ms-inquires" data-hidden="ms-inquires">
+                <li class="ms-wrap-chk ms-disabled">
+                  <input type="checkbox" id="ms-filter-2" name="ms-inquires" data-hidden="ms-inquires" class="ms-hidden-chk" disabled>
                   <label for="ms-filter-2">Inquires</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-3" name="ms-activity" data-hidden="ms-activity">
+                  <input type="checkbox" id="ms-filter-3" name="ms-activity" data-hidden="ms-activity" class="ms-hidden-chk">
                   <label for="ms-filter-3">Activity</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-4" name="ms-communication" data-hidden="ms-communication">
+                  <input type="checkbox" id="ms-filter-4" name="ms-communication" data-hidden="ms-communication" class="ms-hidden-chk">
                   <label for="ms-filter-4">Communication</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-5" name="ms-todo" data-hidden="ms-todo">
+                  <input type="checkbox" id="ms-filter-5" name="ms-todo" data-hidden="ms-todo" class="ms-hidden-chk">
                   <label for="ms-filter-5">To-Dos</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-6" name="ms-actions" data-hidden="ms-actions">
+                  <input type="checkbox" id="ms-filter-6" name="ms-actions" data-hidden="ms-actions" class="ms-hidden-chk">
                   <label for="ms-filter-6">Actions</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-7" name="ms-buckets" data-hidden="ms-buckets">
+                  <input type="checkbox" id="ms-filter-7" name="ms-buckets" data-hidden="ms-buckets" class="ms-hidden-chk">
                   <label for="ms-filter-7">Buckets</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-8" name="ms-drip" data-hidden="ms-drip">
+                  <input type="checkbox" id="ms-filter-8" name="ms-drip" data-hidden="ms-drip" class="ms-hidden-chk">
                   <label for="ms-filter-8">Drip</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-9" name="ms-lastvisit" data-hidden="ms-lastvisit">
+                  <input type="checkbox" id="ms-filter-9" name="ms-lastvisit" data-hidden="ms-lastvisit" class="ms-hidden-chk">
                   <label for="ms-filter-9">Last Visit</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-10" name="ms-registered" data-hidden="ms-registered">
+                  <input type="checkbox" id="ms-filter-10" name="ms-registered" data-hidden="ms-registered" class="ms-hidden-chk">
                   <label for="ms-filter-10">Registered</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-11" name="ms-assigned" data-hidden="ms-assigned">
+                  <input type="checkbox" id="ms-filter-11" name="ms-assigned" data-hidden="ms-assigned" class="ms-hidden-chk">
                   <label for="ms-filter-11">Assigned</label>
                 </li>
               </ul>
@@ -189,7 +189,7 @@
         
         <div class="ms-wrap-table-crm">
           <ul class="ms-lead-header">
-            <li class="ms-username">User Name</li>
+            <li class="ms-username ms-user-info">User Name</li>
             <li class="ms-inquires">Inquires</li>
             <li class="ms-activity">Activity</li>
             <li class="ms-communication">Communication</li>
@@ -1373,6 +1373,16 @@
           jQuery(this).toggleClass('active');
           jQuery(".ms-lead-body input:checkbox").attr( "checked" , true );
         }
+      });
+
+      jQuery(document).on('click', '.ms-hidden-chk', function () {
+      	var hiddenElement = jQuery(this).attr('data-hidden');
+      	if (jQuery(this).is(':checked')) {
+      		jQuery('.'+hiddenElement).addClass('ms-hidden');
+      	}else{
+      		jQuery('.'+hiddenElement).removeClass('ms-hidden');
+      	}
+      	loadWidthTableHeader();
       });
 
     </script>
