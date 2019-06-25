@@ -1376,7 +1376,7 @@
       });
 
       jQuery(document).on('click', '.ms-hidden-chk', function () {
-      	jQuery(this).parents('ms-select-filter').addClass('open');
+      	jQuery(this).parents('.ms-select-filter').addClass('open');
       	var hiddenElement = jQuery(this).attr('data-hidden');
       	if (jQuery(this).is(':checked')) {
       		jQuery('.'+hiddenElement).addClass('ms-hidden');
