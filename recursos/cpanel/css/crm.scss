@@ -269,7 +269,7 @@
 	display: inline-block;
 	width: 34px;
 	height: 39px;
-	background-image: url(../images/crm-icons.png);
+	background-image: url('../images/crm-icons.png');
 	background-size: 255px;
 	background-position: 0 0;
 	margin-bottom: 5px;
@@ -280,7 +280,7 @@
 	}
 
 	&.end{
-		background-position: -103px 0;
+		background-position: -103px 1px;
 	}
 }
 
@@ -311,7 +311,8 @@
 
 .ms-valid,
 .ms-close,
-.ms-show{
+.ms-show,
+.ms-edit{
 	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
@@ -382,6 +383,26 @@
 	}
 }
 
+.ms-edit{
+	margin-left: 0;
+	overflow: visible;
+	border: 0;
+	&:before{
+    content: "";
+    display: block;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/crm-icons.png');
+    background-position: 58px -17px;
+    background-size: 208px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+	}
+}
+
 .ms-widget{
 	border-radius: 4px;
 	border: 1px solid #dcdcdc;
@@ -441,6 +462,15 @@
 					text-transform: uppercase;
 					font-weight: 700;
 					padding-right: 10px;
+					width: 100%;
+					display: block;
+				}
+
+				.ms-icon-verify{
+					margin-right: auto;
+					margin-left: 5px;
+					vertical-align: middle;
+					margin-top: 2px;
 				}
 			}
 
@@ -748,6 +778,33 @@
 				font-size: 12px;
 			}
 		}
+		
+		.ms-wrap-btn{
+			margin-top: 5px;
+		}
+
+		.ms-edit{
+			margin-left: 0;
+			overflow: visible;
+			height: 22px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -9px;
+			&:before{
+				width: 24px;
+				height: 22px;
+				background-position: 91px -20px;
+				background-size: 241px;
+				top: 0px;
+				left: -2px;
+			}
+
+			&:hover{
+				&:before{
+					background-position: 68px -20px;
+				}
+			}
+		}
 	}
 }
 
@@ -847,6 +904,11 @@
 		font-weight: 700;
 		margin-left: -5px;
 
+		&:before{
+			margin: 0 auto 3px auto;
+			display: block;
+		}
+
 		&.ms-rocket{
 			&:before{
 				content: "";
@@ -861,7 +923,7 @@
 
 			&.end{
 				&:before{
-					background-position: -52px 0px;
+					background-position: -52px 1px;
 				}
 			}
 
@@ -871,6 +933,465 @@
 				}
 			}
 		}
+	}
+}
+
+.ms-phone-unknown,
+.ms-phone-talking,
+.ms-phone-valid,
+.ms-phone-wrong{
+	&:before{
+		content: "";
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -13px -94px;
+		display: inline-block;
+		background-size: 190px;
+	}
+}
+
+.ms-phone-unknown,
+.ms-phone-valid{
+	&:before{
+		background-position: -13px -94px;
+	}
+}
+
+.ms-phone-talking{
+	&:before{
+		background-position: -94px -95px;
+	}
+}
+
+.ms-phone-wrong{
+	&:before{
+		background-position: -109px -95px;
+	}
+}
+
+.ms-email-unknown,
+.ms-email-invalid,
+.ms-email-valid,
+.ms-email-way{
+	&:before{
+		content: "";
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -71px -79px;
+		display: inline-block;
+		background-size: 190px;
+	}
+}
+
+.ms-email-unknown,
+.ms-email-valid{
+	&:before{
+		background-position: -71px -79px;
+	}
+}
+
+.ms-email-way{
+	&:before{
+		background-position: -127px -79px;
+	}
+}
+
+.ms-email-invalid{
+	&:before{
+		background-position: -141px -79px;
+	}
+}
+
+.ms-icon-verify{
+	&:before{
+		content: "";
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+    background-position: 0px -201px;
+    display: inline-block;
+    background-size: 270px;
+	}
+}
+
+.ms-note{
+	position: relative;
+	padding-left: 30px;
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 19px;
+		height: 19px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -161px -458px;
+		display: inline-block;
+		background-size: 240px;
+	}
+}
+
+.ms-email-open{
+	&:before{
+		content: "";
+		width: 16px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -51px -175px;
+		display: inline-block;
+		background-size: 257px;
+	}
+}
+
+.ms-email-close{
+	&:before{
+		content: "";
+		width: 16px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -85px -176px;
+		display: inline-block;
+		background-size: 257px;
+	}
+}
+
+.ms-icon-lead{
+	&:before{
+		content: "";
+		width: 16px;
+		height: 15px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -67px -99px;
+		display: inline-block;
+		background-size: 170px;
+	}
+
+	&.active{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&:after{
+			content: "";
+			width: 16px;
+			height: 15px;
+			background-image: url('../images/crm-icons.png');
+			background-position: 2px -183px;
+			display: inline-block;
+			background-size: 247px;
+			order: -1;
+			margin: 0;
+		}
+
+		&:before{
+			order: -2;
+			margin: 0;
+		}
+	}
+}
+
+.ms-icon-inquiere{
+	&:before{
+		content: "";
+    width: 16px;
+    height: 21px;
+    background-image: url('../images/crm-icons.png');
+    background-position: 1px -161px;
+    display: inline-block;
+    background-size: 201px;
+	}
+}
+
+.ms-phone-send,
+.ms-phone-recived,
+.ms-phone-no-answer{
+	&:before{
+    content: "";
+    width: 23px;
+    height: 19px;
+    background-image: url('../images/crm-icons.png');
+    background-position: -16px -187px;
+    display: block;
+    background-size: 252px;
+	}
+}
+
+.ms-phone-recived{
+	&:before{
+		background-position: -40px -187px;
+	}	
+}
+
+.ms-phone-no-answer{
+	&:before{
+		background-position: -63px -187px;
+	}	
+}
+
+.ms-icon-sms{
+	&:before{
+    content: "";
+    width: 19px;
+    height: 17px;
+    background-image: url('../images/crm-icons.png');
+    background-position: -109px -187px;
+    display: block;
+    background-size: 252px;
+	}
+}
+
+.ms-icon-alert{
+	&:before{
+    content: "";
+    width: 22px;
+    height: 19px;
+    background-image: url('../images/crm-icons.png');
+    background-position: -38px -188px;
+    display: block;
+    background-size: 230px;
+	}
+}
+
+.ms-icon-note{
+	&:before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/crm-icons.png');
+    background-position: -133px -378px;
+    display: block;
+    background-size: 198px;
+	}
+}
+
+.ms-icon-calendar{
+	&:before{
+    content: "";
+    width: 16px;
+    height: 17px;
+    background-image: url('../images/crm-icons.png');
+    background-position: -120px -418px;
+    display: block;
+    background-size: 230px;
+	}
+
+	&.active{
+		&:before{
+			background-position: -137px -418px;
+		}
+	}
+}
+
+.ms-icon-bucket{
+	&:before{
+		content: "";
+		width: 13px;
+		height: 20px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -14px -315px;
+		display: block;
+		background-size: 200px;
+	}
+}
+
+.ms-icon-tagged{
+	&:before{
+		content: "";
+		width: 20px;
+		height: 20px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -18px -456px;
+    display: block;
+    background-size: 240px;
+	}
+}
+
+.ms-icon-view{
+	&:before{
+		content: "";
+		width: 18px;
+		height: 11px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -145px -407px;
+		display: block;
+		background-size: 240px;
+	}
+
+	&.favorite{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&:after{
+			content: "";
+			width: 15px;
+			height: 12px;
+			background-image: url('../images/crm-icons.png');
+			background-position: 23px 0px;
+			display: inline-block;
+			background-size: 150px;
+			order: -1;
+			margin: 0;
+			margin-left: 5px;
+		}
+
+		&:before{
+			order: -2;
+			margin: 0;
+		}
+	}
+}
+
+.ms-icon-save{
+	&:before{
+		content: "";
+		width: 13px;
+		height: 14px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -65px -625px;
+		display: block;
+		background-size: 160px;
+	}
+}
+
+.ms-icon-facebook{
+	&:before{
+		content: "";
+		width: 22px;
+		height: 22px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -476px 0px;
+		display: block;
+	}
+}
+
+.ms-icon-instagram{
+	&:before{
+		content: "";
+		width: 22px;
+		height: 22px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -476px -25px;
+		display: block;
+	}
+}
+
+.ms-icon-add{
+	border: 1px solid #e1e1e1;
+	border-radius: 2px;
+	width: 24px;
+	height: 24px;
+	background-color: #FFF;
+	position: relative;
+	&:before{
+		content: "";
+		display: block;
+		background-color: #6a6a6a;
+		width: 9px;
+		height: 1px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		position: absolute;
+	}
+	&:after{
+		content: "";
+		display: block;
+		background-color: #6a6a6a;
+		width: 1px;
+		height: 9px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		position: absolute;
+	}
+}
+
+.ms-social{
+	margin-top: 10px;
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	li{
+		float: left;
+		margin-right: 5px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	[class^="ms-icon-"],
+	[class*=" ms-icon-"]{
+		text-indent: -999999px;
+		overflow: hidden;
+		display: block;
+		height: 22px;
+	}
+}
+
+.ms-item-chk{
+	label{
+		position: relative;
+		padding-left: 26px;
+		font-size: 14px;
+		font-weight: normal;
+		&:before{
+			content: "";
+			display: block;
+			width: 16px;
+			height: 16px;
+			border: 2px solid #cccccc;
+			border-radius: 2px;
+			top: 2px;
+			left: 0;
+			position: absolute;
+		}
+	}
+
+	input:checked+label:after {
+		content: "\e904";
+		font-family: "icomoon"!important;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 2px;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1;
+	}
+}
+
+.tab-content{
+	.ms-list{
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		>li{
+			float: left;
+			margin-right: 10px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+
+	.ms-tab-title{
+		text-transform: uppercase;
+		color: #7b7b7b;
+		font-size: 12px;
+		margin: 15px 0;
+		padding-left: 13px;
 	}
 }
 
@@ -2280,6 +2801,7 @@
 
 			.btn-group{
 				display: flex;
+				position: relative;
 				.btn{
 					box-shadow: none !important;
 					border-radius: 0;
@@ -2288,54 +2810,46 @@
 					border: 0;
 					font-size: 12px;
 					background-color: transparent;
-					.sr-only{
-						width: 30px;
-						height: 25px;
-						position: relative;
-						text-indent: -999999px;
-						overflow: hidden;
-						display: block;
-						cursor: pointer;
-						margin-right: 10px;
+					margin-right: 5px;
+				}
 
-						&:after{
-							width: 13px;
-							height: 100%;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							position: absolute;
-							background-color: aqua;
-							top: 0;
-							right: 0;
-							content: "\e901";
-							font-family: 'icomoon'!important;
-							text-indent: 0;
-							font-size: 9px;
-							transform: rotate(90deg);
-						}
-						
-						&:before{
-							content: "";
-							width: 13px;
-							height: 100%;
-							background-color: aqua;
-							background-image: url('../images/crm-icons.png');
-							background-position: 0 0;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							position: absolute;
-							top: 0;
-							left: 0;
-						}
+				.dropdown-toggle{
+					width: 30px;
+					height: 25px;
+					overflow: hidden;
+					text-indent: -999999px;
+					&:after{
+						width: 13px;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: absolute;
+						top: 0;
+						right: 0;
+						content: "\e901";
+						font-family: 'icomoon'!important;
+						text-indent: 0;
+						font-size: 9px;
+						transform: rotate(90deg);
+					}
+
+					&:before{
+						position: absolute;
+						top: 5px;
+						left: 0;
 					}
 				}
 
-				&.ms-unknown{
-					.sr-only{
+				.dropdown-menu{
+					font-size: 13px;
+					>li>a{
+						padding: 5px;
+						display: inline-flex;
+						align-items: center;
+						width: 100%;
 						&:before{
-							background-position: 0 0;
+							margin-right: 5px;
 						}
 					}
 				}

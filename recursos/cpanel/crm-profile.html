@@ -103,52 +103,52 @@
 
             <div class="ms-user-detail ms-cl-b">
               <h3 class="ms-title">Johanna Johanssen</h3>
-              <div class="btn-group ms-unknown">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
+              <div class="btn-group ms-phone-group">
+                <button type="button" class="btn dropdown-toggle ms-phone-unknown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Toggle Dropdown
                 </button>
                 <button type="button" class="btn">Ph. 305 858 4340 (Personal)</button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Talking to Prospect</a></li>
-                  <li><a href="#">Valid Phone #</a></li>
-                  <li><a href="#">Unknown</a></li>
-                  <li><a href="#">Do Not Call</a></li>
-                  <li><a href="#">Wrong Number</a></li>
+                  <li><a href="#" class="ms-phone-talking" data-action="ms-phone-talking">Talking to Prospect</a></li>
+                  <li><a href="#" class="ms-phone-valid" data-action="ms-phone-valid">Valid Phone #</a></li>
+                  <li><a href="#" class="ms-phone-unknown" data-action="ms-phone-unknown">Unknown</a></li>
+                  <li><a href="#" class="ms-phone-wrong" data-action="ms-phone-wrong">Do Not Call</a></li>
+                  <li><a href="#" class="ms-phone-wrong" data-action="ms-phone-wrong">Wrong Number</a></li>
                 </ul>
               </div>
 
-              <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
+              <div class="btn-group ms-phone-group">
+                <button type="button" class="btn dropdown-toggle ms-phone-talking" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Toggle Dropdown
                 </button>
                 <button type="button" class="btn">Ph. 305 858 4340 (Wife)</button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Talking to Prospect</a></li>
-                  <li><a href="#">Valid Phone #</a></li>
-                  <li><a href="#">Unknown</a></li>
-                  <li><a href="#">Do Not Call</a></li>
-                  <li><a href="#">Wrong Number</a></li>
+                  <li><a href="#" class="ms-phone-talking" data-action="ms-phone-talking">Talking to Prospect</a></li>
+                  <li><a href="#" class="ms-phone-valid" data-action="ms-phone-valid">Valid Phone #</a></li>
+                  <li><a href="#" class="ms-phone-unknown" data-action="ms-phone-unknown">Unknown</a></li>
+                  <li><a href="#" class="ms-phone-wrong" data-action="ms-phone-wrong">Do Not Call</a></li>
+                  <li><a href="#" class="ms-phone-wrong" data-action="ms-phone-wrong">Wrong Number</a></li>
                 </ul>
               </div>
 
-              <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
+              <div class="btn-group ms-email-group">
+                <button type="button" class="btn dropdown-toggle ms-email-valid" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Toggle Dropdown
                 </button>
                 <button type="button" class="btn">Amanda@idxboost.com</button>
                 <ul class="dropdown-menu">
-                  <li><a href="#" data-action="ms-talking">Talking to Prospect</a></li>
-                  <li><a href="#" data-action="ms-valid">Valid Phone #</a></li>
-                  <li><a href="#" data-action="ms-unknown">Unknown</a></li>
-                  <li><a href="#" data-action="ms-wrong">Do Not Call</a></li>
-                  <li><a href="#" data-action="ms-wrong">Wrong Number</a></li>
+                  <li><a href="#" class="ms-email-way" data-action="ms-email-way">2-Way Emailing</a></li>
+                  <li><a href="#" class="ms-email-valid" data-action="ms-email-valid">Valid Address</a></li>
+                  <li><a href="#" class="ms-email-unknown" data-action="ms-email-unknown">Unknown</a></li>
+                  <li><a href="#" class="ms-email-invalid" data-action="ms-email-invalid">Opted-Out</a></li>
+                  <li><a href="#" class="ms-email-invalid" data-action="ms-email-invalid">Invalid Address</a></li>
                 </ul>
               </div>
 
               <ul class="ms-social">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><button>Add more</button></li>
+                <li><a href="#" class="ms-icon-facebook">Facebook</a></li>
+                <li><a href="#" class="ms-icon-instagram">Instagram</a></li>
+                <li><button class="ms-icon-add">Add more</button></li>
               </ul>
             </div>
 
@@ -201,7 +201,7 @@
             </div>
             <div class="ms-body-widget">
               <ul class="ms-table">
-                <li><span>Quality</span> Verifyed <i class="valid"></i></li>
+                <li><span>Quality</span> Verifyed <i class="ms-icon-verify"></i></li>
                 <li><span>Selling</span> Undecided</li>
                 <li><span>Mortgage</span> Approved</li>
                 <li><span>Timeline</span> 6 Months+</li>
@@ -295,320 +295,216 @@
 
             <div class="tab-content">
               <div id="timeline" class="tab-pane fade in active">
-                <h3>Timeline</h3>
-                <p>aqui va el timeline</p>
-              </div>
-              <div id="inquires" class="tab-pane fade">
-                <h3>Inquires</h3>
-                <p>aqui van los Inquires</p>
-              </div>
-              <div id="views" class="tab-pane fade">
-                <h3>Views</h3>
-                <p>aqui van los Views</p>
-              </div>
-              <div id="favs" class="tab-pane fade">
-                <h3>Favs</h3>
-                <p>aqui van los Favs</p>
-              </div>
-              <div id="saved" class="tab-pane fade">
-                <h3>Saved</h3>
-                <p>aqui van los Saved</p>
-              </div>
-              <div id="alerts" class="tab-pane fade">
-                <h3>Alerts</h3>
-                <p>aqui van las Alerts</p>
-              </div>
-              <div id="visits" class="tab-pane fade">
-                <h3>Visits</h3>
-                <p>aqui van las Visits</p>
-              </div>
-            </div>
-          </div>
-
-          <ul class="timeline">
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg">
-                  <h3 class="ms-msg-title">Subject: UR Rental Agreement</h3>
-                  <p>Dear, John Smth, I wanted to follow up with you and send you the rental agreement you requested. please let me know if we can jump on a call...</p>
-                  <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Open on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item ms-date"><span>OCT</span></li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg">
-                  <h3 class="ms-msg-title">Subject: UR Rental Agreement</h3>
-                  <p>Dear, John Smth, I wanted to follow up with you and send you the rental agreement you requested. please let me know if we can jump on a call...</p>
-                  <p class="ms-samll">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-samll">Not Open</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-black">
-                  <h3 class="ms-msg-title">Lead Assigned - <span>Luccas Mapri</span></h3>
-                  <p>Assigned on June 26, 2018 at 02:40pm</p>
-                  <p>Confirmed on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-boost">
-                  <h3 class="ms-msg-title">Inquire! - <span>I am interested in 1551 Stillwater Dr</span></h3>
-                  <p>Miami Beach, FL 33141</p>
-                  <p><strong>$27,000,000</strong> <strong>3 Beds / 2 Baths</strong> <strong>A10630329</strong></p>
-                  <p>Inquired on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item ms-date"><span>SEP</span></li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon ms-rocket end">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-light-gray">
-                  <h3 class="ms-msg-title">Email Drip - <span>26 Day Buyer Program  (Step 4)</span></h3>
-                  <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Open on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-green">
-                  <h3 class="ms-msg-title">Call Log (Outbound) - <span>Talked to Lead</span></h3>
-                  <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-green">
-                  <h3 class="ms-msg-title">Call Log (Inbound) - <span>Talked to Lead</span></h3>
-                  <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-green">
-                  <h3 class="ms-msg-title">Call Log (Outbound) - <span>No Answer</span></h3>
-                  <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg">
-                  <h3 class="ms-msg-title">SMS<span> - Dear, John Smth, I wanted to follow up with you and send you the </span></h3>
-                  <p>rentalagreement you requested. please let me know if we can jump on a call...</p>
-                  <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-light-gray">
-                  <h3 class="ms-msg-title">Notification Sent<span> - Miami Beach Waterfrton Homes</h3>
-                  <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Not Open</p>
-                </div>
-              </span>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-black">
-                  <h3 class="ms-msg-title">New Lead Registration</h3>
-                  <p class="ms-small">Registered on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">San Antonio, Houston, Texas - Mobile - OS X - Safari</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-black">
-                  <h3 class="ms-msg-title">Lead Added</h3>
-                  <p class="ms-small">Registered on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Added by Johana Johanssen</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-note">
-                  <h3 class="ms-msg-title">Note Added</h3>
-                  <p class="ms-small">Remeber to call his nephew for listings</p>
-                  <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-blue">
-                  <h3 class="ms-msg-title">To-Do - Follow Up</h3>
-                  <p class="ms-small">June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Completed</p>
-                  <button class="ms-valid">OK</button>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-black">
-                  <h3 class="ms-msg-title">Added to Bucket - Buyers Bucket</h3>
-                  <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Completed</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-bg-black">
-                  <h3 class="ms-msg-title">Lead Tagged - Buyer</h3>
-                  <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-property-item">
-                  <div class="ms-wrap-img">
-                    <img src="images/blogImg.jpg">
-                  </div>
-                  <div class="ms-property-info">
-                    <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
-                    <ul>
-                      <li>$27,000,000</li>
-                      <li>3 Beds / 2 Baths</li>
-                      <li>1,234 Sq.Ft.</li>
-                    </ul>
-                    <p>A10630329</p>
-                    <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-property-item">
-                  <div class="ms-wrap-img">
-                    <img src="images/blogImg.jpg">
-                  </div>
-                  <div class="ms-property-info">
-                    <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
-                    <ul>
-                      <li>$27,000,000</li>
-                      <li>3 Beds / 2 Baths</li>
-                      <li>1,234 Sq.Ft.</li>
-                    </ul>
-                    <p>A10630329</p>
-                    <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item ms-date"><span>OCT</span></li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-property-item">
-                  <div class="ms-wrap-img">
-                    <img src="images/blogImg.jpg">
-                  </div>
-                  <div class="ms-property-info">
-                    <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
-                    <ul>
-                      <li>$27,000,000</li>
-                      <li>3 Beds / 2 Baths</li>
-                      <li>1,234 Sq.Ft.</li>
-                    </ul>
-                    <p>A10630329</p>
-                    <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-property-item">
-                  <div class="ms-wrap-img">
-                    <div class="ms-float">
-                      <span class="ms-bg-text">456</span>
-                      <span>Listings</span>
+                <ul class="ms-list">
+                  <li class="ms-item-chk">
+                    <input type="checkbox" id="ms-item-calls" name="item">
+                    <label for="ms-item-calls">Calls</label>
+                  </li>
+                  <li class="ms-item-chk">
+                    <input type="checkbox" id="ms-item-email" name="item">
+                    <label for="ms-item-email">Emails</label>
+                  </li>
+                  <li class="ms-item-chk">
+                    <input type="checkbox" id="ms-item-sms" name="item">
+                    <label for="ms-item-sms">SMS</label>
+                  </li>
+                  <li class="ms-item-chk">
+                    <input type="checkbox" id="ms-item-drips" name="item">
+                    <label for="ms-item-drips">Drips</label>
+                  </li>
+                  <li class="ms-item-chk">
+                    <input type="checkbox" id="ms-item-assigns" name="item">
+                    <label for="ms-item-assigns">Assigns</label>
+                  </li>
+                </ul>
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item ms-item-email">
+                    <span class="ms-item-icon ms-email-open">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg">
+                        <h3 class="ms-msg-title">Subject: UR Rental Agreement</h3>
+                        <p>Dear, John Smth, I wanted to follow up with you and send you the rental agreement you requested. please let me know if we can jump on a call...</p>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Open on June 27, 2018 at 09:30am</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="ms-property-info">
-                    <h3 class="ms-title">Miami Beach Waterfront Homes</h3>
-                    <p class="ms-small">Saved on June 27, 2018 at 09:30am</p>
-                    <div class="ms-wrap-btn">
-                      <button class="ms-edit">Edit</button>
-                      <button class="ms-close">Delete</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+                  </li>
 
-            <li class="ms-item">
-              <span class="ms-item-icon">April 10</span>
-              <div class="ms-wrap-item">
-                <div class="ms-msg ms-light-gray">
-                  <h3 class="ms-msg-title">Notification Sent - <span>Miami Beach Waterfrton Homes</span></h3>
-                  <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
-                  <p class="ms-small">Not Open</p>
-                  <button class="ms-show">Show</button>
-                </div>
-                
-                <ul class="ms-dropdown-list">
-                  <li>
+                  <li class="ms-item ms-date"><span>OCT</span></li>
+
+                  <li class="ms-item ms-item-email">
+                    <span class="ms-item-icon ms-email-close">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg">
+                        <h3 class="ms-msg-title">Subject: UR Rental Agreement</h3>
+                        <p>Dear, John Smth, I wanted to follow up with you and send you the rental agreement you requested. please let me know if we can jump on a call...</p>
+                        <p class="ms-samll">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-samll">Not Open</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-assigns">
+                    <span class="ms-item-icon ms-icon-lead active">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-black">
+                        <h3 class="ms-msg-title">Lead Assigned - <span>Luccas Mapri</span></h3>
+                        <p>Assigned on June 26, 2018 at 02:40pm</p>
+                        <p>Confirmed on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-inquiere">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-boost">
+                        <h3 class="ms-msg-title">Inquire! - <span>I am interested in 1551 Stillwater Dr</span></h3>
+                        <p>Miami Beach, FL 33141</p>
+                        <p><strong>$27,000,000</strong> <strong>3 Beds / 2 Baths</strong> <strong>A10630329</strong></p>
+                        <p>Inquired on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-date"><span>SEP</span></li>
+
+                  <li class="ms-item ms-item-drips">
+                    <span class="ms-item-icon ms-rocket end">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-light-gray">
+                        <h3 class="ms-msg-title">Email Drip - <span>26 Day Buyer Program  (Step 4)</span></h3>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Open on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-calls">
+                    <span class="ms-item-icon ms-phone-send">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-green">
+                        <h3 class="ms-msg-title">Call Log (Outbound) - <span>Talked to Lead</span></h3>
+                        <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-calls">
+                    <span class="ms-item-icon ms-phone-recived">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-green">
+                        <h3 class="ms-msg-title">Call Log (Inbound) - <span>Talked to Lead</span></h3>
+                        <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-calls">
+                    <span class="ms-item-icon ms-phone-no-answer">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-green">
+                        <h3 class="ms-msg-title">Call Log (Outbound) - <span>No Answer</span></h3>
+                        <p class="ms-small">Assigned on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Confirmed on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-sms">
+                    <span class="ms-item-icon ms-icon-sms">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg">
+                        <h3 class="ms-msg-title">SMS<span> - Dear, John Smth, I wanted to follow up with you and send you the </span></h3>
+                        <p>rentalagreement you requested. please let me know if we can jump on a call...</p>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-alert">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-light-gray">
+                        <h3 class="ms-msg-title">Notification Sent<span> - Miami Beach Waterfrton Homes</h3>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Not Open</p>
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="ms-item ms-item-assigns">
+                    <span class="ms-item-icon">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-black">
+                        <h3 class="ms-msg-title">New Lead Registration</h3>
+                        <p class="ms-small">Registered on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">San Antonio, Houston, Texas - Mobile - OS X - Safari</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-assigns">
+                    <span class="ms-item-icon">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-black">
+                        <h3 class="ms-msg-title">Lead Added</h3>
+                        <p class="ms-small">Registered on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Added by Johana Johanssen</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-note">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-note">
+                        <h3 class="ms-msg-title">Note Added</h3>
+                        <p class="ms-small">Remeber to call his nephew for listings</p>
+                        <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-calendar">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-blue">
+                        <h3 class="ms-msg-title">To-Do - Follow Up</h3>
+                        <p class="ms-small">June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Completed</p>
+                        <button class="ms-valid">OK</button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-bucket">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-black">
+                        <h3 class="ms-msg-title">Added to Bucket - Buyers Bucket</h3>
+                        <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Completed</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-item-assigns">
+                    <span class="ms-item-icon ms-icon-tagged">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-black">
+                        <h3 class="ms-msg-title">Lead Tagged - Buyer</h3>
+                        <p class="ms-small">Added on June 26, 2018 at 02:40pm</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view favorite">April 10</span>
                     <div class="ms-wrap-item">
                       <div class="ms-property-item">
                         <div class="ms-wrap-img">
@@ -627,7 +523,168 @@
                       </div>
                     </div>
                   </li>
-                  <li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view favorite">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item ms-date"><span>OCT</span></li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-save">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <div class="ms-float">
+                            <span class="ms-bg-text">456</span>
+                            <span>Listings</span>
+                          </div>
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">Miami Beach Waterfront Homes</h3>
+                          <p class="ms-small">Saved on June 27, 2018 at 09:30am</p>
+                          <div class="ms-wrap-btn">
+                            <button class="ms-edit">Edit</button>
+                            <button class="ms-close">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-alert">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-light-gray">
+                        <h3 class="ms-msg-title">Notification Sent - <span>Miami Beach Waterfrton Homes</span></h3>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Not Open</p>
+                        <button class="ms-show">Show</button>
+                      </div>
+                      
+                      <ul class="ms-drop-list">
+                        <li>
+                          <div class="ms-wrap-item">
+                            <div class="ms-property-item">
+                              <div class="ms-wrap-img">
+                                <img src="images/blogImg.jpg">
+                              </div>
+                              <div class="ms-property-info">
+                                <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                                <ul>
+                                  <li>$27,000,000</li>
+                                  <li>3 Beds / 2 Baths</li>
+                                  <li>1,234 Sq.Ft.</li>
+                                </ul>
+                                <p>A10630329</p>
+                                <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="ms-wrap-item">
+                            <div class="ms-property-item">
+                              <div class="ms-wrap-img">
+                                <img src="images/blogImg.jpg">
+                              </div>
+                              <div class="ms-property-info">
+                                <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                                <ul>
+                                  <li>$27,000,000</li>
+                                  <li>3 Beds / 2 Baths</li>
+                                  <li>1,234 Sq.Ft.</li>
+                                </ul>
+                                <p>A10630329</p>
+                                <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="inquires" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-inquiere">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-bg-boost">
+                        <h3 class="ms-msg-title">Inquire! - <span>I am interested in 1551 Stillwater Dr</span></h3>
+                        <p>Miami Beach, FL 33141</p>
+                        <p><strong>$27,000,000</strong> <strong>3 Beds / 2 Baths</strong> <strong>A10630329</strong></p>
+                        <p>Inquired on June 27, 2018 at 09:30am</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="views" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view">April 10</span>
                     <div class="ms-wrap-item">
                       <div class="ms-property-item">
                         <div class="ms-wrap-img">
@@ -648,12 +705,163 @@
                   </li>
                 </ul>
               </div>
-            </li>
-          </ul>
-        
+              <div id="favs" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view favorite">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view favorite">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="saved" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-save">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <div class="ms-float">
+                            <span class="ms-bg-text">456</span>
+                            <span>Listings</span>
+                          </div>
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">Miami Beach Waterfront Homes</h3>
+                          <p class="ms-small">Saved on June 27, 2018 at 09:30am</p>
+                          <div class="ms-wrap-btn">
+                            <button class="ms-edit">Edit</button>
+                            <button class="ms-close">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="alerts" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-alert">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-msg ms-light-gray">
+                        <h3 class="ms-msg-title">Notification Sent - <span>Miami Beach Waterfrton Homes</span></h3>
+                        <p class="ms-small">Sent on June 26, 2018 at 02:40pm</p>
+                        <p class="ms-small">Not Open</p>
+                        <button class="ms-show">Show</button>
+                      </div>
+                      
+                      <ul class="ms-drop-list">
+                        <li>
+                          <div class="ms-wrap-item">
+                            <div class="ms-property-item">
+                              <div class="ms-wrap-img">
+                                <img src="images/blogImg.jpg">
+                              </div>
+                              <div class="ms-property-info">
+                                <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                                <ul>
+                                  <li>$27,000,000</li>
+                                  <li>3 Beds / 2 Baths</li>
+                                  <li>1,234 Sq.Ft.</li>
+                                </ul>
+                                <p>A10630329</p>
+                                <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="ms-wrap-item">
+                            <div class="ms-property-item">
+                              <div class="ms-wrap-img">
+                                <img src="images/blogImg.jpg">
+                              </div>
+                              <div class="ms-property-info">
+                                <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                                <ul>
+                                  <li>$27,000,000</li>
+                                  <li>3 Beds / 2 Baths</li>
+                                  <li>1,234 Sq.Ft.</li>
+                                </ul>
+                                <p>A10630329</p>
+                                <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="visits" class="tab-pane fade">
+                <h3 class="ms-tab-title">April, 2019</h3>
+                <ul class="timeline">
+                  <li class="ms-item">
+                    <span class="ms-item-icon ms-icon-view">April 10</span>
+                    <div class="ms-wrap-item">
+                      <div class="ms-property-item">
+                        <div class="ms-wrap-img">
+                          <img src="images/blogImg.jpg">
+                        </div>
+                        <div class="ms-property-info">
+                          <h3 class="ms-title">1551 Stillwater Dr Miami Beach, FL 33141</h3>
+                          <ul>
+                            <li>$27,000,000</li>
+                            <li>3 Beds / 2 Baths</li>
+                            <li>1,234 Sq.Ft.</li>
+                          </ul>
+                          <p>A10630329</p>
+                          <p class="ms-small">Viewed on June 27, 2018 at 09:30am</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
     <div id="rs-screen-overlay"></div>
     <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
@@ -661,5 +869,30 @@
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/select2.min.js"></script>
     <script type="text/javascript" src="../../js/main.js"></script>
+
+    <script type="text/javascript">
+      
+      jQuery(document).on('click', '.tab-pane input[type="checkbox"]', function () {
+
+        var timeLineItemFilter = "";
+        var parentPanel = jQuery(this).parents('.tab-pane').attr('id');
+
+        jQuery("#"+parentPanel).find('.ms-item').addClass('ms-hidden');
+
+        var contador = 0;
+        jQuery(".tab-pane input[type=checkbox]").each(function(){
+          if(jQuery(this).is(":checked")){
+            timeLineItemFilter = jQuery(this).attr("id");
+            jQuery("#"+parentPanel).find('.'+timeLineItemFilter).removeClass('ms-hidden');
+            contador++;
+          }
+        });
+
+        if(contador<1){
+          jQuery("#"+parentPanel).find('.ms-item').removeClass('ms-hidden');
+        }
+      });
+
+    </script>
   </body>
 </html>
