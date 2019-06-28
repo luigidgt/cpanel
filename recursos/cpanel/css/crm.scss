@@ -14,6 +14,15 @@
 /*-----------------------------------------------------------------------------------------------------*/
 /* COMPONENTES
 /*-----------------------------------------------------------------------------------------------------*/
+.ms-button{
+	span{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+}
 .ms-user-avatar{
 	border-radius: 100%;
 	overflow: hidden;
@@ -2900,12 +2909,142 @@
 	display: none !important;
 }
 
+.ms-back{
+	span{
+		&:before{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 15px;
+			height: 15px;
+			content: "\e901";
+			font-family: "icomoon"!important;
+			font-size: 10px;
+			margin-right: 7px;
+			margin-left: -5px;
+			transform: rotate(-180deg);
+		}
+	}
+}
+
 /*-----------------------------------------------------------------------------------------------------*/
 /* DETALLE LEAD
 /*-----------------------------------------------------------------------------------------------------*/
 .ms-crm-profile{
 	background-color: #FFF;
-	padding: 30px 10px;
+	padding: 15px 10px 30px 10px;
+	.ms-filter-actions{
+		padding-top: 0;
+		box-shadow: none;
+		display: flex;
+
+		.ms-wrap-filter{
+			margin-right: auto;
+			width: 100%;
+			margin-left: 0;
+			justify-content: space-between;
+		}
+
+		.ms-button{
+			flex-shrink: 0;
+			width: 29%;
+			padding: 0 5px;
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
+		.ms-wrap-input{
+			max-width: 300px;
+			flex-shrink: 0;
+			width: 39%;
+			margin-bottom: 0;
+			.ms-search{
+				font-size: 12px;
+			}
+		}
+
+		.ms-back{
+			&:before{
+				margin-right: 3px;
+				margin-left: -5px;
+			}
+		}
+
+		.ms-top-pag{
+			display: none;
+			align-items: center;
+			justify-content: flex-end;
+			@media screen and (min-width: 991px){
+				display: flex;
+			}
+
+			span{
+				font-size: 13px;
+				font-weight: 700;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			button{
+				margin-left: 5px;
+				width: 35px;
+				height: 30px;
+				position: relative;
+				text-indent: -999999px;
+				overflow: hidden;
+				&:before{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					text-indent: 0;
+					content: "\e901";
+					font-family: 'icomoon'!important;
+					font-size: 16px;
+					color: #333;
+				}
+
+				&.ms-prev{
+					&:before{
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 768px){
+			.ms-button{
+				width: auto;
+				padding: 0 15px;
+				margin-left: 10px;
+				&:first-child{
+					margin-right: 10px;
+					margin-left: 0;
+				}
+			}
+
+			.ms-wrap-filter{
+				flex-wrap: nowrap;
+				width: 100%;
+			}
+			
+			.ms-wrap-input{
+			  width: 58%;
+			  max-width: 100% !important;
+			  margin: 0;
+			}
+		}
+
+		@media screen and (min-width: 991px){
+			.ms-wrap-filter {
+				width: auto;
+			}
+		}
+	}
 }
 
 .ms-wrap-profile{
