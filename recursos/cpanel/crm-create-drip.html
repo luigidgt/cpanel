@@ -97,142 +97,144 @@
           <div class="rs-content-body">
             
             <div class="ms-header">
-              <h2 class="ms-title ms-icon-bucket">Buckets</h2>
+              <h2 class="ms-title ms-rocket">Buckets</h2>
               <div class="ms-wrap-btn">
                 <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
+                  <span>Create New Drip Campaign</span>
                 </button>
               </div>
             </div>
 
             <div class="ms-body">
-              <table class="ms-basic-table">
-                <thead>
-                  <tr>
-                    <th>Bucket Name</th>
-                    <th>Target</th>
-                    <th>Contacts</th>
-                    <th class="ms-cp">Drip Campaigns</th>
-                    <th>Delete</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
-                        <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
-                          <p>Jun 03, 2019 1:37 pm</p>
-                        </div>
-                      </div>
-                      <button class="ms-show">View more</button>
-                    </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Sellers</span>
-                    </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
-                    </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip">Buyers Drip 01</span>
-                    </td>
-                    <td data-label="Delete">
-                      <button class="ms-close">Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
-                        <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
-                          <p>Jun 03, 2019 1:37 pm</p>
-                        </div>
-                      </div>
-                      <button class="ms-show">View more</button>
-                    </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Buyers</span>
-                    </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
-                    </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip">No Drip</span>
-                    </td>
-                    <td data-label="Delete">
-                      <button class="ms-close">Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
-                        <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
-                          <p>Jun 03, 2019 1:37 pm</p>
-                        </div>
-                      </div>
-                      <button class="ms-show">View more</button>
-                    </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Renters</span>
-                    </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
-                    </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip end">Renters Drip 01</span>
-                    </td>
-                    <td data-label="Delete">
-                      <button class="ms-close">Delete</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="ms-wrap-btn">
-                <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
-                </button>
-              </div>  
-            </div>
-
-            <div class="ms-header ms-top-60">
-              <h3 class="ms-title ms-icon-bucket">Create New Bucket</h3>
-              <div class="ms-wrap-btn">
-                <button class="btn btn-dgt-grs">
-                  <span>Cancel</span>
-                </button>
-                <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="ms-body">
-              <form name="form-new-bucket" method="post" id="form-new-bucket" class="ms-new-form">
+              <form name="form-new-campaing" method="post" id="form-new-campaing" class="ms-new-form">
                 <div class="form-item ms-full">
-                  <label for="bucket-name">Create New Bucket</label>
-                  <input type="text" id="bucket-name" name="bucket-name" required="required">
+                  <label for="">Drip Campaign Name</label>
+                  <input type="text" id="campaign-name" name="campaign-name" required="required">
                 </div>
-                <div class="form-item">
-                  <label for="select-campaing">Assign Drip Campaign</label>
-                  <select class="ms-select" placeholder="Select Email Template" name="campaign" id="select-campaing">
-                    <option></option>
-                    <option value="0">Template A</option>
-                    <option value="1">Template B</option>
-                    <option value="2">Template C</option>
-                  </select>
+
+                <div class="form-item ms-item-chk">
+                  <input type="checkbox" name="pause-email" id="pause-email" value="1">
+                  <label for="pause-email">Pause when lead replies to email or text</label>
                 </div>
-                <div class="form-item">
-                  <label for="select-target" class="required">Bucket Target</label>
-                  <select class="ms-select" placeholder="Select Bucket Target" name="target" id="select-target" data-minimum-results-for-search="Infinity">
-                    <option></option>
-                    <option value="0">Buyers</option>
-                    <option value="1">Sellers</option>
-                    <option value="2">Renters</option>
-                  </select>
+
+                <div class="form-item ms-item-chk">
+                  <input type="checkbox" name="pause-text" id="pause-text" value="1">
+                  <label for="pause-text">Pause when lead replies to email or text</label>
                 </div>
+
+                <div class="form-item ms-full">
+
+                  <ul class="ms-timeline-steps">
+
+                    <li>
+                      <span class="ms-bubble-idxb">Start</span>
+                      <strong class="ms-title">Start Drip Campaign</strong> <p class="ms-small">- Drip Campaigns begin when a lead enters a </p><a href="#" class="ms-small">bucket</a>
+                    </li>
+
+                    <li>
+                      <div class="ms-wrap-email">
+                        <div class="ms-email-header">
+                          <div class="ms-icon-email">Email</div>
+                          <div class="ms-select-template">
+
+                            <div class="ms-send">
+                              <label for="send-1">Send on day</label>
+                              <input type="text" name="send-on" id="send-1">
+                            </div>
+
+                            <select class="ms-select" placeholder="Select Email Template" name="campaign" id="select-campaing">
+                              <option></option>
+                              <option value="0">Template A</option>
+                              <option value="1">Template B</option>
+                              <option value="2">Template C</option>
+                            </select>
+                          </div>
+                          <button class="ms-show">View detail</button>
+                        </div>
+
+                        <div class="ms-email-body">
+
+                          <div class="ms-subject-header">
+                            
+                            <div class="ms-send">
+                              <label for="email-subject-1">Email Subject</label>
+                              <input type="text" name="email-subject" id="email-subject-1">
+                            </div>
+
+                            <div class="ms-dropdown ms-select-actions dropdown">
+                              <div class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true"><span>Smart Text</span></div>
+                              <ul class="ms-dropdown-list dropdown-menu">
+                                <li><a>Lorem Ipsum</a></li>
+                                <li><a>Lorem Ipsum</a></li>
+                                <li><a>Lorem Ipsum</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="ms-subject-body">
+                            aasdasdasdasdasdas
+                          </div>
+                          <div class="ms-subject-footer">
+                            <input type="file" name="attach-file" id="attach-file-1">
+                            <label for="attach-file-1" class="ms-icon-attach">Attach Files</label>
+                          </div>
+                        </div>
+
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="ms-wrap-email">
+                        <div class="ms-email-header">
+                          <div class="ms-icon-phone">SMS</div>
+                          <div class="ms-select-template">
+                            <label for="send-on-sms">Send on day <input type="text" name="send-on-sms" id="send-on-sms"></label>
+                            <select class="ms-select" placeholder="Select Email Template" name="campaign" id="select-msn">
+                              <option></option>
+                              <option value="0">Template A</option>
+                              <option value="1">Template B</option>
+                              <option value="2">Template C</option>
+                            </select>
+                          </div>
+                          <button class="ms-show">View detail</button>
+                        </div>
+                        <div class="ms-email-body">
+                          <div class="ms-subject-header">
+                            <label>SMS Text</label>
+                            <div class="ms-dropdown ms-select-actions dropdown">
+                              <a href="#" class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Smart Text</a>
+                              <ul class="ms-dropdown-list dropdown-menu">
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="ms-subject-body">
+                            aasdasdasdasdasdas
+                          </div>
+                          <div class="ms-subject-footer">
+                            <input type="file" name="attach-file" id="attach-file-1">
+                            <label for="attach-file-1" class="ms-icon-attach">Attach Files</label>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li>
+                      <div class="ms-wrap-drip">
+                        <span>Add Drip</span>
+                        <div class="ms-wrap-btn">
+                          <a href="#" class="ms-icon-email"><span>Add Email</span></a>
+                          <a href="#" class="ms-icon-sms"><span>Add SNS</span></a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li><span class="ms-bubble-idxb">Finish</span></li>
+                  </ul>
+                </div>
+
                 <div class="ms-wrap-btn">
                   <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
                   <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
