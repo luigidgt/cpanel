@@ -23,6 +23,7 @@
 		height: 100%;
 	}
 }
+
 .ms-user-avatar{
 	border-radius: 100%;
 	overflow: hidden;
@@ -1526,6 +1527,76 @@
 		font-size: 12px;
 		margin: 15px 0;
 		padding-left: 13px;
+	}
+}
+
+.ms-flex{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.ms-top-60{
+	margin-top: 60px;
+}
+
+.ms-icon-bucket{
+	&.ms-big{
+		&:before{
+	    width: 25px;
+	    height: 37px;
+	    background-position: -241px -199px;
+	    background-size: 345px;
+		}
+	}
+}
+
+form{
+	.ms-wrap-btn{
+		display: flex;
+		justify-content: space-between;
+		.btn{
+			width: 48%;
+		}
+
+		.btn-dgt-grs{
+			&:hover,
+			&:active {
+				background-color: #848484 !important;
+				box-shadow: none !important;
+				color: #FFF !important;
+				span{
+					color: #FFF !important;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 640px){
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.form-item{
+			width: 48%;
+			&.ms-full{
+				width: 100%;
+			}
+		}
+
+		.ms-wrap-btn{
+			width: 100%;
+			justify-content: flex-start;
+			.btn{
+				width: auto;
+				min-width: 110px;
+				margin-right: 10px;
+				&.btn-dgt-def{
+					span{
+						padding: 0 40px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3766,5 +3837,212 @@
 	}
 }
 
+/*-----------------------------------------------------------------------------------------------------*/
+/* CREATE BUCKET
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-new-basic-form{
+	.ms-header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 6px solid #f6f6f6;
+		.ms-title{
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			font-weight: 700;
 
-//.ms-wrap-profile .ms-wrap-actions .ms-btn .ms-bg-text {
+			&.ms-icon-bucket{
+				&:before{
+					margin-right: 5px;
+					background-position: -41px -315px;
+				}
+			}
+		}
+
+		.ms-wrap-btn{
+			display: none;
+		}
+	}
+
+	.ms-body{
+		.ms-wrap-btn{
+			margin-top: 15px;
+		}
+	}
+	
+	.btn{
+		border: 0;
+		height: 43px;
+		span{
+			font-size: 13px;
+			font-weight: 600;
+			padding: 0 20px;
+		}
+	}
+}
+
+.ms-basic-table{
+	width: 100%;
+	thead{
+		th{
+			font-size: 10px;
+			text-transform: uppercase;
+			text-align: center;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			border-bottom: 2px solid #f6f6f6;
+			&:nth-child(1){
+				text-align: left;
+			}
+		}
+	}
+
+	tbody{
+		tr{
+			border-bottom: 1px solid #f6f6f6;
+			td{
+				padding: 15px 0;
+				.ms-show{
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -10px;
+				}
+			}
+		}
+	}
+
+	.ms-text-name{
+		margin-left: 15px;
+		.ms-title{
+			font-size: 16px;
+			font-weight: 700;
+		}
+		p{
+			font-size: 12px;
+		}
+	}
+
+	.ms-text-contact{
+		font-weight: 700;
+		font-size: 14px;
+	}
+
+	.ms-text-drip{
+		&:before{
+			content: "";
+			display: block;
+			width: 21px;
+			height: 23px;
+			background-image: url('../images/crm-icons.png');
+			background-size: 155px;
+			background-position: 0px 0;
+			margin: 0 auto;
+		}
+
+		&.end{
+			&:before{
+				background-position: -63px 0;
+			}
+		}
+
+		&.active{
+			&:before{
+				background-position: -42px 0;
+			}
+		}
+	}
+
+	/***** RESETEANDO TABLA *****/
+	@media (max-width: 639px){
+		thead{
+			tr{
+				th{
+					display: none;
+					&:first-child{
+						display: block;
+					}
+				}
+			}
+		}
+
+		tbody{
+			tr{
+				display: flex;
+				flex-wrap: wrap;
+				td{
+					width: 25%;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					border-top: 1px solid #f6f6f6;
+					flex-direction: column;
+					padding: 0;
+					position: relative;
+					padding-top: 33px;
+					padding-bottom: 10px;
+					font-size: 12px;
+					text-align: center;
+					&:before{
+						content: attr(data-label);
+						font-size: 10px;
+						text-transform: uppercase;
+						text-align: center;
+						border-bottom: 1px solid #f6f6f6;
+						display: block;
+						width: 100%;
+						font-weight: 700;
+						position: absolute;
+						top: 0;
+						left: 0;
+						padding: 5px 0;
+					}
+
+					&:nth-child(1){
+						display: flex;
+						width: 100%;
+						justify-content: flex-start;
+						border-top: 0;
+						flex-direction: row;
+						padding: 15px 0;
+						text-align: left;
+						&:before{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 640px){
+		thead{
+			tr{
+				th{
+					&:last-child{
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		tbody{
+			tr{
+				td{
+					text-align: center;
+					&:first-child{
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		.ms-show{
+			display: none;
+		}
+	}
+}
