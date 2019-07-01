@@ -13,13 +13,76 @@
 /*-----------------------------------------------------------------------------------------------------*/
 /* COMPONENTES
 /*-----------------------------------------------------------------------------------------------------*/
+.ms-test{
+	li{
+		margin-right: 10px;
+	}
+
+	@media (max-width: 768px){
+		flex-wrap: wrap !important;
+		justify-content: space-between !important;
+		li{
+			width: 48%;
+			margin: 10px 0;
+			.btn{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.ms-wrap-btn{
+	.btn{
+		border: 0 !important;
+		cursor: pointer;
+	}
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 42px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-right: 30px;
+}
+
 .ms-button{
+	flex-shrink: 0;
+	background-color: #f1f1f1;
+	border: 1px solid #e8e8e8 !important;
+	background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+	width: auto;
+	//min-width: 130px;
+	height: 40px;
+	font-weight: 700;
+	border-radius: 4px;
+	font-size: 13px;
+	color: #333;
+	position: relative;
+	padding: 0;
+	transition: all .4s;
 	span{
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		padding: 0 15px;
+	}
+	
+	&:active,
+	&:focus{
+		//text-shadow: none;
+    background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+    outline: 0;
+    box-shadow: none;
+	}
+}
+
+a.ms-button{
+	color:#333;
+	&:hover{
+		color:#333;
 	}
 }
 
@@ -103,6 +166,21 @@
 			color: #FFF;
 			padding-top: 3px;
 		}
+	}
+}
+
+.ms-icon-todo{
+	&:before{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -2px;
+		width: 25px;
+		height: 25px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -591px -617px;
+		background-size: 340px;
+		margin-right: 10px;
 	}
 }
 
@@ -272,6 +350,10 @@
 
 .ms-bg-gray{
 	background-color: #f5f5f5;
+}
+
+.ms-bg-skyblue{
+	background-color: #bdd6f5;
 }
 
 .ms-icon-rocket{
@@ -677,6 +759,18 @@
 			background-color: transparent;
 			border-color: #FFF;
 			color: #FFF;
+		}
+	}
+
+	&.ms-bg-skyblue{
+		background-color: #bdd6f5 ;
+		border-color: #bdd6f5 ;
+		&:before{
+			border-top: 16px solid #bdd6f5;
+		}
+
+		&:after{
+			display: none;
 		}
 	}
 
@@ -1490,7 +1584,7 @@
 .ms-item-chk{
 	label{
 		position: relative;
-		padding-left: 20px;
+		padding-left: 25px;
 		font-size: 14px;
 		font-weight: normal;
 		cursor: pointer;
@@ -1706,6 +1800,174 @@ form{
 		background-position: -130px -52px;
 		display: block;
 		background-size: 170px;
+	}
+}
+
+.ms-icon-attach{
+	cursor: pointer;
+	width: auto !important;
+	margin: 15px 0px 5px 0px !important;
+	font-weight: 600 !important;
+	&:before{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		width: 18px;
+		height: 18px;
+		background-image: url('../images/crm-icons.png');
+		background-position: -156px -16px;
+    background-size: 190px;
+	}
+}
+
+.richText{
+	a{
+		color: #333;
+		&:hover{
+			text-decoration: none !important;
+			color: #be155e;
+		}
+	}
+}
+
+.ms-textarea{
+	resize: none;
+	height: 120px !important;
+	border-radius: 6px !important;
+}
+
+#form-new-campaing,
+.form-item{
+	input,
+	textarea,
+	.select2-container .select2-choice,
+	.select2-container--default .select2-selection--single {
+  	border-color: #e8e8e8 !important;
+  }
+}
+
+.ms-bold{
+	font-weight: 700;
+}
+
+.ms-link{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 600;
+	color: #333;
+	padding: 0 15px;
+	&:hover,
+	&:focus,
+	&:active{
+		color: #333;
+	}
+
+	&.ms-icon-listing{
+		&:before{
+			content: "";
+			display: inline-block;
+			margin-right: 5px;
+			background-image: url(../images/crm-icons.png);
+			width: 27px;
+			height: 22px;
+			text-indent: 0;
+			background-position: -206px -514px;
+			background-size: 270px;
+			margin-top: -5px;
+		}
+	}
+}
+
+.ms-btn-chek{
+	label{
+		display: flex;
+		align-items: center;
+		padding-left: 40px;
+		height: 50px;
+		border: 1px solid #e8e8e8;
+		border-radius: 4px;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		&:before{
+			position: absolute;
+			left: 10px;
+			top: auto;
+		}
+
+		&:after{
+			transition: opacity .4s;
+			content: "";
+			position: absolute;
+			z-index: -1;
+			background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+
+	input:checked+label{
+		border-color: #dcdcdc;
+		&:after{
+			opacity: 1;
+		}
+	}
+}
+
+.ms-icon-wrong,
+.ms-icon-call,
+.ms-icon-message{
+	&:before{
+		content: "";
+		display: inline-block;
+		margin-right: 10px;
+		background-image: url('../images/crm-icons.png');
+	}
+}
+
+.ms-icon-wrong{
+	&:before{
+		background-position: -63px -186px;
+		background-size: 250px 250px;
+		width: 23px;
+		height: 18px;
+	}
+}
+
+.ms-icon-call{
+	&:before{
+		background-position: -226px -206px;
+		background-size: 250px 250px;
+		width: 23px;
+		height: 20px;
+	}
+}
+
+.ms-icon-message{
+	&:before{
+		background-position: -170px -186px;
+		background-size: 250px 250px;
+		width: 23px;
+		height: 16px;
+	}
+}
+
+.ms-icon-cell-phone{
+	&:before{
+		content: "";
+		display: inline-block;
+		margin-right: 10px;
+		background-image: url(../images/crm-icons.png);
+		background-position: -481px -97px;
+		background-size: 170px 170px;
+		width: 29px;
+		height: 30px;
 	}
 }
 
@@ -3285,72 +3547,6 @@ form{
 				text-overflow: ellipsis;
 				white-space: nowrap;
 			}
-
-			.btn-group{
-				display: flex;
-				position: relative;
-				.btn{
-					box-shadow: none !important;
-					border-radius: 0;
-					margin: 0;
-					padding: 0;
-					border: 0;
-					font-size: 12px;
-					background-color: transparent;
-					margin-right: 5px;
-				}
-
-				a.btn{
-					color: #333;
-					display: flex;
-					align-items: center;
-					&:hover{
-						text-decoration: underline;
-						color:#1893da;
-					}
-				}
-
-				.dropdown-toggle{
-					width: 30px;
-					height: 25px;
-					overflow: hidden;
-					text-indent: -999999px;
-					&:after{
-						width: 13px;
-						height: 100%;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						position: absolute;
-						top: 0;
-						right: 0;
-						content: "\e901";
-						font-family: 'icomoon'!important;
-						text-indent: 0;
-						font-size: 9px;
-						transform: rotate(90deg);
-					}
-
-					&:before{
-						position: absolute;
-						top: 5px;
-						left: 0;
-					}
-				}
-
-				.dropdown-menu{
-					font-size: 13px;
-					>li>a{
-						padding: 5px;
-						display: inline-flex;
-						align-items: center;
-						width: 100%;
-						&:before{
-							margin-right: 5px;
-						}
-					}
-				}
-			}
 		}
 
 		.ms-cl-c{
@@ -3481,6 +3677,72 @@ form{
 
 			.ms-icon-user{
 				margin-top: 5px;
+			}
+		}
+	}
+
+	.btn-group{
+		display: flex;
+		position: relative;
+		.btn{
+			box-shadow: none !important;
+			border-radius: 0;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 12px;
+			background-color: transparent;
+			margin-right: 5px;
+		}
+
+		a.btn{
+			color: #333;
+			display: flex;
+			align-items: center;
+			&:hover{
+				text-decoration: underline;
+				color:#1893da;
+			}
+		}
+
+		.dropdown-toggle{
+			width: 30px;
+			height: 25px;
+			overflow: hidden;
+			text-indent: -999999px;
+			&:after{
+				width: 13px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: "\e901";
+				font-family: 'icomoon'!important;
+				text-indent: 0;
+				font-size: 9px;
+				transform: rotate(90deg);
+			}
+
+			&:before{
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+
+		.dropdown-menu{
+			font-size: 13px;
+			>li>a{
+				padding: 5px;
+				display: inline-flex;
+				align-items: center;
+				width: 100%;
+				&:before{
+					margin-right: 5px;
+				}
 			}
 		}
 	}
@@ -3993,6 +4255,9 @@ form{
 			display: none;
 			@media screen and (min-width: 768px){
 				display: inline-block;
+				.btn.btn-dgt-def{
+					min-width: 160px;
+				}
 			}
 		}
 	}
@@ -4123,6 +4388,18 @@ form{
 		}
 	}
 
+	.ms-text-rocket{
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 27px;
+			height: 29px;
+			background-image: url('../images/crm-icons.png');
+			background-size: 200px;
+			background-position: 0 0;
+		}
+	}
+
 	/***** RESETEANDO TABLA *****/
 	@media (max-width: 639px){
 		thead{
@@ -4153,6 +4430,7 @@ form{
 					padding-bottom: 10px;
 					font-size: 12px;
 					text-align: center;
+					flex-grow: 1;
 					&:before{
 						content: attr(data-label);
 						font-size: 10px;
@@ -4178,6 +4456,35 @@ form{
 						text-align: left;
 						&:before{
 							display: none;
+						}
+					}
+
+					&.ms-td-start{
+						align-items: flex-start;
+						text-align: left;
+						max-width: 20%;
+						&:before{
+							text-align: left
+						}
+					}
+
+					&.ms-td-end{
+						align-items: flex-end;
+						text-align: right;
+						max-width: 48px;
+						&:before{
+							text-align: right
+						}
+					}
+				}
+
+				&.active{
+					td{
+						display: flex;
+						.ms-show{
+							&:after{
+								transform: rotate(-90deg);
+							}
 						}
 					}
 				}
@@ -4234,11 +4541,14 @@ form{
 /* CREATE DRIP
 /*-----------------------------------------------------------------------------------------------------*/
 #form-new-campaing{
+	width: 100%;
+	max-width: 650px;
+	margin-top: 20px;
 	.ms-item-chk{
 		margin-bottom: 5px;
 		label{
 			font-weight: normal;
-			font-size: 12px;
+			font-size: 13px;
 			&:before,
 			&:after{
 				top: 1px;
@@ -4265,7 +4575,7 @@ form{
 	
 	>li{
 		position: relative;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		padding-left: 15px;
 	}
 
@@ -4287,14 +4597,14 @@ form{
 		text-transform: uppercase;
 		color: #FFF;
 		background: linear-gradient(to right, #fa6630, #be155e);
-		position: absolute;
-		left: -50px;
-		margin-top: -5px;
+		margin-top: 0;
+		margin-left: -63px;
+		margin-right: 15px;
 	}
 
 	.ms-small{
 		display: inline;
-		font-size: 12px;
+		font-size: 13px;
 	}
 
 	.ms-title{
@@ -4309,9 +4619,9 @@ form{
 			display: flex;
 			width: 100%;
 			align-items: flex-end;
-			border-bottom: 5px solid #efefef;
-
-			.ms-icon-email{
+			
+			.ms-icon-email,
+			.ms-icon-sms{
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -4331,6 +4641,16 @@ form{
 					background-position: -220px -107px;
 					background-size: 260px;
 					margin-bottom: 10px;
+				}
+			}
+
+			.ms-icon-sms{
+				&:before{
+					width: 43px;
+					height: 43px;
+					background-position: -216px -149px;
+					background-size: 260px;
+					margin-left: 17px;
 				}
 			}
 			
@@ -4353,6 +4673,7 @@ form{
 						margin-left: 15px;
 						width: 82px;
 						height: 40px;
+						text-align: center;
 					}
 				}
 			}
@@ -4370,7 +4691,9 @@ form{
 		}
 
 		.ms-email-body{
+			border-top: 5px solid #efefef;
 			padding: 15px 25px;
+			display: none;
 			.ms-subject-header{
 				display: flex;
 				align-items: center;
@@ -4393,7 +4716,8 @@ form{
 						margin-left: 15px;
 						width: 100%;
 						height: 40px;
-						text-align: center;
+						text-align: left;
+						font-weight: normal;
 					}
 				}
 
@@ -4402,6 +4726,30 @@ form{
 				}
 			}
 		}
+
+		&.active{
+			.ms-email-body{
+				display: block;
+			}
+
+			.ms-email-header{
+				.ms-show{
+					&:after{
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+	}
+
+	.ms-subject-body{
+		margin-top: 15px;
+	}
+
+	.richText{
+		.richText-editor{
+			height: 110px;
+		}
 	}
 
 	.select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -4409,18 +4757,6 @@ form{
 	}
 
 	.ms-button{
-		flex-shrink: 0;
-		background-color: #fff;
-		border: 1px solid #dedede;
-		background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
-		width: 100%;
-		height: 40px;
-		font-weight: 700;
-		border-radius: 4px;
-		font-size: 12px;
-		color: #333;
-		position: relative;
-		padding: 0;
 		span{
 			display: flex;
 			align-items: center;
@@ -4431,10 +4767,921 @@ form{
 			margin-top: 0;
 		}
 
+		&.ms-arrow{
+			span{
+				&:after{
+					content: "\e901";
+					font-family: "icomoon"!important;
+					font-size: 10px;
+					transform: rotate(90deg);
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 10px;
+					margin-top: 0px;
+				}
+			}
+		}
+
+		&.ms-btn-email{
+			span{
+				&:before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+					width: 20px;
+					height: 20px;
+					background-image: url('../images/crm-icons.png');
+					background-size: 130px;
+					background-position: -110px -54px;
+				}
+			}
+		}
+
+		&.ms-btn-sms{
+			span{
+				&:before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+					width: 21px;
+					height: 21px;
+					background-image: url('../images/crm-icons.png');
+					background-size: 120px;
+					background-position: -99px -68px;
+				}
+			}
+		}
+	}
+
+	a.ms-button{
 		&:hover,
-		&:active{
+		&:active,
+		&:focus{
 			text-decoration: none;
 			color: #333;
+		}
+	}
+
+	.ms-wrap-drip{
+		padding: 17px;
+		border: 1px dashed #babbbc;
+		border-radius: 6px;
+		.ms-wrap-btn{
+			.ms-button{
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.ms-step{
+		background-color: #423f40;
+		width: 35px;
+		height: 35px;
+		color: #FFF;
+		font-size: 16px;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		position: absolute;
+		top: 0;
+		left: -42px;
+	}
+}
+
+#create-list{
+	tbody{
+		tr{
+			td:first-child{
+				max-width: 170px;
+			}
+		}
+	}
+}
+
+.ms-title{
+	&.ms-rocket{
+		&:before{
+	    content: "";
+	    display: inline-block;
+	    width: 27px;
+	    height: 29px;
+	    background-image: url('../images/crm-icons.png');
+	    background-size: 200px;
+	    background-position: -81px 0;
+	    margin-right: 10px;
+	  }
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODALS
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-todo{
+	.modal-dialog{
+		max-width: 540px;
+	}
+
+	.form-item{
+		margin-bottom: 10px;
+		label{
+			margin-bottom: 0;
+			width: 20%;
+			flex-shrink: 0;
+			font-size: 13px;
+		}
+
+		&.ms-item-chk{
+			margin: 0 0 15px 0;
+			padding-left: 20%;
+			label{
+				width: 100%;
+			}
+		}
+
+		textarea{
+			height: 150px;
+			resize: none;
+		}
+	}
+
+	.ms-custom{
+		display: none;
+		justify-content: space-between;
+		.ms-button,
+		.select2-container{
+			width: 28% !important;
+			min-width: auto !important;
+			font-weight: 700;
+		}
+
+		.select2-container--default .select2-selection--single{
+			overflow: hidden;
+		}
+
+		.select2-container .select2-selection--single .select2-selection__rendered{
+			background-color: #f1f1f1;
+			background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+		}
+
+		.ms-date{
+			width: 36% !important;
+		}
+	}
+
+	&.active{
+		.form-item{
+			&.ms-item-chk{
+				margin-top: 15px;
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+
+		.ms-custom{
+			display: flex;
+			width: 100%;
+		}
+
+		@media screen and (min-width: 480px){
+			.form-item{
+				&.ms-item-chk{
+					padding-left: 20%;
+				}
+			}
+
+			.ms-custom{
+				padding-left: 20%;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODAL EMAIL
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-email{
+	.modal-dialog{
+		max-width: 540px;
+	}
+
+	.richText{
+		.richText-editor{
+			height: 150px;
+		}
+	}
+
+	.form-item{
+		margin-bottom: 10px;
+		label{
+			margin-bottom: 0;
+			width: 25%;
+			flex-shrink: 0;
+			font-size: 13px;
+			@media screen and (min-width: 640px){
+				font-size: 14px;
+				width: 20%;
+			}
+		}
+	}
+
+	.ms-title{
+		&.ms-icon-email{
+			&:before{
+				margin-right: 10px;
+				width: 24px;
+				height: 24px;
+				background-position: -180px -144px;
+				background-size: 343px;
+				margin-bottom: -2px;
+			}
+		}
+	}
+
+	.ms-wrap-btn{
+		.ms-wrap-attach{
+			padding: 0 15px;
+		}
+
+		.ms-link,
+		.ms-wrap-attach,
+		.btn-dgt-def{
+			margin-left: 10px;
+		}
+	}
+
+	@media (max-width: 640px){
+		.ms-wrap-btn{
+			margin-top: 15px;
+			.ms-link,
+			.ms-wrap-attach,
+			.btn-dgt-def{
+				width: 32%;
+				margin: 0;
+				padding: 0;
+			}
+
+			.btn-dgt-def span{
+				font-size: 13px;
+			}
+
+			.ms-link,
+			.ms-wrap-attach label{
+				flex-direction: column;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0;
+				margin: 0 !important;
+				height: auto;
+				&:before{
+					margin-right: auto;
+					margin-left: auto;
+				}
+			}
+
+			.ms-wrap-attach label{
+				height: 100%;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODAL CALL
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-call{
+	.modal-dialog{
+		max-width: 540px;
+	}
+
+	.ms-title{
+		span{
+			overflow: visible;
+		}
+
+		&.ms-icon-log{
+			&:before{
+				content: "";
+				display: inline-block;
+				margin-right: 10px;
+				background: url(../images/crm-icons.png);
+				background-position: 0 -123px;
+				background-size: 250px 250px;
+				width: 18px;
+				height: 19px;
+				vertical-align: middle;
+				margin-top: -3px;
+			}
+		}
+	}
+
+	#add-comments{
+		height: 110px;
+	}
+	
+	form{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.form-item{
+			width: 48%;
+		}
+
+		.ms-full{
+			width: 100%;
+		}
+
+		.ms-wrap-btn{
+			.btn{
+				margin-left: auto;
+			}
+		}
+
+		.select2-container{
+			.select2-selection--single{
+				height: 50px;
+				background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+				.select2-selection__rendered{
+					height: 100%;
+					line-height: 50px;
+					font-weight: 700;
+					padding-left: 40px;
+					position: relative;
+					
+					&:before{
+						content: "";
+						display: inline-block;
+						background-image: url('../images/crm-icons.png');
+						background-position: -18px -123px;
+						background-size: 250px 250px;
+						width: 18px;
+						height: 19px;
+						position: absolute;
+						top: 50%;
+						margin-top: -9px;
+						left: 10px;
+					}
+				}
+
+				@media screen and (min-width: 768px){
+					height: 54px;
+					.select2-selection__rendered{
+						line-height: 54px;
+						padding-left: 54px;
+						&:before{
+							left: 17px;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 768px){
+			.ms-btn-chek{
+				label{
+					height: 54px;
+					padding-left: 54px;
+					&:before{
+						left: 17px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODAL SMS
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-sms{
+	.modal-dialog{
+		max-width: 890px;
+	}
+
+	.ms-select-template{
+		display: none;
+	}
+
+	.ms-wrap-send{
+		position: relative;
+		padding-top: 12px;
+		width: 100%;
+		&.form-item{
+			margin-bottom: 0;
+			textarea{
+				height: 60px;
+				padding-right: 120px;
+				width: 100%;
+			}
+
+			label{
+				display: none;
+			}
+
+			.ms-wrap-btn{
+				padding: 5px;
+				position: absolute;
+				top: 13px;
+				right: 0;
+				.btn{
+					margin: 0;
+					width: 110px;
+					span{
+						padding: 0 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.ms-select-number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 10px;
+    background-color: #FFF;
+    border-bottom: 1px solid #e8e8e8!important;
+		.select2-container--default{
+			.select2-selection--single {
+				border-radius: 0;
+				border: 0 !important;
+				height: 50px;
+				//background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+				.select2-selection__rendered{
+					height: 100%;
+					line-height: 50px;
+					font-weight: 700;
+					padding-left: 40px;
+					position: relative;
+					
+					&:before{
+						content: "";
+						display: inline-block;
+						background-image: url('../images/crm-icons.png');
+						background-position: -18px -123px;
+						background-size: 250px 250px;
+						width: 18px;
+						height: 19px;
+						position: absolute;
+						top: 50%;
+						margin-top: -9px;
+						left: 10px;
+					}
+				}
+
+				@media screen and (min-width: 768px){
+					height: 54px;
+					.select2-selection__rendered{
+						line-height: 54px;
+						padding-left: 54px;
+						&:before{
+							left: 17px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ms-msg{
+		margin: 12px 0;
+		max-width: 88%;
+		&.ms-send{
+			border-radius: 0;
+			border-top-left-radius: 4px;
+			margin-left: 12%;
+			background-color: #bdd6f5;
+			border-color: #bdd6f5;
+			&:before{
+				content: "";
+				width: 0;
+				height: 0;
+				border-left: 0;
+				border-top: 16px solid #bdd6f5;
+				border-right: 16px solid transparent;
+				position: absolute;
+				top: -1px;
+				right: -14px;
+				left: auto;
+			}
+
+			&:after{
+				display: none;
+			}
+		}
+
+		&.ms-recive{
+			background-color: #d5d5d5;
+			border-color: #d5d5d5;
+			&:before{
+				border-top: 16px solid #d5d5d5;
+			}
+
+			&:after{
+				border-top: 11px solid #d5d5d5;
+			}
+		}
+
+		&.view{
+			&:after {
+				content: "";
+				width: 18px;
+				height: 11px;
+				background-image: url('../images/crm-icons.png');
+				background-position: -145px -407px;
+				display: block;
+				background-size: 240px;
+				left: auto;
+				bottom: 10px;
+				right: 10px;
+				border: 0;
+				top: auto;
+			}
+		}
+	}
+
+	.ms-date-msg{
+		display: block;
+		margin: 15px 0;
+		text-align: center;
+	}
+
+	.ms-wrap-message{
+		background-color: #f2f2f2;
+		padding: 10px 30px;
+		margin: 0 -20px;
+
+		height: calc(100vh - 192px);
+		overflow-y: auto;
+	}
+
+	.modal-body {
+		padding: 15px;
+		padding-top: 51px;
+		padding-bottom: 10px;
+	}
+
+	@media screen and (min-width: 991px){
+		.modal-body{
+			display: flex;
+			align-items: flex-start;
+			padding: 15px;
+			justify-content: space-between;
+			.ms-wrap-message,
+			.ms-wrap-form{
+				width: 49%;
+			}
+
+			.ms-wrap-message {
+				background-color: #FFF;
+				padding: 15px;
+				margin: 0;
+				height: 436px;
+				overflow-y: auto;
+				padding-right: 30px;
+			}
+
+			.select2-container--default{
+				.select2-selection--single {
+					height: 50px;
+					.select2-selection__rendered{
+						line-height: 50px;
+					}
+				}
+			}
+
+			.ms-select-number {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				background-color: #FFF;
+				border-bottom: none;
+				border: 0 !important;
+				.select2-container--default{
+					.select2-selection--single {
+						border: 1px solid #e8e8e8 !important;
+						border-radius: 4px;
+					}
+
+					&.select2-container--open{
+						&.select2-container--below{
+							.select2-selection--single, 
+							.select2-selection--multiple {
+								border-bottom-left-radius: 0;
+								border-bottom-right-radius: 0;
+							}
+						}
+					}
+
+					.select2-selection--single{
+						.select2-selection__rendered{
+							padding-left: 40px;
+							&:before {
+								left: 12px;
+							}
+						} 
+					}
+				}
+			}
+
+			.ms-select-template{
+				display: block;
+			}
+			
+			.ms-wrap-send{
+				&.form-item{
+					textarea{
+						height: 210px;
+						padding-right: 0;
+						width: 100%;
+					}
+
+					label{
+						display: block;
+						font-weight: 700;
+					}
+
+					.ms-wrap-btn{
+						padding: 0;
+						position: relative;
+						top: 0;
+						right: 0;
+						margin-top: 10px;
+						.btn{
+							margin: 0;
+							width: auto;
+							min-width: 180px;
+							span{
+								padding: 0 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODAL BASIC
+/*-----------------------------------------------------------------------------------------------------*/
+.modal{
+	.form-item{
+		>label{
+			padding-right: 5px;
+		}
+	}
+
+	.ms-modal-header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #FFF;
+		border-bottom: 1px solid #f0f0f0;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+		
+		.ms-title{
+		  margin-right: auto;
+		  font-weight: 700;
+		  font-size: 16px;
+		  text-transform: none;
+		  padding-top: 5px;
+		  padding-right: 10px;
+		  display: flex;
+		  align-items: center;
+			
+			span{
+				display: block;
+				overflow: hidden;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				text-align: left;
+
+				height: 30px;
+				line-height: 30px;
+			}
+
+		  @media screen and (min-width: 768px){
+				font-size: 20px;
+		  }
+
+		  &:before{
+		  	margin-top: -5px;
+		  }
+		}
+
+		.close{
+			background: transparent;
+			color: #a6a7a7;
+			&:after{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-weight: 700 !important;
+				font-size: 10px !important;
+			}
+
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+
+	*{
+		font-size: 13px;
+	}
+
+	.ms-sub-title{
+		margin: 15px 0 10px 0;
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	textarea{
+		resize: none;
+		line-height: normal;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	@media screen and (min-width: 640px){
+		.ms-modal-header{
+			padding: 20px 15px;
+		}
+
+		.ms-wrap-btn{
+			justify-content: flex-end;
+			.btn{
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+
+		*{
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 375px){
+		.modal-dialog{
+			margin: 0;
+			min-height: 100vh;
+			.modal-content{
+				border: 0;
+				box-shadow: none;
+				border-radius: 0;
+				min-height: 100vh;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* DATE INPUT
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-date{
+	position: relative;
+	input[type="text"]{
+		height: 100%;
+		border: 0 !important;
+		background-color: transparent;
+		padding-left: 30px;
+		text-align: center;
+		padding-right: 0;
+		font-size: 13px;
+		@media screen and (min-width: 640px){
+			font-size: 14px;
+			padding-left: 20px;
+		}
+	}
+
+	&:before{
+		content: "";
+		background-image: url('../images/crm-icons.png');
+		background-position: 20px 21px;
+		background-size: 250px;
+		display: inline-block;
+		width: 20px;
+		height: 21px;
+		position: absolute;
+		left: 7px;
+		top: 50%;
+		margin-top: -10px;
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* FORMULARIO NEW CONTACT
+/*-----------------------------------------------------------------------------------------------------*/
+#ms-new-contact{
+
+	width: 100%;
+	max-width: 650px;
+
+	.btn-group{
+		border: 1px solid #e8e8e8;
+		border-radius: 4px;
+		height: 44px;
+		input{
+			border: 0 !important;
+			font-size: 14px;
+			text-align: left;
+		}
+
+		.dropdown-toggle {
+			width: 50px;
+			height: 42px;
+			&:before {
+				top: 13px;
+				left: 10px;
+			}
+		}
+	}
+
+	.form-item{
+		label{
+			font-size: 12px;
+		}
+
+		&.ms-flex{
+			justify-content: space-between;
+			.ms-item{
+				width: 32%;
+			}
+		}
+
+		.ms-subtitle{
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		.ms-textarea{
+			height: 100px !important;
+		}
+	}
+	
+	.ms-header{
+		width: 100%;
+		margin-top: 30px;
+		.ms-title{
+			font-size: 16px;
+		}
+	}
+
+	.ms-link{
+		width: auto;
+		padding: 0;
+		margin-top: 5px;
+		font-size: 12px;
+		color: #0068d2;
+		background-color: transparent;
+		&:hover{
+			text-decoration: underline
+		}
+	}
+
+	.ms-wrap-btn{
+		margin-top: 0;
+	}
+
+	.ms-new-item{
+		margin-top: 10px;
+	}
+
+	@media screen and (min-width: 640px){
+		
+		.form-item{
+			&.ms-breack{
+				width: 100%;
+				padding-right: 52%;
+			}
+
+			&.ms-full{
+				&.ms-flex{
+					.ms-item{
+						width: 34%;
+						&:nth-child(2){
+							width: 30%;
+						}
+					}
+				}
+			}
 		}
 	}
 }
