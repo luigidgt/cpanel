@@ -97,22 +97,21 @@
           <div class="rs-content-body">
             
             <div class="ms-header">
-              <h2 class="ms-title ms-icon-bucket">Buckets</h2>
+              <h2 class="ms-title ms-icon-cell-phone">SMS Template</h2>
               <div class="ms-wrap-btn">
                 <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
+                  <span>Create Template</span>
                 </button>
               </div>
             </div>
 
             <div class="ms-body">
-              <table class="ms-basic-table">
+              <table class="ms-basic-table" id="create-list">
                 <thead>
                   <tr>
-                    <th>Bucket Name</th>
-                    <th>Target</th>
-                    <th>Contacts</th>
-                    <th class="ms-cp">Drip Campaigns</th>
+                    <th>Teamplate Name</th>
+                    <th>Shared</th>
+                    <th>Owner</th>
                     <th>Delete</th>
                   </tr>
                 </thead>
@@ -120,70 +119,61 @@
                 <tbody>
                   <tr>
                     <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
+                      <div class="ms-text-phone ms-flex ms-big">
                         <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
+                          <h3 class="ms-title">Want to buy with us</h3>
                           <p>Jun 03, 2019 1:37 pm</p>
                         </div>
                       </div>
                       <button class="ms-show">View more</button>
                     </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Sellers</span>
+                    <td data-label="Shared" class="ms-td-start">
+                      <span>No</span>
                     </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
+                    <td data-label="Owner">
+                      <span>Johanna Johansen</span>
                     </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip">Buyers Drip 01</span>
-                    </td>
-                    <td data-label="Delete">
+                    <td data-label="Delete" class="ms-td-end">
                       <button class="ms-close">Delete</button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
+                      <div class="ms-text-phone ms-flex ms-big">
                         <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
+                          <h3 class="ms-title">Want to buy with us</h3>
                           <p>Jun 03, 2019 1:37 pm</p>
                         </div>
                       </div>
                       <button class="ms-show">View more</button>
                     </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Buyers</span>
+                    <td data-label="Shared" class="ms-td-start">
+                      <span>No</span>
                     </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
+                    <td data-label="Owner">
+                      <span>Johanna Johansen</span>
                     </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip">No Drip</span>
-                    </td>
-                    <td data-label="Delete">
+                    <td data-label="Delete" class="ms-td-end">
                       <button class="ms-close">Delete</button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="ms-icon-bucket ms-flex ms-big">
+                      <div class="ms-text-phone ms-flex ms-big">
                         <div class="ms-text-name">
-                          <h3 class="ms-title">Buyers Bucket 01</h3>
+                          <h3 class="ms-title">Want to buy with us</h3>
                           <p>Jun 03, 2019 1:37 pm</p>
                         </div>
                       </div>
                       <button class="ms-show">View more</button>
                     </td>
-                    <td data-label="Target">
-                      <span class="ms-text-target">Renters</span>
+                    <td data-label="Shared" class="ms-td-start">
+                      <span>No</span>
                     </td>
-                    <td data-label="Contacts">
-                      <span class="ms-text-contact">354</span>
+                    <td data-label="Owner">
+                      <span>Johanna Johansen</span>
                     </td>
-                    <td data-label="Drip">
-                      <span class="ms-text-drip end">Renters Drip 01</span>
-                    </td>
-                    <td data-label="Delete">
+                    <td data-label="Delete" class="ms-td-end">
                       <button class="ms-close">Delete</button>
                     </td>
                   </tr>
@@ -192,54 +182,10 @@
 
               <div class="ms-wrap-btn">
                 <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
-                </button>
-              </div>  
-            </div>
-
-            <div class="ms-header ms-top-60">
-              <h3 class="ms-title ms-icon-bucket">Create New Bucket</h3>
-              <div class="ms-wrap-btn">
-                <button class="btn btn-dgt-grs">
-                  <span>Cancel</span>
-                </button>
-                <button class="btn btn-dgt-def">
-                  <span>Create Bucket</span>
+                  <span>Create Template</span>
                 </button>
               </div>
             </div>
-
-            <div class="ms-body">
-              <form name="form-new-bucket" method="post" id="form-new-bucket" class="ms-new-form ms-crm-form">
-                <div class="form-item ms-full">
-                  <label for="bucket-name">Create New Bucket</label>
-                  <input type="text" id="bucket-name" name="bucket-name" required="required">
-                </div>
-                <div class="form-item">
-                  <label for="select-campaing">Assign Drip Campaign</label>
-                  <select class="ms-select" placeholder="Select Email Template" name="campaign" id="select-campaing">
-                    <option></option>
-                    <option value="0">Template A</option>
-                    <option value="1">Template B</option>
-                    <option value="2">Template C</option>
-                  </select>
-                </div>
-                <div class="form-item">
-                  <label for="select-target" class="required">Bucket Target</label>
-                  <select class="ms-select" placeholder="Select Bucket Target" name="target" id="select-target" data-minimum-results-for-search="Infinity">
-                    <option></option>
-                    <option value="0">Buyers</option>
-                    <option value="1">Sellers</option>
-                    <option value="2">Renters</option>
-                  </select>
-                </div>
-                <div class="ms-wrap-btn">
-                  <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
-                  <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
-                </div>
-              </form>            
-            </div>
-
           </div>
         </div>
       </div>
@@ -252,40 +198,8 @@
     <script type="text/javascript" src="../../js/main.js"></script>
 
     <script type="text/javascript">
-      
-      jQuery(document).on('click', '.tab-pane input[type="checkbox"]', function () {
-
-        var timeLineItemFilter = "";
-        var parentPanel = jQuery(this).parents('.tab-pane').attr('id');
-
-        jQuery("#"+parentPanel).find('.ms-item').addClass('ms-hidden');
-
-        var contador = 0;
-        jQuery(".tab-pane input[type=checkbox]").each(function(){
-          if(jQuery(this).is(":checked")){
-            timeLineItemFilter = jQuery(this).attr("id");
-            jQuery("#"+parentPanel).find('.'+timeLineItemFilter).removeClass('ms-hidden');
-            contador++;
-          }
-        });
-
-        if(contador<1){
-          jQuery("#"+parentPanel).find('.ms-item').removeClass('ms-hidden');
-        }
-      });
-
-
-      jQuery(document).on('click', '.ms-action-verify', function () {
-        var newClass = jQuery(this).attr('data-action');
-        jQuery(this).parents('.ms-wrap-verify').find('.dropdown-toggle').removeClass().addClass('btn dropdown-toggle '+newClass);
-      });
-
-      jQuery(document).on('click', '.ms-item-alert .ms-show', function () {
-        jQuery(this).parents('.ms-item-alert').toggleClass('ms-open-list');
-      });
-
-      jQuery('ms-select').select2({
-        minimumResultsForSearch: Infinity
+      jQuery(document).on('click', '#create-list .ms-show', function () {
+        jQuery(this).parents('tr').toggleClass('active');
       });
     </script>
   </body>

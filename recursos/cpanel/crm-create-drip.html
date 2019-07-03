@@ -100,29 +100,28 @@
           <div class="rs-content-body">
             
             <div class="ms-header">
-              <h2 class="ms-title ms-rocket">Buckets</h2>
+              <h2 class="ms-title ms-rocket">Drip Campaign</h2>
               <div class="ms-wrap-btn">
-                <button class="btn btn-dgt-def">
-                  <span>Create New Drip Campaign</span>
-                </button>
+                <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                <button class="btn btn-dgt-def"><span>Save</span></button>
               </div>
             </div>
 
             <div class="ms-body">
-              <form name="form-new-campaing" method="post" id="form-new-campaing" class="ms-new-form">
+              <form name="form-new-campaing" method="post" id="form-new-campaing" class="ms-new-form ms-crm-form">
                 <div class="form-item ms-full">
                   <label for="">Drip Campaign Name</label>
                   <input type="text" id="campaign-name" name="campaign-name" required="required">
                 </div>
 
                 <div class="form-item ms-item-chk">
-                  <input type="checkbox" name="pause-email" id="pause-email" value="1">
-                  <label for="pause-email">Pause when lead replies to email or text</label>
+                  <input type="checkbox" name="pause-email" id="pause-email" value="1" checked="checked">
+                  <label for="pause-email">Pause when lead replies to <strong>Email</strong> or <strong>Text</strong></label>
                 </div>
 
                 <div class="form-item ms-item-chk">
-                  <input type="checkbox" name="pause-text" id="pause-text" value="1">
-                  <label for="pause-text">Pause after talked to lead on the phone</label>
+                  <input type="checkbox" name="pause-text" id="pause-text" value="2" checked="checked">
+                  <label for="pause-text">Pause after <strong>Talked To Lead</strong></label>
                 </div>
 
                 <div class="form-item ms-full">
@@ -131,16 +130,16 @@
 
                     <li class="ms-flex">
                       <span class="ms-bubble-idxb">Start</span>
-                      <strong class="ms-title">Start Drip Campaign</strong> <p class="ms-small">- Drip Campaigns begin when a lead enters a </p><a href="#" class="ms-small">bucket</a>
+                      <strong class="ms-title">Start Drip Campaign</strong> <p class="ms-small">Drip Campaigns begin when a lead enters a <a href="#" class="ms-small">bucket</a></p>
                     </li>
 
                     <li id="initItem">
                       <span class="ms-step">1</span>
                       <div class="ms-wrap-drip">
-                        <strong>Add Drip</strong>
+                        <strong>Add Step</strong>
                         <div class="ms-wrap-btn add-drip">
                           <a href="#" class="ms-btn-email ms-button" data-template="email"><span>Add Email</span></a>
-                          <a href="#" class="ms-btn-sms ms-button" data-template="sms"><span>Add SNS</span></a>
+                          <a href="#" class="ms-btn-sms ms-button" data-template="sms"><span>Add SMS</span></a>
                         </div>
                       </div>
                     </li>
@@ -150,7 +149,7 @@
 
                 <div class="ms-wrap-btn">
                   <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
-                  <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
+                  <button class="btn btn-dgt-def"><span>Save</span></button>
                 </div>
               </form>            
             </div>
@@ -196,7 +195,7 @@
             var emailThemplate = 
             '<li>'+
               '<span class="ms-step">'+count+'</span>'+
-              '<div class="ms-wrap-email">'+
+              '<div class="ms-wrap-email active">'+
                 '<div class="ms-email-header">'+
                   '<div class="ms-icon-email">Email</div>'+
                   '<div class="ms-select-template">'+
@@ -222,9 +221,12 @@
                     '<div class="ms-dropdown ms-select-actions dropdown">'+
                       '<div class="ms-button btn ms-arrow" type="button" data-toggle="dropdown" aria-expanded="true"><span>Smart Text</span></div>'+
                       '<ul class="ms-dropdown-list dropdown-menu">'+
-                        '<li><a>Lorem Ipsum</a></li>'+
-                        '<li><a>Lorem Ipsum</a></li>'+
-                        '<li><a>Lorem Ipsum</a></li>'+
+                        '<li><a>[client_name]</a></li>'+
+                        '<li><a>[last_name]</a></li>'+
+                        '<li><a>[address]</a></li>'+
+                        '<li><a>[phone-number]</a></li>'+
+                        '<li><a>[interest]</a></li>'+
+                        '<li><a>[timeline]</a></li>'+
                       '</ul>'+
                     '</div>'+
                   '</div>'+
@@ -251,7 +253,7 @@
             var smsThemplate = 
             '<li>'+
               '<span class="ms-step">'+count+'</span>'+
-              '<div class="ms-wrap-email">'+
+              '<div class="ms-wrap-email active">'+
                 '<div class="ms-email-header">'+
                   '<div class="ms-icon-sms">SMS</div>'+
                   '<div class="ms-select-template">'+
@@ -275,9 +277,12 @@
                     '<div class="ms-dropdown ms-select-actions dropdown">'+
                       '<div class="ms-button btn ms-arrow" type="button" data-toggle="dropdown" aria-expanded="true"><span>Smart Text</span></div>'+
                       '<ul class="ms-dropdown-list dropdown-menu">'+
-                        '<li><a>Lorem Ipsum</a></li>'+
-                        '<li><a>Lorem Ipsum</a></li>'+
-                        '<li><a>Lorem Ipsum</a></li>'+
+                        '<li><a>[client_name]</a></li>'+
+                        '<li><a>[last_name]</a></li>'+
+                        '<li><a>[address]</a></li>'+
+                        '<li><a>[phone-number]</a></li>'+
+                        '<li><a>[interest]</a></li>'+
+                        '<li><a>[timeline]</a></li>'+
                       '</ul>'+
                     '</div>'+
                   '</div>'+

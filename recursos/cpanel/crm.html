@@ -135,39 +135,39 @@
                   <label for="ms-filter-2">inquires</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-3" name="ms-activity" data-hidden="ms-activity" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-3" name="ms-activity" data-hidden="ms-activity" class="ms-hidden-chk" checked>
                   <label for="ms-filter-3">Activity</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-4" name="ms-communication" data-hidden="ms-communication" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-4" name="ms-communication" data-hidden="ms-communication" class="ms-hidden-chk" checked>
                   <label for="ms-filter-4">Communication</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-5" name="ms-todo" data-hidden="ms-todo" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-5" name="ms-todo" data-hidden="ms-todo" class="ms-hidden-chk" checked>
                   <label for="ms-filter-5">To-Dos</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-6" name="ms-actions" data-hidden="ms-actions" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-6" name="ms-actions" data-hidden="ms-actions" class="ms-hidden-chk" checked>
                   <label for="ms-filter-6">Actions</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-7" name="ms-buckets" data-hidden="ms-buckets" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-7" name="ms-buckets" data-hidden="ms-buckets" class="ms-hidden-chk" checked>
                   <label for="ms-filter-7">Buckets</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-8" name="ms-drip" data-hidden="ms-drip" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-8" name="ms-drip" data-hidden="ms-drip" class="ms-hidden-chk" checked>
                   <label for="ms-filter-8">Drip</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-9" name="ms-lastvisit" data-hidden="ms-lastvisit" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-9" name="ms-lastvisit" data-hidden="ms-lastvisit" class="ms-hidden-chk" checked>
                   <label for="ms-filter-9">Last visits</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-10" name="ms-registered" data-hidden="ms-registered" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-10" name="ms-registered" data-hidden="ms-registered" class="ms-hidden-chk" checked>
                   <label for="ms-filter-10">Registered</label>
                 </li>
                 <li class="ms-wrap-chk">
-                  <input type="checkbox" id="ms-filter-11" name="ms-assigned" data-hidden="ms-assigned" class="ms-hidden-chk">
+                  <input type="checkbox" id="ms-filter-11" name="ms-assigned" data-hidden="ms-assigned" class="ms-hidden-chk" checked>
                   <label for="ms-filter-11">Assigned</label>
                 </li>
               </ul>
@@ -1326,6 +1326,39 @@
             </li>
           </ul>
         </div>
+
+        <div class="navigation ms-new-pagination">
+          <ul class="pagination">
+            <li class="disabled">
+              <span class="ms-prev">Previous</span>
+            </li>
+            <li class="active">
+              <span>1</span>
+            </li>
+            <li>
+              <a href="/?page=2">2</a>
+            </li>
+            <li>
+              <a href="/?page=3">3</a>
+            </li>
+            <li>
+              <a href="/?page=4">4</a>
+            </li>
+            <li>
+              <a href="/?page=5">5</a>
+            </li>
+            <li class="disabled">
+              <span>…</span>
+            </li>
+            <li>
+              <a href="/?page=17">17</a>
+            </li>
+            <li>
+              <a rel="next" href="/?page=2" class="ms-next">Next</a>
+            </li>
+          </ul>
+          <span class="ms-total-results">1-50 of 162 Leads</span>
+        </div>
       </div>
 
     </div>
@@ -1362,15 +1395,6 @@
         loadWidthTableHeader();
       });
 
-      /*jQuery(document).on('click', '.ms-dropdown', function () {
-        if (jQuery(this).hasClass('active')) {
-          jQuery(this).removeClass('active');
-        }else{
-          jQuery(".ms-dropdown").removeClass('active');
-          jQuery(this).toggleClass('active');
-        }
-      });*/
-
       jQuery(document).on('click', '#select-all-items', function () {
         if (jQuery(this).hasClass('active')) {
           jQuery(this).removeClass('active');
@@ -1385,9 +1409,9 @@
         jQuery(this).parents('.ms-select-filter').addClass('open');
         var hiddenElement = jQuery(this).attr('data-hidden');
         if (jQuery(this).is(':checked')) {
-          jQuery('.'+hiddenElement).addClass('ms-hidden');
-        }else{
           jQuery('.'+hiddenElement).removeClass('ms-hidden');
+        }else{
+          jQuery('.'+hiddenElement).addClass('ms-hidden');
         }
         loadWidthTableHeader();
       });

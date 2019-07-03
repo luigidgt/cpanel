@@ -110,7 +110,7 @@
 
             <div class="ms-body ms-wrap-profile">
 
-              <form id="ms-new-contact">
+              <form id="ms-new-contact" class="ms-crm-form">
                 <div class="form-item">
                   <label for="ms-name">First Name</label>
                   <input type="text" name="ms-name" id="ms-name" value="anamnda">
@@ -304,6 +304,11 @@
         var newItem = '<input type="text" name="ms-social" id="ms-social-'+count+'" class="ms-new-item">';
         jQuery(this).before(newItem);
         jQuery("#ms-social-"+count).focus();
+      });
+
+      jQuery(document).on('click', '.ms-action-verify', function () {
+        var newClass = jQuery(this).attr('data-action');
+        jQuery(this).parents('.ms-wrap-verify').find('.dropdown-toggle').removeClass().addClass('btn dropdown-toggle '+newClass);
       });
     </script>
   </body>

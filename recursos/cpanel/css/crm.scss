@@ -13,8 +13,177 @@
 /*-----------------------------------------------------------------------------------------------------*/
 /* COMPONENTES
 /*-----------------------------------------------------------------------------------------------------*/
+.ms-table{
+	width: 100%;
+	thead{
+		th{
+			font-size: 10px;
+			text-transform: uppercase;
+			text-align: center;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			border-bottom: 2px solid #f6f6f6;
+			&:first-child{
+				text-align: left;
+			}
+			&:last-child{
+				text-align: center;
+			}
+		}
+	}
+
+	tbody{
+		tr{
+			border-bottom: 1px solid #f6f6f6;
+			td{
+				padding: 15px 0;
+				&:first-child{
+					text-align: left;
+				}
+
+				&:last-child{
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.ms-text-name{
+		margin-left: 15px;
+		.ms-title {
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+}
+
+.ms-wrap-tagsinput{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #e8e8e8!important;
+	border-radius: 4px;
+	input[type="text"]{
+		border: 0 !important;
+		background-color: transparent;
+		padding: 0 6px;
+		margin: 0;
+		width: auto;
+		max-width: inherit;
+		height: 22px;
+	}
+
+	.label{
+		display: inline-block !important;
+		padding: .6em;
+		font-size: 75% !important;
+		font-weight: 600;
+		line-height: 1;
+		color: #333;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: .25em;
+		margin-top: 2px;
+		margin-bottom: 2px;
+		background-color: #e4e4e4 !important;
+	}
+
+	.tag{
+		margin-right: 2px;
+		[data-role="remove"] {
+			margin-left: 8px;
+			cursor: pointer;
+			display: inline;
+			font-size: 12px;
+			&:after{
+				content: "x";
+				padding: 0px 2px;
+			}
+		}
+	}
+}
+
+.ms-button-switch{
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 25px;
+	width: 65px;
+	padding: 2px;
+	label{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		display: flex !important;
+		align-items: center;
+		padding: 6px;
+		font-size: 11px !important;
+		text-transform: uppercase !important;
+		cursor: pointer;
+		justify-content: space-between;
+		background-color: #dddfe0;
+		transition: all .6s;
+		span{
+			font-size: 11px;
+			margin: 0;
+			display: none;
+			&:nth-child(2){
+				display: block;
+				margin-left: auto;
+			}
+		}
+		&:before{
+			content: "";
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			background-color: #FFF;
+			border-radius: 100%;
+			box-shadow: 0 0.0625em 0.375em 0 rgba(0,0,0,0.15);
+			cursor: pointer;
+			transition: all .4s;
+			z-index: 1;
+		}
+	}
+
+	input:checked+label{
+		background-color: #99cc00;
+		background-color: #1dcb00;
+		span{
+			color: #FFF;
+			&:nth-child(1){
+				display: block;
+				margin-right: auto;
+			}
+			&:nth-child(2){
+				display: none;
+			}
+		}
+		&:before{
+			left: 38px;
+		}
+	}
+}
+
+#custom-action{
+	display: none;
+	&.active{
+		display: flex;
+	}
+}
+
 .ms-test{
+	flex-wrap: wrap;
 	li{
+		margin-top: 5px;
+		margin-bottom: 5px;
 		margin-right: 10px;
 	}
 
@@ -548,6 +717,7 @@ a.ms-button{
 			font-size: 12px;
 			flex-shrink: 0;
 			margin-left: 10px;
+			padding: 0;
 			&:hover{
 				text-decoration: underline
 			}
@@ -621,6 +791,9 @@ a.ms-button{
 					padding-left: 30px;
 					margin-bottom: 10px;
 				}
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 
 			.ms-list-title{
@@ -669,10 +842,17 @@ a.ms-button{
 						padding-left: 15px;
 					}
 
-					.ms-icon, .ms-icon-verify{
+					.ms-icon{
 						display: inline-block;
 						vertical-align: middle;
 						margin-top: -2px;
+					}
+
+					.ms-icon-verify{
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 5px;
+						margin-top: 2px;
 					}
 				}
 			}
@@ -1174,7 +1354,6 @@ a.ms-button{
 	}
 }
 
-//.ms-phone-unknown,
 .ms-phone-valid{
 	&:before{
 		background-position: -93px -95px;
@@ -1652,18 +1831,45 @@ a.ms-button{
 	margin-top: 60px;
 }
 
-.ms-icon-bucket{
-	&.ms-big{
+.ms-big{
+	&.ms-icon-bucket{
 		&:before{
-	    width: 25px;
-	    height: 37px;
-	    background-position: -241px -199px;
-	    background-size: 345px;
+			width: 25px;
+			height: 37px;
+			background-position: -241px -199px;
+			background-size: 345px;
+		}
+	}
+
+	&.ms-text-phone{
+		&:before{
+			content: "";
+			display: inline-block;
+			background: url('../images/crm-icons.png') no-repeat -117px -39px;
+			background-size: 250px 250px;
+			width: 33px;
+			height: 33px;
+		}
+	}
+
+	&.ms-text-email{
+		&:before{
+			content: "";
+			display: inline-block;
+			background: url('../images/crm-icons.png') no-repeat -82px -38px;
+			background-size: 250px 250px;
+			width: 33px;
+			height: 33px;
 		}
 	}
 }
 
+
 form{
+	label{
+		text-transform: none !important;
+	}
+
 	.ms-wrap-btn{
 		display: flex;
 		justify-content: space-between;
@@ -1685,13 +1891,16 @@ form{
 	}
 
 	@media screen and (min-width: 640px){
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		.form-item{
-			width: 48%;
-			&.ms-full{
-				width: 100%;
+		&.ms-crm-form{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.form-item{
+				width: 48%;
+				&.ms-full{
+					width: 100%;
+				}
 			}
 		}
 
@@ -1707,12 +1916,17 @@ form{
 						padding: 0 40px;
 					}
 				}
+
+				&.btn-dgt-def{
+					min-width: 160px;
+				}
 			}
 		}
 	}
 }
 
 .ms-list-tag{
+	margin-left: 1px;
 	&:after{
 		content: "";
 		display: block;
@@ -1726,8 +1940,9 @@ form{
 			border-radius: 4px;
 			background-color: #e4e4e4;
 			color: #333;
-			font-size: 12px;
-			padding: 10px;
+			padding: .6em;
+			font-size: 75%!important;
+			font-weight: 600;
 			.ms-close{
 				cursor: pointer;
 				text-indent: -999999px;
@@ -1869,7 +2084,7 @@ form{
 			content: "";
 			display: inline-block;
 			margin-right: 5px;
-			background-image: url(../images/crm-icons.png);
+			background-image: url('../images/crm-icons.png');
 			width: 27px;
 			height: 22px;
 			text-indent: 0;
@@ -1913,7 +2128,7 @@ form{
 	}
 
 	input:checked+label{
-		border-color: #dcdcdc;
+		border-color: #cacaca;
 		&:after{
 			opacity: 1;
 		}
@@ -1963,17 +2178,95 @@ form{
 		content: "";
 		display: inline-block;
 		margin-right: 10px;
-		background-image: url(../images/crm-icons.png);
+		background-image: url('../images/crm-icons.png');
 		background-position: -481px -97px;
 		background-size: 170px 170px;
 		width: 29px;
-		height: 30px;
+		height: 29px;
+	}
+}
+
+.ms-new-pagination{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	.ms-total-results{
+		margin-left: 10px;
+		font-weight: 700;
+		font-size: 12px;
+	}
+
+	.pagination{
+		li{
+			display: inline-block;
+			margin-right: 2px;
+			border: 1px solid #dedede;
+			overflow: hidden;
+			border-radius: 4px;
+			>a,
+			>span{
+				border: 0 !important;
+				background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+				&:hover,
+				&:active,
+				&:focus{
+					color: #333;
+					background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+				}
+			}
+
+			&.active,
+			&:active:hover{
+				border: 1px solid transparent !important;
+				>a,
+				>span{
+					background: linear-gradient(to right, #fa6630, #be155e);
+					color: #FFF !important;
+				}
+			}
+		}
+
+		.ms-prev,
+		.ms-next{
+			position: relative;
+			text-indent: -999999px;
+			overflow: hidden;
+			width: 34px;
+			&:before{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-indent: 0;
+				content: "\e901";
+				font-family: "icomoon"!important;
+				font-size: 14px;
+			}
+		}
+
+		.ms-prev{
+			&:before{
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	@media (max-width: 640px){
+		display: none;
 	}
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
 /* LEADS TABLA
 /*-----------------------------------------------------------------------------------------------------*/
+.ms-wrap-table-crm{
+	overflow-x: auto;
+}
+
 .ms-lead-header{
 	display: none;
 	align-items: center;
@@ -1991,9 +2284,8 @@ form{
 		text-align: center;
 		font-size: 10px;
 		text-transform: uppercase;
+		margin: 0;
 		margin-bottom: 5px;
-		/*width: fit-content;
-    min-width: 100%;*/
 		border-right: 1px solid transparent;
 
 		&:last-child{
@@ -2365,7 +2657,7 @@ form{
 				width: 100%;
 				font-size: 12px;
 				border-top: 0;
-				border-bottom: 1px solid #dfe0e0;
+				//border-bottom: 1px solid #dfe0e0;
 				@media screen and (min-width: 480px){
 					font-size: 15px;
 				}
@@ -3402,7 +3694,7 @@ form{
 		.ms-wrap-input{
 			max-width: 300px;
 			flex-shrink: 0;
-			width: 39%;
+			width: 55%;
 			margin-bottom: 0;
 			.ms-search{
 				font-size: 12px;
@@ -3410,9 +3702,28 @@ form{
 		}
 
 		.ms-back{
-			&:before{
+			width: 40px;
+			/*&:before{
 				margin-right: 3px;
 				margin-left: -5px;
+			}*/
+
+			&:before{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				content: "\e901";
+				font-family: "icomoon"!important;
+				font-size: 14px;
+				/*margin-right: 7px;
+				margin-left: -5px;*/
+				transform: rotate(-180deg);
+			}
+
+			span{
+				display: none;
 			}
 		}
 
@@ -3462,6 +3773,31 @@ form{
 			}
 		}
 
+		@media screen and (min-width: 640px){
+			.ms-button,
+			.ms-back{
+				width: 29%;
+			}
+
+			.ms-wrap-input{
+				width: 39%;
+			}
+
+			.ms-back{
+				/*&:before{
+					margin-right: 3px;
+					margin-left: -5px;
+				}*/
+				&:before{
+					display: none;
+				}
+
+				span{
+					display: flex;
+				}
+			}
+		}
+
 		@media screen and (min-width: 768px){
 			.ms-button{
 				width: auto;
@@ -3504,11 +3840,11 @@ form{
 			align-items: center;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 60px;
+			width: 85px;
 			.ms-user-avatar{
 				width: 60px;
 				height: 60px;
-				margin-bottom: 10px;
+				margin-bottom: 16px;
 				font-size: 30px;
 			}
 
@@ -3530,10 +3866,26 @@ form{
 					}
 				}
 			}
+
+			.content_dropdown{
+				margin: 0;
+				margin-top: 10px;
+				.dropdown{
+					width: 85px;
+					position: relative;
+					.dropdown-menu{
+						position: absolute;
+						top: 100%;
+					}
+					.btn {
+						padding: 1px 10px 1px 7px;
+					}
+				}
+			}
 		}
 
 		.ms-cl-b{
-			width: calc(100% - 60px);
+			width: calc(100% - 85px);
 			padding-left: 15px;
 		}
 
@@ -3746,6 +4098,31 @@ form{
 			}
 		}
 	}
+
+	.ms-widget{
+		.ms-wrap-btn{
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			margin-top: -15px;
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 640px){
+		.ms-qualification{
+			tr{
+				display: flex;
+				flex-wrap: wrap;
+				td{
+					width: 50%;
+					display: flex;
+					padding: 0 !important;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
 }
 
 .ms-tabs{
@@ -3919,7 +4296,6 @@ form{
 	}
 }
 
-
 /*-----------------------------------------------------------------------------------------------------*/
 /* RESPOSNIVE DETALLE LEAD
 /*-----------------------------------------------------------------------------------------------------*/
@@ -4007,22 +4383,12 @@ form{
 
 			//.ms-block-a,
 			.ms-wrap-info{
-				width: 48%;
+				width: 49%;
 			}
 			
 			//.ms-block-b,
 			.ms-wrap-actions{
-				width: 49%;
-			}
-
-			.ms-widget{
-				min-height: auto;
-				margin-bottom: 20px;
-				.ms-wrap-btn{
-					position: absolute;
-					bottom: 15px;
-					right: 10px;
-				}
+				width: 48%;
 			}
 		}
 	}
@@ -4030,14 +4396,14 @@ form{
 	@media screen and (min-width: 1600px){
 		.ms-wrap-profile{
 			.ms-wrap-info{
-				margin-bottom: 25px;
+				margin-bottom: 20px;
 				.ms-cl-a{
-					width: 72px;
+
 					flex-shrink: 0;
 					.ms-user-avatar {
 						width: 72px;
 						height: 72px;
-						margin-bottom: 20px;
+						margin-bottom: 10px;
 						font-size: 34px;
 					}
 
@@ -4050,7 +4416,7 @@ form{
 				}
 
 				.ms-user-detail{
-					padding-left: 25px;
+					padding-left: 20px;
 					.ms-title{
 						font-size: 24px;
 						margin-bottom: 5px;
@@ -4065,7 +4431,7 @@ form{
 			}
 
 			.ms-wrap-actions{
-				margin-bottom: 25px;
+				margin-bottom: 20px;
 				.ms-btn{
 					justify-content: flex-end;
 					padding-bottom: 20px;
@@ -4125,7 +4491,6 @@ form{
 				}
 			}
 
-
 			.tab-content .ms-list>li {
 				margin-right: 20px;
 			}
@@ -4184,7 +4549,7 @@ form{
 					.ms-title,
 					.ms-address{
 						display: inline;
-						font-size: 18px;
+						font-size: 15px;
 						margin-right: 5px;
 						font-weight: 700;
 					}
@@ -4218,6 +4583,10 @@ form{
 					margin-bottom: 20px;
 				}
 			}
+
+			.ms-widget{
+				margin-bottom: 20px;
+			}
 		}
 	}
 }
@@ -4245,8 +4614,21 @@ form{
 
 			&.ms-icon-bucket{
 				&:before{
-					margin-right: 5px;
-					background-position: -41px -315px;
+					background-position: -51px -144px;
+					background-size: 250px 250px;
+					width: 16px;
+					height: 25px;
+					margin-right: 10px;
+				}
+			}
+
+			&.ms-icon-email{
+				&:before{
+					background-position: -512px -74px;
+					background-size: 180px 180px;
+					width: 28px;
+					height: 28px;
+					margin-right: 10px;
 				}
 			}
 		}
@@ -4375,8 +4757,6 @@ form{
 		@media screen and (min-width: 1024px){
 			display: block;
 			text-align: left;
-			//padding-left: 15px;
-			//padding-right: 15px;
 			margin-left: 20px;
 			&:before{
 				display: inline-block;
@@ -4519,7 +4899,6 @@ form{
 		}
 	}
 }
-
 
 .form-item{
 	label {
@@ -4723,6 +5102,9 @@ form{
 
 				.ms-dropdown{
 					margin-left: 10px;
+					.btn{
+						height: 40px
+					}
 				}
 			}
 		}
@@ -4825,10 +5207,12 @@ form{
 	}
 
 	.ms-wrap-drip{
+		background-color: #FFF;
 		padding: 17px;
 		border: 1px dashed #babbbc;
 		border-radius: 6px;
 		.ms-wrap-btn{
+			justify-content: flex-start;
 			.ms-button{
 				margin-right: 10px;
 			}
@@ -4849,6 +5233,96 @@ form{
 		position: absolute;
 		top: 0;
 		left: -42px;
+	}
+
+	@media (max-width: 640px){
+		padding-left: 0;
+		margin-bottom: 0;
+		.ms-flex{
+			padding-left: 65px;
+			//display: block;
+			min-height: 50px;
+			flex-wrap: wrap;
+			.ms-bubble-idxb{
+				margin-top: 0;
+				position: absolute;
+			}
+		}
+
+		>li{
+			padding-left: 0;
+		}
+
+		.ms-step{
+			position: relative;
+			left: 8px;
+			margin-bottom: 15px;
+		}
+
+		.ms-wrap-email{
+			.ms-email-header{
+				.ms-show{
+					display: none;
+				}
+			}
+		}
+
+		>li:last-child{
+			height: 50px;
+			.ms-bubble-idxb{
+				position: absolute;
+				left: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	@media (max-width: 480px){
+		.ms-wrap-email{
+			.ms-email-body{
+				.ms-subject-header{
+					align-items: flex-end;
+					.ms-send{
+						flex-direction: column;
+						justify-content: flex-start;
+						label{
+							display: block;
+							width: 100%;
+							margin-bottom: 5px;
+						}
+						input{
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 375px){
+		.ms-wrap-email{
+			.ms-email-body{
+				padding: 15px;
+			}
+			.ms-email-header{
+				.ms-icon-email,
+				.ms-icon-sms{
+					width: 72px;
+				}
+
+				.ms-icon-sms{
+					&:before {
+						margin-left: 9px !important;
+					}
+				}
+			}
+		}
+
+		.ms-button{
+			span{
+				padding: 0 10px;
+			}
+		}
 	}
 }
 
@@ -4988,19 +5462,6 @@ form{
 		}
 	}
 
-	.ms-title{
-		&.ms-icon-email{
-			&:before{
-				margin-right: 10px;
-				width: 24px;
-				height: 24px;
-				background-position: -180px -144px;
-				background-size: 343px;
-				margin-bottom: -2px;
-			}
-		}
-	}
-
 	.ms-wrap-btn{
 		.ms-wrap-attach{
 			padding: 0 15px;
@@ -5068,8 +5529,8 @@ form{
 				content: "";
 				display: inline-block;
 				margin-right: 10px;
-				background: url(../images/crm-icons.png);
-				background-position: 0 -123px;
+				background: url('../images/crm-icons.png');
+				background-position: -204px -203px;
 				background-size: 250px 250px;
 				width: 18px;
 				height: 19px;
@@ -5432,6 +5893,85 @@ form{
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
+/* EMAIL/SMS TEMPLATE
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-template-sms,
+#modal-template-email{
+	.modal-dialog{
+		max-width: 540px;
+	}
+
+	.richText{
+		.richText-editor{
+			height: 200px;
+		}
+	}
+
+	.form-item{
+		margin-bottom: 10px;
+		label{
+			margin-bottom: 0;
+			width: 30%;
+			flex-shrink: 0;
+			font-size: 13px;
+			@media screen and (min-width: 640px){
+				font-size: 14px;
+				width: 30%;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* MODAL BUCKET
+/*-----------------------------------------------------------------------------------------------------*/
+#modal-bucket{
+	.modal-dialog{
+		max-width: 540px;
+	}
+
+	button{
+		&.ms-big{
+			background-color: transparent;
+			color: #8a8b8c;
+			&:before{
+				opacity: 0.7;
+			}
+
+			.ms-text-name{
+				text-align: left;
+				p{
+					color: #333;
+				}
+			}
+		}
+	}
+
+	.ms-text-target{
+		color: #8a8b8c;
+	}
+
+	tr.active{
+		button{
+			&.ms-big{
+				background-color: transparent;
+				color: #333;
+				&:before{
+					opacity: 1 !important;
+					background-position: -70px -199px;
+					background-size: 348px;
+				}
+			}
+		}
+
+		.ms-text-target{
+			font-weight: 600;
+			color: #333 !important;
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
 /* MODAL BASIC
 /*-----------------------------------------------------------------------------------------------------*/
 .modal{
@@ -5439,6 +5979,11 @@ form{
 		>label{
 			padding-right: 5px;
 		}
+	}
+
+	.modal-dialog {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.ms-modal-header{
@@ -5449,7 +5994,9 @@ form{
 		border-bottom: 1px solid #f0f0f0;
 		padding-top: 10px !important;
 		padding-bottom: 10px !important;
-		
+		padding-left: 20px;
+		padding-right: 20px;
+
 		.ms-title{
 		  margin-right: auto;
 		  font-weight: 700;
@@ -5467,7 +6014,6 @@ form{
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				text-align: left;
-
 				height: 30px;
 				line-height: 30px;
 			}
@@ -5479,9 +6025,56 @@ form{
 		  &:before{
 		  	margin-top: -5px;
 		  }
+
+		  &.ms-icon-bucket{
+		  	&:before{
+		  		margin-right: 10px;
+					background: url('../images/crm-icons.png');
+					background-position: -51px -144px;
+					background-size: 250px 250px;
+					width: 16px;
+					height: 25px;
+		  	}
+		  }
+
+		  &.ms-icon-note{
+		  	&:before{
+					//background: url('../images/crm-icons.png');
+					background-position: -167px -226px;
+					background-size: 250px 250px;
+					width: 21px;
+					height: 21px;
+					margin-right: 10px;
+		  	}
+		  }
+
+		  &.ms-icon-email{
+		  	&:before{
+					background-position: -512px -74px;
+					background-size: 180px 180px;
+					width: 28px;
+					height: 28px;
+					margin-right: 10px;
+		  	}
+		  }
+
+		  &.ms-icon-tag{
+		  	&:before{
+					content: "";
+					display: inline-block;
+					background: url('../images/crm-icons.png');
+					background-position: -67px -252px;
+					background-size: 280px 280px;
+					width: 23px;
+					height: 25px;
+					margin-right: 10px;
+					margin-top: 1px;
+		  	}
+		  }
 		}
 
 		.close{
+			margin-right: -10px;
 			background: transparent;
 			color: #a6a7a7;
 			&:after{
@@ -5519,17 +6112,29 @@ form{
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
+	.ms-basic-table{
+		thead{
+			tr{
+				th:last-child {
+					text-align: center;
+				}
+			}
+		}
+	}
 	
 	@media screen and (min-width: 640px){
 		.ms-modal-header{
-			padding: 20px 15px;
+			padding: 20px;
 		}
-
-		.ms-wrap-btn{
-			justify-content: flex-end;
-			.btn{
-				margin-right: 0;
-				margin-left: 10px;
+		
+		.ms-crm-form{
+			.ms-wrap-btn{
+				justify-content: flex-end;
+				.btn{
+					margin-right: 0;
+					margin-left: 10px;
+				}
 			}
 		}
 
@@ -5590,10 +6195,8 @@ form{
 /* FORMULARIO NEW CONTACT
 /*-----------------------------------------------------------------------------------------------------*/
 #ms-new-contact{
-
 	width: 100%;
 	max-width: 650px;
-
 	.btn-group{
 		border: 1px solid #e8e8e8;
 		border-radius: 4px;
@@ -5617,6 +6220,9 @@ form{
 	.form-item{
 		label{
 			font-size: 12px;
+			@media screen and (min-width: 991px){
+				font-size: 14px;
+			}
 		}
 
 		&.ms-flex{
@@ -5639,6 +6245,7 @@ form{
 	.ms-header{
 		width: 100%;
 		margin-top: 30px;
+		margin-bottom: 15px;
 		.ms-title{
 			font-size: 16px;
 		}
