@@ -4589,6 +4589,74 @@ form{
 			}
 		}
 	}
+
+	&.ms-agent-profile{
+
+		.ms-wrap-info{
+			.ms-user-detail{
+				.ms-title{
+					margin-bottom: 0
+				}
+				.ms-subtitle{
+					font-size: 14px;
+					margin-bottom: 10px;
+					display: block;
+				}
+			}
+		}
+
+		.ms-social{
+			li{
+				display: flex;
+				align-items: center;
+				margin-bottom: 5px;
+				width: 100%;
+				span{
+					margin-right: 10px;
+					height: 15px;
+					&:before{
+						width: 15px;
+						height: 15px;
+					}
+
+					&.ms-icon-facebook{
+						&:before{
+							background-position: -295px 0px;
+							background-size: 310px;
+						}
+					}
+
+					&.ms-icon-instagram{
+						&:before{
+							background-position: -295px -15px;
+							background-size: 310px;
+						}
+					}
+				}
+			}
+		}
+
+		.ms-wrap-profile{
+			.ms-wrap-info{
+				.ms-cl-a{
+					width: 210px;
+				}
+				
+				.ms-cl-b{
+    			width: calc(100% - 230px);
+				}
+			}
+		}
+
+		@media screen and (min-width: 1024px){
+			.ms-wrap-profile{
+				.ms-block-c,
+				.ms-wrap-info{
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
