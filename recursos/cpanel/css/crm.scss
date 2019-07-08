@@ -4592,7 +4592,12 @@ form{
 
 	&.ms-agent-profile{
 
+		.ms-wrap-profile{
+			max-width: 945px;
+		}
+
 		.ms-wrap-info{
+			margin-bottom: 15px;
 			.ms-user-detail{
 				.ms-title{
 					margin-bottom: 0
@@ -4653,6 +4658,27 @@ form{
 				.ms-block-c,
 				.ms-wrap-info{
 					width: 100%;
+				}
+			}
+		}
+
+		@media screen and (min-width: 1600px){
+			.ms-wrap-profile{
+				position: relative;
+				.ms-block-a,
+				.ms-block-c{
+					width: 67.72%
+				}
+
+				.ms-block-b{
+					width: 29.47%;
+					flex-wrap: wrap;
+					position: absolute;
+					right: 0;
+					top: 0;
+					.ms-widget{
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -6170,7 +6196,7 @@ form{
 
 	.ms-sub-title{
 		margin: 15px 0 10px 0;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 700;
 	}
 
@@ -6358,5 +6384,21 @@ form{
 				}
 			}
 		}
+	}
+}
+
+.ms-label-file{
+	border: 2px dashed #737477;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	color: #3298d5;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
 	}
 }

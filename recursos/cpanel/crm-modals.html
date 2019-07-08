@@ -142,6 +142,11 @@
               <span>SMS Template</span>
             </button>
           </li>
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-tag">
+              <span>Add Tag</span>
+            </button>
+          </li>
         </ul>
 
         <!-- MODAL TO-DO -->
@@ -673,7 +678,7 @@
         </div>
 
         <!-- MODAL TAG -->
-        <div class="modal fade" id="modal-note" tabindex="-1" role="dialog">
+        <div class="modal fade" id="modal-tag" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header ms-modal-header">
@@ -681,8 +686,8 @@
                 <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
               </div>
               <div class="modal-body">
+								<label for="ms-tag-name">Press enter inster the tag</label>
                 <div class="form-item ms-full ms-wrap-tagsinput">
-                  <label for="ms-tag-name">Tag Name</label>
                   <input type="text" name="ms-tag-name" id="ms-tag-name" data-role="tagsinput">
                 </div>
                 <div class="ms-wrap-btn ms-full">

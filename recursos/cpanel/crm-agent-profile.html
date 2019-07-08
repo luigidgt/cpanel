@@ -120,8 +120,8 @@
 
           <div class="ms-wrap-info ms-block-a">
             <div class="ms-cl-a">
-              <input type="file">
-              <label>+Add Agent Photo</label>
+              <input type="file" id="ms-avatar-img">
+              <label class="ms-label-file" for="ms-avatar-img">+Add Agent Photo</label>
             </div>
 
             <div class="ms-user-detail ms-cl-b">
@@ -199,7 +199,9 @@
                 <a href="#" class="ms-link">+Add New</a>
               </div>
               <div class="ms-body-widget">
-                <textarea class="add-text" id="agent-biography" placeholder="Enter your biography"></textarea>
+                <textarea class="add-text" id="agent-biography" placeholder="Enter your biography">
+                  <p>Dear, John Smth, I wanted to follow up with you and send you the rental agreement you requested. please let me know if we can jump on a call... Sent on June 26, 2018 at 02:40pm Open on June 27, 2018 at 09:30amagreement you requested. please let me know if we can jump on a call... Sent on June 26, 2018 at 02:40pm Open on June 27, 2018 at 09:30am</p><br><p>please let me know if we can jump on a call... Sent on June 26, 2018 at 02:40pm Open on June 27, 2018 at 09:30amagreement you requested. please let me know if we can jump on a call... Sent on June 26, 2018 at 02:40pm Open on June 27, 2018 at 09:30am</p>
+                </textarea>
               </div>
             </div>
 
@@ -209,7 +211,26 @@
                 <a href="#" class="ms-link">+Add New</a>
               </div>
               <div class="ms-body-widget">
-                <textarea class="add-text" id="agent-signature" placeholder="Agent Signature"></textarea>
+                <textarea class="add-text" id="agent-signature" placeholder="Agent Signature">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td style="border:0">
+                          <img src="images/email-header-1.png">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border:0">Johanna Johanssen</td>
+                      </tr>
+                      <tr>
+                        <td style="border:0"><a href="tel:7863262828">Cell: 786 326 2828</a></td>
+                      </tr>
+                      <tr>
+                        <td style="border:0"><a href="mailto:Johanseen@idxboost.com">Johanseen@idxboost.com</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </textarea>
               </div>
             </div>
           </div>
@@ -225,9 +246,9 @@
     <script type="text/javascript" src="../../js/main.js"></script>
     <script type="text/javascript" src="../../js/jquery.richtext.min.js"></script>
     <script type="text/javascript">
-
-      jQuery(".add-text").richText();
-
+      jQuery(".add-text").each(function( index ) {
+        jQuery(this).richText();
+      });
     </script>
   </body>
 </html>
