@@ -121,7 +121,7 @@
           <div class="ms-wrap-info ms-block-a">
             <div class="ms-cl-a">
               <input type="file" id="ms-avatar-img">
-              <label class="ms-label-file" for="ms-avatar-img">+Add Agent Photo</label>
+              <label class="ms-label-file" for="ms-avatar-img" id="ms-label-file">+Add Agent Photo</label>
             </div>
 
             <div class="ms-user-detail ms-cl-b">
@@ -248,6 +248,22 @@
     <script type="text/javascript">
       jQuery(".add-text").each(function( index ) {
         jQuery(this).richText();
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            jQuery('#ms-label-file').html('<img src="'+e.target.result+'"/><span>+Edit Agent Photo</span>').addClass('active');
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      jQuery("#ms-avatar-img").change(function() {
+        readURL(this);
       });
     </script>
   </body>

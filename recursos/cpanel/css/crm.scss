@@ -4645,10 +4645,31 @@ form{
 			.ms-wrap-info{
 				.ms-cl-a{
 					width: 210px;
+					margin: 0 auto;
+					margin-bottom: 15px;
 				}
 				
 				.ms-cl-b{
-    			width: calc(100% - 230px);
+					width: 100%;
+					padding: 0;
+					text-align: center;
+				}
+			}
+		}
+
+		@media screen and (min-width: 640px){
+			.ms-wrap-profile{
+				.ms-wrap-info{
+					.ms-cl-a{
+						margin-left: 0;
+						margin-bottom: 0;
+					}
+					
+					.ms-cl-b{
+						width: calc(100% - 230px);
+						padding-left: 15px;
+						text-align: left;
+					}
 				}
 			}
 		}
@@ -6387,18 +6408,75 @@ form{
 	}
 }
 
+.ms-wrap-picture{
+	width: 100%;
+	.ms-label-file{
+		max-width: 210px;
+	}
+}
+
 .ms-label-file{
 	border: 2px dashed #737477;
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: 260px;
 	align-items: center;
 	justify-content: center;
 	color: #3298d5;
 	font-size: 12px;
 	font-weight: 600;
 	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	margin: 0;
 	&:hover{
 		text-decoration: underline;
+	}
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&.active{
+		border: 2px solid #737477;
+		color: #FFF;
+		text-shadow: 0px 1px 4px rgba(0,0,0,.33);
+		align-items: flex-end;
+		span{
+			padding: 10px;
+			background-color: #333;
+			display: block;
+			width: 100%;
+			text-align: center;
+			text-decoration: none !important;
+			transition: all .3s;
+		}
+		&:hover{
+			span{
+				background-color: #000;
+			}
+		}
+	}
+}
+
+.ms-wrap{
+	position: relative;
+	width: 100%;
+
+	.ms-min-text{
+		padding: 10px 0;
+		font-size: 12px;
+		color: #303030;
+		margin: 0;
+		@media screen and (min-width: 640px){
+			position: absolute;
+			top: 20px;
+			right: 0;
+		}
 	}
 }
