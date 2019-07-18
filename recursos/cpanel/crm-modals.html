@@ -147,7 +147,55 @@
               <span>Add Tag</span>
             </button>
           </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-create-bucket">
+              <span>Create Bucket</span>
+            </button>
+          </li>
         </ul>
+
+        <!-- CREATE BUCKET -->
+        <div class="modal fade" id="modal-create-bucket" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header">
+                <h4 class="ms-title ms-icon-bucket"><span>Create Bucket</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body">
+                <form name="form-new-bucket" method="post" id="form-new-bucket" class="ms-new-form ms-crm-form">
+                  <div class="form-item ms-full">
+                    <label for="bucket-name">Create New Bucket</label>
+                    <input type="text" id="bucket-name" name="bucket-name" required="required">
+                  </div>
+                  <div class="form-item">
+                    <label for="select-campaing">Assign Drip Campaign</label>
+                    <select class="ms-select" placeholder="Select Email Template" name="campaign" id="select-campaing">
+                      <option></option>
+                      <option value="0">Template A</option>
+                      <option value="1">Template B</option>
+                      <option value="2">Template C</option>
+                    </select>
+                  </div>
+                  <div class="form-item">
+                    <label for="select-target" class="required">Bucket Target</label>
+                    <select class="ms-select" placeholder="Select Bucket Target" name="target" id="select-target" data-minimum-results-for-search="Infinity">
+                      <option></option>
+                      <option value="0">Buyers</option>
+                      <option value="1">Sellers</option>
+                      <option value="2">Renters</option>
+                    </select>
+                  </div>
+                  <div class="ms-wrap-btn">
+                    <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                    <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
+                  </div>
+                </form>  
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- MODAL TO-DO -->
         <div class="modal fade" id="modal-todo" tabindex="-1" role="dialog">

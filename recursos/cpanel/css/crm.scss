@@ -5441,11 +5441,13 @@ form{
 	}
 }
 
-#create-list{
-	tbody{
-		tr{
-			td:first-child{
-				max-width: 170px;
+@media screen and (min-width: 640px){
+	#create-list{
+		tbody{
+			tr{
+				td:first-child{
+					max-width: 170px;
+				}
 			}
 		}
 	}
@@ -6477,6 +6479,375 @@ form{
 			position: absolute;
 			top: 20px;
 			right: 0;
+		}
+	}
+}
+
+.ms-min-switch{
+	label{
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+
+	.ms-button-switch{
+		margin-right: 10px;
+		height: 20px;
+		width: 45px;
+		border-radius: 0;
+		//
+		span{
+			display: none !important;
+		}
+
+		label{
+			border-radius: 25px;
+			background-color: #FFF;
+			border: 1px solid #4a4a4b;
+			transition: none;
+			&:before{
+				width: 14px;
+				height: 14px;
+				top: 50%;
+				margin-top: -7px;
+				background-color: #404041;
+			}
+		}
+
+		input:checked+label{
+			border: 0;
+			background-color: transparent;
+			background: linear-gradient(to right, #fa6630, #be155e);
+			&:before{
+				left: 25px;
+				background-color: #FFF;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* LEADS TABLA USER
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-wrap-table-crm{
+	&.ms-crm-user{
+		.ms-lead-body{
+			>li{
+				height: auto;
+				>.ms-item{
+					border-right: 0;
+					border-left: 1px solid #cacaca;
+					padding: 0 15px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					color: #909090;
+					font-size: 12px;
+					flex-grow: 1;
+					//flex-shrink: 0;
+					.ms-bg-text{
+						display: none;
+					}
+
+					.ms-bold{
+						color: #333;
+					}
+
+					.ms-min-switch{
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						.ms-button-switch{
+							margin-right: 0;
+							margin-bottom: 4px;
+							height: 16px;
+							width: 33px;
+							label{
+								border: 0;
+								background: linear-gradient(to right, #969696, #606060);
+								&:before {
+									width: 12px;
+									height: 12px;
+									margin-top: -6px;
+									left: 2px;
+									background-color: #FFF;
+								}
+							}
+							
+							input:checked+label{
+								background: linear-gradient(to right, #fa6630, #be155e);
+								&:before{
+									left: 19px;
+								}
+							}
+						}
+
+						label{
+							font-weight: normal;
+						}
+					}
+				}
+
+				>.ms-wrap{
+					width: auto;
+					&.ms-item{
+						flex-direction: row;
+						.ms-item{
+							padding: 5px 10px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							flex-direction: column;
+							color: #909090;
+
+							.ms-bold{
+								font-size: 14px;
+								color: #0374ad;
+							}
+
+							a{
+								color: #909090;
+							}
+
+							&:hover{
+								a{
+									color: #0374ad;
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+
+					&.ms-username{
+						padding: 5px !important;
+					}
+				}
+			}
+
+			.ms-lead-item{
+				.ms-user-avatar{
+					width: 62px;
+					height: 69px;
+					border-radius: 0;
+				}
+			}
+
+			.ms-username{ 
+				order: 0;
+				width: 290px !important;
+				@media screen and (min-width: 1600px){
+					width: 315px !important;
+				}
+			}
+
+			.ms-activity{ 
+				order: 1;
+				width: 180px; 
+			}
+
+			.ms-rooster{ 
+				order: 2;
+				width: 120px; 
+			}
+
+			.ms-sendlead{ 
+				order: 3;
+				width: 120px; 
+			}
+
+			.ms-lastlead{ 
+				order: 4;
+				width: 105px;
+			}
+
+			.ms-assigned{ 
+				order: 5;
+				width: 200px !important;
+			}
+
+			.ms-joinon{ 
+				order: 6;
+				width: 110px;
+			}
+
+			.ms-office{ 
+				order: 7;
+				width: 100%;
+				width: 130px; 
+			}
+
+			.ms-delete{ 
+				order: 8;
+				width: 60px;
+			}
+
+			.ms-arrow {
+				//position: absolute;
+				position: relative;
+				display: none;
+				top: 0;
+				left: 0;
+				width: 35px;
+				height: 100%;
+				text-indent: -999999px;
+				overflow: hidden;
+				background-color: transparent;
+				color: #858687;
+				&:before{
+					content: "\e901";
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 16px;
+					font-family: "icomoon"!important;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					text-indent: 0;
+					transform: rotate(90deg);
+				}
+			}
+
+			@media (max-width: 767px){
+
+				.ms-arrow {
+					display: block;
+				}
+				
+				>li>.ms-wrap.ms-username{
+					padding-left: 40px !important;
+				}
+
+				.ms-item{
+					border: 0 !important;
+					.ms-bg-text{
+						display: block !important;
+						text-align: center;
+						text-transform: uppercase;
+						font-size: 11px;
+						font-weight: 700;
+						margin-bottom: 5px;
+						color: #333;
+					}
+				}
+
+				.ms-username{ 
+					order: 0;
+					width: 100% !important;
+					border-bottom: 0 !important;
+				}
+
+				.ms-office{
+					order: 1;
+					width: 100% !important;
+					flex-direction: row !important;
+					padding: 10px 15px !important;
+					justify-content: flex-start !important;
+					border-top: 1px solid #dfe0e0 !important;
+					border-bottom: 1px solid #dfe0e0 !important;
+					display: none !important;
+					.ms-bg-text{
+						margin-bottom: 0;
+						margin-right: 10px;
+					}
+				}
+
+				.ms-activity{
+					order: 2;
+					width: 100%;
+					padding: 10px 15px !important;
+					border-bottom: 1px solid #dfe0e0 !important;
+					display: none !important;
+				}
+
+				.ms-rooster,
+				.ms-sendlead{
+					order: 3;
+					width: 50%;
+					padding: 10px 15px !important;
+					border-bottom: 1px solid #dfe0e0 !important;
+					border-right: 1px solid #dfe0e0 !important;
+					display: none !important;
+				}
+
+				.ms-assigned{
+					width: 100% !important;
+					order: 4;
+					border-bottom: 1px solid #dfe0e0 !important;
+					padding: 0 !important;
+					display: none !important;
+					.ms-item{
+						width: 50%;
+						border-right: 1px solid #dfe0e0 !important;
+						padding: 15px !important;
+						&:nth-child(2){
+							border-right: 0 !important;
+						}
+					}
+				}
+
+				.ms-sendlead{
+					border-right: 0 !important;
+				}
+
+				.ms-lastlead,
+				.ms-joinon{
+					order: 5;
+					width: 50%;
+					padding: 10px 15px !important;
+					display: none !important;
+				}
+
+				.ms-delete{
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 80px;
+					padding: 0 !important;
+					width: 40px;
+				}
+
+				>li{
+					position: relative;
+					&.active{
+						.ms-office,
+						.ms-activity,
+						.ms-rooster,
+						.ms-sendlead,
+						.ms-assigned,
+						.ms-lastlead,
+						.ms-joinon{
+							display: flex !important;
+						}
+
+						.ms-arrow:before {
+							transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.ms-elipsis{
+	width: auto;
+	max-width: 100%;
+	display: block;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #333;
+}
+
+@media (max-width: 767px){
+	.ms-activity-actions{
+		&.ms-todo{
+			border-bottom: 1px solid #dfe0e0;
 		}
 	}
 }
