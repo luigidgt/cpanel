@@ -5362,6 +5362,16 @@ form{
 		left: -42px;
 	}
 
+	.ms-subject-footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.ms-button{
+			width: auto;
+			margin-top: 10px;
+		}
+	}
+
 	@media (max-width: 640px){
 		padding-left: 0;
 		margin-bottom: 0;
