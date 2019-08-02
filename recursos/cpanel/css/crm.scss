@@ -2,9 +2,6 @@
 /* CRM LEAD
 /*-----------------------------------------------------------------------------------------------------*/
 .ms-crm-page{
-	//padding: 0 15px;
-	//background-color: #f2f2f2;
-	//overflow-x: auto;
 	button{
 		background-color: transparent;
 	}
@@ -13,6 +10,37 @@
 /*-----------------------------------------------------------------------------------------------------*/
 /* COMPONENTES
 /*-----------------------------------------------------------------------------------------------------*/
+.btn-icon-edit,
+.btn-icon-delete{
+	width: 30px;
+	height: 30px;
+	span{
+		background: url('../images/crm-icons.png');
+		margin: auto;
+		text-indent: -999999px;
+		overflow: hidden;
+	}
+}
+
+.btn-icon-edit{
+	span{
+		background-position: -180px -21px;
+		background-repeat: no-repeat;
+		background-size: 250px auto;
+		width: 22px;
+		height: 22px;
+	}
+}
+
+.btn-icon-delete{
+	span{
+		background-position: -19px -39px;
+		background-size: 250px auto;
+		width: 19px;
+		height: 21px;
+	}
+}
+
 .ms-table{
 	width: 100%;
 	thead{
@@ -7180,7 +7208,7 @@ form{
 	.ms-header{
 		margin-bottom: 0;
 	}
-	
+
 	.ms-new-basic-form{
     padding: 30px 15px 0 15px;
     margin-left: -15px;
