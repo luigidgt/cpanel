@@ -2439,6 +2439,7 @@ form{
 	width: 100%;
 	margin: 0 auto;
 	.ms-lead-item{
+		position: relative;
 		border-radius: 4px;
 		background-color: #FFF;
 		border: 1px solid #d6d5da;
@@ -3566,7 +3567,7 @@ form{
 		}
 	}
 
-	@media screen and (min-width: 1200px){
+	@media screen and (min-width: 1300px){
 		.ms-wrap-filter{
 			.ms-wrap-input{
 				&.ms-inp-search{
@@ -3577,10 +3578,6 @@ form{
 	}
 
 	@media screen and (min-width: 1440px){
-
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		padding-bottom: 15px;
 
 		.ms-wrap-filter{
@@ -3598,7 +3595,22 @@ form{
 				margin-bottom: 0;
 			}
 		}
-	
+	}
+
+	@media screen and (min-width: 1600px){
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+
+		.ms-wrap-filter{
+			.ms-wrap-input{
+				&.ms-inp-search{
+					width: 280px;
+				}
+			}
+		}
+
 		.ms-top-pag{
 			display: flex;
 			align-items: center;
@@ -3637,16 +3649,6 @@ form{
 					&:before{
 						transform: rotate(-180deg);
 					}
-				}
-			}
-		}
-	}
-
-	@media screen and (min-width: 1600px){
-		.ms-wrap-filter{
-			.ms-wrap-input{
-				&.ms-inp-search{
-					width: 280px;
 				}
 			}
 		}
@@ -7179,6 +7181,13 @@ form{
 		margin-bottom: 0;
 	}
 
+	.ms-new-basic-form{
+    padding: 30px 15px 0 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: #FFF;
+	}
+
 	@media screen and (min-width: 768px){
 		.ms-lead-body .ms-lead-item .ms-user-info {
 			max-width: 100%;
@@ -7211,12 +7220,8 @@ form{
 		}
 	}
 
-	.ms-edit-bucket{
+	/*.ms-edit-bucket{
 		.ms-filter-actions{
-			margin-top: 15px;
-			padding-top: 15px;
-			border-top: 1px solid #eaeaea;
-
 			.ms-search{
 				height: 43px;
 			}
@@ -7277,9 +7282,8 @@ form{
 				}
 			}
 		}
-	}
+	}*/
 }
-
 
 #ms-input-search{
 	.ui-widget-content{
