@@ -96,11 +96,22 @@
         <div class="ms-filter-actions">
           
           <div class="ms-wrap-filter">
-            <div class="ms-select-items">
+
+            <button class="ms-button" id="ms-more-filters">
+              <span>Filters</span>
+            </button>
+
+            <div class="ms-wrap-input ms-inp-search">
+              <div class="ms-input-search">
+                <input type="search" name="ms_search" id="ms_search" class="ms-search" placeholder="Search leads">
+              </div>
+            </div>
+
+            <div class="ms-ft-item ms-select-items">
               <button class="ms-button" id="select-all-items">Select all</button>
             </div>
             
-            <div class="ms-dropdown ms-select-actions dropdown">
+            <div class="ms-ft-item ms-dropdown ms-select-actions dropdown">
               <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Actions</button>
               <ul class="ms-dropdown-list dropdown-menu">
                 <li><a>Send To Dialer</a></li>
@@ -119,11 +130,7 @@
               </ul>
             </div>
 
-            <div class="ms-wrap-input ms-input-search">
-              <input type="search" name="ms_search" id="ms_search" class="ms-search" placeholder="Search leads">
-            </div>
-
-            <div class="ms-dropdown ms-select-filter">
+            <div class="ms-ft-item ms-dropdown ms-select-filter">
               <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Filter Leads</button>
               <ul class="ms-dropdown-list dropdown-menu">
                 <li class="ms-wrap-chk ms-disabled">
@@ -173,7 +180,7 @@
               </ul>
             </div>
 
-            <div class="ms-dropdown ms-select-leads">
+            <div class="ms-ft-item ms-dropdown ms-select-leads">
               <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Newest Leads</button>
               <ul class="ms-dropdown-list dropdown-menu">
                 <li><a>Recent activity</a></li>
@@ -183,7 +190,8 @@
               </ul>
             </div>
 
-            <button class="ms-new-lead ms-button">Add Lead</button>
+            <button class="ms-ft-item ms-new-lead ms-button">Add Lead</button>
+
           </div>
 
           <div class="ms-top-pag">
@@ -1370,6 +1378,16 @@
     <script type="text/javascript" src="../../js/main.js"></script>
 
     <script type="text/javascript">
+
+      jQuery(document).on('click','#ms-more-filters', function(){
+        if (jQuery(".ms-filter-actions").hasClass('active')) {
+          jQuery(this).text('Filters');
+          jQuery(".ms-filter-actions").removeClass('active');
+        }else{
+          jQuery(this).text('Close');
+          jQuery(".ms-filter-actions").addClass('active');
+        }
+      });
 
       jQuery(document).on('click', '.ms-arrow', function () {
         jQuery(this).parents(".ms-lead-item").toggleClass('active');
