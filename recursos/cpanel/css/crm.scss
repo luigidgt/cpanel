@@ -7432,15 +7432,6 @@ form{
 		max-height: 450px;
 		overflow-y: auto;
 		li{
-			padding: 10px 15px;
-			position: relative;
-			padding-left: 50px;
-			border-bottom: 1px solid #e8e8e8;
-			font-size: 14px;
-			font-weight: 600;
-			min-height: 50px;
-			display: flex;
-			align-items: center;
 			&:last-child{
 				border-bottom: 0;
 			}
@@ -7471,6 +7462,32 @@ form{
 					height: 100%;
 					object-fit: cover;
 					z-index: 1;
+				}
+			}
+		}
+
+		.ms-add-agent{
+			width: 100%;
+			text-align: left;
+			padding: 10px 15px;
+			position: relative;
+			padding-left: 50px;
+			border-bottom: 1px solid #e8e8e8;
+			font-size: 14px;
+			font-weight: 600;
+			min-height: 50px;
+			display: flex;
+			align-items: center;
+			&.active{
+				&:after{
+					content: "\e904";
+					font-family: "icomoon"!important;
+					display: inline-block;
+					font-size: 18px;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
 				}
 			}
 		}
