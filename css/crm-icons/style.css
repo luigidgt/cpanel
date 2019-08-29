@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'crm-icons';
-  src:  url('fonts/crm-icons.eot?sczxq2');
-  src:  url('fonts/crm-icons.eot?sczxq2#iefix') format('embedded-opentype'),
-    url('fonts/crm-icons.ttf?sczxq2') format('truetype'),
-    url('fonts/crm-icons.woff?sczxq2') format('woff'),
-    url('fonts/crm-icons.svg?sczxq2#crm-icons') format('svg');
+  src:  url('fonts/crm-icons.eot?2jv0ei');
+  src:  url('fonts/crm-icons.eot?2jv0ei#iefix') format('embedded-opentype'),
+    url('fonts/crm-icons.ttf?2jv0ei') format('truetype'),
+    url('fonts/crm-icons.woff?2jv0ei') format('woff'),
+    url('fonts/crm-icons.svg?2jv0ei#crm-icons') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="crm-"], [class*=" crm-"] {
@@ -22,9 +23,32 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
+.crm-ms-youtube-a:before {
+  content: "\e925";
+}
+.crm-ms-twitter-a:before {
+  content: "\e926";
+}
+.crm-ms-pinterest-a:before {
+  content: "\e921";
+}
+.crm-ms-instagram-a:before {
+  content: "\e923";
+}
+.crm-ms-google-a:before {
+  content: "\ea8c";
+}
+.crm-ms-facebook-a:before {
+  content: "\ea91";
+}
+.crm-ms-linkedin-a:before {
+  content: "\eac9";
+}
+.crm-ms-bucket:before {
+  content: "\e924";
+}
 .crm-ms-pinterest:before {
   content: "\e900";
 }
@@ -64,12 +88,6 @@
 .crm-ms-youtube:before {
   content: "\e913";
 }
-.crm-ms-filter:before {
-  content: "\e903";
-}
-.crm-ms-hidden:before {
-  content: "\e904";
-}
 .crm-ms-add:before {
   content: "\e906";
 }
@@ -78,9 +96,6 @@
 }
 .crm-ms-phone:before {
   content: "\e908";
-}
-.crm-ms-open-email:before {
-  content: "\e909";
 }
 .crm-ms-phone-msg:before {
   content: "\e90a";
@@ -138,4 +153,13 @@
 }
 .crm-ms-ok:before {
   content: "\e920";
+}
+.crm-ms-filter:before {
+  content: "\e903";
+}
+.crm-ms-open-email:before {
+  content: "\e909";
+}
+.crm-ms-hidden:before {
+  content: "\e904";
 }
