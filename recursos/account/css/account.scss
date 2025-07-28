@@ -91,9 +91,9 @@ form{
 		border-radius: 4px;
 		border: 3px solid #c7c7c7;
 		font-size: 14px;
-		height: 44px;
-		line-height: 44px;
-		padding: 0 10px;
+		height: 42px;
+		line-height: 42px;
+		padding: 5px 10px;
 		width: 100%;
 	}
 	textarea{
@@ -200,9 +200,10 @@ form{
 	}
 	.btn{
 		margin-bottom: 5px;
-		padding: 9px 12px;
-		width: 100%;
-		max-width: 200px;
+    padding: 9px 12px;
+    width: auto;
+    max-width: 200px;
+    min-width: 160px;
 	}
 	.chk_content{
 		font-size: 13px;
@@ -322,135 +323,6 @@ form{
 }
 /*FINAL TABLA DE FILTROS*/
 
-
-/*INICIO ESTILO PARA LAS TABLES Y FILTROS*/
-.table{
-	thead{
-		tr{
-			display: flex;
-			th{
-				display: block;
-				width: 50%;
-				text-transform: uppercase;
-				&:nth-child(n+3){
-					display: none;
-				}
-				&:first-child{
-					padding-left: 0;
-				}
-				&:last-child{
-					padding-right: 0;
-				}
-				button{
-					background-color: #FFF;
-					color: #333;
-					font-size: 12px;
-					font-weight: 700;
-					height: 37px;
-					text-align: left;
-					text-transform: uppercase;
-					width: 100%;
-			    	&:after{
-						@include transition();
-						color: #686868;
-						content: "\e901";
-						display: inline-block;
-						font-family: 'icomoon' !important;
-						font-size: 12px;
-						padding: 10px;
-						transform: rotate(90deg);
-			    	}
-			    	&.active{
-			    		&:after{
-							transform: rotate(270deg);
-			    		}
-			    	}
-			    }
-			}
-		}
-	}
-	tbody{
-		tr{
-			border-bottom: 1px solid #ccc;
-			display: flex;
-			flex-wrap: wrap;
-			align-items:center;
-			td{
-				position: relative;
-				display: block;
-				width: 50%;
-				border: none;
-				&:nth-child(3){
-					background: url(../img/bg-leaders.png) center top repeat-x;
-				}
-				&:nth-child(n+3){
-					width: 100%;
-					overflow: hidden;
-					max-height: 0;
-					opacity: 0;
-					@include transition($t: .4s);
-					padding: 0px;
-					padding-left: 110px;
-					span{
-						display: block;
-					}
-				}
-				&:first-child{
-					padding-left: 35px;
-					&:before {
-					    content: "+";
-					    font-size: 16px;
-					    position: absolute;
-					    top: 7px;
-					    left: 10px;
-					    color: #75be27;
-					    font-weight: 800;
-					    display: inline-block;
-					}
-				}
-				&:last-child{
-					padding-right: 0;
-				}
-				span{
-					font-weight: 600;
-					font-size: 14px;
-					color: #080808;
-					width: 100px;
-					position: absolute;
-					display: none;
-					padding-right: 10px;
-					top: 2px;
-					left: 0;
-					&:before{
-						content: ":";
-						display: inline-block;
-						position: absolute;
-						right: 0;
-						top: 0;
-					}
-				}
-			}
-			&.actived{
-				td{
-					&:nth-child(n+3){
-						max-height: 600px;
-						opacity: 1;
-						padding-top: 3px;
-						padding-bottom: 3px;
-					}
-					&:nth-child(3){
-						padding-top: 10px;
-						span{
-							top: 10px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-/*FINAL ESTILO PARA LAS TABLES Y FILTROS*/
 
 @media (min-width: 769px){
 
@@ -631,7 +503,8 @@ form{
 				}
 			}
 		}
-	}
+  }
+  
 	.table-list.filters{
 		.header-list{
 			li{
@@ -698,47 +571,6 @@ form{
 		}
 	}
 	/*FINAL TABLAS DE LISTAS*/
-
-	/*INICIO TABLAS REALES*/
-	.table{
-		thead{
-			tr{
-				th{
-					display: block;
-					width: 33.333%;
-					&:nth-child(3){
-						display: block;
-					}
-					&:nth-child(n+4){
-						display: none;
-					}
-				}
-			}
-		}
-		tbody{
-			tr{
-				td{
-					width: 33.333%;
-					&:nth-child(3){
-						width: 33.333%;
-						background: none;
-						max-height: 600px;
-						opacity: 1;
-						padding: 8px;
-						span{
-							display: none;
-						}
-					}
-					&:nth-child(n+4){
-						width: 100%;
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	/**FINAL TABLAS REALES*/
-
 }
 
 @media (min-width: 1024px){
@@ -812,48 +644,6 @@ form{
 			}
 		}
 	}
-
-	/*INICIO TABLAS REALES*/
-	.table{
-		thead{
-			tr{
-				th{
-					display: block;
-					width: 25%;
-					&:nth-child(4){
-						display: block;
-					}
-					&:nth-child(n+5){
-						display: none;
-					}
-				}
-			}
-		}
-		tbody{
-			tr{
-				min-height: 50px;
-				td{
-					width: 25%;
-					&:nth-child(3),
-					&:nth-child(4){
-						width: 25%;
-						background: none;
-						max-height: 600px;
-						opacity: 1;
-						padding: 8px;
-						span{
-							display: none;
-						}
-					}
-					&:nth-child(n+5){
-						width: 100%;
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	/**FINAL TABLAS REALES*/
 }
 
 @media (min-width: 1366px){
@@ -892,59 +682,6 @@ form{
 		}
 	}
 
-	/*INICIO TABLAS REALES*/
-	.table{
-		thead{
-			tr{
-				th{
-					display: block;
-					width: 25%;
-					&:nth-child(4){
-						display: block;
-					}
-					&:nth-child(n+5){
-						display: block;
-					}
-				}
-			}
-		}
-		tbody{
-			tr{
-				flex-wrap: nowrap;
-				td{
-					width: 25%;
-					&:nth-child(3),
-					&:nth-child(4){
-						width: 25%;
-						background: none;
-						max-height: 600px;
-						opacity: 1;
-						padding: 8px;
-						span{
-							display: none;
-						}
-					}
-					&:nth-child(n+5){
-						width: 25%;
-						background: none;
-						max-height: 600px;
-						opacity: 1;
-						padding: 8px;
-						span{
-							display: none;
-						}
-					}
-					&:first-child{
-						padding-left: 0;
-						&:before{
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
-	/**FINAL TABLAS REALES*/
 }
 
 #featured_listings_featuredListingRentalType,
@@ -976,7 +713,6 @@ form{
     &:after{
 			content: "";
 			align-items: center;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			border-radius: 4px;
 			display: flex;
 			height: 12px;
@@ -989,6 +725,7 @@ form{
 			transform: scale(0);
 			transition: all linear .2s;
 			width: 12px;
+			@extend .gradient;
     }
   }
 
@@ -1466,7 +1203,7 @@ form[name="account_social_networks"]{
 #form-my-account-ed{
 	.form-item{
 		width: 100%;
-		@media screen and (min-width: 768px){
+		@media screen and (min-width: 769px){
 			&.item-name,
 			&.item-lname,
 			&.item-email,
@@ -1549,8 +1286,8 @@ form[name="account_social_networks"]{
 
 .alert{
 	&.idx-boost-alert{
-	  background: linear-gradient(to right, #fa6630, #be155e);
-	  border-color: #be155e;
+	  @extend .gradient;
+	  border-color: $color-b;
 	  color: #FFF;
 	}
 }
@@ -1772,26 +1509,27 @@ form[name="account_social_networks"]{
 	}
 
 	.idxboost-uploader-actions .remodal-confirm {
-	  background: linear-gradient(to right, #fa6630, #be155e) !important;
+	  background: $gradient !important;
 	  color: #FFF;
 	  border: none;
 	}
 }
 
 .iboost-account-has-expired{
-	>.rs-wrapper{
-		margin-top: 70px;
-		@media screen and (min-width: 768px){
-			margin-top: 137px;
-			.rs-navbar{
-				top: 50px;
-			}
+	padding-top: 60px;
+	@media screen and (min-width: 768px){
+		padding-top: 138px;
+		.rs-navbar{
+			top: 50px;
 		}
+	}
+	>.rs-wrapper{
+		margin-top: 0;
 	}
 }
 
 .iboost-account-expiration-banner{
-  background: linear-gradient(to right, #fa6630, #be155e)!important;
+  background: $gradient !important;
   height: auto;
   padding: 10px;
   width: 100%;
@@ -1801,6 +1539,10 @@ form[name="account_social_networks"]{
   top: 0;
   z-index: 1000;
   color: #FFF;
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   a{
   	color: #FFF;
   	text-decoration: underline;
@@ -1808,8 +1550,7 @@ form[name="account_social_networks"]{
   }
   @media screen and (min-width: 768px){
   	padding: 0;
-		height: 50px;
-		line-height: 50px;
+		min-height: 50px;
   }
 }
 
@@ -2157,20 +1898,19 @@ form[name="account_social_networks"]{
 	width: 100%;
 }
 
-
 #ib-wrap-header{
 	.delete_thumb{
 		position: absolute;
 		top: 0;
 		left: 0;
 		padding: 5px;
-		background: #f46035;
+		background: $color-a;
 		font-size: 10px;
 		color: #FFF;
 		transition: all .3s;
 		cursor: pointer;
 		&:hover{
-			background-color: #be155e;
+			background-color: $color-b;
 		}
 	}
 }
@@ -2249,9 +1989,9 @@ form[name="account_social_networks"]{
 			width: 100%;
 			height: 100%;
 			z-index: -1;
-			background: linear-gradient(to right, #fa6630, #be155e);
 			transition: opacity .4s;
 			opacity: 0;
+			@extend .gradient;
 		}
 	}
 
@@ -2359,7 +2099,7 @@ form[name="account_social_networks"]{
 	label{
 		font-weight: 600;
 		&:after{
-			background: linear-gradient(to right, #fa6630, #be155e);
+			@extend .gradient;
 		}
 	}
 
@@ -2464,7 +2204,7 @@ form[name="account_social_networks"]{
 	}
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px){
 	.rs-navbar nav .header-nav .search_nav #help {
 		width: 100% !important;
 	}
@@ -2522,4 +2262,349 @@ form[name="account_social_networks"]{
 			z-index: 1;
 		}
 	}
+}
+
+.idx-content-404{
+  padding: 100px 15px !important;
+  .idx-btn-404 {
+    font-size: 12px !important;
+  }
+}
+
+
+/***********************************************/
+/* RESETEANDO TABLAS */
+/**********************************************/
+/*
+.table{
+	thead{
+		tr{
+			display: flex;
+			th{
+				display: block;
+				width: 50%;
+				text-transform: uppercase;
+				&:nth-child(n+3){
+					display: none;
+				}
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					padding-right: 0;
+				}
+				button{
+					background-color: #FFF;
+					color: #333;
+					font-size: 12px;
+					font-weight: 700;
+					height: 37px;
+					text-align: left;
+					text-transform: uppercase;
+					width: 100%;
+			    	&:after{
+						@include transition();
+						color: #686868;
+						content: "\e901";
+						display: inline-block;
+						font-family: 'icomoon' !important;
+						font-size: 12px;
+						padding: 10px;
+						transform: rotate(90deg);
+			    	}
+			    	&.active{
+			    		&:after{
+							transform: rotate(270deg);
+			    		}
+			    	}
+			    }
+			}
+		}
+	}
+	tbody{
+		tr{
+			border-bottom: 1px solid #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			align-items:center;
+			td{
+				position: relative;
+				display: block;
+				width: 50%;
+				border: none;
+				&:nth-child(3){
+					background: url(../img/bg-leaders.png) center top repeat-x;
+				}
+				&:nth-child(n+3){
+					width: 100%;
+					overflow: hidden;
+					max-height: 0;
+					opacity: 0;
+					@include transition($t: .4s);
+					padding: 0px;
+					padding-left: 110px;
+					span{
+						display: block;
+					}
+				}
+				&:first-child{
+					padding-left: 35px;
+					&:before {
+					    content: "+";
+					    font-size: 16px;
+					    position: absolute;
+					    top: 7px;
+					    left: 10px;
+					    color: #75be27;
+					    font-weight: 800;
+					    display: inline-block;
+					}
+				}
+				&:last-child{
+					padding-right: 0;
+				}
+				span{
+					font-weight: 600;
+					font-size: 14px;
+					color: #080808;
+					width: 100px;
+					position: absolute;
+					display: none;
+					padding-right: 10px;
+					top: 2px;
+					left: 0;
+					&:before{
+						content: ":";
+						display: inline-block;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+			&.actived{
+				td{
+					&:nth-child(n+3){
+						max-height: 600px;
+						opacity: 1;
+						padding-top: 3px;
+						padding-bottom: 3px;
+					}
+					&:nth-child(3){
+						padding-top: 10px;
+						span{
+							top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 769px){
+	.table{
+		thead{
+			tr{
+				th{
+					display: block;
+					width: 33.333%;
+					&:nth-child(3){
+						display: block;
+					}
+					&:nth-child(n+4){
+						display: none;
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				td{
+					width: 33.333%;
+					&:nth-child(3){
+						width: 33.333%;
+						background: none;
+						max-height: 600px;
+						opacity: 1;
+						padding: 8px;
+						span{
+							display: none;
+						}
+					}
+					&:nth-child(n+4){
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px){
+	.table{
+		thead{
+			tr{
+				th{
+					display: block;
+					width: 25%;
+					&:nth-child(4){
+						display: block;
+					}
+					&:nth-child(n+5){
+						display: none;
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				min-height: 50px;
+				td{
+					width: 25%;
+					&:nth-child(3),
+					&:nth-child(4){
+						width: 25%;
+						background: none;
+						max-height: 600px;
+						opacity: 1;
+						padding: 8px;
+						span{
+							display: none;
+						}
+					}
+					&:nth-child(n+5){
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1366px){
+	.table{
+		thead{
+			tr{
+				th{
+					display: block;
+					width: 25%;
+					&:nth-child(4){
+						display: block;
+					}
+					&:nth-child(n+5){
+						display: block;
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				flex-wrap: nowrap;
+				td{
+					width: 25%;
+					&:nth-child(3),
+					&:nth-child(4){
+						width: 25%;
+						background: none;
+						max-height: 600px;
+						opacity: 1;
+						padding: 8px;
+						span{
+							display: none;
+						}
+					}
+					&:nth-child(n+5){
+						width: 25%;
+						background: none;
+						max-height: 600px;
+						opacity: 1;
+						padding: 8px;
+						span{
+							display: none;
+						}
+					}
+					&:first-child{
+						padding-left: 0;
+						&:before{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}*/
+
+
+.table{
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead,
+  tbody{
+    tr{
+      td{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        border-bottom: 1px solid #f6f6f6;
+      }
+
+      th{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        border-bottom: 2px solid #f6f6f6;
+      }
+
+      td,
+      th{
+        vertical-align: bottom;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #f6f6f6;
+        display: table-cell !important;
+        padding-left: 0;
+        &:last-child{
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        &.flex-end{
+          text-align: right;
+        }
+
+        &.flex-center{
+          text-align: center;
+        }
+
+        .btn-filter-copy{
+          margin-left: 20px;
+        }
+
+        &.nsx-nlf{
+          .btn-filter-copy{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  thead{
+    tr{
+      th{
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.ms-table-md{
+    max-width: 950px;
+  }
 }

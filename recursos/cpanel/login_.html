@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Leads </title>
+    <meta name="keywords" content="idx boost">
+    <meta name="description" content="IDX Boost">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>.csv-import-container{width:70vw;height:600px;overflow-y:auto}.csv-import-container h2,.csv-import-container h2 span{font-size:20px}.csv-import-table{width:100%;table-layout:fixed}.csv-import-table th,.csv-import-table td{font-size:15px}.csv-import-table th{height:30px;line-height:30px}.csv-import-table td{line-height:1.5;padding:10px 0}.csv-import-table tbody > tr:hover{background-color:#f3f3f3}.csv-import-btn{background:linear-gradient(to right,#fa6630,#be155e);border:0;color:#fff;border-radius:4px;padding:10px;font-weight:700;border:none}.csv-import-not-found{max-width:400px!important;height:100px!important;text-align:center!important}.sub_item_nav li a.active{background-color:#333!important}.lead_logged_in{background:#00af00!important;color:#fff!important;display:inline-block!important;font-size:13px}.lead_logged_out{background:#d60a0a!important;color:#fff!important;display:inline-block!important;font-size:13px}.agent-slug-not-available{position:absolute;left:0;top:42px;width:100%;height:30px;line-height:30px;color:red;text-indent:255px;margin-top:0!important;padding-left:15px}.rs-navbar nav .logo a.new-lg img{width:100%}@media (min-width: 769px){.rs-navbar nav .logo a.new-lg{max-width:230px}}.modal__container{max-width:80vw;max-height:90vh;padding:15px}.modal__content{margin:0}.modal__footer{margin-top:15px}.modal-crop-info ul{list-style:none;margin:0;height:32px;line-height:32px;padding:0 15px;background:linear-gradient(to right,#fa6630,#be155e)}.modal-crop-info li{font-size:15px;display:inline-block;color:#fff}.modal__btn-primary{background:linear-gradient(to right,#fa6630,#be155e);outline:0}label sup{color:red;top:0;font-weight:600;font-size:13px!important}.show_autocomplet{width:30%!important;z-index:90000!important}#crm-billing-information .ms-form-item label,#crm-billing-contact .ms-form-item label{font-weight:600;font-size:13px;margin-top:5px}</style>
+  </head>
+  <body>
+    <div class="rs-wrapper ">
+      <header class="rs-navbar">
+        <h1>IDX Boost! Cutting-Edge MLS/IDX Search for Wordpress</h1>
+        <nav>
+          <div class="logo">
+            <a href="#" title="IDX Boost™" class="new-lg">
+            <img src="https://cpanel.idxboost.dev/bundles/cpanel/images/logo.svg" title="IDXBoost" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+            <ul id="list_nav" style="visibility: hidden !important;">
+              <li><a href="#" title="Leads" class="ico-leads">Leads</a></li>
+              <li><a href="#" title="Filters" class="ico-filters">Filters</a></li>
+              <li><a href="#" title="Listings" class="ico-listings">Listings</a></li>
+              <li><a href="#" title="Account" class="ico-account">Account</a></li>
+            </ul>
+            <div class="user_nav">
+              <div class="ms-dropdown dropdown" style="margin-right: 10px !important;">
+                <button id="btnNotification" class="btnActions js-notifications-list -icon-notifications -on">
+                Notifications
+                </button>
+              </div>
+              <div class="ms-dropdown dropdown">
+                <button class="btnActions dropdown-toggle -icon-settings" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Settings
+                </button>
+                <ul class="ms-standarListActions dropdown-menu">
+                  <li><a href="#" class="-icon-email">Email Settings</a></li>
+                  <li><a href="#" class="-icon-integrations">Integrations</a></li>
+                  <li><a href="#" class="-icon-terms">Terms &amp;
+                    Conditions</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="ms-dropdown dropdown">
+                <button class="ms-button btn userAvatar" type="button" data-toggle="dropdown" aria-expanded="false">
+                  <div title="Compass Demo" id="userAvatar" class="active">
+                    <div class="user_avatar idxboost-photo-preview" style="background-color: transparent">
+                      <img src="https://idxboost.s3.amazonaws.com/agent_profiles/b5fc4b8de05c.41ddfbfc9a1d.jpg" alt="Compass Demo">
+                    </div>
+                  </div>
+                </button>
+                <ul class="ms-userListActions dropdown-menu">
+                  <li class="ms-userInfo">
+                    <span class="ms-title">Compass Demo</span>
+                    <span class="ms-ellipsis">josephcompass@idxboost.dev</span>
+                    <span id="membership_id">Member #: </span>
+                    <button class="ms-back-list js-close-switch-account">Back</button>
+                  </li>
+                  <li class="ms-user-nav">
+                    <a href="#" class="-icon-ms-update js-switch-account">Switch Account</a>
+                    <a href="#" class="-icon-profile">Profile</a>
+                    <a href="#" class="-icon-membership">Membership</a>
+                    <a href="#" class="-icon-billing">Billing</a>
+                    <a href="#" class="-icon-key">Registration Key</a>
+                    <a href="#" class="-icon-locked">Change Password</a>
+                    <a href="#" class="-icon-support" target="_blank">Support</a>
+                    <a href="#" class="-icon-logout">Log out</a>
+                  </li>
+                  <li class="ms-user-account">
+										<a href="#" class="ms-login-btn"><strong>Boost01410</strong> testwizard-non-wp-460.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01411</strong> testwizard-non-wp-461.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01412</strong> testwizard-non-wp-462.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01413</strong> testwizard-non-wp-463.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01414</strong> testwizard-non-wp-464.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01415</strong> testwizard-non-wp-465.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01416</strong> testwizard-non-wp-466.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01417</strong> testwizard-non-wp-467.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01418</strong> testwizard-non-wp-468.com</a>
+										<a href="#" class="ms-login-btn"><strong>Boost01419</strong> testwizard-non-wp-469.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="main_menu" id="mainMene">Main Menu <span></span></button>
+        </nav>
+      </header>
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul class="ms-menu-list ">
+          <li class="idx-tutorial-step-leads">
+            <a class="item_nav ico-leads" href="#" title="My Leads">My Leads<span class="gb" style="width:40px;height:40px;">30</span></a>
+          </li>
+          <li>
+            <a class="item_nav ico-inquires" href="#" title="Hot Sheet">Hot Sheet<span class="gb" style="width:40px;height:40px;">15</span></a>
+          </li>
+          <li class="idx-tutorial-step-account">
+            <a class="item_nav ico-pages sub-items" href="#" title="Website Builder">Website Builder</a>
+            <ul class="sub_item_nav" style="display: none;">
+              <li><a href="#" title="Navigation">Navigation</a></li>
+              <li><a href="#" title="Homepage">Homepage</a></li>
+              <li><a href="#" title="Content Pages">Content Pages</a></li>
+              <li><a href="#" title="Team">Team</a></li>
+              <li><a href="#" title="Contact">Contact</a></li>
+              <li><a class="item_nav ico-spicon" href="#" title="Properties">Properties</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-account ms-bg-blue">
+            <a class="item_nav ico-areas sub-items">IDX Integration</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Listings">My Listings</a></li>
+              <li class="ico-my-master-plan"><a href="#" title="Map Search Filters">Map Search Filters</a></li>
+              <li class="ico-display-filters"><a href="#" title="Display Filters">Display Filters</a></li>
+              <li class="ico-my-buildings"><a href="#" title="My Buildings">My Buildings</a></li>
+              <li class="ico-map-search-filter"><a href="#" title="My Master Plans">My Master Plans</a></li>
+              <li><a href="#" title="Commercial Filters">Commercial Search</a></li>
+              <li><a href="#" title="Off Market Inventory">Off Market Inventory</a></li>
+              <li><a href="#" title="IDX Settings">IDX Settings</a></li>
+            </ul>
+          </li>
+          <li class="ms-bg-green">
+            <a class="sub-items item_nav ico-team" href="#" title="Lead Generation">Lead Generation</a>
+            <ul class="sub_item_nav" style="display: none;">
+              <li><a href="#" title="Boost Engagement">Boost Engagement</a></li>
+              <li><a href="#" title="Boost Conversion">Boost Conversion</a></li>
+              <li><a href="#" title="Boost Nurture">Boost Nurture</a></li>
+              <li><a href="#" title="Tripwires">Tripwires</a></li>
+              <li><a href="#" title="Custom Forms">Custom Forms</a></li>
+              <li><a href="#" title="Landing">Landing Pages</a></li>
+            </ul>
+          </li>
+          <li class="ms-bg-purple">
+            <a class="item_nav ico-marketing sub-items" href="#" title="CRM &amp; Automations">CRM &amp; Automations</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Bucket">My Buckets</a></li>
+              <li><a href="#" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="#" title="Lead Rules">Lead Rules</a></li>
+              <li><a href="#" title="Email Templates">Email Templates</a></li>
+              <li><a href="#" title="SMS Templates">SMS Templates</a></li>
+              <li><a href="#" title="Agents">Users</a></li>
+              <li><a href="#" title="Users Groups">Users Groups</a></li>
+              <li><a href="#" title="Offices">Offices</a></li>
+            </ul>
+          </li>
+          <li class="group-cpanel-btn">
+            <a class="group-btn ico-rocket" id="my_website" href="#" title="Go to my Website" target="_blank">
+            Go to my Website
+            <span></span>
+            </a>
+            <a class="group-btn ico-wordpress" href="#" title="Go to my WP Dashboard" target="_blank">
+            Go to my WP Dashboard
+            <span></span>
+            </a>
+            <a class="group-btn ico-sync" href="#" title="Synchronize my Wordpress" data-toggle="modal" data-target="#synchronizeModal">
+            Synchronize my Wordpress
+            <span></span>
+            <i class="active-sync-bullet js-sync-bullet" id="active-sync-bullet" style="display:none"></i>
+            </a>
+          </li>
+          <li class="active-sync" style="display:none" id="sync-text">
+            <div class="ms-float-modal-alert">
+              <i class="active-sync-bullet"></i>
+              <div class="ms-body">
+                You have changes that need to be synched with your website.
+                <strong>Click the icon to sync now.</strong>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+      <aside class="ms-notifitacionList">
+        <div class="ms-header">
+          <div class="ms-title">Notifications</div>
+        </div>
+        <div class="ms-wrapper-nav">
+          <ul class="ms-list">
+            <li><a id="idxboost_notifications_new" href="#" class="active">Unread</a></li>
+            <li><a id="idxboost_notifications_read" href="#">Read</a></li>
+            <li><a id="idxboost_notifications_all" href="#">All</a></li>
+          </ul>
+        </div>
+        <div class="ms-body">
+          <div class="ms-wrapper-list ">
+            <ul id="ms-notifications-list" class="ms-notifications-list">
+              <li>
+                <a href="#" class="mark_read" data-id="3477">Mark as Read</a>
+                <div class="ms-item">
+                  <span class="ms-label -off">May 12th, 2022</span>
+                  <span class="ms-nt-title">Prueba</span>
+                  x
+                </div>
+              </li>
+              <li>
+                <a href="#" class="mark_read" data-id="2740">Mark as Read</a>
+                <div class="ms-item">
+                  <span class="ms-label -on">April 12th, 2022</span>
+                  <span class="ms-nt-title">Test 1.1.0</span>
+                  Test 1.1.0
+                </div>
+              </li>
+              <li>
+                <a href="#" class="mark_read" data-id="2085">Mark as Read</a>
+                <div class="ms-item">
+                  <span class="ms-label -on">April 11th, 2022</span>
+                  <span class="ms-nt-title">Test 1.1.0</span>
+                  Test 1.1.0
+                </div>
+              </li>
+              <li>
+                <a href="#" class="mark_read" data-id="1384">Mark as Read</a>
+                <div class="ms-item">
+                  <span class="ms-label -on">March 2nd, 2022</span>
+                  <span class="ms-nt-title">New Builder Release 4.2.0</span>
+                  Lorem ipsum
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="ms-btn-close js-close-notifications-list" id="notifitacionListClose">Close</button>
+      </aside>
+      <section class="rs-content-wrapper ms-crm-page">
+        <div class="modal fade ms-contacts-list" id="modal-success-csv-import" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body ms-message-content">
+                <div class="ms-wrap-body">
+                  <div class="modal-body ms-message-content">
+                    <span class="crm-ico-ms-ok color-boost"></span>
+                    <h3 class="ms-title">Import completed!</h3>
+                    <p id="update-csv-import-resume">Added Contacts:
+                      ([added_qty]) 
+                    </p>
+                  </div>
+                </div>
+                <div class="ms-wrap-btn">
+                  <a href="#" class="btn btn-dgt-def" data-dismiss="modal" id="hide-success-csv-import">
+                  <span id="csv-import-refresh">View Imports</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade ms-contacts-list" id="modal-save-filter" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header ms-header-list">
+                <h4 class="ms-title"><span>Save List</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body ms-crm-form">
+                <div class="ms-input-search ms-lp">
+                  <input type="text" class="ms-input" placeholder="Name">
+                  <input type="text" class="ms-input" placeholder="Description">
+                </div>
+                <h4 class="ms-title" style="margin-bottom: 5px;"><span>Share with:</span></h4>
+                <div class="ms-input-search">
+                  <input type="search" class="ms-search" placeholder="Search">
+                  <button class="ms-btn-search">Search</button>
+                </div>
+                <ul class="ms-contacts ms-ls-list">
+                  <li>
+                    <div class="ms-chk-item">
+                      <input type="checkbox" name="ms-item" id="item01">
+                      <label for="item01">Lorem Ipsum</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ms-chk-item">
+                      <input type="checkbox" name="ms-item" id="item02">
+                      <label for="item02">Lorem Ipsum</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ms-chk-item">
+                      <input type="checkbox" name="ms-item" id="item03">
+                      <label for="item02">Lorem Ipsum</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ms-chk-item">
+                      <input type="checkbox" name="ms-item" id="item04">
+                      <label for="item04">Lorem Ipsum</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="ms-wrap-btn">
+                  <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+                  <button class="btn btn-dgt-def">
+                  <span>Save</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button style="width:0px;height:0px;position:fixed;left:0;top:0;overflow:hidden" id="show-success-csv-import" type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-success-csv-import">
+        <span>...</span>
+        </button>
+        <div class="ms-filter-actions">
+          <div class="ms-wrap-filter">
+            <button class="ms-button" id="ms-more-filters">
+            <span>Filters</span>
+            </button>
+            <div class="ms-wrap-input ms-inp-search">
+              <div class="ms-input-search">
+                <input type="search" class="ms-search crm-filter-lead-input" id="crm-query-input" placeholder="Search leads">
+                <button class="ms-btn-search">Search</button>
+              </div>
+            </div>
+            <div class="ms-ft-item ms-select-items">
+              <button class="ms-button" id="select-all-items">Select all</button>
+            </div>
+            <div class="ms-ft-item ms-dropdown ms-select-actions dropdown">
+              <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">
+              Actions
+              </button>
+              <ul class="ms-dropdown-list dropdown-menu">
+                <li>
+                  <input id="csv-upload-lead-input" type="file" accept=".csv" style="display:none;">
+                  <a href="" id="csv-upload-lead-trigger" data-value="import-leads" class="crm-bulk-action">Import
+                  Leads</a>
+                </li>
+                <li><a data-value="export-leads" target="_blank" class="crm-bulk-action">Export Leads</a></li>
+                <li><a data-value="delete-leads" class="crm-bulk-action">Delete Leads</a></li>
+              </ul>
+            </div>
+            <div class="ms-ft-item ms-dropdown ms-select-filter">
+              <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">
+              Show/Hide
+              </button>
+              <ul class="ms-dropdown-list dropdown-menu" id="crm-visible-listing-columns">
+                <li class="ms-wrap-chk ms-disabled">
+                  <input type="checkbox" id="ms-filter-1" data-value="ms-username" data-hidden="ms-user-info" class="ms-hidden-chk" disabled="">
+                  <label for="ms-filter-1">User Name</label>
+                </li>
+                <li class="ms-wrap-chk ms-disabled">
+                  <input type="checkbox" id="ms-filter-2" data-value="ms-inquires" data-hidden="ms-inquires" class="ms-hidden-chk" disabled="">
+                  <label for="ms-filter-2">Inquiries</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-3" data-value="ms-activity" data-hidden="ms-activity" class="ms-hidden-chk">
+                  <label for="ms-filter-3">Engagement</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-10" data-value="ms-registered" data-hidden="ms-registered" class="ms-hidden-chk">
+                  <label for="ms-filter-10">Created</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-9" data-value="ms-lastvisit" data-hidden="ms-lastvisit" class="ms-hidden-chk">
+                  <label for="ms-filter-9">Last Activity</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-6" data-value="ms-actions" data-hidden="ms-actions" class="ms-hidden-chk">
+                  <label for="ms-filter-6">Actions</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-7" data-value="ms-buckets" data-hidden="ms-buckets" class="ms-hidden-chk">
+                  <label for="ms-filter-7">Buckets</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-8" data-value="ms-drip" data-hidden="ms-drip" class="ms-hidden-chk">
+                  <label for="ms-filter-8">Drips</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-4" data-value="ms-communication" data-hidden="ms-communication" class="ms-hidden-chk">
+                  <label for="ms-filter-4">Communication</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-5" data-value="ms-todo" data-hidden="ms-todo" class="ms-hidden-chk">
+                  <label for="ms-filter-5">To-Dos</label>
+                </li>
+                <li class="ms-wrap-chk">
+                  <input type="checkbox" id="ms-filter-11" data-value="ms-assigned" data-hidden="ms-assigned" class="ms-hidden-chk">
+                  <label for="ms-filter-11">Agent</label>
+                </li>
+              </ul>
+            </div>
+            <div class="ms-ft-item ms-dropdown ms-select-leads">
+              <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Recent Activity</button>
+              <ul class="ms-dropdown-list dropdown-menu" id="crm-leads-options-sort">
+                <li><a data-value="newest-leads" class="crm-sort-option">Newest Leads</a></li>
+                <li><a data-value="recent-activity" class="crm-sort-option crm-sort-option-selected">Recent Activity</a></li>
+                <li><a data-value="recent-communication" class="crm-sort-option">Recent Communication</a></li>
+                <li><a data-value="recent-inquiries" class="crm-sort-option">Recent Inquiries</a></li>
+                <li><a data-value="oldest-leads" class="crm-sort-option">Oldest Leads</a></li>
+                <li><a data-value="alphabetical" class="crm-sort-option">Alphabetical</a></li>
+                <li><a data-value="most-visits" class="crm-sort-option">Most Visits</a></li>
+                <li><a data-value="most-viewed-listings" class="crm-sort-option">Most Viewed Listings</a></li>
+                <li><a data-value="most-saved-listings" class="crm-sort-option">Most Saved Listings</a></li>
+                <li><a data-value="most-saved-searches" class="crm-sort-option">Most Saved Searches</a></li>
+              </ul>
+            </div>
+            <div class="ms-ft-item">
+              <a class="ms-new-lead ms-button" href="#">Add Lead</a>
+            </div>
+            <div class="ms-ft-item ms-dropdown ms-select-actions dropdown ms-order-10" style="display: none">
+              <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">Leads Lists
+              </button>
+              <div class="ms-dropdown-list dropdown-menu">
+                <ul class="ms-scoll-list">
+                  <li><a>All Leads</a></li>
+                  <li><a>Today's</a></li>
+                  <li><a>Last Week</a></li>
+                  <li><a>Last Month</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                  <li><a>Lorem ipsum</a></li>
+                </ul>
+                <div class="ms-wrap-btn ms-lead-list">
+                  <a href="#" class="ms-btn">Manage Lists</a>
+                </div>
+              </div>
+            </div>
+            <div class="ms-ft-item ms-dropdown ms-lead-filters ms-order-10" style="display: none">
+              <button class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true" id="serchFilterBtn">Filters
+              </button>
+              <div class="ms-dropdown-list dropdown-menu">
+                <div class="ms-wrap-lead-filters">
+                  <div class="ms-header-lead-filters" id="ms-filter-ld">
+                    <input id="searchFilterList" placeholder="Add a filter" class="ms-input ui-autocomplete-input" autocomplete="off">
+                    <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+                  </div>
+                  <div class="ms-body-lead-filters">
+                    <div class="ms-wrap-info-filter">
+                      <span class="ms-icon-filter"></span>
+                      <span class="ms-title">No filters added yet</span>
+                    </div>
+                  </div>
+                  <div class="ms-wrap-save-fd">
+                    <a class="ms-button clearFilter">Clear Filter</a>
+                    <a class="ms-button saveFilter" data-toggle="modal" data-target="#modal-save-filter">Save
+                    Filter</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ms-top-pag" id="crm_pagination_header">
+            <div class="ms-top-pag" id="crm_pagination_header"> <button class="ms-button ms-prev disabled" data-page="0">prev</button>  <button class="ms-button ms-next" data-page="2">next</button> <span> 1-10 of 30 Leads</span></div>
+          </div>
+        </div>
+        <style>@media screen and (min-width: 768px) {
+          body {
+          overflow: hidden
+          }
+          }
+        </style>
+        <div class="ms-wrap-table-crm">
+          <ul class="ms-lead-header">
+            <li class="ms-username ms-user-info" data-header-rel="ms-username" style="width: 61.9219px;">
+              <div class="ms-item ms-chk">
+                <input style="display:inline-block;-webkit-appearance:checkbox;" type="checkbox" id="checkall" class="crm-lead-row">
+                <label for="checkall">Select all</label>
+              </div>
+            </li>
+            <li class="ms-inquires" data-header-rel="ms-inquires" style="width: 14.0781px;">Inquiries</li>
+            <li class="ms-activity" data-header-rel="ms-activity" style="width: 76px;">Engagement</li>
+            <li class="ms-registered" data-header-rel="ms-registered" style="width: 24.3125px;">Created</li>
+            <li class="ms-lastvisit" data-header-rel="ms-lastvisit" style="width: 76px;">Last Activity</li>
+            <li class="ms-actions" data-header-rel="ms-actions" style="width: 76px;">Actions</li>
+            <li class="ms-buckets" data-header-rel="ms-buckets" style="width: 24.3125px;">Buckets</li>
+            <li class="ms-drip" data-header-rel="ms-drip" style="width: 24.3125px;">Drip</li>
+            <li class="ms-communication" data-header-rel="ms-communication" style="width: 24.3125px;">Communication</li>
+            <li class="ms-todo" data-header-rel="ms-todo" style="width: 76px;">To-Dos</li>
+            <li class="ms-assigned" data-header-rel="ms-assigned" style="width: 44.8438px;">Agent</li>
+          </ul>
+          <ul class="ms-lead-body" id="crm-list-table-body">
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+            <li class="ms-lead-item">
+              <div class="ms-wrap ms-username" data-body-rel="ms-username">
+                <div class="ms-item ms-chk">
+                  <input type="checkbox" id="ms-item-76627" class="crm-lead-row" data-id="76627" name="item">
+                  <label for="ms-item-76627">Select item</label>
+                </div>
+                <div class="ms-item ms-user-info">
+                  <a href="#" class="ms-user-avatar">J</a>
+                  <div class="ms-sub-item">
+                    <a href="#" class="ms-title">
+                    <span class="ms-name">Joseph </span>
+                    <span class="ms-status ms-logged-off lead_76627">Inactive</span></a>
+                    <div class="ms-user-access">
+                      <a href="mailto:joseph-test@tremgroup.com" class="ms-icon-email">joseph-test@tremgroup.com</a>
+                      <span class="ms-icon-phone">999999999</span>
+                    </div>
+                    <div class="content_dropdown">
+                      <div class="dropdown read_m">
+                        <button class="btn btn-default dropdown-toggle tg" type="button" data-toggle="dropdown" aria-expanded="false">Add Label</button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#" data-lead-tag="0" data-lead-id="76627" title="Add Label" class="crm-lead-tag-mode tg">Add Label</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="1" data-lead-id="76627" title="Buyers" class="crm-lead-tag-mode by">Buyers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="2" data-lead-id="76627" title="Sellers" class="crm-lead-tag-mode sl">Sellers</a>
+                          </li>
+                          <li>
+                            <a href="#" data-lead-tag="3" data-lead-id="76627" title="Renters" class="crm-lead-tag-mode rt">Renters</a>
+                          </li>
+                          <li><a href="#" data-lead-tag="4" data-lead-id="76627" title="Selling &amp; Buying" class="crm-lead-tag-mode sb">Selling &amp; Buying</a></li>
+                          <li><a href="#" data-lead-tag="5" data-lead-id="76627" title="Investors" class="crm-lead-tag-mode iv">Investors</a></li>
+                          <li><a href="#" data-lead-tag="6" data-lead-id="76627" title="Commercial" class="crm-lead-tag-mode cm">Commercial</a></li>
+                          <li><a href="#" data-lead-tag="7" data-lead-id="76627" title="Other" class="crm-lead-tag-mode oth">Other</a></li>
+                          <li><a href="#" data-lead-tag="8" data-lead-id="76627" title="Wrong Information" class="crm-lead-tag-mode wri">Wrong Information</a></li>
+                          <li><a href="#" data-lead-tag="9" data-lead-id="76627" title="Not Interested" class="crm-lead-tag-mode nint">Not Interested</a></li>
+                          <li><a href="#" data-lead-tag="10" data-lead-id="76627" title="Agent" class="crm-lead-tag-mode agt">Agent</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="ms-item ms-inquires  active " data-header="Inquiries">
+                  <span>1</span>
+                  <div style="color:#fff;">Inquiries</div>
+                </a>
+              </div>
+              <div class="ms-activity-actions ms-todo" data-body-rel="ms-todo" data-header="TO-DOS">
+                <div class="ms-todo-mx todo-76627">
+                  <span class="ms-label">TO-DO:</span>
+                  <span class="ms-bg-text">N/A</span>
+                  <a href="#" class="todo_fields_data" data-lead-name="Joseph " data-lead-id="76627" data-toggle="modal" data-target="#modal-todo">Create</a>
+                </div>
+              </div>
+              <div class="ms-wrap ms-lastvisit-btn" data-body-rel="ms-lastvisit" data-header="LAST VISIT">
+                <span class="handleMobileSortHeading-d">Sep 9, 2021 - 12:04pm</span> 
+                <span class="handleMobileSortHeading-m">2021-09-09 12:04:12<span> 
+                ,  
+                <button class="ms-arrow">Show more</button> 
+                </span></span>
+              </div>
+              <div class="ms-wrap ms-actions" data-body-rel="ms-actions" data-header="ACTIONS">
+                <button data-toggle="modal" data-target="#modal-call" data-lead-id="76627" class="ms-btn ms-phone ms-tool-item " data-tool="Log Call"><span>0</span> Calls</button>
+                <button data-toggle="modal" data-target="#modal-email" data-lead-id="76627" class="ms-btn ms-email ms-tool-item " data-tool="Send Email"><span> 0</span> Emails</button>
+                <button data-toggle="modal" data-target="#modal-sms" data-lead-id="76627" class="ms-btn ms-texts ms-tool-item " data-tool="Send SMS"><span>  0</span> </button>
+              </div>
+              <div class="ms-wrap ms-activity" data-body-rel="ms-activity" data-header="ENGAGEMENT" style="">
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">visits</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">views</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">favs</a>
+                </div>
+                <div class="ms-item  color-gray ">
+                  <a href="#"><span>0</span></a>
+                  <a href="#">saved</a>
+                </div>
+                <div class="ms-item ">
+                  <a href="#"><span class="lead_notifications_qty" data-lead="76627"></span></a>
+                  <a href="#">alerts</a>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-communication" data-body-rel="ms-communication" data-header="COMMUNICATION" style="">
+                <span class="ms-bg-text">Last <span>Comm</span></span>
+                <span>Never</span>
+                N/A
+              </div>
+              <div class="ms-item ms-activity-actions ms-registered" data-body-rel="ms-registered" data-header="CREATED" style="">
+                <span class="ms-bg-text">Register <span>Date</span></span>
+                <span>Sep 9, 2021 - 12:04pm</span>
+                Email
+              </div>
+              <div class="ms-item ms-activity-actions ms-lastvisit mm-modified" data-header="LAST ACTIVITY" data-body-rel="ms-lastvisit" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sep 9th 2021, 12:04:12 pm - Registered" style="">
+                <div class="msLastActivityItem">
+                  <span class="ms-bg-text">Last <span>Activity</span></span>
+                  <span style="display:block;flex-grow:initial;" class="ms-icon-td ms-registered">Registered</span>
+                  <span style="font-weight:normal;">1 year ago</span>
+                </div>
+              </div>
+              <div class="ms-item ms-activity-actions ms-buckets" data-body-rel="ms-buckets" data-header="BUCKETS" style="">
+                <button class="cmr-bucket-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-bucket">
+                <i class="ms-icon-buckets "></i>
+                <span class="ms-bg-text">Buckets</span>
+                <span class="ms-assign">Assign Bucket</span>
+                </button>
+              </div>
+              <div class="ms-item ms-activity-actions ms-drip" data-body-rel="ms-drip" data-header="DRIP" style="">
+                <button class="cmr-drip-click ib-lead-76627" data-lead-name="Joseph " lead-id="76627" data-toggle="modal" data-target="#modal-active-drips">
+                <i class="ms-icon-rocket  "></i>
+                <span class="ms-bg-text">Drips</span>
+                <span class="ms-assign">Running/Stopped</span>
+                </button>
+              </div>
+              <div class="ms-activity-actions ms-assigned js-assign-lead js-assign-lead-76627" data-header="AGENT" old-id-agent="" lead-id="76627" data-body-rel="ms-assigned" data-toggle="modal" data-target="#modal-agent-assignment">
+                <i class="ms-icon-user"></i>
+                <span>None</span>
+                <a href="#">Assign</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="ms-wrap-table-no-data" style="display: none">
+          <p>No one matchs for given terms.</p>
+        </div>
+        <div class="navigation ms-new-pagination" id="crm_pagination_footer">
+          <ul class="pagination">
+            <li class="disabled"><span class="ms-prev">Previous</span></li>
+            <li class="active"><span>1</span></li>
+            <li><a data-page="2" href="#">2</a></li>
+            <li><a data-page="3" href="#">3</a></li>
+            <li><a rel="next" href="#" class="ms-next" data-page="2">Next</a></li>
+          </ul>
+          <span class="ms-total-results">1-10 of 30 Leads</span>
+        </div>
+      </section>
+    </div>
+    <div id="rs-screen-overlay"></div>
+    <div id="ms-loading">
+      <div class="ms-wrapper-loader">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <div class="ms-rocket-loader"><i class="crm-ico-rocket_only"></i></div>
+      </div>
+      <span class="ms-title">Loading...</span>
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+
+
+    <script>
+      jQuery(document).on("click", ".js-switch-account", function(e) {
+        e.stopPropagation();
+        jQuery(".ms-userListActions").addClass("account-list");
+      });
+      jQuery(document).on("click", ".js-close-switch-account", function(e) {
+        e.stopPropagation();
+        jQuery(".ms-userListActions").removeClass("account-list");
+      });
+    </script>
+  </body>
+</html>
+
+

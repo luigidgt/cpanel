@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>FlexIdx | Welcome</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+  </head>
+  <body>
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>IDX Boost</h1>
+        <nav>
+          <div class="logo">
+            <a href="#" title="IDX Boost™">
+            <img src="https://cpanel.idxboost.dev/bundles/cpanel/images/logo.png" title="IDX Boost!" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+
+            <ul id="list_nav">
+              <li><a href="#" title="Home">Home</a></li>
+              <li><a href="#" title="My Membership">My Membership</a></li>
+              <li><a href="#" title="Inbox">Inbox</a></li>
+              <li><a href="#" title="My Tasks">My Tasks</a></li>
+              <li><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
+              <li><a href="#" title="Help">Help</a></li>
+            </ul>
+
+            <!--<div class="ms-warning-message">
+              <i class="crm-ico-alert-triangle">Warning</i>
+              <span>You must set up your <strong>email sender</strong> to set up your account <a href="#">Click here to resolve</a></span>
+            </div>-->
+
+            <div class="user_nav">
+              <div class="ms-dropdown dropdown">
+                <button class="ms-button btn userAvatar" type="button" data-toggle="dropdown" aria-expanded="false">
+                  <div title="Master IDXBoost" id="userAvatar">
+                    <div class="user_avatar idxboost-photo-preview" style="background-color: transparent">
+                      <img src="https://idxboost.s3.amazonaws.com/user/account/_pwjxbr7pb/foto-agent.jpg" alt="Master IDXBoost">
+                    </div>
+                    <h2>Master IDXBoost</h2>
+                  </div>
+                </button>
+                <ul class="ms-dropdown-list dropdown-menu">
+                  <li class="ms-item-hidden"><a href="#" title="Home">Home</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Membership">My Membership</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="Inbox">Inbox</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Tasks">My Tasks</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
+                  <li><a href="#" target="_blank">Support</a></li>
+                  <li><a href="#" title="Log out">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="main_menu" id="mainMene">Main Menu <span></span></button>
+        </nav>
+      </header>
+
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul class="ms-menu-list">
+          <li class="idx-tutorial-step-leads"><a href="/" title="My Leads" class="item_nav ico-leads">My Leads<span style="width:40px;height:40px;" class="gb">33</span></a></li>
+          <li><a href="hot-sheet.html" title="Hot Sheet" class="item_nav ico-inquires active">Hot Sheet<span style="width:40px;height:40px;" class="gb">22</span></a></li>
+          <li>
+            <a href="#" title="Marketing" class="item_nav ico-marketing sub-items">Marketing</a>
+            <ul class="sub_item_nav ">
+              <li><a href="bucket.html" title="My Bucket">My Buckets</a></li>
+              <li><a href="drip.html" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="rules.html" title="My Rules">My Rules</a></li>
+              <li><a href="mailing.html" title="Email Templates">Email Templates</a></li>
+              <li><a href="sms.html" title="SMS Templates">SMS Templates</a></li>
+              <li><a href="add_lead.html" title="Add Lead">Add Lead</a></li>
+              <li><a href="boostbox.html" title="Boostbox">Boostbox</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-listings">
+            <a href="#" title="My Listings" class="item_nav ico-listing sub-items ">My Listings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/my-exclusive-listings" title="Exclusive Listings">Exclusive Listings</a></li>
+              <li><a href="/my-sold-properties" title="Sold Listings">Sold Listings</a></li>
+              <li><a href="/custom/property" title="Add Listing Details">Add Listing Details</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-filters">
+            <a href="#" title="Filters" class="item_nav ico-filters sub-items ">Filters</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/search-filters" title="Map Search Filters">Map Search Filters</a></li>
+              <li><a href="/search-filters/commercial" title="Commercial Filters">Commercial Filters</a></li>
+              <li>
+                <a href="/filters" title="Display Filters">Display Filters</a>
+              </li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-buildings">
+            <a href="#" title="Buildings" class="item_nav ico-buildings sub-items ">Buildings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/buildings" title="My Buildings">My Buildings</a></li>
+              <li><a href="/buildings/groups" title="Building Groups">Building Groups</a></li>
+              <li><a href="/buildings/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="Areas" class="item_nav ico-areas sub-items ">Areas</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/sub-area" title="My Areas">My Areas</a></li>
+              <li><a href="/sub-area/settings" title="Floorplan Settings">Floorplan Settings</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-account">
+            <a href="#" title="My Account" class="item_nav ico-account sub-items ">My Account</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/account" title="My Profile">My Profile</a></li>
+              <li><a href="/settings/applications" title="Registration Key">Registration Key</a></li>
+              <li><a href="/settings/password" title="Change Password">Change Password</a></li>
+              <li><a href="/settings/social_networks" title="Social Networks">Social Networks</a></li>
+              <li><a href="/settings/terms_conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="My Agents" class="sub-items item_nav ico-my-agents ">My Agents</a>
+            <ul class="sub_item_nav">
+              <li><a href="/agents" title="Agents">Agents</a></li>
+              <li><a href="/agents/group" title="Group Agents">Group Agents</a></li>
+              <li><a href="/office" title="Offices">Offices</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-email idx-tutorial-step-settings">
+            <a href="#" title="Settings" class="item_nav ico-setting sub-items ">Settings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="/settings/cities" title="Cities">Cities</a></li>
+              <li><a href="/settings/preferences" title="Display Preferences">Display Preferences</a></li>
+              <li><a href="/settings/registration" title="Registration Settings">Registration Settings</a></li>
+              <li><a href="/settings/analytics" title="Analytics Integration">Analytics Integration</a></li>
+              <li><a href="/settings/crm_integrator" title="CRM Integration">CRM Integration</a></li>
+              <li><a href="/settings/email/signature" class="" title="Smtp Signature">Email Signature</a></li>
+              <li><a href="/settings/smtp" class="" title="Smtp Settings">Email Sender</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-access"><a class="item_nav ico-tutorial " href="/getting_started" title="Tutorials">Tutorials</a></li>
+        </ul>
+      </aside>
+
+      <section class="rs-content-wrapper">
+        <style>
+          @media screen and (min-width: 768px) {
+            body {
+              overflow: hidden
+            }
+          }
+        </style>
+
+        <div class="main-content ms-new-basic-form ms-basic-pd js-block-any-result">
+          <div class="container basicPage ms-new-basic-form ms-float-btn ms-header-nfs">
+            
+            <div class="ms-general-header">
+              <div class="ms-wrap-header">
+                <h2 class="ms-title">Hot Sheet</h2>
+                <div class="ms-ct-header">
+                  <form method="get" id="">
+                    <div class="ms-wrap-gh">
+                      <div class="ms-gh-item ms-filter-name">
+                        <input type="hidden" name="abc" class="abc-filter" value="">
+                        <div>
+                          <label for="name">Search by Name</label>
+                          <input class="js-search-filter" type="search" id="name" name="name" placeholder="Search by Name">
+                        </div>
+                      </div>
+                      <div class="ms-gh-item">
+                        <button class="ms-new-lead ms-button">Export</button>
+                      </div>
+                      <div class="ms-gh-item">
+                        <button class="ms-new-lead ms-button">Delete</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="ms-wrap-btn" id="msbkt">
+                  <div class="ms-top-pag" id="crm_pagination_header"><button class="ms-button ms-prev disabled">prev</button><button class="ms-button ms-next js-change-page" data-page="1">next</button><span> 1-10 of 1154 Items</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ms-body resetBucket">
+              <div class="ms-wrap-srcoll hotSheetFilterTable">
+                <div class="table-list filters" id="searchFilterPageTable">
+                  <ul class="ms-table" id="myFilters">
+                    <li class="ms-tr">
+                      <div class="ms-wrapper-items">
+                        <div class="ms-item -checkbox">
+                          <div class="ms-wrapper-checkbox">
+                            <input type="checkbox" id="item1" name="item">
+                            <label for="item1">Select item</label>
+                          </div>
+                        </div>
+                        <div class="ms-item -hot-lead">
+                          <div class="ms-wrapper-hot-lead">
+                            <span>hot lead</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -user-info">
+                          <div class="ms-wrapper-user-info">
+                            <h3 class="ms-title"><a href="#">Lorem Ipsum</a></h3>
+                            <a href="mailto:lorem@demo.com" class="ms-email"><span class="ms-ellipsis">lorem@demo.com</span></a>
+                            <a href="tel:9999999999" class="ms-phone">(999) 999-9999</a>
+                          </div>
+                        </div>
+                        <div class="ms-item -info">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title"><span class="text-green">$546K</span> - 2354 South Marina Ave</span>
+                            <span class="ms-info">3 Beds / 2 Baths / 1,234 Sqft</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -date">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title">Jul 3, 2021 - 8:30 pm</span>
+                            <span class="ms-info">Los Angeles, CA</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -detail">
+                          <div class="ms-wrapper-info">
+                            <p class="ms-text-ellipsis">I'd like to schedule a viewing for 950 Stillwater Dr, Miami Beach schedule a viewing for 950 schedule a viewing for 950</p>
+                          </div>
+                        </div>
+                        <div class="ms-item -action">
+                          <button class="ms-show-more">Show more</button>
+                        </div>
+                        <div class="ms-item -hidden">
+                          <div class="ms-wrapper-hidden">
+                            <div class="ms-wrapper-property">
+                              <a href="#" class="ms-wrapper-img">
+                                <img src="https://fl-photos-static.idxboost.us/35/A10804135_1.jpeg" alt="Miami Beach FL 33140">
+                              </a>
+                              <div class="ms-wrapper-info">
+                                <h4 class="ms-title"><a href="#">Miami Beach FL 33140</a></h4>
+                                <span class="ms-text">3026 N Bay Rd</span>
+                                <span class="ms-price">$14,900,000</span>
+                                <span class="ms-detail">6 Beds / 5 Baths / 6,636 Sq.Ft.</span>
+                                <span class="ms-text">#A11072745</span>
+                              </div>
+                            </div>
+
+                            <div class="ms-wrapper-comment">
+                              <p>I am interested in 6061 Collins Ave #9C Miami Beach, FL 33140 please send more photos of the apartment and information on values ​​and payment of purchase taxes and extra costs. fabio.mautari@gmail.com Tks.</p>
+                            </div>
+
+                            <div class="ms-wrapper-contact-detail">
+                              <ul>
+                                <li class="-ip"><span class="ms-td">IP Address</span> <strong>2607:fb90:e85c:2056:</strong></li>
+                                <li class="-location">
+                                  <div><span class="ms-td">City</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">State</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Country</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-computer">
+                                  <div><span class="ms-td">Device</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Platform</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Browser</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-tag">
+                                  <div><span class="ms-td">Tags</span> <span class="ms-tag">Buyer</span> <span class="ms-tag">Buyer</span></div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="ms-wrapper-form-detail">
+                              <ul>
+                                <li>
+                                  <div><span class="ms-td">Custom Form</span> <span class="ms-text">Sellers Form - Default</span></div>
+                                  <div><span class="ms-td">When are you looking to move?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">How many bedrooms do you need?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">Do you have a budget?</span> <span class="ms-text">3,500 to 5,000</span></div>
+                                  <div><span class="ms-td">Do you have any pets?</span> <span class="ms-text">Small Pet (under 20 lbs)</span></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="ms-tr">
+                      <div class="ms-wrapper-items">
+                        <div class="ms-item -checkbox">
+                          <div class="ms-wrapper-checkbox">
+                            <input type="checkbox" id="item2" name="item">
+                            <label for="item2">Select item</label>
+                          </div>
+                        </div>
+                        <div class="ms-item -hot-lead">
+                          <div class="ms-wrapper-hot-lead">
+                            <span>hot lead</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -user-info">
+                          <div class="ms-wrapper-user-info">
+                            <h3 class="ms-title"><a href="#">Lorem Ipsum</a></h3>
+                            <a href="mailto:lorem@demo.com" class="ms-email"><span class="ms-ellipsis">lorem@demo.com</span></a>
+                            <a href="tel:9999999999" class="ms-phone">(999) 999-9999</a>
+                          </div>
+                        </div>
+                        <div class="ms-item -info">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title"><span class="text-green">$546K</span> - 2354 South Marina Ave</span>
+                            <span class="ms-info">3 Beds / 2 Baths / 1,234 Sqft</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -date">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title">Jul 3, 2021 - 8:30 pm</span>
+                            <span class="ms-info">Los Angeles, CA</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -detail">
+                          <div class="ms-wrapper-info">
+                            <p class="ms-text-ellipsis">I'd like to schedule a viewing for 950 Stillwater Dr, Miami Beach schedule a viewing for 950 schedule a viewing for 950</p>
+                          </div>
+                        </div>
+                        <div class="ms-item -action">
+                          <button class="ms-show-more">Show more</button>
+                        </div>
+                        <div class="ms-item -hidden">
+                          <div class="ms-wrapper-hidden">
+                            <div class="ms-wrapper-property">
+                              <a href="#" class="ms-wrapper-img">
+                                <img src="https://fl-photos-static.idxboost.us/35/A10804135_1.jpeg" alt="Miami Beach FL 33140">
+                              </a>
+                              <div class="ms-wrapper-info">
+                                <h4 class="ms-title"><a href="#">Miami Beach FL 33140</a></h4>
+                                <span class="ms-text">3026 N Bay Rd</span>
+                                <span class="ms-price">$14,900,000</span>
+                                <span class="ms-detail">6 Beds / 5 Baths / 6,636 Sq.Ft.</span>
+                                <span class="ms-text">#A11072745</span>
+                              </div>
+                            </div>
+
+                            <div class="ms-wrapper-comment">
+                              <p>I am interested in 6061 Collins Ave #9C Miami Beach, FL 33140 please send more photos of the apartment and information on values ​​and payment of purchase taxes and extra costs. fabio.mautari@gmail.com Tks.</p>
+                            </div>
+
+                            <div class="ms-wrapper-contact-detail">
+                              <ul>
+                                <li class="-ip"><span class="ms-td">IP Address</span> <strong>2607:fb90:e85c:2056:</strong></li>
+                                <li class="-location">
+                                  <div><span class="ms-td">City</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">State</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Country</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-computer">
+                                  <div><span class="ms-td">Device</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Platform</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Browser</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-tag">
+                                  <div><span class="ms-td">Tags</span> <span class="ms-tag">Buyer</span> <span class="ms-tag">Buyer</span></div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="ms-wrapper-form-detail">
+                              <ul>
+                                <li>
+                                  <div><span class="ms-td">Custom Form</span> <span class="ms-text">Sellers Form - Default</span></div>
+                                  <div><span class="ms-td">When are you looking to move?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">How many bedrooms do you need?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">Do you have a budget?</span> <span class="ms-text">3,500 to 5,000</span></div>
+                                  <div><span class="ms-td">Do you have any pets?</span> <span class="ms-text">Small Pet (under 20 lbs)</span></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="ms-tr">
+                      <div class="ms-wrapper-items">
+                        <div class="ms-item -checkbox">
+                          <div class="ms-wrapper-checkbox">
+                            <input type="checkbox" id="item3" name="item">
+                            <label for="item3">Select item</label>
+                          </div>
+                        </div>
+                        <div class="ms-item -hot-lead">
+                          <div class="ms-wrapper-hot-lead">
+                            <span>hot lead</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -user-info">
+                          <div class="ms-wrapper-user-info">
+                            <h3 class="ms-title"><a href="#">Lorem Ipsum</a></h3>
+                            <a href="mailto:lorem@demo.com" class="ms-email"><span class="ms-ellipsis">lorem@demo.com</span></a>
+                            <a href="tel:9999999999" class="ms-phone">(999) 999-9999</a>
+                          </div>
+                        </div>
+                        <div class="ms-item -info">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title"><span class="text-green">$546K</span> - 2354 South Marina Ave</span>
+                            <span class="ms-info">3 Beds / 2 Baths / 1,234 Sqft</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -date">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title">Jul 3, 2021 - 8:30 pm</span>
+                            <span class="ms-info">Los Angeles, CA</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -detail">
+                          <div class="ms-wrapper-info">
+                            <p class="ms-text-ellipsis">I'd like to schedule a viewing for 950 Stillwater Dr, Miami Beach schedule a viewing for 950 schedule a viewing for 950</p>
+                          </div>
+                        </div>
+                        <div class="ms-item -action">
+                          <button class="ms-show-more">Show more</button>
+                        </div>
+                        <div class="ms-item -hidden">
+                          <div class="ms-wrapper-hidden">
+                            <div class="ms-wrapper-property">
+                              <a href="#" class="ms-wrapper-img">
+                                <img src="https://fl-photos-static.idxboost.us/35/A10804135_1.jpeg" alt="Miami Beach FL 33140">
+                              </a>
+                              <div class="ms-wrapper-info">
+                                <h4 class="ms-title"><a href="#">Miami Beach FL 33140</a></h4>
+                                <span class="ms-text">3026 N Bay Rd</span>
+                                <span class="ms-price">$14,900,000</span>
+                                <span class="ms-detail">6 Beds / 5 Baths / 6,636 Sq.Ft.</span>
+                                <span class="ms-text">#A11072745</span>
+                              </div>
+                            </div>
+
+                            <div class="ms-wrapper-comment">
+                              <p>I am interested in 6061 Collins Ave #9C Miami Beach, FL 33140 please send more photos of the apartment and information on values ​​and payment of purchase taxes and extra costs. fabio.mautari@gmail.com Tks.</p>
+                            </div>
+
+                            <div class="ms-wrapper-contact-detail">
+                              <ul>
+                                <li class="-ip"><span class="ms-td">IP Address</span> <strong>2607:fb90:e85c:2056:</strong></li>
+                                <li class="-location">
+                                  <div><span class="ms-td">City</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">State</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Country</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-computer">
+                                  <div><span class="ms-td">Device</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Platform</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Browser</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-tag">
+                                  <div><span class="ms-td">Tags</span> <span class="ms-tag">Buyer</span> <span class="ms-tag">Buyer</span></div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="ms-wrapper-form-detail">
+                              <ul>
+                                <li>
+                                  <div><span class="ms-td">Custom Form</span> <span class="ms-text">Sellers Form - Default</span></div>
+                                  <div><span class="ms-td">When are you looking to move?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">How many bedrooms do you need?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">Do you have a budget?</span> <span class="ms-text">3,500 to 5,000</span></div>
+                                  <div><span class="ms-td">Do you have any pets?</span> <span class="ms-text">Small Pet (under 20 lbs)</span></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="ms-tr">
+                      <div class="ms-wrapper-items">
+                        <div class="ms-item -checkbox">
+                          <div class="ms-wrapper-checkbox">
+                            <input type="checkbox" id="item4" name="item">
+                            <label for="item4">Select item</label>
+                          </div>
+                        </div>
+                        <div class="ms-item -hot-lead">
+                          <div class="ms-wrapper-hot-lead">
+                            <span>hot lead</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -user-info">
+                          <div class="ms-wrapper-user-info">
+                            <h3 class="ms-title"><a href="#">Lorem Ipsum</a></h3>
+                            <a href="mailto:lorem@demo.com" class="ms-email"><span class="ms-ellipsis">lorem@demo.com</span></a>
+                            <a href="tel:9999999999" class="ms-phone">(999) 999-9999</a>
+                          </div>
+                        </div>
+                        <div class="ms-item -info">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title"><span class="text-green">$546K</span> - 2354 South Marina Ave</span>
+                            <span class="ms-info">3 Beds / 2 Baths / 1,234 Sqft</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -date">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title">Jul 3, 2021 - 8:30 pm</span>
+                            <span class="ms-info">Los Angeles, CA</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -detail">
+                          <div class="ms-wrapper-info">
+                            <p class="ms-text-ellipsis">I'd like to schedule a viewing for 950 Stillwater Dr, Miami Beach schedule a viewing for 950 schedule a viewing for 950</p>
+                          </div>
+                        </div>
+                        <div class="ms-item -action">
+                          <button class="ms-show-more">Show more</button>
+                        </div>
+                        <div class="ms-item -hidden">
+                          <div class="ms-wrapper-hidden">
+                            <div class="ms-wrapper-property">
+                              <a href="#" class="ms-wrapper-img">
+                                <img src="https://fl-photos-static.idxboost.us/35/A10804135_1.jpeg" alt="Miami Beach FL 33140">
+                              </a>
+                              <div class="ms-wrapper-info">
+                                <h4 class="ms-title"><a href="#">Miami Beach FL 33140</a></h4>
+                                <span class="ms-text">3026 N Bay Rd</span>
+                                <span class="ms-price">$14,900,000</span>
+                                <span class="ms-detail">6 Beds / 5 Baths / 6,636 Sq.Ft.</span>
+                                <span class="ms-text">#A11072745</span>
+                              </div>
+                            </div>
+
+                            <div class="ms-wrapper-comment">
+                              <p>I am interested in 6061 Collins Ave #9C Miami Beach, FL 33140 please send more photos of the apartment and information on values ​​and payment of purchase taxes and extra costs. fabio.mautari@gmail.com Tks.</p>
+                            </div>
+
+                            <div class="ms-wrapper-contact-detail">
+                              <ul>
+                                <li class="-ip"><span class="ms-td">IP Address</span> <strong>2607:fb90:e85c:2056:</strong></li>
+                                <li class="-location">
+                                  <div><span class="ms-td">City</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">State</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Country</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-computer">
+                                  <div><span class="ms-td">Device</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Platform</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Browser</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-tag">
+                                  <div><span class="ms-td">Tags</span> <span class="ms-tag">Buyer</span> <span class="ms-tag">Buyer</span></div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="ms-wrapper-form-detail">
+                              <ul>
+                                <li>
+                                  <div><span class="ms-td">Custom Form</span> <span class="ms-text">Sellers Form - Default</span></div>
+                                  <div><span class="ms-td">When are you looking to move?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">How many bedrooms do you need?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">Do you have a budget?</span> <span class="ms-text">3,500 to 5,000</span></div>
+                                  <div><span class="ms-td">Do you have any pets?</span> <span class="ms-text">Small Pet (under 20 lbs)</span></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="ms-tr">
+                      <div class="ms-wrapper-items">
+                        <div class="ms-item -checkbox">
+                          <div class="ms-wrapper-checkbox">
+                            <input type="checkbox" id="item5" name="item">
+                            <label for="item5">Select item</label>
+                          </div>
+                        </div>
+                        <div class="ms-item -hot-lead">
+                          <div class="ms-wrapper-hot-lead">
+                            <span>hot lead</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -user-info">
+                          <div class="ms-wrapper-user-info">
+                            <h3 class="ms-title"><a href="#">Lorem Ipsum</a></h3>
+                            <a href="mailto:lorem@demo.com" class="ms-email"><span class="ms-ellipsis">lorem@demo.com</span></a>
+                            <a href="tel:9999999999" class="ms-phone">(999) 999-9999</a>
+                          </div>
+                        </div>
+                        <div class="ms-item -info">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title"><span class="text-green">$546K</span> - 2354 South Marina Ave</span>
+                            <span class="ms-info">3 Beds / 2 Baths / 1,234 Sqft</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -date">
+                          <div class="ms-wrapper-info">
+                            <span class="ms-title">Jul 3, 2021 - 8:30 pm</span>
+                            <span class="ms-info">Los Angeles, CA</span>
+                          </div>
+                        </div>
+                        <div class="ms-item -info -detail">
+                          <div class="ms-wrapper-info">
+                            <p class="ms-text-ellipsis">I'd like to schedule a viewing for 950 Stillwater Dr, Miami Beach schedule a viewing for 950 schedule a viewing for 950</p>
+                          </div>
+                        </div>
+                        <div class="ms-item -action">
+                          <button class="ms-show-more">Show more</button>
+                        </div>
+                        <div class="ms-item -hidden">
+                          <div class="ms-wrapper-hidden">
+                            <div class="ms-wrapper-property">
+                              <a href="#" class="ms-wrapper-img">
+                                <img src="https://fl-photos-static.idxboost.us/35/A10804135_1.jpeg" alt="Miami Beach FL 33140">
+                              </a>
+                              <div class="ms-wrapper-info">
+                                <h4 class="ms-title"><a href="#">Miami Beach FL 33140</a></h4>
+                                <span class="ms-text">3026 N Bay Rd</span>
+                                <span class="ms-price">$14,900,000</span>
+                                <span class="ms-detail">6 Beds / 5 Baths / 6,636 Sq.Ft.</span>
+                                <span class="ms-text">#A11072745</span>
+                              </div>
+                            </div>
+
+                            <div class="ms-wrapper-comment">
+                              <p>I am interested in 6061 Collins Ave #9C Miami Beach, FL 33140 please send more photos of the apartment and information on values ​​and payment of purchase taxes and extra costs. fabio.mautari@gmail.com Tks.</p>
+                            </div>
+
+                            <div class="ms-wrapper-contact-detail">
+                              <ul>
+                                <li class="-ip"><span class="ms-td">IP Address</span> <strong>2607:fb90:e85c:2056:</strong></li>
+                                <li class="-location">
+                                  <div><span class="ms-td">City</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">State</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Country</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-computer">
+                                  <div><span class="ms-td">Device</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Platform</span> <span class="ms-text">Brooklyn</span></div>
+                                  <div><span class="ms-td">Browser</span> <span class="ms-text">United States</span></div>
+                                </li>
+                                <li class="-tag">
+                                  <div><span class="ms-td">Tags</span> <span class="ms-tag">Buyer</span> <span class="ms-tag">Buyer</span></div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="ms-wrapper-form-detail">
+                              <ul>
+                                <li>
+                                  <div><span class="ms-td">Custom Form</span> <span class="ms-text">Sellers Form - Default</span></div>
+                                  <div><span class="ms-td">When are you looking to move?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">How many bedrooms do you need?</span> <span class="ms-text">2 to 3 Bedrooms</span></div>
+                                  <div><span class="ms-td">Do you have a budget?</span> <span class="ms-text">3,500 to 5,000</span></div>
+                                  <div><span class="ms-td">Do you have any pets?</span> <span class="ms-text">Small Pet (under 20 lbs)</span></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigation ms-new-pagination" id="crm_pagination_footer">
+                <ul class="pagination">
+                  <li class="disabled"><span>«</span></li>
+                  <li class="active"><span>1</span></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="disabled"><span>…</span></li>
+                  <li><a href="#">4</a></li>
+                  <li><a rel="next" href="#">»</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade ms-contacts-list" id="modal-delete" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body ms-message-content">
+                <div class="ms-wrap-body">
+                  <div class="modal-body ms-message-content">
+                    <span class="crm-ico-ms-trash color-boost"></span>
+                    <h3 class="ms-title">Are you sure?</h3>
+                    <p>Are you sure you want to delete?</p>
+                  </div>
+                </div>
+                <div class="ms-wrap-btn">
+                  <a href="#" class="btn btn-dgt-grs" data-dismiss="modal" even="0">
+                  <span>Cancel</span>
+                  </a>
+                  <button class="btn btn-dgt-def btn-confirm-delete" even="1">
+                  <span>Yes, delete it!</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <div id="rs-screen-overlay"></div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+
+    <script>
+      jQuery(document).on('click', '.ms-show-more', function(e) {
+        e.preventDefault();
+        var parent = jQuery(this).parents(".ms-tr");
+        if(parent.hasClass("active")){
+          parent.removeClass("active");
+          jQuery(this).text("Show More");
+        }else{
+          parent.addClass("active");
+          jQuery(this).text("Show Less");
+        }
+      });
+    </script>
+
+  </body>
+</html>

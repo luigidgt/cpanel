@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>IDXBoost | Welcome</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+  </head>
+  <body class="modal-open">
+    <div class="rs-wrapper">
+      <header class="rs-navbar">
+        <h1>IDX Boost</h1>
+        <nav>
+          <div class="logo">
+            <a href="#" title="IDX Boost™">
+            <img src="https://cpanel.idxboost.dev/bundles/cpanel/images/logo.png" title="IDX Boost!" alt="Cutting-Edge MLS/IDX Search for Wordpress">
+            </a>
+            <button class="ms-hidden-menu-btn">Hidden Menu <span></span></button>
+          </div>
+          <div class="header-nav">
+
+            <ul id="list_nav">
+              <li><a href="#" title="Home">Home</a></li>
+              <li><a href="#" title="My Membership">My Membership</a></li>
+              <li><a href="#" title="Inbox">Inbox</a></li>
+              <li><a href="#" title="My Tasks">My Tasks</a></li>
+              <li><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
+              <li><a href="#" title="Help">Help</a></li>
+            </ul>
+
+            <!--<div class="ms-warning-message">
+              <i class="crm-ico-alert-triangle">Warning</i>
+              <span>You must set up your <strong>email sender</strong> to set up your account <a href="#">Click here to resolve</a></span>
+            </div>-->
+
+            <div class="user_nav">
+              <div class="ms-dropdown dropdown">
+                <button class="ms-button btn userAvatar" type="button" data-toggle="dropdown" aria-expanded="false">
+                  <div title="Master IDXBoost" id="userAvatar">
+                    <div class="user_avatar idxboost-photo-preview" style="background-color: transparent">
+                      <img src="https://idxboost.s3.amazonaws.com/user/account/_pwjxbr7pb/foto-agent.jpg" alt="Master IDXBoost">
+                    </div>
+                    <h2>Master IDXBoost</h2>
+                  </div>
+                </button>
+                <ul class="ms-dropdown-list dropdown-menu">
+                  <li class="ms-item-hidden"><a href="#" title="Home">Home</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Membership">My Membership</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="Inbox">Inbox</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="My Tasks">My Tasks</a></li>
+                  <li class="ms-item-hidden"><a href="#" title="IDXBoost Store">IDXBoost Store</a></li>
+                  <li><a href="#" target="_blank">Support</a></li>
+                  <li><a href="#" title="Log out">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="main_menu" id="mainMene">Main Menu <span></span></button>
+        </nav>
+      </header>
+
+      <aside class="rs-sidebar">
+        <div class="title-rs-sidebar">Main menu</div>
+        <button id="closeMenu">Close</button>
+        <ul class="ms-menu-list ">
+          <li class="idx-tutorial-step-leads"><a href="#" title="My Leads" class="item_nav ico-leads active">My Leads<span style="width:40px;height:40px;" class="gb">21</span></a></li>
+          <li><a href="#" title="Hot Sheet" class="item_nav ico-inquires ">Hot Sheet<span style="width:40px;height:40px;" class="gb">18</span></a></li>
+          <li class="idx-tutorial-step-account">
+            <a href="#" title="My Account" class="item_nav ico-account sub-items">My Account</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Profile">My Profile</a></li>
+              <li><a href="#" title="Registration Key">Registration Key</a></li>
+              <li><a href="#" title="Change Password">Change Password</a></li>
+            </ul>
+          </li>
+          <li><a href="#" title="Property Sities" class="item_nav ico-spicon ">Property Sites</a>
+          </li>
+          <li class="idx-tutorial-step-account ms-bg-blue">
+            <a href="#" title="Properties" class="item_nav ico-areas sub-items">IDX Integration</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Listings">My Listings</a></li>
+              <li class="ico-my-master-plan"><a href="#" title="Map Search Filters">Map Search Filters</a></li>
+              <li class="ico-display-filters"><a href="#" title="Display Filters">Display Filters</a></li>
+              <li class="ico-my-buildings"><a href="#" title="My Buildings">My Buildings</a></li>
+              <li><a href="#" title="IDX Settings">IDXSettings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="CRM &amp; Automations" class="item_nav ico-marketing sub-items">CRM &amp; Automations</a>
+            <ul class="sub_item_nav">
+              <li><a href="#" title="My Bucket">My Buckets</a></li>
+              <li><a href="#" title="Drip Campaigns">Drip Campaigns</a></li>
+              <li><a href="#" title="Lead Rules">Lead Rules</a></li>
+              <li><a href="#" title="Email Templates">Email Templates</a></li>
+              <li><a href="#" title="SMS Templates">SMS Templates</a></li>
+              <li><a href="#" title="Agents">Users</a></li>
+              <li><a href="#" title="Users Groups">Users Groups</a></li>
+              <li><a href="#" title="Offices">Offices</a></li>
+            </ul>
+          </li>
+          <li class="ms-bg-green">
+            <a href="#" title="Lead Generation" class="sub-items item_nav ico-team">Lead Generation</a>
+            <ul class="sub_item_nav">
+              <li><a href="/settings/registration" title="Boost Conversion Tool">Boost Conversion Tool</a></li>
+              <li><a href="/cms-forms/?page=forms" title="Custom Forms">Custom Forms</a></li>
+              <li><a href="/cms-pages/?page=landing" title="Landing">Landing Pages</a></li>
+            </ul>
+          </li>
+          <li class="idx-tutorial-step-email idx-tutorial-step-settings">
+            <a href="#" title="Settings" class="item_nav ico-setting sub-items">Settings</a>
+            <ul class="sub_item_nav ">
+              <li><a href="#" class="" title="Smtp Settings">Email Sender</a></li>
+              <li><a href="#" class="" title="Smtp Signature">Email Signature</a></li>
+              <li><a href="#" title="CRM Integration">CRM Integrations</a></li>
+              <li><a href="#" title="Analytics Integration">AnalyticsIntegration</a></li>
+              <li><a href="#" title="Terms &amp; Conditions">Terms &amp;Conditions</a></li>
+            </ul>
+          </li>
+          <li class="group-cpanel-btn">
+            <a href="#" title="Go to my Website" class="group-btn ico-rocket">Go to my Website<span></span></a>
+            <a href="#" title="Go to my WP Dashboard" class="group-btn ico-wordpress">Go to my WP Dashboard<span></span></a>
+            <a href="#" title="Synchronize my Wordpress" class="group-btn ico-sync" data-toggle="modal" data-target="#synchronizeModal">
+              Synchronize my Wordpress<span></span>
+              <i class="active-sync-bullet"></i>
+            </a>
+          </li>
+          <li class="active-sync">
+            <div class="ms-float-modal-alert">
+              <i class="active-sync-bullet"></i>
+              <div class="ms-body">You have changes that need to be synched with your website. <strong>Click the icon to sync now.</strong></div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="rs-content-wrapper">
+        <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-preview-tutorial">
+          <span>Show Modal</span>
+        </button>
+      </section>
+    </div>
+
+    <!--<div class="modal fade in" id="modal-preview-tutorial" tabindex="-1" role="dialog" data-keyboard="true" style="display: block; padding-left: 17px;">-->
+
+    <div class="modal fade" id="modal-preview-tutorial" tabindex="-1" role="dialog" data-keyboard="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-mho">
+            <h4 class="ms-title">Explaining Your Website Package</h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="ms-header-pt">
+              <ul class="ms-tab">
+                <li>
+                  <button class="ms-btn-tab active js-active-tab" data-tab="#Essentials">Essentials</button>
+                </li>
+                <li>
+                  <button class="ms-btn-tab js-active-tab" data-tab="#Standard">Standard</button>
+                </li>
+                <li>
+                  <button class="ms-btn-tab js-active-tab" data-tab="#Advance">Advance</button>
+                </li>
+                <li>
+                  <button class="ms-btn-tab js-active-tab" data-tab="#Pro">PRO</button>
+                </li>
+                <li>
+                  <button class="ms-btn-tab js-active-tab" data-tab="#Master">Master</button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="ms-body-pt">
+              <div class="ms-item-tab js-tab-item active in" id="Essentials">
+                <div class="ms-wrapper-media">
+                  <div class="ms-video">
+                    <iframe width="560" height="315" src="https://player.vimeo.com/video/1003770817?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" title="Vimeo video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="ms-caption">
+                    <h4 class="ms-title">What Does Package Price Include?</h4>
+                    <div class="ms-flex-box">
+                      <div class="ms-item">
+                        <strong>Home Page:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Hero Section</li>
+                            <li>Exclusive Listings <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="By Agent or Office MLS"></i></li>
+                            <li>About</li>
+                            <li>Testimonials</li>
+                            <li>Blog</li>
+                            <li>I Want to Buy / I Want to Sell CTAs</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="ms-item">
+                        <strong>Other Pages:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Search</li>
+                            <li>Exclusive Listings</li>
+                            <li>Blog</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-wrapper-websites">
+                  <div class="ms-flex">
+                    <h5 class="ms-title">Essentials Website Preview</h5>
+                  </div>
+                  <div class="ms-preview-list">
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/gem/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB025/home/IB025-template-home-thumbnail-desktop.jpg" alt="Gem">
+                        </picture>
+                        <strong>Gem</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/hestia" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB026/home/IB026-template-home-thumbnail-desktop.jpg" alt="Hestia">
+                        </picture>
+                        <strong>Hestia</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/astra/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB027/home/IB027-template-home-thumbnail-desktop.jpg" alt="Astra">
+                        </picture>
+                        <strong>Astra</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/neve/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB028/home/IB028-template-home-thumbnail-desktop.jpg" alt="Neve">
+                        </picture>
+                        <strong>Neve</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/kadence" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB029/home/IB029-template-home-thumbnail-desktop.jpg" alt="Kadence">
+                        </picture>
+                        <strong>Kadence</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/nebula/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB030/home/IB030-template-home-thumbnail-desktop.jpg" alt="Nebula">
+                        </picture>
+                        <strong>Nebula</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/santorini-sunset" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB031/home/IB031-template-home-thumbnail-desktop.jpg" alt="Satorini Sunset">
+                        </picture>
+                        <strong>Satorini Sunset</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/venus-vogue/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB032/home/IB032-template-home-thumbnail-desktop.jpg" alt="Venus Vogue">
+                        </picture>
+                        <strong>Venus Vogue</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/lunar-luxury/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB033/home/IB033-template-home-thumbnail-desktop.jpg" alt="Lunar Luxury">
+                        </picture>
+                        <strong>Lunar Luxury</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/classic-noir/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB001/home/IB001-template-home-thumbnail-desktop.jpg" alt="Classic Noir">
+                        </picture>
+                        <strong>Classic Noir</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-estates/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB002/home/IB002-template-home-thumbnail-desktop.jpg" alt="Golden Estates">
+                        </picture>
+                        <strong>Golden Estates</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-elegance" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB003/home/IB003-template-home-thumbnail-desktop.jpg" alt="Golden Elegance">
+                        </picture>
+                        <strong>Golden Elegance</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-item-tab js-tab-item" id="Standard">
+                <div class="ms-wrapper-media">
+                  <div class="ms-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0NtNHoCcFIs?si=Gyu_Ei1MawaeeV4a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="ms-caption">
+                    <h4 class="ms-title">What Does Package Price Include?</h4>
+                    <div class="ms-flex-box">
+                      <div class="ms-item">
+                        <strong>Home Page:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Hero Section</li>
+                            <li>Exclusive Listings <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="By Agent or Office MLS"></i></li>
+                            <li>About</li>
+                            <li>Testimonials</li>
+                            <li>Blog</li>
+                            <li>I Want to Buy / I Want to Sell CTAs</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Up to 6 IDX Filters combined:</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Carousel</li>
+                            <li>Buildings Carousel</li>
+                            <li>New Construction Carousel</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="ms-item">
+                        <strong>Other Pages:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Search</li>
+                            <li>Exclusive Listings</li>
+                            <li>Blog</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Optional (IDX Page Type):</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Collection Page</li>
+                            <li>Buildings Collection Page</li>
+                            <li>New Construction Collection Page</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-wrapper-websites">
+                  <div class="ms-flex">
+                    <h5 class="ms-title">Standard Website Preview</h5>
+                  </div>
+                  <div class="ms-preview-list">
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/gem/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB025/home/IB025-template-home-thumbnail-desktop.jpg" alt="Gem">
+                        </picture>
+                        <strong>Gem</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/hestia" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB026/home/IB026-template-home-thumbnail-desktop.jpg" alt="Hestia">
+                        </picture>
+                        <strong>Hestia</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/astra/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB027/home/IB027-template-home-thumbnail-desktop.jpg" alt="Astra">
+                        </picture>
+                        <strong>Astra</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/neve/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB028/home/IB028-template-home-thumbnail-desktop.jpg" alt="Neve">
+                        </picture>
+                        <strong>Neve</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/kadence" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB029/home/IB029-template-home-thumbnail-desktop.jpg" alt="Kadence">
+                        </picture>
+                        <strong>Kadence</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/nebula/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB030/home/IB030-template-home-thumbnail-desktop.jpg" alt="Nebula">
+                        </picture>
+                        <strong>Nebula</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/santorini-sunset" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB031/home/IB031-template-home-thumbnail-desktop.jpg" alt="Satorini Sunset">
+                        </picture>
+                        <strong>Satorini Sunset</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/venus-vogue/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB032/home/IB032-template-home-thumbnail-desktop.jpg" alt="Venus Vogue">
+                        </picture>
+                        <strong>Venus Vogue</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/lunar-luxury/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB033/home/IB033-template-home-thumbnail-desktop.jpg" alt="Lunar Luxury">
+                        </picture>
+                        <strong>Lunar Luxury</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/classic-noir/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB001/home/IB001-template-home-thumbnail-desktop.jpg" alt="Classic Noir">
+                        </picture>
+                        <strong>Classic Noir</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-estates/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB002/home/IB002-template-home-thumbnail-desktop.jpg" alt="Golden Estates">
+                        </picture>
+                        <strong>Golden Estates</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-elegance" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB003/home/IB003-template-home-thumbnail-desktop.jpg" alt="Golden Elegance">
+                        </picture>
+                        <strong>Golden Elegance</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-item-tab js-tab-item" id="Advance">
+                <div class="ms-wrapper-media">
+                  <div class="ms-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0NtNHoCcFIs?si=Gyu_Ei1MawaeeV4a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="ms-caption">
+                    <h4 class="ms-title">What Does Package Price Include?</h4>
+                    <div class="ms-flex-box">
+                      <div class="ms-item">
+                        <strong>Home Page:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Hero Section</li>
+                            <li>Exclusive Listings <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="By Agent or Office MLS"></i></li>
+                            <li>About</li>
+                            <li>Testimonials</li>
+                            <li>Blog</li>
+                            <li>I Want to Buy / I Want to Sell CTAs</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Up to 12 IDX Filters combined:</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Carousel</li>
+                            <li>Buildings Carousel</li>
+                            <li>New Construction Carousel</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="ms-item">
+                        <strong>Other Pages:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Search</li>
+                            <li>Exclusive Listings</li>
+                            <li>Blog</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Optional (IDX Page Type):</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Collection Page</li>
+                            <li>Buildings Collection Page</li>
+                            <li>New Construction Collection Page</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-wrapper-websites">
+                  <div class="ms-flex">
+                    <h5 class="ms-title">Advance Website Preview</h5>
+                  </div>
+                  <div class="ms-preview-list">
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/gem/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB025/home/IB025-template-home-thumbnail-desktop.jpg" alt="Gem">
+                        </picture>
+                        <strong>Gem</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/hestia" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB026/home/IB026-template-home-thumbnail-desktop.jpg" alt="Hestia">
+                        </picture>
+                        <strong>Hestia</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/astra/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB027/home/IB027-template-home-thumbnail-desktop.jpg" alt="Astra">
+                        </picture>
+                        <strong>Astra</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/neve/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB028/home/IB028-template-home-thumbnail-desktop.jpg" alt="Neve">
+                        </picture>
+                        <strong>Neve</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/kadence" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB029/home/IB029-template-home-thumbnail-desktop.jpg" alt="Kadence">
+                        </picture>
+                        <strong>Kadence</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/nebula/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB030/home/IB030-template-home-thumbnail-desktop.jpg" alt="Nebula">
+                        </picture>
+                        <strong>Nebula</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/santorini-sunset" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB031/home/IB031-template-home-thumbnail-desktop.jpg" alt="Satorini Sunset">
+                        </picture>
+                        <strong>Satorini Sunset</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/venus-vogue/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB032/home/IB032-template-home-thumbnail-desktop.jpg" alt="Venus Vogue">
+                        </picture>
+                        <strong>Venus Vogue</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/lunar-luxury/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB033/home/IB033-template-home-thumbnail-desktop.jpg" alt="Lunar Luxury">
+                        </picture>
+                        <strong>Lunar Luxury</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/classic-noir/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB001/home/IB001-template-home-thumbnail-desktop.jpg" alt="Classic Noir">
+                        </picture>
+                        <strong>Classic Noir</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-estates/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB002/home/IB002-template-home-thumbnail-desktop.jpg" alt="Golden Estates">
+                        </picture>
+                        <strong>Golden Estates</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-elegance" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB003/home/IB003-template-home-thumbnail-desktop.jpg" alt="Golden Elegance">
+                        </picture>
+                        <strong>Golden Elegance</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-item-tab js-tab-item" id="Pro">
+                <div class="ms-wrapper-media">
+                  <div class="ms-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0NtNHoCcFIs?si=Gyu_Ei1MawaeeV4a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="ms-caption">
+                    <h4 class="ms-title">What Does Package Price Include?</h4>
+                    <div class="ms-flex-box">
+                      <div class="ms-item">
+                        <strong>Home Page:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Hero Section</li>
+                            <li>Exclusive Listings <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="By Agent or Office MLS"></i></li>
+                            <li>About</li>
+                            <li>Team Profiles <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="Up to 4"></i></li>
+                            <li>Testimonials</li>
+                            <li>Blog</li>
+                            <li>I Want to Buy / I Want to Sell CTAs</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Up to 24 IDX Filters combined:</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Carousel</li>
+                            <li>Buildings Carousel</li>
+                            <li>New Construction Carousel</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="ms-item">
+                        <strong>Other Pages:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Search</li>
+                            <li>Exclusive Listings</li>
+                            <li>Blog</li>
+                            <li>About</li>
+                            <li>Team Collection</li>
+                            <li>Agent Detail</li>
+                            <li>Contact</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Optional (IDX Page Type):</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Collection Page</li>
+                            <li>Buildings Collection Page</li>
+                            <li>New Construction Collection Page</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-wrapper-websites">
+                  <div class="ms-flex">
+                    <h5 class="ms-title">Pro Website Preview</h5>
+                  </div>
+                  <div class="ms-preview-list">
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/gem/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB025/home/IB025-template-home-thumbnail-desktop.jpg" alt="Gem">
+                        </picture>
+                        <strong>Gem</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/hestia" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB026/home/IB026-template-home-thumbnail-desktop.jpg" alt="Hestia">
+                        </picture>
+                        <strong>Hestia</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/astra/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB027/home/IB027-template-home-thumbnail-desktop.jpg" alt="Astra">
+                        </picture>
+                        <strong>Astra</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/neve/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB028/home/IB028-template-home-thumbnail-desktop.jpg" alt="Neve">
+                        </picture>
+                        <strong>Neve</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/kadence" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB029/home/IB029-template-home-thumbnail-desktop.jpg" alt="Kadence">
+                        </picture>
+                        <strong>Kadence</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/nebula/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB030/home/IB030-template-home-thumbnail-desktop.jpg" alt="Nebula">
+                        </picture>
+                        <strong>Nebula</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/santorini-sunset" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB031/home/IB031-template-home-thumbnail-desktop.jpg" alt="Satorini Sunset">
+                        </picture>
+                        <strong>Satorini Sunset</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/venus-vogue/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB032/home/IB032-template-home-thumbnail-desktop.jpg" alt="Venus Vogue">
+                        </picture>
+                        <strong>Venus Vogue</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/lunar-luxury/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB033/home/IB033-template-home-thumbnail-desktop.jpg" alt="Lunar Luxury">
+                        </picture>
+                        <strong>Lunar Luxury</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/classic-noir/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB001/home/IB001-template-home-thumbnail-desktop.jpg" alt="Classic Noir">
+                        </picture>
+                        <strong>Classic Noir</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-estates/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB002/home/IB002-template-home-thumbnail-desktop.jpg" alt="Golden Estates">
+                        </picture>
+                        <strong>Golden Estates</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-elegance" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB003/home/IB003-template-home-thumbnail-desktop.jpg" alt="Golden Elegance">
+                        </picture>
+                        <strong>Golden Elegance</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-item-tab js-tab-item" id="Master">
+                <div class="ms-wrapper-media">
+                  <div class="ms-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0NtNHoCcFIs?si=Gyu_Ei1MawaeeV4a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="ms-caption">
+                    <h4 class="ms-title">What Does Package Price Include?</h4>
+                    <div class="ms-flex-box">
+                      <div class="ms-item">
+                        <strong>Home Page:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Hero Section</li>
+                            <li>Exclusive Listings <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="By Agent or Office MLS"></i></li>
+                            <li>About</li>
+                            <li>Team Profiles <i class="crm-ico-tutorials" data-toggle="tooltip" data-placement="top" title="" data-original-title="Up to 12"></i></li>
+                            <li>Testimonials</li>
+                            <li>Blog</li>
+                            <li>I Want to Buy / I Want to Sell CTAs</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Up to 50 IDX Filters combined:</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Carousel</li>
+                            <li>Buildings Carousel</li>
+                            <li>New Construction Carousel</li>
+                            <li>Life Style</li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="ms-item">
+                        <strong>Other Pages:</strong>
+                        <div class="ms-container-item">
+                          <ol>
+                            <li>Search</li>
+                            <li>Exclusive Listings</li>
+                            <li>Blog</li>
+                            <li>About</li>
+                            <li>Team Collection</li>
+                            <li>Agent Detail</li>
+                            <li>Contact</li>
+                          </ol>
+                          <br>
+                          <strong><em style="font-size: 13px">Optional (IDX Page Type):</em></strong>
+                          <ol class="-min">
+                            <li>Neighborhoods Collection Page</li>
+                            <li>Buildings Collection Page</li>
+                            <li>New Construction Collection Page</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-wrapper-websites">
+                  <div class="ms-flex">
+                    <h5 class="ms-title">Master Website Preview</h5>
+                  </div>
+                  <div class="ms-preview-list">
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/gem/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB025/home/IB025-template-home-thumbnail-desktop.jpg" alt="Gem">
+                        </picture>
+                        <strong>Gem</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/hestia" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB026/home/IB026-template-home-thumbnail-desktop.jpg" alt="Hestia">
+                        </picture>
+                        <strong>Hestia</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/astra/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB027/home/IB027-template-home-thumbnail-desktop.jpg" alt="Astra">
+                        </picture>
+                        <strong>Astra</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/neve/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB028/home/IB028-template-home-thumbnail-desktop.jpg" alt="Neve">
+                        </picture>
+                        <strong>Neve</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/kadence" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB029/home/IB029-template-home-thumbnail-desktop.jpg" alt="Kadence">
+                        </picture>
+                        <strong>Kadence</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/nebula/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB030/home/IB030-template-home-thumbnail-desktop.jpg" alt="Nebula">
+                        </picture>
+                        <strong>Nebula</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/santorini-sunset" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB031/home/IB031-template-home-thumbnail-desktop.jpg" alt="Satorini Sunset">
+                        </picture>
+                        <strong>Satorini Sunset</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/venus-vogue/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB032/home/IB032-template-home-thumbnail-desktop.jpg" alt="Venus Vogue">
+                        </picture>
+                        <strong>Venus Vogue</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/lunar-luxury/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB033/home/IB033-template-home-thumbnail-desktop.jpg" alt="Lunar Luxury">
+                        </picture>
+                        <strong>Lunar Luxury</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/classic-noir/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB001/home/IB001-template-home-thumbnail-desktop.jpg" alt="Classic Noir">
+                        </picture>
+                        <strong>Classic Noir</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-estates/" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB002/home/IB002-template-home-thumbnail-desktop.jpg" alt="Golden Estates">
+                        </picture>
+                        <strong>Golden Estates</strong>
+                      </a>
+                    </div>
+                    <div class="ms-item">
+                      <a href="https://basic-compass.idxboost.cloud/golden-elegance" target="_blank" class="ms-card">
+                        <picture>
+                          <img src="https://api-cms.idxboost.dev/assets/images/themes/IB003/home/IB003-template-home-thumbnail-desktop.jpg" alt="Golden Elegance">
+                        </picture>
+                        <strong>Golden Elegance</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rs-screen-overlay"></div>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+
+    <script>
+      jQuery('[data-toggle="tooltip"]').tooltip();
+
+      jQuery(document).on('click', '.js-active-tab', function(event){
+        event.preventDefault();
+        var tabId = jQuery(this).attr("data-tab");
+        jQuery(".js-tab-item").removeClass("active in");
+        jQuery(".js-active-tab").removeClass("active");
+        jQuery(this).addClass("active");
+        jQuery(tabId).addClass("active");
+        setTimeout(function(){ 
+          jQuery(tabId).addClass("in");
+        }, 300);
+      });
+    </script>
+  </body>
+</html>

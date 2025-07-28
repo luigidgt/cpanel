@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login - IDX Boost</title>
+    <link rel="icon" type="image/png" href="/bundles/cpanel/images/favicon.png">
+    <meta name="robots" content="noindex">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css">
+		<link rel="stylesheet" href="../../js/slik/slick.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
+		<link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>body { padding: 0 !important; background-color: #2a263b !important; } /*#login-content .content-login .input-form.add-options a:first-child:after { display: none !important; }*/</style>
+  </head>
+  <body>
+    <div class="ms-new-login-content">
+      <h1 class="ms-title-hd">IDXBoost, Dominate Your Real Estate Market</h1>
+      
+			<div class="ms-wrapper-login accounts">
+				<div class="ms-wrapper-el">
+					<div class="ms-wrapper-form">
+						<div class="ms-form-content">
+							<picture class="ms-logo">
+								<source type="image/webp" srcset="../cpanel/images/logo_nw.webp">
+								<img alt="Berkshire Hathaway" src="../cpanel/images/logo_nw.png" width="235" height="69">
+							</picture>
+							<div class="ms-wrapper-login">
+								<div class="ms-item">
+									<h3 class="ms-title-account">Choose Account</h3>
+									<ul class="ms-list">
+										<li><button class="ms-login-btn"><strong>Boost01410</strong> - testwizard-non-wp-460.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01411</strong> - testwizard-non-wp-461.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01412</strong> - testwizard-non-wp-462.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01413</strong> - testwizard-non-wp-463.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01414</strong> - testwizard-non-wp-464.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01415</strong> - testwizard-non-wp-465.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01416</strong> - testwizard-non-wp-466.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01417</strong> - testwizard-non-wp-467.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01418</strong> - testwizard-non-wp-468.com</button></li>
+										<li><button class="ms-login-btn"><strong>Boost01419</strong> - testwizard-non-wp-469.com</button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<span class="-icon crm-ico-circle layer" data-speed="-5"></span>
+				<span class="-icon crm-ico-triangle layer" data-speed="2"></span>
+				<span class="-icon crm-ico-square layer" data-speed="5"></span>
+				<span class="-icon crm-ico-polygon layer" data-speed="-2"></span>
+			</div>
+
+			<div class="ms-copyright">
+				© 2017-2018. All Rights Reserved. IDXBoostTM ® is a registered trademark. <a target="_blank" href="#" title="Privacy">Privacy</a> and <a target="_blank" href="#" title="Terms">Terms</a>
+			</div>
+
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+			document.addEventListener("mousemove", parallax);
+			function parallax(e){
+				this.querySelectorAll('.layer').forEach(layer => {
+					const speed = layer.getAttribute('data-speed')
+					const x = (window.innerWidth - e.pageX*speed)/100
+					const y = (window.innerHeight - e.pageY*speed)/100
+					layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+				});
+			}
+
+      (function ($) {
+				$(function () {
+					$('#showpassord').on('click', function (e) {
+						e.preventDefault();
+						var current = $(this).attr('action');
+					
+						if (current == 'hide') {
+							$(this).prev().attr('type', 'text');
+							$(this).addClass('show-eye').attr('action', 'show');
+						}
+						
+						if (current == 'show') {
+							$(this).prev().attr('type', 'password');
+							$(this).removeClass('show-eye').attr('action', 'hide');
+						}
+					})
+				});
+      })(jQuery);
+    </script>
+  </body>
+</html>

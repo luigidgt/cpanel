@@ -1,5 +1,5 @@
 /* Fonts */
-@font-face {
+/*@font-face {
 	font-family: 'Open Sans';
 	src: url('./fonts/OpenSans-SemiBold.eot');
 	src: local('Open Sans Semibold'), local('OpenSans-Bold'),
@@ -10,7 +10,7 @@
 			url('./fonts/OpenSans-SemiBold.svg#OpenSans-Bold') format('svg');
 	font-weight: 600;
 	font-style: normal;
-}
+}*/
 
 * {
   box-sizing: border-box;
@@ -42,7 +42,7 @@
   width: 100%
 }
 
-.cp-btn span {
+/*.cp-btn span {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -53,7 +53,7 @@
   position: relative;
   width: 100%;
   z-index: 2;
-}
+}*/
 
 .cp-btn:hover {
   background-color: #000;
@@ -80,7 +80,7 @@
 
 .btn-action.default span:before {
   content: "";
-  background: linear-gradient(to right, #fa6630, #be155e);
+  @extend .gradient;
   height: 100%;
   left: 0;
   opacity: 1;
@@ -99,13 +99,27 @@
   background: linear-gradient(#fff, #f7f7f7);
   border: 1px solid #e1e8ed;
   color: #3f3f3f;
-  font-size: 17px;
+  font-size: 14px;
   height: 80px;
   margin-bottom: 6px;
   position: relative;
-  transition: all .5s ease-in-out;
+  //transition: background .5s ease-in-out;
   min-width: 300px;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 90px;
+  padding-right: 15px;
+
+
+  transition: none !important;
+
+  @media screen and (min-width: 768px){
+    width: 49%;
+    min-width: auto;
+  }
 }
 
 .btn-option:hover {
@@ -122,6 +136,13 @@
   position: absolute;
 }
 
+.account-container:before{
+  left: 0;
+  width: 80px;
+  height: 70px;
+  top: 0;
+}
+
 .btn-option.gmail:before,
 .account-container.gmail:before {
   background-position: -10px 3px;
@@ -131,6 +152,8 @@
   width: 60px;
 }
 
+.btn-option.outlook:before,
+.account-container.outlook:before,
 .btn-option.office365:before,
 .account-container.office365:before {  
   background-position: -10px -64px;
@@ -150,6 +173,7 @@
 }
 
 .account-container.gmail:before,
+.account-container.outlook:before,
 .account-container.office365:before,
 .account-container.custom:before {
   left: 0;
@@ -198,7 +222,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  overflow: hidden;
+  //overflow: hidden;
   padding-left: 72px;
   position: relative;
 }
@@ -249,7 +273,8 @@
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+//@media screen and (min-width: 768px) {
+@media screen and (min-width: 991px) {
   .title_section .subtitle {
     font-size: 14px;
   }
@@ -272,11 +297,11 @@
   }
 
   .btn-option {
-    flex: 0 0 calc(50% - 3px);
-    height: 96px;
-    margin-bottom: 6px;
-    min-width: auto;
-    width: calc(50% - 3px);  
+    //flex: 0 0 calc(50% - 3px);
+    height: 89px;
+    //margin-bottom: 6px;
+    //min-width: auto;
+    //width: calc(50% - 3px);  
   }
 
   .account {
@@ -318,6 +343,10 @@
   .account-actions {
     width: auto;
   }
+
+  .btn-option {
+    width: 32%;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -325,19 +354,19 @@
     min-width: 150px;
   }
 
-  .btn-option {
+  /*.btn-option {
     flex: 0 0 calc(25% - 3px);
     padding-left: 40px;
     width: calc(25% - 3px);    
-  }
+  }*/
 
   .btn-option +.btn-option {
-    margin-left: 6px;
+    margin-left: 16px;
   }
   
-  .btn-action {
+  /*.btn-action {
     min-width: 248px;
-  }
+  }*/
 
   .sender-email-options {
     justify-content: center;
@@ -433,4 +462,61 @@
 
 .smtp-settings>form>div:last-of-type {
   margin-left: 6px;
+}
+
+/******/
+.sender-email-accounts{
+  .account-container{
+    padding-left: 85px !important;
+    @media screen and (min-width: 1024px){
+      margin-bottom: 0;
+    }
+
+    &:before{
+      width: 74px;
+      height: 70px;
+      background: url('../images/smtp/services.png') no-repeat;
+      top: -15px;
+    }
+
+    &.gpr-1{
+      &:before{
+        background-position: 0 0;
+      }
+    }
+
+    &.gpr-2{
+      &:before{
+        background-position: -138px 0;
+      }
+    }
+
+    &.custom{
+      &:before{
+        background-position: -207px 0;
+      }
+    }
+
+    .account-email {
+      padding-bottom: 5px;
+    }
+
+    .account-status-success:before {
+      width: 15px;
+    }
+  }
+}
+
+.ms-marketplace-page{
+  .sender-email-accounts{
+    .ms-wrap-btn {
+      display: flex;
+      @media (max-width: 1023px){
+        justify-content: space-between !important;
+        .btn{
+          width: 49% !important;
+        }
+      }
+    }
+  }
 }

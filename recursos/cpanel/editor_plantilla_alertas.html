@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | IDX Integration</title>
+    <meta name="keywords" content="FlexIdx, listing, Filters, Analytics">
+    <meta name="description" content="FlexIdx, the best dashboard admin listing, Filters, Analytics">
+    <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/alert_editor/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+  </head>
+  <body>
+
+    <div class="ms-wrapper-alert-editor">
+      <div class="ms-wrapper-alert-editor-body">
+        <div class="ms-wrapper-alert-editor-menu">
+          <div class="ms-wrapper-alert-editor-menu-list">
+            <div class="ms-item -dropdown">
+              <button class="ms-btn-action">Typography</button>
+              <div class="ms-fixed-layout">
+                <button class="ms-dropdown-close" aria-label="Close"></button>
+                <div class="ms-dropdown-menu">
+                  <ul>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="1" name="typography_name" id="typography_01" checked>
+                        <label for="typography_01">Arial</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="2" name="typography_name" id="typography_02">
+                        <label for="typography_02">Open Sans</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="3" name="typography_name" id="typography_03">
+                        <label for="typography_03">Montserrat</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ms-item -dropdown">
+              <button class="ms-btn-action">Design</button>
+              <div class="ms-fixed-layout">
+                <button class="ms-dropdown-close" aria-label="Close"></button>
+                <div class="ms-dropdown-menu">
+                  <ul>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="1" name="design_size" id="design_size_01">
+                        <label for="design_size_01">Small</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="2" name="design_size" id="design_size_02">
+                        <label for="design_size_02">Medium</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="3" name="design_size" id="design_size_03">
+                        <label for="design_size_03">Large</label>
+                      </div>
+                    </li>
+                    <li class="-flex">
+                      <label for="paddingDesign" style="margin-bottom: 0;">Padding</label>
+                      <div class="ms-wrapper-padding">
+                        <div class="ms-item">
+                          <input type="number" id="paddingDesignTop">
+                          <span class="ms-small-text">Top</span>
+                        </div>
+                        <div class="ms-item">
+                          <input type="number" id="paddingDesignRight">
+                          <span class="ms-small-text">Right</span>
+                        </div>
+                        <div class="ms-item">
+                          <input type="number" id="paddingDesignBottom">
+                          <span class="ms-small-text">Bottom</span>
+                        </div>
+                        <div class="ms-item">
+                          <input type="number" id="paddingDesignLeft">
+                          <span class="ms-small-text">Left</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ms-item -dropdown">
+              <button class="ms-btn-action">Buttons</button>
+              <div class="ms-fixed-layout">
+                <button class="ms-dropdown-close" aria-label="Close"></button>
+                <div class="ms-dropdown-menu">
+                  <ul>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="1" name="button_height" id="button_height_01">
+                        <label for="button_height_01">Small</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="2" name="button_height" id="button_height_02">
+                        <label for="button_height_02">Medium</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ms-wrapper-radio-button">
+                        <input type="radio" value="3" name="button_height" id="button_height_03">
+                        <label for="button_height_03">Large</label>
+                      </div>
+                    </li>
+                    <li class="-flex wrapperFontColor color_container">
+                      <label for="fontColor">Font Color</label>
+                      <input type="text" id="fontColor" class="fontColor" value="#000000" data-coloris>
+                    </li>
+                    <li class="-flex wrapperBorderColor color_container">
+                      <label for="borderColor">Border Color</label>
+                      <input type="text" id="borderColor" class="borderColor" value="#000000" data-coloris>
+                    </li>
+                    <li class="-flex wrapperBackgroundColor color_container">
+                      <label for="backgroundColor">Background Color</label>
+                      <input type="text" id="backgroundColor" class="backgroundColor" value="#FFFFFF" data-coloris>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ms-item -dropdown">
+              <button class="ms-btn-action">Thumbnail</button>
+              <div class="ms-fixed-layout">
+                <button class="ms-dropdown-close" aria-label="Close"></button>
+                <div class="ms-dropdown-menu">
+                  <ul>
+                    <li>
+                      <div class="ms-thumbnail-options">
+                        <div class="ms-item-title">
+                          <span>Thumbnail Type</span>
+                        </div> 
+                        
+                        <div class="ms-wrapper-thumbnail-type">
+                          <div class="ms-item">
+                            <div class="ms-wrapper-thumbnail-btn">
+                              <input type="radio" id="thumbnailType01" name="thumbnailType" value="1">
+                              <label for="thumbnailType01">
+                                <img src="" id="thumbnailType01" alt="">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="ms-item">
+                            <div class="ms-wrapper-thumbnail-btn">
+                              <input type="radio" id="thumbnailType02" name="thumbnailType" value="2">
+                              <label for="thumbnailType02">
+                                <img src="" id="thumbnailType02" alt="">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="ms-item-title">
+                          <span>Price</span>
+                        </div>
+
+                        <div class="ms-flex" style="margin-bottom: 10px;">
+                          <span class="ms-label">Font Size (px)</span>
+                          <input type="number" id="price_font_size" class="ms-input">
+                        </div>
+
+                        <div class="ms-item-title">
+                          <span>Label</span>
+                        </div>
+
+                        <div class="ms-flex wrapperLabelColor color_container">
+                          <label for="labelColor">Label Color</label>
+                          <input type="text" id="labelColor" class="labelColor" value="#0a801f" data-coloris>
+                        </div>
+                        
+                        <div class="ms-flex">
+                          <span class="ms-label">Label Position</span>
+                          <div class="ms-group">
+                            <div class="ms-wrapper-radio-button">
+                              <input type="radio" value="1" name="label_position" id="label_position_01" checked>
+                              <label for="label_position_01">A</label>
+                            </div>
+                            <div class="ms-wrapper-radio-button">
+                              <input type="radio" value="2" name="label_position" id="label_position_02">
+                              <label for="label_position_02">B</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="ms-item-title">
+                          <span>Active Buttons</span>
+                        </div>
+
+                        <div class="ms-wrapper-checkbox-button">
+                          <input type="checkbox" value="1" name="view_btn" id="view_btn_01" checked>
+                          <label for="view_btn_01">View Listing</label>
+                        </div>
+
+                        <div class="ms-wrapper-checkbox-button">
+                          <input type="checkbox" value="2" name="view_btn" id="view_btn_02" checked>
+                          <label for="view_btn_02">Contact Agent</label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ms-wrapper-alert-editor-template">
+
+          <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding:0; mso-table-lspace:0; mso-table-rspace:0; border-collapse:collapse; border-spacing:0; background-repeat:repeat; background-position:center top; background-color:#99cc00; font-family: Montserrat, system-ui, Arial, Helvetica, sans-serif; font-size:16px">
+            <tr>
+              <td align="center">
+                
+                <!-- INICIO: CABECERA CON LA INFORMACION DEL CLIENTE -->
+                <div id="client_header" class="ms-wrapper-section" style="background-color: #FFFFFF; padding: 20px; width:600px">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center" style="padding-bottom: 10px;">
+                        <a href="#" target="_blank" title="MR C Residences">
+                          <img 
+                          width="100" 
+                          height="100" 
+                          alt="MR C Residences" 
+                          src="https://ci3.googleusercontent.com/meips/ADKq_NYuc7papWQB4ZEipzotzXobghLypqBb2zbuxQp7T0fnxdVITRP2whyn-E5JlN7xPLqsMA6Ahffv6NmOvBXxrCgSpB4wdqlI5WHV8AGNWN9SwAf-29wwwWl0LpHYi5eKeT9FeAY=s0-d-e1-ft#https://idxboost.s3.amazonaws.com/agent_profiles/0f048b60e890.d2118bcd0db8.jpg"
+                          style="border-radius: 50px 50px 50px 50px;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <h1 style="margin: 0; font-size: 30px; font-weight: bold; padding-bottom:5px">MR C Residences</h1>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <p>
+                          <a href="tel:+17868532333" target="_blank" style="display: inline-block; margin:0 10px">T. (786) 853 2333</a>
+                          <a href="https://mrc-miami.com/" target="_blank" style="display: inline-block; margin:0 10px">www.mrc-miami.com</a>
+                        </p>
+                        <br>
+                        <p>Hello Benja, below we <strong>recommend some properties</strong>. Do not hesitate to contact us at <a href="mailto:demo@gmail.com">demo@gmail.com</a> if you want more information or call us at <a href="tel:+17868532333">(786) 853 2333</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- FINAL: CABECERA CON LA INFORMACION DEL CLIENTE -->
+
+                <!-- INICIO: INFORMACION DE LA PROPIEDAD -->
+                <div id="property_information" class="ms-wrapper-section" style="background-color: #FFFFFF; padding: 20px; width:600px">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td>
+                        <h2 style="font-size: 24px; font-weight:bold; padding-bottom:10px">New listings</h2>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td width="100%" align="left" valign="top" background="https://th-fl-photos-static.idxboost.us/26/A11702826_x600.jpeg" style="background-repeat:no-repeat;background-position:center;background-size:cover;border-radius: 10px; background-color:#f1f1f4">
+                                          <a href="#" title="Miami, Florida 33133" style="display:block; width:100%; height:340px">
+                                            <table border="0" cellpadding="0" cellspacing="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="padding:15px">
+                                                    <span style="font-size: 12px; font-family: Open Sans, system-ui, Arial, Helvetica, sans-serif; color: #FFFFFF; font-weight: 600; padding: 5px 15px; border-radius: 4px; background-color: #0a801f; margin-bottom: 5px; display: inline-block; text-decoration: none">NEW</span>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td style="padding:15px 0;">
+                                          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                              <td width="100%" align="left" style="padding-bottom:10px;">
+                                                <h3 style="margin: 0; font-size:24px; font-weight: bold">$1,750,000</h3>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td width="100%" align="left" style="padding-bottom:5px;">
+                                                <table width="auto" border="0" cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                    <td><strong>2</strong> Beds<span style="padding: 0 5px;">•</span></td>
+                                                    <td><strong>2.5</strong> Beds<span style="padding: 0 5px;">•</span></td>
+                                                    <td><strong>1,300</strong> sqft</td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td width="100%" align="left" style="padding-bottom:5px;">
+                                                <a href="#" target="_blank">2678 Tigertail Ave #813, Miami, FL 33133</a>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td width="100%" align="left" style="padding-bottom:5px;">
+                                                <span>Condo in Hudson Square</span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td width="100%" align="left" style="padding-top:10px;">
+                                                <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                    <td>
+                                                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td width="100%" height="50" align="center" valign="middle">
+                                                              <a href="#" target="_blank" style="text-decoration:none!important; display:block; height:50px; line-height:50px; padding:0 20px!important; border:1px solid #000; border-radius:6px; color: #000; font-weight:600">View Listing</a>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                    <td style="width: 20px;"></td>
+                                                    <td>
+                                                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td width="100%" height="50" align="center" valign="middle">
+                                                              <a href="#" target="_blank" style="text-decoration:none!important; display:block; height:50px; line-height:50px; padding:0 20px!important; border:1px solid #000; border-radius:6px; color: #000; font-weight:600">Contact Agent</a>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- FINAL: INFORMACION DE LA PROPIEDAD -->
+
+                <!-- INICIO: INFORMACION DE LA PROPIEDAD CON DESCUENTO
+                <div id="property_information_price_reductions" class="ms-wrapper-section" style="background-color: #FFFFFF; padding: 20px; width:600px">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td>
+                        <h2 style="font-size: 24px; font-weight:bold; padding-bottom:10px">Recent Price Reductions</h2>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td width="100%" align="left" valign="top" background="https://th-fl-photos-static.idxboost.us/26/A11702826_x600.jpeg" style="background-repeat:no-repeat;background-position:center;background-size:cover;border-radius: 10px; background-color:#f1f1f4">
+                                          <a href="#" title="Miami, Florida 33133" style="display:block; width:100%; height:340px">
+                                            <table border="0" cellpadding="0" cellspacing="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="padding:15px">
+                                                    <span style="font-size: 10px; font-family: Open Sans, system-ui, Arial, Helvetica, sans-serif; color: #FFFFFF; font-weight: 600; padding: 5px 15px; border-radius: 4px; background-color: #0a801f; margin-bottom: 5px; display: inline-block; text-decoration: none">NEW</span>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td style="padding:15px 0;">
+                                          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                              <td width="100%" align="left">
+                                                <table width="auto" border="0" cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                    <td>
+                                                      <h3>$1,750,000</h3>
+                                                    </td>
+                                                    <td>
+                                                      <span>$1,750,000</span>
+                                                    </td>
+                                                    <td>
+                                                      <div>Price cut: 13,2%</div>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td align="left">
+                                                <table width="auto" border="0" cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                    <td><strong>2</strong> Beds<span style="padding: 0 5px;">•</span></td>
+                                                    <td><strong>2.5</strong> Beds<span style="padding: 0 5px;">•</span></td>
+                                                    <td><strong>1,300</strong> sqft</td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td align="left">
+                                                <a href="#" target="_blank">2678 Tigertail Ave #813, Miami, FL 33133</a>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <span>Condo in Hudson Square</span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td align="left">
+                                                <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                                  <tr>
+                                                    <td>
+                                                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td width="100%" height="50" align="center" valign="middle">
+                                                              <a href="#" target="_blank">View Listing</a>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                    <td>
+                                                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td width="100%" height="50" align="center" valign="middle">
+                                                              <a href="#" target="_blank">Contact Agent</a>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                FINAL: INFORMACION DE LA PROPIEDAD CON DESCUENTO -->
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/select2.min.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+
+    <script>
+      jQuery(document).on('click', '.fontColor', function(event){
+        event.preventDefault();
+        Coloris({
+          theme: 'polaroid',
+          closeButton: true,
+          parent: '.wrapperFontColor',
+        });
+      });
+
+      jQuery(document).on('click', '.borderColor', function(event){
+        event.preventDefault();
+        Coloris({
+          theme: 'polaroid',
+          closeButton: true,
+          parent: '.wrapperBorderColor',
+        });
+      });
+
+      jQuery(document).on('click', '.backgroundColor', function(event){
+        event.preventDefault();
+        Coloris({
+          theme: 'polaroid',
+          closeButton: true,
+          parent: '.wrapperBackgroundColor',
+        });
+      });
+
+      jQuery(document).on('click', '.labelColor', function(event){
+        event.preventDefault();
+        Coloris({
+          theme: 'polaroid',
+          closeButton: true,
+          parent: '.wrapperLabelColor',
+        });
+      });
+    </script> 
+    
+  </body>
+</html>

@@ -1,6 +1,6 @@
 $crm-icons :'crm-icons';
 
-[class^="crm-"], [class*=" crm-"] {
+[class^="crm-ico-"], [class*=" crm-ico-"] {
 	font-weight: normal !important;
 }
 
@@ -36,6 +36,9 @@ $crm-icons :'crm-icons';
 		background-size: 250px auto;
 		width: 22px;
 		height: 22px;
+		bottom: 0;
+    right: 0;
+    margin: auto;
 	}
 }
 
@@ -45,6 +48,9 @@ $crm-icons :'crm-icons';
 		background-size: 250px auto;
 		width: 19px;
 		height: 21px;
+		bottom: 0;
+    right: 0;
+    margin: auto;
 	}
 }
 
@@ -86,7 +92,7 @@ $crm-icons :'crm-icons';
 	.ms-text-name{
 		margin-left: 15px;
 		.ms-title {
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: 700;
 		}
 		a{
@@ -282,7 +288,8 @@ $crm-icons :'crm-icons';
 		height: 100%;
 		padding: 0 15px;
 	}
-	
+
+	&:hover,
 	&:active,
 	&:focus{
 		//text-shadow: none;
@@ -309,8 +316,8 @@ a.ms-button{
 	color: #FFF !important;
 	text-decoration: none;
 	font-size: 20px;
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	flex-shrink: 0;
 	display: flex;
 	justify-content: center;
@@ -329,38 +336,47 @@ a.ms-button{
 
 .ms-user-info{
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
+	padding-top: 10px;
 
-	@media (max-width: 767px){
-		justify-content: flex-start;
+	@media screen and (min-width: 768px){
+		padding-top: 0;
+		align-items: center;
+		justify-content: flex-start; 
 	}
 
 	.ms-title{
-		font-size: 15px;
+		font-size: 14px;
 		display: flex;
-    align-items: center;
-    justify-content: space-between;
+		align-items: center;
+		justify-content: space-between;
 
-    .ms-name{
-    	width: 90%;
-    	display: block;
+		.ms-name{
+			width: 90%;
+			display: block;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-    }
+		}
 	}
 
 	.ms-sub-item{
-		width: calc(100% - 50px);
-		padding-top: 5px;
-		position: relative;
+		width: calc(100% - 54px);
+		@media screen and (min-width: 768px){
+			position: relative;
+			width: calc(100% - 50px);
+		}
 	}
 }
 
 .ms-icon{
-	text-indent: -999999px;
+	font-style: normal;
+	&:before{
+		font-size: 16px !important;
+	}
+	/*text-indent: -999999px;
 	display: block;
 	overflow: hidden;
 	width: 15px;
@@ -385,40 +401,53 @@ a.ms-button{
 			color: #FFF;
 			padding-top: 3px;
 		}
-	}
+	}*/
 }
 
 .ms-icon-todo{
 	&:before{
-		content: "";
+		content: "\e91a";
 		display: inline-block;
 		vertical-align: middle;
 		margin-top: -2px;
-		width: 25px;
+		/*width: 25px;
 		height: 25px;
 		background-image: url('../images/crm-icons.png');
 		background-position: -591px -617px;
-		background-size: 340px;
+		background-size: 340px;*/
 		margin-right: 10px;
+		font-size: 24px;
+		font-family: $crm-icons;
+		font-weight: normal;
+		color: #df105f;
+		background-image: linear-gradient(to right, #ff612c, #df105f);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 
 .ms-user-access{
 	display: flex;
-	align-items: center;
+	/*align-items: center;
 	justify-content: flex-start;
-	flex-wrap: wrap;
+	flex-wrap: wrap;*/
+	flex-direction: column;
+	flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 	a, p{
 		color: #333;
 		transition: all .3s;
 		font-size: 13px;
-
-		width: 90%;
-		display: block;
+		max-width: 90%;
+		width: auto;
+    	display: inline-block;
 		overflow: hidden;
 		-o-text-overflow: ellipsis;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		margin-top: 2px;
 		&:hover{
 			color: #157edc;
 		}
@@ -432,6 +461,7 @@ a.ms-button{
 			width: 16px;
 			text-align: center;
 			font-weight: normal !important;
+			margin-right: 5px !important;
 		}
 	}
 
@@ -465,40 +495,40 @@ a.ms-button{
 	margin-top: auto;
 	margin-bottom: auto;
 	.ms-btn{
-    background-color: #fff;
-    border: 1px solid #dedede;
-    background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
-    width: 45px;
-    height: 40px;
-    margin-right: 5px;
-    flex-shrink: 0;
-    font-weight: 700;
-    border-radius: 4px;
-    font-size: 13px;
-    color: #909090;
-    position: relative;
-    span{
-    	display: block;
-    	&:before{
-    		color: #d6d6d6;
-    		font-weight: normal !important;
-    	}
-    }
+		background-color: #fff;
+		border: 1px solid #dedede;
+		background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+		width: 45px;
+		height: 40px;
+		margin-right: 6px;
+		flex-shrink: 0;
+		font-weight: 700;
+		border-radius: 4px;
+		font-size: 13px;
+		color: #909090;
+		position: relative;
+		span{
+			display: block;
+			&:before{
+				color: #d6d6d6;
+				font-weight: normal !important;
+			}
+		}
 
-    &.active{
-    	color: #303030;
-    	&:before,
-    	span:before{
-    		color: #007fe0;
-    	}
-    }
+		&.active{
+			color: #303030;
+			&:before,
+			span:before{
+				color: #007fe0;
+			}
+		}
 	}
 
-	@media screen and (min-width: 375px){
+	@media screen and (min-width: 319px){
 		.ms-btn{
 			text-indent: -999999px;
 			padding: 5px;
-			width: 57px;
+			width: 50px;
 			flex-shrink: 0;
 			span{
 				position: absolute;
@@ -556,6 +586,12 @@ a.ms-button{
 		}
 	}
 
+	@media screen and (min-width: 374px){
+		.ms-btn{
+			width: 57px;
+		}
+	}
+
 	@media screen and (min-width: 480px){
 		margin-right: 5px;
 		.ms-btn{
@@ -574,8 +610,10 @@ a.ms-button{
 }
 
 .ms-icon-rocket{
-	font-style: normal;
-	margin-bottom: 5px;
+    font-style: normal;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #d6d6d6;
 	&:before{
 		display: inline-block;
 		content: "\e90b";
@@ -593,18 +631,21 @@ a.ms-button{
 	}
 
 	&.end{
-		&:before{
+		/*&:before{
 			color: #df105f;
 			background-image: linear-gradient(to right,#ff612c,#df105f);
 			-webkit-background-clip: text;
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
+		}*/
+		&:before{
+			color: #7bc500;
 		}
 	}
 }
 
 .ms-icon-buckets{
-	display: inline-block;
+	/*display: inline-block;
 	width: 25px;
 	height: 39px;
 	background-image: url('../images/crm-icons.png');
@@ -615,7 +656,31 @@ a.ms-button{
 	font-style: normal;
 	&.active{
 		background-position: -73px -205px;
+	}*/
+	font-style: normal;
+	font-weight: normal;
+	&:before{
+		display: inline-block;
+		content: "\e924";
+		font-family: $crm-icons;
+		font-size: 38px;
+		line-height: normal;
+		text-align: center;
+		color: #d6d6d6;
+		margin-bottom: 5px;
 	}
+
+	&.active{
+		&:before{
+			color: #7bc500;
+			/*color: #df105f;
+			background-image: linear-gradient(to right,#ff612c,#df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;*/
+		}
+	}
+
 }
 
 .ms-icon-user{
@@ -644,24 +709,39 @@ a.ms-button{
 	}
 }
 
+.ms-history,
 .ms-valid,
 .ms-close,
 .ms-show,
 .ms-edit{
+	transition: all .3s;
 	flex-shrink: 0;
 	width: 20px;
-	height: 20px;
+	height: 21px;
 	margin-left: 10px;
 	text-indent: -999999px;
 	overflow: hidden;
 	position: relative;
-	border: 2px solid #969695;
 	background-color: #FFF;
 	color: #969695;
 	&:hover,
 	&.active{
 		color: #333;
 		border-color: #333;
+	}
+}
+
+.ms-history{
+	&:before{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		text-indent: 0;
+		top: 0;
 	}
 }
 
@@ -683,18 +763,19 @@ a.ms-button{
 
 .ms-close{
 	&:after{
-		content: "\e905";
-		font-family: "icomoon"!important;
-		width: 100%;
-		height: 100%;
+		content: "\e91c";
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 19px;
+		font-family: $crm-icons;
 		text-indent: 0;
-		z-index: 1;
-		line-height: 16px;
-		font-size: 8px;
-		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: normal;
 	}
 }
 
@@ -726,6 +807,23 @@ a.ms-button{
 	height: 24px;
 	position: relative;
 	&:before{
+		content: "\e91b";
+		position: absolute;
+		top: -1px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 22px;
+		font-family: $crm-icons;
+		text-indent: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: normal;
+	}
+
+
+	/*&:before{
 		content: "";
 		display: block;
 		margin: 0;
@@ -758,7 +856,7 @@ a.ms-button{
 		&:after{
 			border-color: #333;
 		}
-	}
+	}*/
 }
 
 .ms-widget{
@@ -776,7 +874,7 @@ a.ms-button{
 		align-items: center;
 		min-height: 40px;
 		.ms-title{
-			font-size: 15px;
+			font-size: 16px;
 			font-weight: 700;
 			overflow: hidden;
 			-o-text-overflow: ellipsis;
@@ -877,6 +975,8 @@ a.ms-button{
 				width: 100%;
 				position: relative;
 				padding-right: 30px;
+				line-height: 1.4;
+    			margin-bottom: 5px;
 				button, a{
 					position: absolute;
 					right: 0;
@@ -944,6 +1044,21 @@ a.ms-button{
 						margin-top: 2px;
 					}
 				}
+			}
+		}
+
+		.ms-note{
+			&:before{
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 20px;
+
+				color: #ffe015;
+				background-image: linear-gradient(90deg, #ffea0a, #ffe015);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
 		}
 	}
@@ -1044,9 +1159,9 @@ a.ms-button{
 	}
 
 	&.ms-bg-boost{
-		background-color: #be155e;
+		background-color: $color-b;
 		border: 0;
-		background: linear-gradient(to right, #fa6630, #be155e);
+		@extend .gradient;
 		color: #FFF;
 		&:before{
 			border-top: 16px solid #fa6630;
@@ -1148,7 +1263,71 @@ a.ms-button{
 		display: block;
     margin-right: 0;
     margin-left: auto;
-    margin-top: -20px;
+    margin-top: 0;
+	}
+
+	&.ms-new-lead{
+		box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.15);
+		border: 0;
+		&:before{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 150px;
+			@extend .gradient;
+			border: 0;
+			top: -60px;
+			left: -38px;
+			transform: rotate(45deg);
+		}
+
+		&:after{
+			display: none;
+		}
+
+		.ms-property-item{
+			padding: 0 !important;
+			.ms-msg-title,
+			.ms-title{
+				display: block;
+				overflow: visible;
+				white-space: normal;
+				font-size: 14px !important;
+				line-height: normal;
+				color: #e52752;
+				font-weight: 700 !important;
+				padding-right: 0 !important;
+				span{
+					color:#2a263b;
+				}
+			}
+
+			.ms-mls,
+			.ms-price{
+				font-weight: normal;
+				margin-bottom: 2px;
+				strong{
+					font-weight: 700;
+				}
+			}
+
+			.ms-wrap-img{
+				border: 2px solid #FFF;
+				@media screen and (min-width: 480px){
+					max-width: 150px;
+					margin-right: 15px;
+				}
+				a{
+					display: block;
+					line-height: 0;
+				}
+			}
+		}
+
+		.ms-drop-list {
+			padding-top: 15px;
+			border-top: 1px dashed #CCC;
+		}
 	}
 }
 
@@ -1196,7 +1375,7 @@ a.ms-button{
 		margin-top: 10px;
 		width: 100%;
 		.ms-title{
-			font-size: 16px;
+			font-size: 14px;
 			margin-bottom: 0;
 			font-weight: 600;
 
@@ -1207,11 +1386,10 @@ a.ms-button{
 		}
 		.ms-address{
 			font-size: 13px;
-
 			overflow: hidden;
 			-o-text-overflow: ellipsis;
 			text-overflow: ellipsis;
-			white-space: nowrap;
+			white-space: normal;
 		}
 
 		.ms-price{
@@ -1231,9 +1409,13 @@ a.ms-button{
 		p{
 			font-size: 13px;
 		}
+
+		ul{
+			margin: 3px 0;
+		}
 	}
 
-	@media screen and (min-width: 374px){
+	@media screen and (min-width: 480px){
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -1248,7 +1430,7 @@ a.ms-button{
 			width: calc(100% - 130px);
 			line-height: 1.4;
 			.ms-title{
-				font-size: 17px;
+				//font-size: 17px;
 				margin-bottom: 0;
 				font-weight: 600;
 			}
@@ -1315,9 +1497,9 @@ a.ms-button{
 .timeline{
 	padding-left: 35px;
 	position: relative;
-
 	margin-right: 0px;
 	margin-left: -5px;
+	padding-top: 15px;
 
 	&:before{
 		content: "";
@@ -1334,7 +1516,7 @@ a.ms-button{
 		margin-bottom: 20px;
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: flex-start;
 		&:before{
 			content: "";
 			display: block;
@@ -1372,19 +1554,21 @@ a.ms-button{
 	}
 
 	.ms-wrap-item{
-		//padding-left: 15px;
+		//width: calc(100% - 50px);
 		width: 100%;
+		padding-left: 10px;
 	}
 
 	.ms-item-icon{
-		width: 40px;
+		width: 45px;
 		flex-shrink: 0;
-		margin-right: 8px;
+		//margin-right: 8px;
 		font-size: 10px;
 		display: block;
 		text-align: center;
 		font-weight: 700;
-		margin-left: -8px;
+		//margin-left: -8px;
+		padding-right: 5px;
 
 		&:before{
 			margin: 0 auto 3px auto;
@@ -1393,37 +1577,194 @@ a.ms-button{
 
 		&.ms-rocket{
 			&:before{
-				content: "";
-				display: block;
-				margin: 0 auto 3px auto;
-				width: 18px;
-				height: 20px;
-				background-image: url('../images/crm-icons.png');
-				background-position: 0 0;
-				background-size: 130px;
+				display: inline-block;
+				content: "\e90b";
+				font-family: "crm-icons";
+				font-size: 20px;
+				line-height: 21px;
+				text-align: center;
+				font-weight: normal;
 			}
 
 			&.end{
 				&:before{
-					background-position: -52px 1px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 			}
 
 			&.active{
 				&:before{
-					background-position: -35px 0px;
+					color: #7bc500;
 				}
 			}
 		}
 	}
 
 	.ms-msg{
-		margin-left: 5px;
+		//margin-left: 5px;
+		width: 100%;
+		overflow: auto;
 		p{
-			font-size: 13px;
+			font-size: 14px;
 			word-break: break-word;
 			&.ms-small{
-				font-size: 11px;
+				font-size: 12px;
+			}
+		}
+	}
+	
+	.ms-icon-sms{
+		&:before{
+			display: block;
+			content: "\e917";
+			font-family: "crm-icons";
+			font-size: 20px;
+			line-height: 21px;
+			text-align: center;
+			font-weight: normal;
+		}
+	}
+
+	.ms-icon-note{
+		&:before{
+			font-size: 16px;
+			line-height: 17px;
+			color: #ffe015;
+			background-image: linear-gradient(90deg, #ffea0a, #ffe015);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.ms-icon-calendar{
+		&:before{
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		&.active{
+			&:before{
+				color: #90b02e;
+			}
+		}
+	}
+
+	.ms-drop-list{
+		max-height: auto;
+		margin-top: 15px;
+		padding-left: 5px;
+		display: none;
+	}
+	
+	.ms-open-list{
+		.ms-show{
+			&:after{
+				transform: rotate(-90deg);
+			}
+		}
+	
+		.ms-drop-list{
+			display: block;
+		}
+	}
+
+	.ms-item{
+		&.li-market-report{
+			.ms-msg{
+				border-radius: 10px;
+				color: #787878;
+				&:before{
+					content: "\e978";
+					font-family: "crm-icons"!important;
+					width: 45px;
+					height: 45px;
+					border-radius: 6px;
+					background-color: #dfdfdf;
+					color: #333;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 24px;
+					padding: 0;
+					position: absolute;
+					top: 15px;
+					left: 15px;
+					border: 0;
+				}
+
+				.ms-title{
+					font-size: 18px;
+					font-weight: bold;
+					color: #333;
+					margin-bottom: 5px;
+					padding-left: 60px;
+					margin-top: 4px;
+				}
+
+				.ms-sub-title{
+					font-size: 14px;
+					font-weight: 600;
+					color: #333;
+					margin-bottom: 5px;
+					padding-left: 60px;
+				}
+
+				.ms-small-criterial{
+					font-size: 13px;
+					position: relative;
+					padding-left: 10px;
+					&:before{
+						content: "";
+						display: block;
+						width: 4px;
+						height: 4px;
+						background-color: #787878;
+						position: absolute;
+						top: 7px;
+						left: 0;
+						border-radius: 100%;
+					}
+				}
+
+				@media screen and (min-width: 640px){
+					.ms-wrap-btn{
+						right: 15px;
+					}
+				}
+
+				@media screen and (min-width: 991px){
+					padding: 20px !important;
+					padding-left: 125px !important;
+					margin-left: 0 !important;
+					.ms-title{
+						font-size: 22px;
+						padding-left: 0;
+					}
+	
+					.ms-sub-title{
+						font-size: 15px;
+						padding-left: 0;
+						margin-bottom: 10px;
+						padding-right: 90px;
+					}
+
+					p{
+						padding-right: 90px;
+					}
+
+					&:before{
+						width: 85px;
+						height: 85px;
+						top: 20px;
+						left: 20px;
+						font-size: 40px;
+					}
+				}
 			}
 		}
 	}
@@ -1434,71 +1775,98 @@ a.ms-button{
 .ms-phone-valid,
 .ms-phone-wrong{
 	&:before{
-		content: "";
-		width: 15px;
-		height: 15px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -13px -95px;
+		font-family: $crm-icons;
+		width: 16px;
+		height: 16px;
 		display: inline-block;
-		background-size: 190px;
+		font-size: 16px;
+		line-height: 16px;
+		text-indent: 0;
 	}
 }
 
 .ms-phone-valid{
 	&:before{
-		background-position: -93px -95px;
+		//background-position: -93px -95px;
+		content: "\e92a";
+		color: #82b10d;
 	}
 }
 
 .ms-phone-unknown{
 	&:before{
-		background-position: -143px -95px;
+		//background-position: -143px -95px;
+		content: "\e92c";
+		color: #474747;
+	}
+}
+
+.ms-phone-noanswer,
+.ms-phone-wrong{
+	&:before{
+		//background-position: -125px -95px;
+		content: "\e92b";
+		color: #ee0000;
 	}
 }
 
 .ms-phone-noanswer{
 	&:before{
-		background-position: -125px -95px;
-	}
+		color: #474747;
+	}	
 }
 
-.ms-phone-wrong{
+/*.ms-phone-wrong{
 	&:before{
 		background-position: -109px -95px;
 	}
-}
+}*/
 
 .ms-email-unknown,
 .ms-email-invalid,
 .ms-email-valid,
 .ms-email-way{
 	&:before{
-		content: "";
-		width: 15px;
-		height: 15px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -71px -79px;
+		//content: "";
+		width: 18px;
+		height: 18px;
+		font-family: $crm-icons;
+		//background-image: url('../images/crm-icons.png');
+		//background-position: -71px -79px;
 		display: inline-block;
-		background-size: 190px;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: normal;
+		text-indent: 0;
+		//background-size: 190px;
 	}
 }
 
-.ms-email-unknown,
+.ms-email-unknown{
+	&:before{
+		content: "\e92f";
+	}
+}
+
 .ms-email-valid{
 	&:before{
-		background-position: -71px -79px;
+		content: "\e92e";
+		color: #82b10d;
 	}
 }
 
 .ms-email-way{
 	&:before{
-		background-position: -127px -79px;
+		content: "\e92d";
+		color: #82b10d;
+		//background-position: -127px -79px;
 	}
 }
 
 .ms-email-invalid{
 	&:before{
-		background-position: -141px -79px;
+		content: "\e930";
+		color: #ee0000;
 	}
 }
 
@@ -1508,9 +1876,9 @@ a.ms-button{
 		width: 15px;
 		height: 15px;
 		background-image: url('../images/crm-icons.png');
-    background-position: 0px -201px;
-    display: inline-block;
-    background-size: 270px;
+		background-position: 0px -201px;
+		display: inline-block;
+		background-size: 270px;
 	}
 }
 
@@ -1518,53 +1886,48 @@ a.ms-button{
 	position: relative;
 	padding-left: 30px;
 	&:before{
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 19px;
-		height: 19px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -161px -458px;
+		content: "\e927";
+		font-family: $crm-icons;
 		display: inline-block;
-		background-size: 240px;
+		font-size: 24px;
 	}
 }
 
 .ms-email-open{
 	&:before{
-		content: "";
-		width: 16px;
-		height: 15px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -51px -175px;
+		content: "\e928";
+		font-family: $crm-icons;
+		font-size: 16px;
+		line-height: 16px;
 		display: inline-block;
-		background-size: 257px;
+		color: #df105f;
+		background-image: linear-gradient(to right, #ff612c, #df105f);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: normal;
 	}
 }
 
 .ms-email-close{
 	&:before{
-		content: "";
-		width: 16px;
-		height: 15px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -85px -176px;
+		content: "\e915";
+		font-family: $crm-icons;
+		font-size: 16px;
+		line-height: 16px;
 		display: inline-block;
-		background-size: 257px;
+		font-weight: normal;
 	}
 }
 
 .ms-icon-lead{
 	&:before{
-		content: "";
-		width: 16px;
-		height: 15px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -67px -99px;
+		content: "\e90d";
+		font-family: $crm-icons;
+		font-size: 16px;
+		line-height: 16px;
 		display: inline-block;
-		background-size: 170px;
+		font-weight: normal;
 	}
 
 	&.active{
@@ -1577,7 +1940,7 @@ a.ms-button{
 			width: 16px;
 			height: 15px;
 			background-image: url('../images/crm-icons.png');
-			background-position: 2px -183px;
+			background-position: 1px -183px;
 			display: inline-block;
 			background-size: 247px;
 			order: -1;
@@ -1593,13 +1956,17 @@ a.ms-button{
 
 .ms-icon-inquiere{
 	&:before{
-		content: "";
-    width: 16px;
-    height: 21px;
-    background-image: url('../images/crm-icons.png');
-    background-position: 1px -161px;
-    display: inline-block;
-    background-size: 201px;
+		content: "\e914";
+		font-family: $crm-icons;
+		font-size: 22px;
+		line-height: 23px;
+		display: inline-block;
+		color: #df105f;
+		background-image: linear-gradient(to right, #ff612c, #df105f);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: normal;
 	}
 }
 
@@ -1629,7 +1996,7 @@ a.ms-button{
 	}	
 }
 
-.ms-icon-sms{
+/*.ms-icon-sms{
 	&:before{
     content: "";
     width: 19px;
@@ -1639,100 +2006,94 @@ a.ms-button{
     display: block;
     background-size: 252px;
 	}
-}
+}*/
 
 .ms-icon-alert{
 	&:before{
-    content: "";
-    width: 22px;
-    height: 19px;
-    background-image: url('../images/crm-icons.png');
-    background-position: -38px -188px;
-    display: block;
-    background-size: 230px;
+		display: inline-block;
+		content: "\e918";
+		font-family: "crm-icons";
+		font-size: 20px;
+		line-height: 21px;
+		text-align: center;
+		font-weight: normal;
 	}
 }
 
 .ms-icon-note{
 	&:before{
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-image: url('../images/crm-icons.png');
-    background-position: -133px -378px;
-    display: block;
-    background-size: 198px;
+		display: inline-block;
+		content: "\e927";
+		font-family: $crm-icons;
+		font-weight: normal;
+		font-size: 24px;
 	}
 }
 
 .ms-icon-calendar{
 	&:before{
-    content: "";
-    width: 16px;
-    height: 17px;
-    background-image: url('../images/crm-icons.png');
-    background-position: -120px -418px;
-    display: block;
-    background-size: 230px;
-	}
-
-	&.active{
-		&:before{
-			background-position: -137px -418px;
-		}
+		display: inline-block;
+		content: "\e91a";
+		font-family: $crm-icons;
+		font-weight: normal;
+		font-size: 24px;
 	}
 }
 
 .ms-icon-bucket{
 	&:before{
-		content: "";
-		width: 13px;
-		height: 20px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -14px -315px;
-		display: block;
-		background-size: 200px;
+		content: "\e924";
+		font-family: $crm-icons;
+		font-weight: normal;
+		font-size: 24px;
+		display: inline-block;
+		text-indent: 0;
 	}
 }
 
 .ms-icon-new{
 	&:before{
-		content: "";
-		width: 37px;
-		height: 12px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -200px -49px;
-		display: block;
-		background-size: 250px;
+    display: inline-block;
+    content: "\e919";
+    font-family: $crm-icons;
+    font-size: 35px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: normal;
 	}
+
 	&.active{
 		&:before{
-			background-position: -200px -63px;
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 }
 
 .ms-icon-tagged{
 	&:before{
-		content: "";
-		width: 20px;
-		height: 20px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -18px -456px;
-    display: block;
-    background-size: 240px;
+    display: inline-block;
+    content: "\e91e";
+    font-family: $crm-icons;
+    font-size: 22px;
+    line-height: 23px;
+    text-align: center;
+    font-weight: normal;
 	}
 }
 
 .ms-icon-view{
 	&:before{
-		content: "";
-		width: 18px;
-		height: 11px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -145px -407px;
-		display: block;
-		background-size: 240px;
+    display: inline-block;
+    content: "\e90e";
+    font-family: $crm-icons;
+    font-size: 18px;
+    line-height: 12px;
+    text-align: center;
+    font-weight: normal;
 	}
 
 	&.favorite{
@@ -1741,16 +2102,22 @@ a.ms-button{
 		justify-content: center;
 
 		&:after{
-			content: "";
-			width: 15px;
-			height: 12px;
-			background-image: url('../images/crm-icons.png');
-			background-position: 23px 0px;
 			display: inline-block;
-			background-size: 150px;
+			content: "\e911";
+			font-family: $crm-icons;
+			font-size: 13px;
+			line-height: 12px;
+			text-align: center;
+			font-weight: normal;
 			order: -1;
 			margin: 0;
 			margin-left: 5px;
+
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 
 		&:before{
@@ -1762,16 +2129,17 @@ a.ms-button{
 
 .ms-icon-save{
 	&:before{
-		content: "";
-		width: 13px;
-		height: 14px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -65px -625px;
-		display: block;
-		background-size: 160px;
+		display: inline-block;
+		content: "\e910";
+		font-family: $crm-icons;
+		font-size: 16px;
+		line-height: 17px;
+		text-align: center;
+		font-weight: normal;
 	}
 }
 
+.social-connectors-item.ms-fb,
 .ms-icon-fb,
 .ms-icon-facebook{
 	&:before{
@@ -1784,6 +2152,7 @@ a.ms-button{
 	}
 }
 
+.social-connectors-item.ms-in,
 .ms-icon-ig,
 .ms-icon-instagram{
 	&:before{
@@ -1793,14 +2162,15 @@ a.ms-button{
 		font-family: $crm-icons;
 		font-size: 24px;
 		color: #3350b9;
-
-		background-image: linear-gradient(to right,#ff7d2e,#9a25ba);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+		text-indent: 0;
+		background-image: linear-gradient(to right, #ff7d2e, #9a25ba);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 
+.social-connectors-item.ms-tw,
 .ms-icon-tw,
 .ms-icon-twitter{
 	&:before{
@@ -1809,10 +2179,11 @@ a.ms-button{
 		margin-right: 5px;
 		font-family: $crm-icons;
 		font-size: 24px;
-		color: #00a2f6;
+		color: #000;
 	}
 }
 
+.social-connectors-item.ms-gg,
 .ms-icon-gp,
 .ms-icon-google{
 	&:before{
@@ -1825,6 +2196,7 @@ a.ms-button{
 	}
 }
 
+.social-connectors-item.ms-ln,
 .ms-icon-ln,
 .ms-icon-linkedin{
 	&:before{
@@ -1837,6 +2209,7 @@ a.ms-button{
 	}
 }
 
+.social-connectors-item.ms-pt,
 .ms-icon-pt,
 .ms-icon-pinterest{
 	&:before{
@@ -1849,6 +2222,7 @@ a.ms-button{
 	}
 }
 
+.social-connectors-item.ms-yt,
 .ms-icon-yt,
 .ms-icon-youtube{
 	&:before{
@@ -1861,6 +2235,18 @@ a.ms-button{
 	}
 }
 
+.social-connectors-item.ms-tik-tok,
+.ms-icon-tik-tok{
+	&:before{
+		content: "\e970";
+		display: inline-block;
+		margin-right: 5px;
+		font-family: "crm-icons"!important;
+		font-size: 24px;
+		color: #000;
+	}
+}
+
 .ms-icon-add{
 	border: 1px solid #e1e1e1;
 	border-radius: 2px;
@@ -1869,12 +2255,17 @@ a.ms-button{
 	background-color: #FFF;
 	position: relative;
 	&:before{
-		content: "";
-		display: block;
+		content: "\e902";
+		/*display: block;
 		background: url('../images/crm-icons.png') no-repeat -109px -14px;
 		background-size: 180px auto;
 		width: 22px;
-		height: 22px;
+		height: 22px;*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px !important;
+		font-family: $crm-icons;
 	}
 
 	/*&:before{
@@ -1922,7 +2313,27 @@ a.ms-button{
 		text-indent: -999999px;
 		overflow: hidden;
 		display: block;
-		height: 22px;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		&:before{
+			font-size: 23px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-indent: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.ms-icon-ig:before, 
+	.ms-icon-instagram:before{
+		display: inline-block !important;
+		line-height: 24px;
 	}
 }
 
@@ -2000,32 +2411,32 @@ a.ms-button{
 .ms-big{
 	&.ms-icon-bucket{
 		&:before{
-			width: 25px;
-			height: 37px;
-			background-position: -241px -199px;
-			background-size: 345px;
+			font-size: 40px;
+			line-height: normal;
+			font-weight: normal;
+			color: #d6d6d6;
 		}
 	}
 
 	&.ms-text-phone{
 		&:before{
-			content: "";
+			content: "\e90a";
 			display: inline-block;
-			background: url('../images/crm-icons.png') no-repeat -117px -39px;
-			background-size: 250px 250px;
-			width: 33px;
-			height: 33px;
+			font-family: $crm-icons;
+			font-size: 40px;
+			font-weight: normal;
+			color: #d6d6d6;
 		}
 	}
 
 	&.ms-text-email{
 		&:before{
-			content: "";
+			content: "\e909";
 			display: inline-block;
-			background: url('../images/crm-icons.png') no-repeat -82px -38px;
-			background-size: 250px 250px;
-			width: 33px;
-			height: 33px;
+			font-family: $crm-icons;
+			font-size: 33px;
+			font-weight: normal;
+			color: #d6d6d6;
 		}
 	}
 }
@@ -2063,7 +2474,7 @@ form{
 			justify-content: space-between;
 
 			.form-item{
-				width: 48%;
+				width: 49%;
 				&.ms-full{
 					width: 100%;
 				}
@@ -2115,16 +2526,18 @@ form{
 				position: relative;
 				display: inline-block;
 				vertical-align: middle;
-				margin-top: -2px;
 				margin-left: 2px;
+				margin-top: -2px;
 				border: 0;
 				text-align: center;
-				height: 10px;
+				height: 9px;
 				width: 10px;
 				background-color: transparent;
 				&:after{
-					top: -2px;
 					color: #333;
+					content: "\e905";
+					font-size: 7px;
+					font-weight: 600;
 				}
 			}
 		}
@@ -2155,19 +2568,14 @@ form{
 	background-repeat: no-repeat;
 
 	&:before{
-		content: "\e904";
-		font-family: "icomoon"!important;
-		width: 14px;
-		height: 14px;
-		border: 1px solid #989897;
+		content: "\e920";
+		font-family: $crm-icons;
+		font-size: 16px;
 		display: inline-block;
-		vertical-align: middle;
-		margin-top: -2px;
+		font-weight: normal;
 		margin-right: 5px;
-		border-radius: 100%;
-		text-align: center;
-		font-size: 11px;
-		line-height: 14px;
+		vertical-align: middle;
+		margin-top: -4px;
 	}
 
 	&:after{
@@ -2177,7 +2585,6 @@ form{
     top: -10px;
     width: max-content;
     font-size: 11px;
-    background: linear-gradient(to right, #fa6630, #be155e);
     border-radius: 4px;
     padding: 3px 10px;
     margin-bottom: 10px;
@@ -2186,6 +2593,7 @@ form{
     opacity: 0;
     transition: all .3s;
     transform: translateX(-50%);
+		@extend .gradient;
 	}
 	
 	&:not(.active){
@@ -2209,13 +2617,13 @@ form{
 
 .ms-icon-marker{
 	&:before{
-		content: "";
-		width: 13px;
-		height: 18px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -130px -52px;
-		display: block;
-		background-size: 170px;
+		content: "\e91d";
+		display: inline-block;
+		margin-right: 5px;
+		font-family: $crm-icons;
+		font-size: 18px;
+		line-height: normal;
+		font-weight: normal;
 	}
 }
 
@@ -2225,15 +2633,15 @@ form{
 	margin: 15px 0px 5px 0px !important;
 	font-weight: 600 !important;
 	&:before{
-		content: "";
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 10px;
-		width: 16px;
-		height: 18px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -156px -16px;
-    background-size: 190px;
+    content: "\e90c";
+    font-family: "crm-icons";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: normal;
+    margin-top: -5px;
 	}
 }
 
@@ -2242,7 +2650,7 @@ form{
 		color: #333;
 		&:hover{
 			text-decoration: none !important;
-			color: #be155e;
+			color: $color-b;
 		}
 	}
 }
@@ -2376,14 +2784,18 @@ form{
 
 .ms-icon-cell-phone{
 	&:before{
-		content: "";
-		display: inline-block;
 		margin-right: 10px;
-		background-image: url('../images/crm-icons.png');
-		background-position: -481px -97px;
-		background-size: 170px 170px;
-		width: 29px;
-		height: 29px;
+		content: "\e90a";
+		display: inline-block;
+		font-family: $crm-icons;
+		font-size: 30px;
+		font-weight: normal;
+
+		color: #df105f;
+		background-image: linear-gradient(to right, #ff612c, #df105f);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 
@@ -2391,6 +2803,8 @@ form{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	position: relative;
+	z-index: 0;
 	.ms-total-results{
 		margin-left: 10px;
 		font-weight: 700;
@@ -2421,8 +2835,8 @@ form{
 				border: 1px solid transparent !important;
 				>a,
 				>span{
-					background: linear-gradient(to right, #fa6630, #be155e);
 					color: #FFF !important;
+					@extend .gradient;
 				}
 			}
 		}
@@ -2465,7 +2879,34 @@ form{
 /* LEADS TABLA
 /*-----------------------------------------------------------------------------------------------------*/
 .ms-wrap-table-crm{
-	overflow-x: auto;
+	@media screen and (min-width: 768px){
+		overflow-x: auto;
+		/*&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+
+		&::-webkit-scrollbar-corner {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-button {
+			width: 0px;
+			height: 0px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgb(90, 90, 90);
+			border: 0px none rgb(245, 245, 245);
+			border-radius: 0px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgb(245, 245, 245);
+			border: 0px none rgb(245, 245, 245);
+			border-radius: 0px;
+		}*/
+	}
 }
 
 .ms-lead-header{
@@ -2540,17 +2981,20 @@ form{
 		background-color: #FFF;
 		border: 1px solid #d6d5da;
 		//box-shadow: 0 0 16px #ccc;
-		box-shadow: 0 0 4px rgba(0,0,0,0.090);
-		display: flex;
+		//box-shadow: 0 0 4px rgba(0,0,0,0.090);
+		//overflow: hidden;
+		display: flex; 
 		justify-content: space-between;
 		flex-wrap: wrap;
-		//overflow: hidden;
 		margin-bottom: 15px;
+		box-shadow: 0px 2px 4px rgba(31,30,47,0.03);
+		border-color: $border-color;
 
 		.ms-item{
 			&.ms-chk{
 				@media (max-width: 767px){
 					width: 10.78%;
+					max-width: 40px;
 				}
 				label{
 					text-indent: -999999px;
@@ -2602,10 +3046,45 @@ form{
 		.content_dropdown{
 			margin: 0;
 			z-index: auto;
+			@media (max-width: 767px){
+				position: absolute;
+				/*bottom: -46px;
+				right: -1px;
+				height: 46px;
+				width: 50%;
+				padding: 6px;*/
+				bottom: -40px;
+				right: 3px;
+				height: 35px;
+				width: 100px;
+				padding: 6px;
+			}
+
+			@media (max-width: 481px){
+				bottom: -40px;
+			}
+			
 			.dropdown{
 				position: relative;
 				margin-left: auto;
 				margin-right: 0;
+
+				@media (max-width: 767px){
+					width: 100%;
+					height: 100%;
+					border: 0;
+					.btn{
+						height: 100%;
+						font-size: 12px;
+						border: 0 !important;
+						&:after{
+							top: 50%;
+							margin-top: -6px;
+							right: 9px;
+						}
+					}
+				}
+
 				.dropdown-menu {
 					position: absolute;
 					top: 100%;
@@ -2616,16 +3095,16 @@ form{
 
 		.ms-user-avatar{
 			display: none;
-			@media screen and (min-width: 375px){
+			@media screen and (min-width: 319px){
 				display: flex;
-				margin-right: 10px;
+				margin-right: 8px;
 			}
 
-			@media screen and (min-width: 480px){
+			/*@media screen and (min-width: 480px){
 				width: 50px;
 				height: 50px;
 				font-size: 24px;
-			}
+			}*/
 
 			@media screen and (min-width: 480px){
 				width: 35px;
@@ -2636,9 +3115,10 @@ form{
 
 		.ms-user-info{
 			margin: 0;
-			padding-right: 10px;
+			padding-right: 8px;
 			@media (max-width: 767px){
-				width: 72.01%;
+				width: 69.01%;
+				flex-grow: 1;
 			}
 			.ms-title{
 		    .ms-name{
@@ -2683,7 +3163,7 @@ form{
 			background-color: #aaaaaa;
 			color: #FFF;
 			@media (max-width:767px){
-				width: 19%;
+				width: 22%;
 			}
 			span{
 				font-weight: 600;
@@ -2703,7 +3183,7 @@ form{
 			}
 
 			&.active{
-				background: linear-gradient(to right, #fa6630, #be155e);
+				@extend .gradient;
 			}
 		}
 
@@ -2720,8 +3200,9 @@ form{
 			&.ms-username{
 				position: relative;
 				justify-content: space-between;
-				padding: 5px;
+				padding: 6px;
 				border-bottom: 1px solid #dfe0e0;
+				border-color: $border-color;
 				.ms-chk{
 					margin-left: -5px;
 				}
@@ -2740,7 +3221,7 @@ form{
 		}
 
 		.ms-lastvisit-btn{
-			padding: 10px 10px 10px 40px; 
+			padding: 10px 10px 10px 30px; 
 			font-size: 13px;
 			margin: 0;
 			color: #909090;
@@ -2762,7 +3243,7 @@ form{
 				display: block;
 				top: 0;
 				left: 0;
-				width: 35px;
+				width: 30px;
 				height: 100%;
 				text-indent: -999999px;
 				overflow: hidden;
@@ -2773,7 +3254,7 @@ form{
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					font-size: 16px;
+					font-size: 12px;
 					font-family: 'icomoon'!important;
 					position: absolute;
 					top: 0;
@@ -2802,6 +3283,7 @@ form{
 			align-items: center;
 			padding: 7px 0;
 			border-top: 1px solid #dfe0e0;
+			border-color: $border-color;
 			.ms-item{
 				flex-grow: 1;
 				width: 20%;
@@ -2813,6 +3295,7 @@ form{
 				color: #979797;
 				padding: 5px;
 				border-right: 1px solid #dfe0e0;
+				border-color: $border-color;
 				span{
 					display: block;
 					font-weight: 700;
@@ -2857,6 +3340,7 @@ form{
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
+			border-color: $border-color;
 			span{
 				font-weight: 700;
 				color: #333;
@@ -2894,9 +3378,9 @@ form{
 						display: block;
 					}
 
-					&.ms-bg-text{
+					/*&.ms-bg-text{
 						margin-bottom: 5px;
-					}
+					}*/
 				}
 			}
 		}
@@ -2905,7 +3389,6 @@ form{
 			flex-wrap: nowrap;
 			height: 75px;
 			margin-bottom: 10px;
-			
 			width: fit-content;
 			min-width: 100%;
 			flex-shrink: 0;
@@ -2966,8 +3449,7 @@ form{
 				max-width: 275px;
 				.ms-title{
 					margin-top: 0;
-					font-size: 16px;
-
+					//font-size: 16px;
 					.ms-name{
 						max-width: 210px;
 					}
@@ -2982,7 +3464,6 @@ form{
 				a, p{
 					font-size: 13px;
 				}
-
 				.ms-icon{
 					width: 15px;
 					height: 15px;
@@ -2999,7 +3480,6 @@ form{
 				flex-grow: 1;
 				flex-shrink: 0;
 				width: 380px;
-
 				.ms-item{
 					&.ms-chk{
 						label{
@@ -3010,7 +3490,6 @@ form{
 								border-radius: 2px;
 							}
 						}
-
 						input:checked+label:after{
 							width: 16px;
 							height: 16px;
@@ -3025,8 +3504,9 @@ form{
 				border-top: 0;
 				flex-shrink: 0;
 				flex-grow: 1;
-				width: 220px;
+				width: auto;
 				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-item{
 					font-size: 13px;
 					border-right: 0;
@@ -3046,10 +3526,11 @@ form{
 				font-weight: 700;
 				color: #333;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
 				flex-grow: 1;
-				width: 90px;
+				width: auto;
 				flex-shrink: 0;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-bg-text{
 					display: none;
 				}
@@ -3064,12 +3545,13 @@ form{
 				order: 3;
 				font-size: 12px !important;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
 				flex-grow: 1;
-				width: 90px !important;
+				width: auto !important;
 				flex-shrink: 0;
 				padding-left: 0 !important;
 				padding-right: 0 !important;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-label{
 					display: none;
 				}
@@ -3090,13 +3572,13 @@ form{
 				order: 4;
 				margin: 0;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
 				justify-content: center;
 				flex-grow: 1;
-				//width: auto;
-				width: 180px;
+				width: auto;
 				flex-shrink: 0;
 				padding: 0 10px;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-btn{
 					margin-right: 5px;
 					width: 50px;
@@ -3107,18 +3589,8 @@ form{
 					&.ms-phone{
 						span{
 							&:before{
-								width: 14px;
-								height: 16px;
-								background-position: 0px -298px;
-								background-size: 200px;
-							}
-						}
-
-						&.active{
-							span{
-								&:before {
-									background-position: -30px -298px;
-								}
+								font-size: 16px;
+								line-height: normal;
 							}
 						}
 					}
@@ -3126,18 +3598,8 @@ form{
 					&.ms-email{
 						span{
 							&:before{
-								width: 17px;
-								height: 17px;
-								background-position: -70px -326px;
-								background-size: 230px;
-							}
-						}
-
-						&.active{
-							span{
-								&:before {
-									background-position: -103px -326px;
-								}
+								font-size: 18px;
+								line-height: normal;
 							}
 						}
 					}
@@ -3145,18 +3607,8 @@ form{
 					&.ms-texts{
 						span{
 							&:before{
-								width: 18px;
-								height: 17.5px;
-								background-position: 1px -330px;
-								background-size: 233px;
-							}
-						}
-
-						&.active{
-							span{
-								&:before {
-									background-position: -35px -330px;
-								}
+								font-size: 20px;
+								line-height: normal;
 							}
 						}
 					}
@@ -3168,12 +3620,13 @@ form{
 				text-indent: -999999px;
 				position: relative;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
 				flex-grow: 1;
-				min-width: 50px;
-				width: 50px;
+				min-width: auto;
+				width: auto;
 				flex-shrink: 0;
 				display: block;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				span{
 					display: none;
 				}
@@ -3202,36 +3655,31 @@ form{
 				text-indent: -999999px;
 				position: relative;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
 				flex-grow: 1;
-				min-width: 50px;
-				width: 50px;
+				min-width: auto;
+				width: auto;
 				flex-shrink: 0;
 				display: block;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				span{
 					display: none;
 				}
 
 				.ms-icon-buckets{
-					position: relative;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					position: absolute;
-					top: 50%;
-					left: 50%;
-					//transform: translate(-50%,-50%);
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
 					text-indent: 0;
-					margin-bottom: 0;
-					width: 17px;
-					height: 26px;
-
-					margin-top: -13px;
-					margin-left: -8.5px;
-					background-size: 250px;
-					background-position: 0px -143px;
-					&.active{
-						background-position: -51px -143px;
+					&:before{
+						font-size: 24px;
+						margin-bottom: 0;
+						//line-height: 26px;
 					}
 				}
 			}
@@ -3244,11 +3692,11 @@ form{
 				justify-content: center;
 				flex-direction: column;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
-
 				flex-grow: 1;
 				flex-shrink: 0;
-				width: 85px;
+				width: auto;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-bg-text{
 					display: none;
 				}
@@ -3262,11 +3710,11 @@ form{
 				justify-content: center;
 				flex-direction: column;
 				border-top: 0;
-				border-right: 1px solid #cacaca;
-
 				flex-grow: 1;
 				flex-shrink: 0;
-				width: 85px;
+				width: auto;
+				border-right: 1px solid #cacaca;
+				border-color: $border-color;
 				.ms-bg-text{
 					display: none;
 				}
@@ -3280,10 +3728,9 @@ form{
 				justify-content: center;
 				flex-direction: column;
 				border-top: 0;
-
 				flex-grow: 1;
 				flex-shrink: 0;
-				width: 85px;
+				width: auto;
 				.ms-bg-text{
 					margin-bottom: 0 !important;
 					font-size: 11px;
@@ -3299,7 +3746,7 @@ form{
 				margin-right: 10px;
 			}
 			.ms-user-info {
-				max-width: 100%;
+				max-width: 300px;
 			}
 		}
 
@@ -3311,13 +3758,26 @@ form{
 
 			.ms-activity-actions{
 				&.ms-todo{
-					padding: 10px 15px;
-					justify-content: flex-start;
+					//padding: 6px 15px;
+					padding: 6px 15px 6px 10px;
 					text-align: left;
-					display: block;
+					padding-right: 52%;
+					font-size: 12px;
+					height: 45px;
+					border-bottom: 1px solid #dfe0e0;
+					border-color: $border-color;
+
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					flex-direction: row;
+
 					span{
 						display: inline;
 						margin-right: 5px;
+						&:not(.ms-ellipsis){
+							font-size: 11px;
+						}
 					}
 				}
 			}
@@ -3333,19 +3793,6 @@ form{
 						transform: rotate(-90deg);
 					}
 				}
-
-				/*.ms-activity-actions{
-					&.ms-todo{
-						padding: 15px;
-						justify-content: flex-start;
-						text-align: left;
-						display: block;
-						span{
-							display: inline;
-							margin-right: 5px;
-						}
-					}
-				}*/
 			}
 		}
 	}
@@ -3360,7 +3807,7 @@ form{
 }
 
 .ms-ellipsis{
-	width: 90%;
+	width: 100%;
 	display: block;
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
@@ -3370,27 +3817,34 @@ form{
 }
 
 .ms-filter-actions{
-	padding: 15px;
+	padding: 10px 15px;
 	margin-right: -15px;
 	margin-left: -15px;
 	background-color: #FFF;
-	margin-bottom: 15px;
-	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+	//margin-bottom: 15px;
+	//box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid #e1e8ed;
 
+	@media screen and (min-width: 1024px){
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	/* ACTUALIZACION*/
+	//@media (max-width: 1023px){
 	@media (max-width: 1023px){
-
 		&:not(.ms-mb-ft){
-			overflow: hidden;
+			/*overflow: hidden;
 			height: auto;
-			max-height: 73px;
+			max-height: 73px;*/
 			.ms-wrap-filter{
 				padding-top: 50px;
 			}
 
-			&.active{
+			/*&.active{
 				overflow: visible;
 				max-height: 100%;
-			}
+			}*/
 		}
 	}
 
@@ -3400,13 +3854,13 @@ form{
 		border: 1px solid #dedede;
 		background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
 		width: 100%;
-		height: 43px;
+		height: 40px;
 		font-weight: 700;
 		border-radius: 4px;
-		font-size: 13px;
+		font-size: 12px;
 		color: #333;
 		position: relative;
-		padding: 0 15px;
+		padding: 0 10px;
 
 		display: flex;
 		align-items: center;
@@ -3416,11 +3870,12 @@ form{
 	.ms-search{
 		border: 1px solid #dedede;
 		border-radius: 4px;
-		height: 43px;
+		height: 40px;
 		padding: 0 30px 0 15px;
 		position: relative;
 		z-index: 1;
 		background-color: transparent;
+		font-size: 13px;
 	}
 
 	/*.ms-select-items,
@@ -3471,6 +3926,7 @@ form{
 
 	.ms-top-pag{
 		display: none;
+		a,
 		button{
 			&.ms-next{
 				order: 2;
@@ -3518,20 +3974,25 @@ form{
 		&.ms-button{
 			&:before{
 				content: "\e906";
-				font-size: 24px;
+				font-size: 19px;
 				display: inline-block;
 				margin-right: 5px;
 				font-family: $crm-icons;
 				font-weight: normal;
+				@media screen and (min-width: 768px){
+					font-size: 24px;
+				}
 			}
 		}
 	}
 
 	.ms-wrap-filter{
 		display: flex;
-		flex-wrap: wrap;
+		//flex-wrap: wrap;
 		justify-content: space-between;
 		position: relative;
+		margin-left: -5px;
+		margin-right: -5px;
 
 		#ms-more-filters{
 			width: 70px;
@@ -3540,15 +4001,17 @@ form{
 			top: 0;
 			right: 0;
 			z-index: 2;
+			display: none;
 		}
-
+		/*ACTUALIZACION*/	
 		.ms-wrap-input{
+			//display: none;
 			&.ms-inp-search{
 				position: absolute;
 				top: 0;
-				left: 0;
-				width: 100%;
-				padding-right: 80px;
+				left: 5px;
+				width: calc(100% - 10px);
+				padding-right: 0;
 				z-index: 1;
 			}
 		}
@@ -3560,8 +4023,22 @@ form{
 		}
 
 		.ms-ft-item{
-			width: 48%;
-			margin-top: 10px;
+			//ACTUALIZACION width: 48%;
+			//margin-top: 10px;
+			padding: 0 5px;
+			width: auto;
+			flex-grow: 1;
+			&.ms-select-items{
+				display: none;
+			}
+
+			.ms-button{
+				padding: 0;
+				//font-size: 11px;
+				@media screen and (min-width: 1024px){
+					padding: 0 15px;
+				}
+			}
 		}
 	}
 	
@@ -3628,7 +4105,7 @@ form{
 			}
 
 			.ms-button{
-				font-size: 13px;
+				font-size: 12px;
 			}
 
 			.ms-wrap-input{
@@ -3636,8 +4113,8 @@ form{
 					position: relative;
 					padding-right: 0;
 					order: 3;
-					width: 60%;
-					padding: 0 5px;
+					width: 28%;
+					padding: 0 10px 0 0;
 				}
 			}
 
@@ -3678,6 +4155,9 @@ form{
 
 	@media screen and (min-width: 1440px){
 		padding-bottom: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
 		.ms-wrap-filter{
 			justify-content: flex-start;
@@ -3694,21 +4174,6 @@ form{
 				margin-bottom: 0;
 			}
 		}
-	}
-
-	@media screen and (min-width: 1600px){
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		
-
-		.ms-wrap-filter{
-			.ms-wrap-input{
-				&.ms-inp-search{
-					width: 280px;
-				}
-			}
-		}
 
 		.ms-top-pag{
 			display: flex;
@@ -3716,7 +4181,7 @@ form{
 			justify-content: flex-end;
 			span{
 				font-size: 13px;
-				font-weight: 700;
+				font-weight: 600;
 				display: inline-block;
 				margin-right: 10px;
 			}
@@ -3753,6 +4218,16 @@ form{
 			}
 		}
 	}
+
+	@media screen and (min-width: 1600px){
+		.ms-wrap-filter{
+			.ms-wrap-input{
+				&.ms-inp-search{
+					width: 280px;
+				}
+			}
+		}
+	}
 }
 
 .ms-icon-phone{
@@ -3781,9 +4256,10 @@ form{
 	&:before{
 		content: "\e909";
 		display: inline-block;
-		margin-right: 5px;
+		margin-right: 10px;
 		font-family: "crm-icons";
 		font-size: 24px;
+		font-weight: normal;
 	}
 }
 
@@ -3794,25 +4270,69 @@ form{
 		position: absolute;
 		top: 100%;
 		left: 0;
-		padding: 15px 0;
+		//padding: 15px 0;
+		padding: 0;
 		border: 1px solid #cacaca;
 		z-index: 2;
 		background-color: #FFF;
-    min-width: 160px;
-    font-size: 13px;
+    //min-width: 160px;
+    //font-size: 13px;
+		min-width: 200px;
+		font-size: 14px;
     text-align: left;
     border-radius: 4px;
+		margin-top: 10px;
+
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -8px;
+			left: 30px;
+			background-image: url("../images/arrow_min.png");
+			width: 11px;
+			height: 8px;
+		}
+
 		li{
 			a{
-				padding: 5px 15px;
+				//padding: 5px 15px;
+				padding: 10px 15px;
 				color: #333;
 				display: block;
 				cursor: pointer;
+				border-bottom: 1px solid $border-color;
 				&:hover,
 				&.active{
 					color: #157edc;
 				}
-			}		
+			}
+
+			&.ms-wrap-chk{
+				label{
+					padding-top: 10px;
+					padding-bottom: 10px;
+					margin-bottom: 0;
+					border-bottom: 1px solid $border-color;
+					&:after{
+						top: 10px;
+					}
+
+					&:before{
+						background-color: #FFF;
+					}
+
+					&:hover{
+						background-color: #f5f5f5;
+					}
+				}
+			}
+
+			&:last-child{
+				a, label{
+					border-bottom: 0;
+				}
+			}
 		}
 	}
 
@@ -3840,7 +4360,7 @@ form{
 			display: block;
 			width: 20px;
 			height: 20px;
-			margin-right: 5px;
+			margin-right: 10px;
 			border-radius: 3px;
 			border: 2px solid #cccccc;
 		}
@@ -3933,7 +4453,8 @@ form{
 	@media screen and (min-width: 768px){
 		padding: 0;
 		margin: 0;
-	}
+  }
+  
 	.ms-filter-actions{
 		padding-top: 0;
 		box-shadow: none;
@@ -3948,17 +4469,18 @@ form{
 
 		.ms-button{
 			flex-shrink: 0;
-			width: 29%;
+			width: 31%;
 			padding: 0 5px;
 			font-size: 13px;
 			margin-bottom: 0;
-			display: block;
+			//display: block;
 		}
 
 		.ms-wrap-input{
 			max-width: 300px;
 			flex-shrink: 0;
-			width: 55%;
+			width: 30%;
+			flex-grow: 1;
 			margin-bottom: 0;
 			.ms-search{
 				font-size: 13px;
@@ -4001,7 +4523,7 @@ form{
 
 			span{
 				font-size: 13px;
-				font-weight: 700;
+				font-weight: 600;
 				display: inline-block;
 				margin-right: 10px;
 			}
@@ -4013,6 +4535,7 @@ form{
 				position: relative;
 				text-indent: -999999px;
 				overflow: hidden;
+				display: block;
 				&:before{
 					display: flex;
 					align-items: center;
@@ -4043,15 +4566,7 @@ form{
 				width: 29%;
 			}
 
-			.ms-wrap-input{
-				width: 39%;
-			}
-
 			.ms-back{
-				/*&:before{
-					margin-right: 3px;
-					margin-left: -5px;
-				}*/
 				&:before{
 					display: none;
 				}
@@ -4079,8 +4594,6 @@ form{
 			}
 			
 			.ms-wrap-input{
-			  width: 58%;
-			  max-width: 100% !important;
 			  margin: 0;
 			}
 		}
@@ -4088,6 +4601,10 @@ form{
 		@media screen and (min-width: 991px){
 			.ms-wrap-filter {
 				width: auto;
+			}
+
+			.ms-wrap-input{
+			  width: 55%;
 			}
 		}
 	}
@@ -4134,12 +4651,15 @@ form{
 			.content_dropdown{
 				margin: 0;
 				margin-top: 10px;
+				z-index: 11;
 				.dropdown{
 					width: 85px;
 					position: relative;
 					.dropdown-menu{
 						position: absolute;
 						top: 100%;
+						border: 1px solid gainsboro;
+						left: -1px;
 					}
 					.btn {
 						padding: 1px 10px 1px 7px;
@@ -4151,6 +4671,9 @@ form{
 		.ms-cl-b{
 			width: calc(100% - 85px);
 			padding-left: 15px;
+			.ms-title{
+				cursor: pointer;
+			}
 		}
 
 		.ms-user-detail{
@@ -4192,26 +4715,35 @@ form{
 						justify-content: center;
 					}
 
-					&.ms-phone{
+					&.ms-phone,
+					&.ms-email{
 						span{
 							&:before{
-								content: "";
-								display: inline-block;
-								margin-right: 5px;
-								background-image: url('../images/crm-icons.png');
-								width: 20px;
-								height: 22px;
-								text-indent: 0;
-								background-position: 0px -403px;
-								background-size: 270px;
+								font-size: 20px;
+								font-weight: normal;
 							}
 						}
+					}
 
-						&.active{
-							span{
-								&:before{
-									background-position: -40px -403px;
-								}
+					&.ms-texts{
+						span{
+							&:before{
+								width: 24px;
+								font-size: 24px;
+								font-weight: normal;
+							}
+						}
+					}
+
+					/*&.ms-phone{
+						span{
+							&:before{
+								content: "\e908";
+								display: inline-block;
+								margin-right: 5px;
+								font-family: "crm-icons";
+								font-size: 24px;
+								text-align: center;
 							}
 						}
 					}
@@ -4262,7 +4794,7 @@ form{
 								}
 							}
 						}
-					}
+					}*/
 				}
 			}
 		}
@@ -4271,15 +4803,20 @@ form{
 	.ms-wrap-actions{
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 15px;
+    margin-bottom: 15px;
+    margin-left: -5px;
+    margin-right: -5px;
 		.ms-btn{
-			width: 32%;
+			width: 33%;
 			border: 1px solid #d0d0d0;
 			border-radius: 6px;
 			padding: 10px 5px;
 			text-align: center;
 			font-size: 13px;
-			background-color: #FFF;
+      background-color: #FFF;
+      flex-grow: 1;
+      margin-left: 5px;
+      margin-right: 5px;
 			span{
 				display: block;
 				margin: 0 auto;
@@ -4290,10 +4827,29 @@ form{
 				font-size: 11px;
 				color: #333;
 				font-weight: 700;
+      }
+      
+      .ms-user-avatar{
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: 1600px){
+          width: 55px;
+          height: 55px;
+        }
+      }
+		}
+		
+		@media screen and (min-width: 1600px){
+			.ms-icon-rocket:before{
+				font-size: 45px;
+				line-height: normal;
+				height: auto;
 			}
 
-			.ms-icon-user{
-				margin-top: 5px;
+			.ms-icon-user:before {
+				font-size: 55px;
+				height: auto;
+				line-height: normal;
 			}
 		}
 	}
@@ -4358,7 +4914,7 @@ form{
 				align-items: center;
 				width: 100%;
 				&:before{
-					margin-right: 5px;
+					margin-right: 10px;
 				}
 			}
 		}
@@ -4373,6 +4929,40 @@ form{
 			padding: 0;
 		}
 	}
+
+	.dropdown-menu{
+		padding: 0;
+		margin-top: 10px;
+		min-width: 200px;
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -8px;
+			left: 30px;
+			background-image: url("../images/arrow_min.png");
+			width: 11px;
+			height: 8px;
+		}
+		>li{
+			font-size: 14px;
+			>a{
+				padding: 10px 15px !important;
+				border-bottom: 1px solid $border-color;
+				font-size: 14px;
+			}
+			&:last-child{
+				>a{
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	/*.ms-icon-rocket.end:before{
+		color: #7bc500;
+		background-image: none !important;
+	}*/
 
 	@media (max-width: 640px){
 		.ms-qualification{
@@ -4399,15 +4989,21 @@ form{
 	position: sticky;
 	z-index: 10;
 	top: 0;
-	height: 49px;
+	height: 45px;
 	margin-bottom: 15px;
 	background-color: #FFF;
+	@media screen and (min-width: 1600px){
+		height: 50px;
+	}
 
-	.ms-wrap-tabs{
+	.ms-wrap-tabs {
 		position: relative;
 		width: 100%;
 		height: 64px;
-		overflow: auto;
+
+		@media (max-width: 768px) {
+			overflow: auto;
+		}
 	}
 
 	.ms-header-tabs{
@@ -4420,7 +5016,6 @@ form{
 			font-size: 13px;
 			text-align: center;
 			font-weight: 600;
-			min-width: 88.66px;
 			flex-grow: 1;
 			border-top-left-radius: 4px;
 			border-top-right-radius: 4px;
@@ -4428,6 +5023,10 @@ form{
 			overflow: hidden;
 			border-bottom: 4px solid #e1e1e1;
 			position: relative;
+
+			@media (max-width: 768px) {
+				min-width: 110px;
+			}
 
 			&.ms-blocked{
 				display: none;
@@ -4447,7 +5046,7 @@ form{
 			}
 
 			&.active{
-				background: linear-gradient(to right, #fa6630, #be155e);
+				@extend .gradient;
 				a{
 					background-color: transparent;
 					color: #FFF;
@@ -4518,11 +5117,11 @@ form{
 				&.active{
 					background: #FFF;
 					&:after{
-						background: linear-gradient(to right, #fa6630, #be155e);
+						@extend .gradient;
 					}
 
 					a{
-						color: #be155e;
+						color: $color-b;
 					}
 				}
 			}
@@ -4606,8 +5205,9 @@ form{
 
 			.ms-wrap-actions{
 				height: auto;
-				margin-bottom: 20px;
+				margin-bottom: 0 !important;
 				order: 1;
+				padding-bottom: 15px;
 				.ms-btn {
 					display: flex;
 					flex-direction: column;
@@ -4628,11 +5228,12 @@ form{
 				display: flex;
 				width: 100%;
 				justify-content: space-between;
+				align-items: flex-start;
 				.ms-widget:nth-child(even){
 					width: 48%;
 				}
 				.ms-widget:nth-child(odd){
-					width: 49%;			
+					width: 50%;			
 				}
 			}
 
@@ -4648,12 +5249,24 @@ form{
 
 			//.ms-block-a,
 			.ms-wrap-info{
-				width: 49%;
+				width: 60%;
 			}
 			
 			//.ms-block-b,
 			.ms-wrap-actions{
-				width: 48%;
+				width: 39%;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1400px){
+		.ms-wrap-profile{
+			.ms-wrap-info{
+				width: 50%;
+			}
+
+			.ms-wrap-actions{
+				width: 49%;
 			}
 		}
 	}
@@ -4715,13 +5328,17 @@ form{
 					}
 
 					.ms-icon-buckets {
-						width: 32px;
-						height: 50px;
-						background-size: 480px;
-						background-position: 0px -275px;
-						&.active {
-							background-position: -99px -276px;
+						//width: 32px;
+						&:before{
+							font-size: 50px;
+							line-height: normal;
+							margin-bottom: 0;
 						}
+						//background-size: 480px;
+						//background-position: 0px -275px;
+						/*&.active {
+							background-position: -99px -276px;
+						}*/
 					}
 
 					.ms-icon-rocket {
@@ -4772,7 +5389,7 @@ form{
 
 			.timeline{
 				.ms-msg{
-					margin-left: 15px;
+					//margin-left: 15px;
 					padding: 20px 27px;
 					.ms-msg-title{
 						font-size: 15px !important;
@@ -4785,13 +5402,13 @@ form{
 						}
 					}
 
-					&.ms-medium{
+					/*&.ms-medium{
 						max-width: 390px;
 					}
 
 					&.ms-big{
 						max-width: 490px;
-					}
+					}*/
 				}
 
 				.ms-item-icon {
@@ -4800,10 +5417,10 @@ form{
 			}
 
 			.ms-property-item {
-				padding-left: 15px;
+				padding-left: 0;
 				padding-bottom: 0;
 				.ms-property-info{
-					width: calc(100% - 170px);
+					width: calc(100% - 156px);
 					.ms-beds-bads{
 						font-size: 14px;
 						span{
@@ -4811,12 +5428,17 @@ form{
 						}
 					}
 
+					.ms-title {
+						padding-right: 130px;
+					}
+
 					.ms-title,
 					.ms-address{
-						display: inline;
-						font-size: 15px;
+						display: block;
+						font-size: 14px;
 						margin-right: 5px;
-						font-weight: 700;
+						//font-weight: 700;
+						min-height: 20px;
 					}
 
 					p{
@@ -4850,7 +5472,7 @@ form{
 			}
 
 			.ms-widget{
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 			}
 		}
 	}
@@ -4886,7 +5508,7 @@ form{
 					margin-right: 5px;
 					height: 18px;
 					width: 18px;
-					line-height: 18px;
+					line-height: normal;
 					position: relative;
 					&:before{
 						position: absolute;
@@ -5011,7 +5633,7 @@ form{
 /* CREATE BUCKET
 /*-----------------------------------------------------------------------------------------------------*/
 .ms-new-basic-form{
-	.ms-header{
+	>.ms-header{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -5030,26 +5652,31 @@ form{
 
 			&.ms-icon-bucket{
 				&:before{
-					background-position: -51px -144px;
+					/*background-position: -51px -144px;
 					background-size: 250px 250px;
 					width: 16px;
-					height: 25px;
+					height: 25px;*/
 					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 			}
 
 			&.ms-icon-email{
 				&:before{
-					background-position: -512px -74px;
-					background-size: 180px 180px;
-					width: 28px;
-					height: 28px;
-					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 			}
 		}
 
-		.ms-wrap-btn{
+		/*.ms-wrap-btn{
 			display: none;
 			@media screen and (min-width: 768px){
 				display: inline-block;
@@ -5057,7 +5684,7 @@ form{
 					min-width: 160px;
 				}
 			}
-		}
+		}*/
 	}
 
 	.ms-body{
@@ -5070,14 +5697,16 @@ form{
 		border: 0;
 		height: 43px;
 		span{
-			font-size: 13px;
+			font-size: 12px;
 			font-weight: 600;
 			padding: 0 20px;
+			text-transform: uppercase;
 		}
 	}
 
 	.ms-basic-table{
-		max-width: 650px;
+    //max-width: 650px;
+    max-width: 950px;
 	}
 
 	#form-new-bucket{
@@ -5105,13 +5734,6 @@ form{
 			&:nth-child(1){
 				text-align: left;
 			}
-			
-			/*@media screen and (min-width: 1024px){
-				&.ms-cp{
-					padding-left: 20px;
-					text-align: left;
-				}
-			}*/
 		}
 	}
 
@@ -5139,7 +5761,7 @@ form{
 	.ms-text-name{
 		margin-left: 15px;
 		.ms-title{
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: 700;
 			a{
 				color: #157edc;
@@ -5159,25 +5781,30 @@ form{
 
 	.ms-text-drip{
 		&:before{
-			content: "";
+			content: "\e90b";
+			font-family: $crm-icons;
 			display: block;
-			width: 21px;
+			text-align: center;
 			height: 23px;
-			background-image: url('../images/crm-icons.png');
-			background-size: 155px;
-			background-position: 0px 0;
-			margin: 0 auto;
+			line-height: normal;
+			color: #d6d6d6;
+			font-size: 23px;
+			margin-bottom: 3px;
 		}
 
 		&.end{
 			&:before{
-				background-position: -63px 0;
+				color: #df105f;
+				background-image: linear-gradient(to right, #ff612c, #df105f);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
 		}
 
 		&.active{
 			&:before{
-				background-position: -42px 0;
+				color: #7bc500;
 			}
 		}
 
@@ -5197,13 +5824,21 @@ form{
 
 	.ms-text-rocket{
 		&:before{
-			content: "";
+			/*content: "";
 			display: inline-block;
 			width: 27px;
 			height: 29px;
 			background-image: url('../images/crm-icons.png');
 			background-size: 200px;
-			background-position: 0 0;
+			background-position: 0 0;*/
+			display: inline-block;
+			content: "\e90b";
+			font-family: $crm-icons;
+			font-size: 28px;
+			line-height: normal;
+			height: 28px;
+			font-weight: normal;
+			color: #d6d6d6;
 		}
 	}
 
@@ -5348,7 +5983,7 @@ form{
 /*-----------------------------------------------------------------------------------------------------*/
 #form-new-campaing{
 	width: 100%;
-	max-width: 650px;
+	max-width: 1000px;
 	margin-top: 20px;
 	.ms-item-chk{
 		margin-bottom: 5px;
@@ -5365,7 +6000,7 @@ form{
 
 .ms-timeline-steps{
 	position: relative;
-	padding-left: 50px;
+	padding-left: 0;
 	margin-left: 0px;
 	margin-top: 20px;
 	&:before{
@@ -5373,16 +6008,29 @@ form{
 		display: block;
 		width: 2px;
 		background-color: #f0f1f1;
-		height: 100%;
 		position: absolute;
 		left: 25px;
-		top: 0;
+    height: calc(100% - 80px);
+    bottom: 0;
+		display: none;
+	}
+
+	.js-rules-step-line{
+		justify-content: flex-end;
 	}
 	
 	>li{
 		position: relative;
-		margin-bottom: 20px;
-		padding-left: 15px;
+		margin-bottom: 15px;
+		//padding-left: 15px;
+		&.ms-flex{
+			padding-bottom: 10px !important;
+			padding-left: 0 !important;
+			margin-left: 0 !important;
+			.ms-bubble-idxb{
+				display: none;
+			}
+		}
 	}
 
 	a{
@@ -5402,10 +6050,10 @@ form{
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #FFF;
-		background: linear-gradient(to right, #fa6630, #be155e);
 		margin-top: 0;
-		margin-left: -63px;
+		margin-left: 0;
 		margin-right: 15px;
+		@extend .gradient;
 	}
 
 	.ms-small{
@@ -5433,30 +6081,47 @@ form{
 				justify-content: center;
 				flex-direction: column;
 				font-weight: 700;
-				font-size: 14px;
+				//font-size: 14px;
 				width: 90px;
 				flex-shrink: 0;
 				margin-left: -15px;
 				&:before{
-					content: "";
-					display: block;
-					width: 40px;
-					height: 40px;
+					content: "\e909";
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 40px;
+					font-family: "crm-icons";
+					color: #df105f;
+					background-image: -webkit-gradient(linear, left top, right top, from(#ff612c), to(#df105f));
+					background-image: -webkit-linear-gradient(left, #ff612c, #df105f);
+					background-image: -o-linear-gradient(left, #ff612c, #df105f);
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					font-weight: normal;
 					margin: 0 auto;
-					background-image: url('../images/crm-icons.png');
-					background-position: -220px -107px;
-					background-size: 260px;
-					margin-bottom: 10px;
 				}
 			}
 
 			.ms-icon-sms{
 				&:before{
-					width: 43px;
-					height: 43px;
-					background-position: -216px -149px;
-					background-size: 260px;
-					margin-left: 17px;
+					content: "\e90a";
+					margin-left: 19px;
+					/*display: inline-block;
+					vertical-align: middle;
+					font-size: 40px;
+					font-family: "crm-icons";
+					color: #df105f;
+					background-image: -webkit-gradient(linear, left top, right top, from(#ff612c), to(#df105f));
+					background-image: -webkit-linear-gradient(left, #ff612c, #df105f);
+					background-image: -o-linear-gradient(left, #ff612c, #df105f);
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					font-weight: normal;
+					margin: 0 auto;*/
 				}
 			}
 			
@@ -5489,6 +6154,7 @@ form{
 				height: 42px;
 				flex-shrink: 0;
 				margin-left: 40px;
+				cursor: pointer;
 				&:after{
 					font-size: 20px;
 					color: #333;
@@ -5557,7 +6223,7 @@ form{
 
 	.richText{
 		.richText-editor{
-			height: 110px;
+			height: 300px;
 		}
 	}
 
@@ -5594,15 +6260,18 @@ form{
 		&.ms-btn-email{
 			span{
 				&:before{
-					content: "";
+					content: "\e909";
 					display: inline-block;
 					vertical-align: middle;
 					margin-right: 10px;
-					width: 20px;
-					height: 20px;
-					background-image: url('../images/crm-icons.png');
-					background-size: 130px;
-					background-position: -110px -54px;
+					font-size: 22px;
+					font-family: $crm-icons;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					font-weight: normal;
 				}
 			}
 		}
@@ -5610,15 +6279,18 @@ form{
 		&.ms-btn-sms{
 			span{
 				&:before{
-					content: "";
+					content: "\e90a";
 					display: inline-block;
 					vertical-align: middle;
 					margin-right: 10px;
-					width: 21px;
-					height: 21px;
-					background-image: url('../images/crm-icons.png');
-					background-size: 120px;
-					background-position: -99px -68px;
+					font-size: 23px;
+					font-family: $crm-icons;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					font-weight: normal;
 				}
 			}
 		}
@@ -5637,8 +6309,9 @@ form{
 		position: relative;
 		background-color: #FFF;
 		padding: 17px;
-		border: 1px dashed #babbbc;
+		border: 1px solid #e1e8ed;
 		border-radius: 6px;
+		box-shadow: 0px 2px 4px rgba(31,30,47,0.03);
 		.ms-wrap-btn{
 			justify-content: flex-start;
 			.ms-button{
@@ -5656,16 +6329,26 @@ form{
 			top: 5px;
 			right: 5px;
 			cursor: pointer;
+			color: #929292;
+			transition: all .3s;
 			&:before{
-				content: "";
-				display: block;
-				background: url('../images/crm-icons.png') no-repeat -19px -39px;
-				background-size: 250px 250px;
-				width: 19px;
-				height: 21px;
+				content: "\e922";
+				display: flex;
 				position: absolute;
-				top: 6px;
-				left: 7px;
+				top: 0;
+				left: 0;
+				font-family: $crm-icons;
+				font-size: 22px;
+				text-indent: 0;
+				font-weight: normal;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover{
+				color: #333;
 			}
 		}
 	}
@@ -5684,6 +6367,7 @@ form{
 		position: absolute;
 		top: 0;
 		left: -42px;
+		display: none;
 	}
 
 	.ms-subject-footer{
@@ -5700,13 +6384,14 @@ form{
 		padding-left: 0;
 		margin-bottom: 0;
 		.ms-flex{
-			padding-left: 65px;
+			//padding-left: 65px;
 			//display: block;
-			min-height: 50px;
+			//min-height: 50px;
 			flex-wrap: wrap;
 			.ms-bubble-idxb{
 				margin-top: 0;
 				position: absolute;
+				display: none;
 			}
 		}
 
@@ -5760,7 +6445,7 @@ form{
 		}
 	}
 
-	@media (max-width: 375px){
+	@media (max-width: 319px){
 		.ms-wrap-email{
 			.ms-email-body{
 				padding: 15px;
@@ -5785,6 +6470,14 @@ form{
 			}
 		}
 	}
+
+	&.ib-drip-collection{
+		.ms-button{
+			span{
+				position: relative;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 640px){
@@ -5802,14 +6495,17 @@ form{
 .ms-title{
 	&.ms-rocket{
 		&:before{
-	    content: "";
+	    font-size: 27px;
+	    content: "\e90b";
+	    font-family: $crm-icons;
 	    display: inline-block;
-	    width: 27px;
-	    height: 29px;
-	    background-image: url('../images/crm-icons.png');
-	    background-size: 200px;
-	    background-position: -81px 0;
 	    margin-right: 10px;
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: normal;
 	  }
 	}
 }
@@ -5834,7 +6530,7 @@ form{
 	.form-item{
 		margin-bottom: 10px;
 		label{
-			margin-bottom: 0;
+			//margin-bottom: 0;
 			width: 20%;
 			flex-shrink: 0;
 			font-size: 13px;
@@ -5890,6 +6586,7 @@ form{
 		.ms-custom{
 			display: flex;
 			width: 100%;
+			padding-bottom: 10px;
 		}
 
 		@media screen and (min-width: 480px){
@@ -5998,16 +6695,25 @@ form{
 
 		&.ms-icon-log{
 			&:before{
-				content: "";
+				content: "\e908";
 				display: inline-block;
+				font-family: $crm-icons;
 				margin-right: 10px;
-				background: url('../images/crm-icons.png');
-				background-position: -204px -203px;
-				background-size: 250px 250px;
-				width: 18px;
-				height: 19px;
+				font-size: 20px;
+				font-weight: normal;
+				//background: url('../images/crm-icons.png');
+				//background-position: -204px -203px;
+				//background-size: 250px 250px;
+				//width: 18px;
+				//height: 19px;
 				vertical-align: middle;
 				margin-top: -3px;
+
+				color: #ff612c;
+				background-image: linear-gradient(to right, #ff612c, #df105f);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
 		}
 	}
@@ -6046,11 +6752,14 @@ form{
 					position: relative;
 					
 					&:before{
-						content: "";
+						content: "\e908";
 						display: inline-block;
-						background-image: url('../images/crm-icons.png');
-						background-position: -18px -123px;
-						background-size: 250px 250px;
+						font-family: $crm-icons;
+						//background-image: url('../images/crm-icons.png');
+						//background-position: -18px -123px;
+						//background-size: 250px 250px;
+						font-size: 18px;
+						line-height: 19px;
 						width: 18px;
 						height: 19px;
 						position: absolute;
@@ -6132,14 +6841,14 @@ form{
 	}
 
 	.ms-select-number{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 10px;
-    background-color: #FFF;
-    border-bottom: 1px solid #e8e8e8!important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 10px;
+		background-color: #FFF;
+		border-bottom: 1px solid #e8e8e8!important;
 		.select2-container--default{
 			.select2-selection--single {
 				border-radius: 0;
@@ -6154,13 +6863,17 @@ form{
 					position: relative;
 					
 					&:before{
-						content: "";
+						content: "\e908";
+						font-family: $crm-icons;
 						display: inline-block;
-						background-image: url('../images/crm-icons.png');
-						background-position: -18px -123px;
-						background-size: 250px 250px;
-						width: 18px;
-						height: 19px;
+						font-size: 18px;
+						line-height: 18px;
+						font-weight: normal;
+						//background-image: url('../images/crm-icons.png');
+						//background-position: -18px -123px;
+						//background-size: 250px 250px;
+						//width: 18px;
+						//height: 19px;
 						position: absolute;
 						top: 50%;
 						margin-top: -9px;
@@ -6223,13 +6936,19 @@ form{
 
 		&.view{
 			&:after {
-				content: "";
+				content: "\e90e";
+				font-family: $crm-icons;
+				font-size: 18px;
+				line-height: 18px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				width: 18px;
 				height: 11px;
-				background-image: url('../images/crm-icons.png');
-				background-position: -145px -407px;
-				display: block;
-				background-size: 240px;
+				//background-image: url('../images/crm-icons.png');
+				//background-position: -145px -407px;
+				//display: block;
+				//background-size: 240px;
 				left: auto;
 				bottom: 10px;
 				right: 10px;
@@ -6242,15 +6961,15 @@ form{
 	.ms-date-msg{
 		display: block;
 		margin: 15px 0;
-		text-align: center;
+    text-align: center;
+    font-weight: 600;
 	}
 
 	.ms-wrap-message{
 		background-color: #f2f2f2;
 		padding: 10px 30px;
 		margin: 0 -20px;
-
-		height: calc(100vh - 192px);
+		height: auto;
 		overflow-y: auto;
 	}
 
@@ -6394,6 +7113,12 @@ form{
 	}
 }
 
+#modal-template-email{
+	.modal-dialog{
+		max-width: 900px;
+	}
+}
+
 /*-----------------------------------------------------------------------------------------------------*/
 /* MODAL DRIF
 /*-----------------------------------------------------------------------------------------------------*/
@@ -6488,8 +7213,11 @@ form{
 				color: #333;
 				&:before{
 					opacity: 1 !important;
-					background-position: -70px -199px;
-					background-size: 348px;
+					color: #7bc500;
+					/*background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;*/
 				}
 			}
 		}
@@ -6585,61 +7313,69 @@ form{
 
 		  &.ms-icon-bucket{
 		  	&:before{
-		  		margin-right: 10px;
-					background: url('../images/crm-icons.png');
-					background-position: -51px -144px;
-					background-size: 250px 250px;
-					width: 16px;
-					height: 25px;
+				margin-right: 10px;
+				color: #df105f;
+				background-image: linear-gradient(to right, #ff612c, #df105f);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 		  	}
 		  }
 
 		  &.ms-icon-note{
 		  	&:before{
-					//background: url('../images/crm-icons.png');
-					background-position: -167px -226px;
-					background-size: 250px 250px;
-					width: 21px;
-					height: 21px;
-					margin-right: 10px;
+				//background: url('../images/crm-icons.png');
+				font-size: 18px;
+				margin-right: 10px;
+				margin-top: -2px;
+				color: #df105f;
+				background-image: linear-gradient(to right, #ff612c, #df105f);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 		  	}
 		  }
 
 		  &.ms-icon-email{
 		  	&:before{
-					background-position: -512px -74px;
-					background-size: 180px 180px;
-					width: 28px;
-					height: 28px;
-					margin-right: 10px;
+				color: #df105f;
+				background-image: linear-gradient(to right, #ff612c, #df105f);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-top: -3px;
 		  	}
 		  }
 
 		  &.ms-icon-tag{
 		  	&:before{
-					content: "";
+					content: "\e91e";
+					font-family: $crm-icons;
+					font-weight: normal;
+					font-size: 24px;
 					display: inline-block;
-					background: url('../images/crm-icons.png');
-					background-position: -67px -252px;
-					background-size: 280px 280px;
-					width: 23px;
-					height: 25px;
 					margin-right: 10px;
-					margin-top: 1px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
 		  	}
 		  }
 
 		  &.ms-icon-users{
 		  	&:before{
-					content: "";
+					content: "\e906";
+					font-family: $crm-icons;
+					font-weight: normal;
+					font-size: 24px;
 					display: inline-block;
-					background: url('../images/crm-icons.png');
-					background-position: -70px -41px;
-					background-size: 140px auto;
-					width: 25px;
-					height: 18px;
 					margin-right: 10px;
-					margin-top: -3px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
 		  	}
 		  }
 
@@ -6655,7 +7391,68 @@ form{
 					margin-right: 10px;
 					margin-top: -3px;
 		  	}
-		  }
+			}
+			
+			&.ms-icon-drip{
+				&:before{
+					content: "\e90b";
+					font-family: $crm-icons;
+					font-weight: normal;
+					font-size: 24px;
+					display: inline-block;
+					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+		  	}
+			}
+			
+			&.ms-icon-alert{
+				&:before{
+					font-weight: normal;
+					font-size: 24px;
+					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+		  	}
+			}
+			
+			&.ms-ico-ms-favorite{
+				&:before{
+					content: "\e911";
+					font-family: $crm-icons;
+					font-weight: normal;
+					font-size: 24px;
+					display: inline-block;
+					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+		  	}
+			}
+
+			&.ms-ico-qualification{
+				&:before{
+					content: "\e944";
+					font-family: $crm-icons;
+					font-weight: normal;
+					font-size: 24px;
+					display: inline-block;
+					margin-right: 10px;
+					color: #df105f;
+					background-image: linear-gradient(to right, #ff612c, #df105f);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+		  	}
+			}
 		}
 
 		.close{
@@ -6673,6 +7470,7 @@ form{
 				height: 100%;
 				font-weight: 700 !important;
 				font-size: 10px !important;
+				content: "\e905";
 			}
 
 			&:hover{
@@ -6728,7 +7526,7 @@ form{
 		}
 	}
 
-	@media (max-width: 375px){
+	@media (max-width: 319px){
 		.modal-dialog{
 			margin: 0;
 			min-height: 100vh;
@@ -6762,13 +7560,17 @@ form{
 	}
 
 	&:before{
-		content: "";
-		background-image: url('../images/crm-icons.png');
-		background-position: 20px 21px;
-		background-size: 250px;
-		display: inline-block;
-		width: 20px;
-		height: 21px;
+		content: "\e929";
+		//background-image: url('../images/crm-icons.png');
+		//background-position: 20px 21px;
+		//background-size: 250px;
+		//display: inline-block;
+		//width: 20px;
+		//height: 21px;
+		font-family: $crm-icons;
+		font-size: 24px;
+		line-height: 19px;
+		font-weight: normal;
 		position: absolute;
 		left: 7px;
 		top: 50%;
@@ -6781,7 +7583,7 @@ form{
 /*-----------------------------------------------------------------------------------------------------*/
 #ms-new-contact{
 	width: 100%;
-	max-width: 650px;
+	max-width: 950px;
 	.btn-group{
 		border: 1px solid #e8e8e8;
 		border-radius: 4px;
@@ -6867,7 +7669,7 @@ form{
 			&.ms-full{
 				&.ms-flex{
 					.ms-item{
-						width: 34%;
+						width: 33%;
 						&:nth-child(2){
 							width: 30%;
 						}
@@ -6983,8 +7785,7 @@ form{
 
 		input:checked+label{
 			border: 0;
-			background-color: transparent;
-			background: linear-gradient(to right, #fa6630, #be155e);
+			background: #7bc500;
 			&:before{
 				left: 25px;
 				background-color: #FFF;
@@ -6997,6 +7798,7 @@ form{
 /* LEADS TABLA USER
 /*-----------------------------------------------------------------------------------------------------*/
 .ms-wrap-table-crm{
+	padding-top: 15px;
 	&.ms-crm-user{
 		.ms-lead-body{
 			>li{
@@ -7044,7 +7846,7 @@ form{
 							}
 							
 							input:checked+label{
-								background: linear-gradient(to right, #fa6630, #be155e);
+								background: #7bc500;
 								&:before{
 									left: 19px;
 								}
@@ -7091,6 +7893,13 @@ form{
 						padding: 5px !important;
 					}
 				}
+
+				.ms-tool-item{
+					&:before,
+					&:after{
+						top: 27px;
+					}
+				}
 			}
 
 			.ms-lead-item{
@@ -7099,11 +7908,18 @@ form{
 					height: 69px;
 					border-radius: 0;
 				}
+			
+				@media screen and (min-width: 1800px){
+					.ms-user-info {
+						max-width: 340px;
+					}
+				}
 			}
 
 			.ms-username{ 
 				order: 0;
 				width: 290px !important;
+				justify-content: flex-start;
 				@media screen and (min-width: 1600px){
 					width: 315px !important;
 				}
@@ -7111,11 +7927,28 @@ form{
 
 			.ms-activity{ 
 				order: 1;
-				width: 180px; 
+				width: 180px;
+				&.phone{
+					width: 100px;
+				}
+
+				.ms-ellipsis-text{
+					width: 100%;
+				}
+			}
+
+			.ms-phone-number{
+				order: 5;
+				width: 120px;
+			}
+
+			.ms-reset{
+				order: 100;
+				width: 100px;
 			}
 
 			.ms-rooster{ 
-				order: 2;
+				order: 3;
 				width: 120px; 
 			}
 
@@ -7131,23 +7964,28 @@ form{
 
 			.ms-assigned{ 
 				order: 5;
-				width: 200px !important;
+				width: 80px !important;
 			}
 
 			.ms-joinon{ 
-				order: 6;
-				width: 110px;
+				order: 2;
+				width: 100px;
 			}
 
 			.ms-office{ 
-				order: 7;
+				order: 1;
 				width: 100%;
 				width: 130px; 
 			}
 
 			.ms-delete{ 
-				order: 8;
-				width: 60px;
+				//order: 8;
+				//width: 60px;
+				width: auto;
+				margin-left: 0 !important;
+				@media screen and (min-width: 768px){
+					margin-left: -5px !important;
+				}
 			}
 
 			.ms-arrow {
@@ -7475,18 +8313,21 @@ form{
 }
 
 .rs-content-wrapper{
-	padding: 15px;
+	padding: 0;
 	&.ms-crm-page{
-		padding: 0 15px 15px !important;
+		padding: 0 15px !important;
+		/*@media screen and (min-width: 1024px){
+			padding: 0 15px !important;
+		}*/
 	}
 
-	@media screen and (min-width: 1024px){
-		padding-left: 30px;
-		padding-right: 30px;
-		.ms-crm-profile{
+	@media screen and (min-width: 768px){
+		padding-left: 15px;
+		padding-right: 15px;
+		/*.ms-crm-profile{
 			margin-left: -15px;
 			margin-right: -15px;
-		}
+		}*/
 	}
 }
 
@@ -7522,7 +8363,6 @@ form{
 		}
 	}
 }*/
-
 .ms-contacts-list{
 	.modal-dialog{
 		max-width: 450px;
@@ -7575,8 +8415,14 @@ form{
 			padding: 10px;
 			border-bottom: 1px solid #e8e8e8;
 			transition: all .3s;
+			position: relative;
 			&:hover{
 				background-color: #f7f7f7;
+			}
+
+			&.ms-disabled{
+				background-color: #f7f7f7;
+				cursor: default;
 			}
 
 			&:last-child{
@@ -7610,6 +8456,12 @@ form{
 					object-fit: cover;
 					z-index: 1;
 				}
+			}
+
+			.ms-title{
+				font-size: 12px;
+				font-weight: 700;
+				padding: 5px 0;
 			}
 		}
 
@@ -7737,9 +8589,9 @@ form{
 					width: 9px;
 					height: 9px;
 					border-radius: 100%;
-					background: linear-gradient(to right, #fa6630, #be155e);
 					transition: opacity .4s;
 					opacity: 0;
+					@extend .gradient;
 				}
 			}
 
@@ -7764,6 +8616,8 @@ form{
 			}
 		}
 	}
+
+
 }
 
 .modal-add-group,
@@ -7817,7 +8671,7 @@ form{
 			margin-bottom: 15px;
 			.ms-title{
 				font-weight: 600;
-				font-size: 16px;
+				font-size: 14px;
 			}
 		}
 
@@ -7901,7 +8755,7 @@ form{
 		margin-right: -15px;
 		margin-top: 15px;
 		padding-top: 20px;
-		border-top: 1px dashed #babbbc;
+		border-top: 1px solid #e1e8ed;
 		.ms-wrap-item{
 			margin-bottom: 15px;
 		}
@@ -7933,10 +8787,28 @@ form{
 	}
 
 	.ms-link{
-		color: #157edc;
+		//color: #157edc;
 		padding: 0;
 		cursor: pointer;
-		background-color: transparent;
+		//background-color: transparent;
+
+    background-color: #fff;
+    border: 1px solid #dedede;
+    background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+    width: auto;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		&:hover{
+			text-decoration: none;
+		}
 	}
 }
 
@@ -8002,13 +8874,4134 @@ form{
 	}
 }
 
-@media (max-width: 767px){
-	.rs-content-wrapper{
-		.ms-new-basic-form{
-			&.ms-basic-pd{
+.ms-assign{
+	color: #157edc !important;
+  font-size: 11px;
+	font-weight: normal !important;
+	cursor: pointer;
+	@media screen and (min-width: 480px){
+		font-size: 15px;
+	}
+	&:hover{
+		text-decoration: underline;
+	}
+}
+.content_dropdown{
+	.dropdown{
+		padding: 0 !important;
+		.dropdown-menu{
+			left: 0;
+			right: auto;
+			min-width: 130px;
+			.crm-lead-tag-mode{
+				&.sb{
+					&:before{
+						background-color: #24c7c7;
+					}
+				}
+
+				&.iv{
+					&:before{
+						background-color: #4a86e8;
+					}
+				}
+
+				&.cm{
+					&:before{
+						background-color: #9900ff;
+					}
+				}
+
+				&.oth{
+					&:before{
+						background-color: #434343;
+					}
+				}
+
+				&.wri{
+					&:before{
+						background-color: #3d85c6;
+					}
+				}
+
+				&.nint{
+					&:before{
+						background-color: #674ea7;
+					}
+				}
+
+				&.agt{
+					&:before{
+						background-color: #c9daf8;
+					}
+				}
+			}
+		}
+
+		.btn{
+			border: 1px solid #FFF !important;
+			padding-right: 15px !important;
+			display: block;
+			overflow: hidden;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			&.sb{
+				background-color: #24c7c7;
+			}
+
+			&.iv{
+				background-color: #4a86e8;
+			}
+
+			&.cm{
+				background-color: #9900ff;
+			}
+
+			&.oth{
+				background-color: #434343;
+			}
+
+			&.wri{
+				background-color: #3d85c6;
+			}
+
+			&.nint{
+				background-color: #674ea7;
+			}
+
+			&.agt{
+				background-color: #c9daf8;
+			}
+		}
+	}
+
+	.dropdown-menu>li>a{
+		white-space: normal
+	}
+}
+
+.tag-editor{
+	border: 0 !important;
+	width: 100%;
+}
+
+.ms-block-c{
+	.ms-widget{
+		table{
+			table-layout: fixed;
+			tr td {
+				width: 60%;
+				&:nth-child(2n) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.rs-navbar{
+		nav{
+			/*.header-nav{
+				border-bottom: 0;
+				.user_nav{
+					>a {
+						padding: 30px;
+						top: -60px;
+						right: 12px;
+						width: auto;
+						z-index: 2;
+						position: absolute;
+						h2{
+							display: none;
+						}
+
+						&:before{
+							display: none;
+						}
+					}
+
+					ul{
+						border-top: 0;
+						&.active{
+							border-bottom: 1px solid #e1e8ed;
+						}
+					}
+				}
+			}*/
+
+			.sub_menu{
+				opacity: 0;
+				z-index: -1;
+			}
+
+			.main_menu{
+				width: 50px;
+				height: 60px;
+				flex-shrink: 0;
+			}
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* RESETEANDO BUCKETS MOBILE
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-edit-bucket{
+  .ms-lead-body{
+    .ms-lead-item{
+      .content_dropdown{
+        bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px){
+    .ms-lead-body{
+      .ms-lead-item{
+        .ms-user-info {
+          width: 100%;
+        }
+
+        .ms-lastvisit-btn{
+          bottom: 0;
+          top: auto;
+        }
+
+        .ms-item{
+          &.ms-chk{
+            label {
+              height: 35px;
+              margin-top: 14px;
+            }
+          }
+        }
+
+        .content_dropdown{
+          position: relative !important;
+          bottom: 0 !important;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* RESETEANDO TITULOS ANTERIORES
+/*-----------------------------------------------------------------------------------------------------*/
+.rs-content{
+  .title_section {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    @media screen and (min-width: 768px){
+      font-size: 23px !important;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 0;
+    }
+  }
+}
+
+.top-actions{
+  top: 0 !important;
+  margin-top: 1px;
+  .btn-dgt-def, 
+  .btn-dgt-grs {
+    min-width: 160px;
+    height: 43px;
+    display: inline-block;
+    width: auto !important;
+    span{
+      font-weight: 600 !important;
+      font-size: 13px;
+    }
+  }
+}
+
+.btn-dgt-def, 
+.btn-dgt-grs {
+  min-width: 160px;
+  height: 43px;
+  display: inline-block;
+  width: auto !important;
+  span{
+    font-weight: 600 !important;
+    font-size: 13px;
+  }
+}
+
+.btn-dgt-grs:hover{
+  border-color: transparent !important;
+}
+
+.ms-crm-page{
+  .btn.btn-dgt-grs{
+    background-color: #dadada;
+  }
+}
+
+.ms-small{
+  font-size: 12px;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+  font-weight: 600;
+}
+
+.ms-actions .ms-btn{
+  .ms-badge{
+    display: inline-block !important;
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    padding: 2px 5px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #cc2020;
+    border-radius: 100%;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:before,
+    &:after{
+      display: none !important;
+    }
+  }
+}
+
+.ms-contacts-list{
+  .ms-contacts{
+    &.ms-ls-list{
+      li{
+        padding: 0;
+        .ms-chk-item{
+          label{
+            padding: 13px;
+            width: 100%;
+            padding-left: 40px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            cursor: pointer;
+            position: relative;
+            &:before{
+              top: 15px;
+              left: 11px;
+              content: "";
+              display: block;
+              width: 16px;
+              height: 16px;
+              border: 2px solid #cccccc;
+              border-radius: 2px;
+              top: 15px;
+              left: 11px;
+              position: absolute;
+            }
+          }
+
+          input:checked ~ label:after,
+          input:checked+label:after {
+            content: "\e904";
+            font-family: "icomoon"!important;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 15px;
+            left: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    li{
+      input:checked ~ .ms-bt-ed:after,
+      input:checked+.ms-bt-ed:after {
+        content: "\e904";
+        font-family: "icomoon"!important;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 17px;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.ms-wrap-search{
+  max-width: 650px;
+  position: relative;
+  margin: 20px 0px 10px 0;
+  label{
+    display: none;
+  }
+  .ms-search{
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-indent: -999999px;
+    background-color: transparent;
+    z-index: 2;
+    &:before{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #676766;
+      content: "\e903";
+      font-family: "icomoon"!important;
+      text-indent: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  input{
+    padding-right: 50px;
+  }
+}
+
+.ms-nx{
+  #building_filter_form div {
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.ms-nlk.form-item.actions .btn-dgt-def {
+  margin-left: 0;
+}
+
+#moreOptionsTab{
+  input[type=text] {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px){
+  .new-filter-cpanel{
+    #basicTab{
+      .form-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input[type=text]{
+          order: 0
+        }
+        .info-form{
+          order: 3;
+          position: relative;
+        }
+        .btn_add_amenities{
+          padding: 0 10px;
+          line-height: 44px;
+          order: 2;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .content_tab .content .itemWiew{
+      margin: 5px 0;
+      .hackbox_select{
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .form-item.actions .btn-dgt-def{
+    min-width: 48% !important;
+  }
+
+  #_import_buildings_form .flex-idx-content-a label span{
+    margin-left: 0;
+  }
+}
+
+.ms-wrp-table{
+  overflow-x: auto;
+  width: 100%;
+  table{
+    max-width: 200% !important;
+  }
+
+  @media (max-width: 768px){
+    overflow: visible;
+    table{
+      margin-top: 15px;
+      thead{
+        display: none;
+      }
+
+      tbody{
+        tr{
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          border: 1px solid #ddd;
+          display: block;
+          padding: 0 15px;
+          box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.15);
+          td{
+            display: flex !important;
+            padding: 15px 0;
+            border: 0;
+            border-bottom: 1px dashed #ccc;
+            &:last-child{
+              border-bottom: 0;
+            }
+            &:before{
+              content: attr(data-label);
+              display: inline-block;
+              margin-right: 0;
+              font-weight: 600;
+              width: 30%;
+              position: relative;
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px){
+  .ms-sx-act{
+    display: flex;
+    justify-content: space-between;
+    .btn{
+      width: 48% !important;
+      min-width: auto;
+    }
+  }
+}
+
+.idx-tutorial-active{
+  &:after{
+    display: none;
+  }
+}
+
+.rs-wrapper .rs-sidebar{
+	overflow: visible !important;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* NOTIFY LIST
+/*-----------------------------------------------------------------------------------------------------*/
+#notify-list{
+  .ms-user-avatar{
+    margin-right: 15px;
+  }
+
+  .ms-user-info {
+    padding-top: 0;
+    align-items: center;
+  }
+
+  &.ms-basic-table{
+    thead,
+    tbody{
+      tr{
+        th,
+        td{
+          text-align: left;
+          padding-right: 10px;
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px){
+      margin-top: 15px;
+      thead{
+        display: none;
+      }
+
+      tbody{
+        tr{
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          border: 1px solid #ddd;
+          display: block;
+          padding: 0 15px;
+          box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.15);
+          td{
+            display: flex !important;
+            padding: 15px 0;
+            border: 0;
+            border-bottom: 1px dashed #ccc;
+            align-items: center;
+            width: 100%;
+            font-size: 14px;
+            flex-direction: row;
+            justify-content: flex-start;
+            &:last-child{
+              border-bottom: 0;
+              justify-content: flex-end;
+            }
+
+            &:before{
+              content: attr(data-head);
+              display: inline-block;
+              margin-right: 0;
+              font-weight: 600;
+              width: 35%;
+              position: relative;
+              flex-shrink: 0;
+              text-align: left;
+              text-transform: none;
+              font-size: 14px;
+              border: 0;
+              padding: 0;
+              padding-right: 10px;
+            }
+
+            &:first-child{
+              &:before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//#notify-list{
+.ms-icon-td{
+	padding-left: 30px;
+	position: relative;
+	text-align: left;
+	&:before{
+		font-family: "crm-icons";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: -3px;
+		font-size: 17px;
+		font-weight: normal !important;
+	}
+
+	&.ms-open-email{
+		&:before{
+			content: "\e909";
+			color: #2889df;
+			font-size: 15px;
+		}
+	}
+
+	&.ms-registered{
+		&:before{
+			content: "\e919";
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 35px;
+			line-height: 1;
+			left: -10px;
+			top: -8px;
+		}
+	}
+
+	&.ms-view{
+		&:before{
+			content: "\e90e";
+			color: #81ac0f;
+			left: 0;
+			top: -4px;
+			font-size: 19px;
+		}
+	}
+
+	&.ms-inquired{
+		&:before{
+			content: "\e914";
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			line-height: 1;
+			left: -4px;
+			top: -5px;
+			font-size: 24px;
+		}
+	}
+
+	&.ms-favorite{
+		&:before{
+			content: "\e911";
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			line-height: 1;
+			left: 0;
+			top: 0px;
+		}
+	}
+
+	&.ms-saved{
+		&:before{
+			content: "\e910";
+		}
+	}
+
+	&.ms-drip{
+		&:before{
+			content: "\e90b";
+			color: #df105f;
+			background-image: linear-gradient(to right, #ff612c, #df105f);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			line-height: 1;
+			left: -3px;
+			top: 0px;
+			font-size: 22px;
+		}
+	}
+
+	&.ms-registered{
+		padding-left: 30px !important;
+	}
+}
+
+.ms-lead-body .ms-lead-item .ms-lastvisit .ms-icon-td.ms-registered{
+	padding-left: 30px !important;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* RESETEANDO ICONOS
+/*-----------------------------------------------------------------------------------------------------*/
+.rs-wrapper{
+  .rs-sidebar{
+    >ul{
+      >li{
+        >a{
+          &.ico-leads {
+            &:before{
+              content: "\e957";
+              font-family: "crm-icons" !important;
+              font-size: 22px;
+              font-weight: 100 !important;
+            }
+          }
+
+          &.ico-marketing{
+            &:before{
+              font-family: "crm-icons"!important;
+              font-size: 24px;
+              font-weight: 100!important;
+              content: "\e956";
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-image: none;
+            }
+          }
+
+          &.ico-listing{
+            &:before{
+              content: "\e936";
+              font-family: "crm-icons" !important;
+              font-size: 26px;
+              font-weight: 100 !important;
+            }
+          }
+
+          &.ico-filters {
+            &:before{
+              content: "\e933";
+              font-family: "crm-icons" !important;
+              font-size: 24px;
+              font-weight: 100 !important;
+            }
+          }
+
+          &.ico-areas {
+            &:before{
+              content: "\e95f";
+              font-family: "crm-icons" !important;
+              font-size: 24px;
+              font-weight: 100 !important;
+            }
+          }
+		  
+          &.ico-buildings{
+            &:before{
+              font-size: 22px;
+            }
+          }
+
+          &.ico-tutorial{
+            &:before{
+              content: "\e937";
+              font-family: "crm-icons" !important;
+              font-size: 25px;
+              font-weight: 100 !important;
+            }
+          }
+
+          &.ico-agents{
+            &:before{
+              content: "\e931";
+              font-family: "crm-icons" !important;
+              font-size: 25px;
+              font-weight: 100 !important;
+            }
+          }
+
+          &.ico-inquires{
+            &:before{
+              content: "\e938";
+              font-family: "crm-icons" !important;
+              font-size: 26px;
+              font-weight: 100 !important;
+            }
+					}
+
+					&.ico-pages:before{
+						content:"\e959";
+						font-family: "crm-icons" !important;
+						font-size: 25px;
+            font-weight: 100 !important;
+						left: 15px;
+					}
+					&.ico-team:before{
+						content:"\e95a";
+						font-family: "crm-icons" !important;
+						font-size: 24px;
+            font-weight: 100 !important;
+					}
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* ACCOUNT SET UP
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-new-basic-form{
+	.ms-body{
+		&.ms-set-up{
+			.ms-header {
+				border: 0;
+				padding-bottom: 0;
+			}
+
+			.ms-crm-form{
+				label{
+					display: none;
+				}
+
+				.ms-lbl-item{
+					label{
+						display: block;
+						font-weight: 400;
+					}
+				}
+			}
+
+			.ms-picture{
+				width: 100%;
+				max-width: 250px;
+				margin-left: 0;
+				margin-right: auto;
+			}
+
+			@media screen and (min-width: 640px){
+				form.ms-crm-form{
+					.form-item{
+						&.ms-address-input {
+							width: 68%;
+						}
+						&.ms-address-small-input {
+							width: 30%;
+						}
+					}
+				}
+			}
+			
+			@media (max-width: 639px){
+				.ms-wrap-btn{
+					justify-content: flex-start;
+					.btn {
+						margin-right: 10px;
+					}
+				}
+			}
+
+			@media (max-width: 440px){
+				.ms-wrap-btn{
+					flex-wrap: wrap;
+					.btn {
+						width: 100% !important;
+						margin-bottom: 10px;
+						margin-right: 0;
+					}
+				}
+			}
+
+			.ms-wrap-logos{
+				width: 100%;
+				.ms-picture{
+					width: 100%;
+					max-width: 305px;
+					.ms-img-result {
+						width: 100%;
+						height: 115px;
+
+						.ms-temporal-info{
+							span {
+								position: relative;
+								bottom: auto;
+							}
+						}
+					}
+				}
+
+				@media screen and (min-width: 991px){
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					.ms-item{
+						width: 50%;
+					}
+				}
+			}
+
+			.ms-wrap-gallery{
+				width: 100%;
+				.ms-btn{
+					height: 45px;
+					display: flex !important;
+					align-items: center;
+					justify-content: center;
+					color: #FFF;
+					width: 100%;
+					max-width: 250px;
+					margin-right: auto;
+					margin-left: 0;
+					overflow: hidden;
+					border-radius: 4px;
+					transition: all .3s;
+					position: relative;
+					font-size: 13px;
+					font-weight: 600;
+					@extend .gradient;
+					cursor: pointer;
+					&:before{
+						content: "";
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 1;
+						transition: all .3s;
+						background-color: #333;
+					}
+
+					span{
+						position: relative;
+						z-index: 2;
+					}
+
+					&:hover{
+						&:before{
+							opacity: 0;
+						}
+					}
+				}
+				
+				.ms-small-text{
+					font-size: 11px;
+					font-style: italic;
+          color: #989898;
+          margin: 5px 0;
+				}
+			}
+
+			.ms-lbl-item{
+				input{
+					background-color: transparent;
+					z-index: 1;
+					padding-left: 38px;
+					position: relative;
+				}
+
+				&.ms-icon-facebook,
+				&.ms-icon-twitter,
+				&.ms-icon-instagram,
+				&.ms-icon-linkedin,
+				&.ms-icon-gp,
+				&.ms-icon-youtube{
+					&:before{
+						font-size: 17px;
+						display: inline-block;
+						margin: 0;
+						position: absolute;
+						bottom: 9px;
+						left: 11px;
+						z-index: 0;
+					}
+				}
+			}
+
+			.ms-wp-msg{
+				z-index: 2;
+			}
+			
+			#ms-new-contact{
+				.form-item{
+					.ms-textarea {
+						height: 150px!important;
+					}
+				}
+			}
+		}
+
+		&.ms-ed-ft{
+			/*.ms-crm-form{
+				label{
+					display: none;
+				}
+
+				.ms-lbl-item{
+					label{
+						display: block;
+						font-weight: 400;
+					}
+				}
+			}*/
+
+			.ms-picture{
+				width: 100%;
+				max-width: 250px;
+				margin-left: 0;
+				margin-right: auto;
+			}
+
+			/*@media screen and (min-width: 640px){
+				form.ms-crm-form{
+					.form-item{
+						&.ms-address-input {
+							width: 68%;
+						}
+						&.ms-address-small-input {
+							width: 30%;
+						}
+					}
+				}
+			}*/
+			
+			@media (max-width: 639px){
+				.ms-wrap-btn{
+					justify-content: flex-start;
+					.btn {
+						margin-right: 10px;
+					}
+				}
+			}
+
+			@media (max-width: 440px){
+				.ms-wrap-btn{
+					flex-wrap: wrap;
+					.btn {
+						width: 100% !important;
+						margin-bottom: 10px;
+						margin-right: 0;
+					}
+				}
+			}
+
+			.ms-wrap-logos{
+				width: 100%;
+				.ms-picture{
+					width: 100%;
+					max-width: 305px;
+					.ms-img-result {
+						width: 100%;
+						height: 115px;
+
+						.ms-temporal-info{
+							span {
+								position: relative;
+								bottom: auto;
+							}
+						}
+					}
+				}
+
+				@media screen and (min-width: 991px){
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					.ms-item{
+						width: 50%;
+					}
+				}
+			}
+
+			.ms-wrap-gallery{
+				width: 100%;
+				.ms-btn{
+					height: 45px;
+					display: flex !important;
+					align-items: center;
+					justify-content: center;
+					color: #FFF;
+					width: 100%;
+					max-width: 250px;
+					margin-right: auto;
+					margin-left: 0;
+					overflow: hidden;
+					border-radius: 4px;
+					transition: all .3s;
+					position: relative;
+					font-size: 13px;
+					font-weight: 600;
+					@extend .gradient;
+					cursor: pointer;
+					&:before{
+						content: "";
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 1;
+						transition: all .3s;
+						background-color: #333;
+					}
+
+					span{
+						position: relative;
+						z-index: 2;
+					}
+
+					&:hover{
+						&:before{
+							opacity: 0;
+						}
+					}
+				}
+				
+				.ms-small-text{
+					font-size: 11px;
+					font-style: italic;
+          color: #989898;
+          margin: 5px 0;
+				}
+			}
+
+			.ms-lbl-item{
+				input{
+					background-color: transparent;
+					z-index: 1;
+					padding-left: 38px;
+					position: relative;
+				}
+
+				&.ms-icon-facebook,
+				&.ms-icon-twitter,
+				&.ms-icon-instagram,
+				&.ms-icon-linkedin,
+				&.ms-icon-gp,
+				&.ms-icon-youtube,
+				&.ms-icon-pinterest{
+					&:before{
+						font-size: 17px;
+						display: inline-block;
+						margin: 0;
+						position: absolute;
+						bottom: 9px;
+						left: 11px;
+						z-index: 0;
+					}
+				}
+			}
+
+			.ms-wp-msg{
+				z-index: 2;
+			}
+			
+			#ms-new-contact{
+				.form-item{
+					.ms-textarea {
+						height: 150px!important;
+					}
+				}
+			}
+
+			.form-item{
+				.btn-dgt-grs{
+					width: 100% !important;
+					&.active{
+						background-color: #848484!important;
+						color: #FFF!important;
+						span{
+							color: #FFF !important
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ms-bubble-info{
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border: 1px solid #333;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		bottom: 13px;
+    right: 10px;
+    border-radius: 100%;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .4s;
+    span{
+    	margin: 0;
+    }
+
+		.ms-message{
+			position: absolute;
+			bottom: calc(100% + 20px);
+			width: 180px;
+			font-size: 12px;
+			padding: 10px;
+			right: -10px;
+			color: #fff;
+			margin: 0;
+			opacity: 0;
+			transition: all .4s;
+			display: none;
+			@extend .gradient;
+			&:after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border-top: 10px solid $color-b;
+				border-left: 10px solid transparent;
+				position: absolute;
+				bottom: -10px;
+				right: 15px;
+			}
+		}
+
+		&:hover{
+			background-color: #333;
+			color: #FFF;
+			.ms-message{
+				bottom: calc(100% + 9px);
+				opacity: 1;
+				display: block;
+			}
+		}
+	}
+
+	.ms-picture{
+		.ms-img-result{
+			width: 100%;
+			height: 285px;
+			border: 2px dashed #737477;
+			cursor: pointer;
+		}
+
+		.ms-temporal-info{
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 15px;
+			font-weight: 600;
+			flex-direction: column;
+			span{
+				color: #afafaf;
+				font-size: 12px;
+				position: absolute;
+				bottom: 20px;
+				display: block;
+				text-align: center;
+				left: 0;
+				width: 100%;
+			}
+		}
+
+		label{
+			border: 0;
+			width: 100%;
+			height: 45px;
+			border-radius: 4px;
+			color: #FFF;
+			display: flex !important;
+			transition: all .3s;
+			overflow: hidden;
+			position: relative;
+			margin-top: 15px;
+			@extend .gradient;
+			&:before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				background-color: #333;
+				transition: all .3s;
+			}
+
+			&:hover{
+				text-decoration: none;
+				&:before{
+					opacity: 0;
+				}
+			}
+
+			span{
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.select2-container{
+	.select2-selection--single{
+		background-color: transparent!important;
+		position: relative;
+		z-index: 1;
+	}
+
+	&:after{
+		z-index: 0;
+	}
+}
+
+.ms-header-tab-express{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  .ms-express-tab-item{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    height: 50px;
+    border: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    line-height: 1.2;
+    background-color: #ddd;
+    transition: all .4s;
+		cursor: pointer;
+		color: #333 !important;
+    font-weight: 600;
+    &.ms-it-a{
+      margin-right: -1px;
+    }
+    
+    &:hover{
+      background-color: #d2d2d2;
+    }
+
+    &.active{
+      background-color: #FFF;
+      &:hover{
+        background-color: #FFF;
+      }
+    }
+  }
+}
+
+.ms-express-tab{
+  .fade{
+    display: none;
+    opacity: 0;
+    transition: opacity .15s linear;
+    &.in{
+      opacity: 1;
+    }
+  
+    &.active{
+      display: block;
+    }
+  }
+
+  .ms-wrap-gallery{
+    .ms-btn{
+      max-width: 100% !important;
+      @media screen and (min-width: 991px){
+        max-width: 250px !important;
+      }
+    }
+  }
+
+  /*#ms-homepage-media-video{
+    margin-top: 15px;
+  }*/
+}
+
+#modal-active-drips{
+  .ms-action{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    .ms-delete{
+      background-color: #FFF;
+      text-indent: -999999px;
+      overflow: hidden;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      margin-left: 10px;
+      transition: all .3s;
+      &:before{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-weight: 700!important;
+        font-size: 10px!important;
+        content: "\e905";
+        font-family: "crm-icons";
+        text-indent: 0;
+      }
+
+      &:hover{
+        color: #df105f;
+      }
+    }
+  }
+
+  .ms-min-date{
+    font-size: 13px;
+    color: #8e8e8e;
+    display: block;
+    margin-top: 3px;
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+  }
+
+  .ms-table{
+    tbody{
+      tr{
+        &:last-child{
+          border-bottom: 0
+        }
+      }
+    }
+  }
+}
+
+.ms-agent-profile{
+  &.agent-show{
+    .ms-body{
+      &.ms-wrap-profile{
+        max-width: 650px !important;
+        @media screen and (min-width: 640px){
+          width: 100%;
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: space-between !important;
+          align-items: flex-start !important;
+
+          .form-item {
+            width: 49% !important;
+          }
+        }
+      }
+    }
+
+    .ms-header{
+      .ms-title{
+        a{
+          margin-left: 5px;
+          &:hover{
+            color: #007fe0;
+          }
+        }
+      }
+
+      &.min-text{
+        .ms-title{
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    button[disabled], html input[disabled] {
+      background-color: #f1f1f1 !important;
+    }
+
+    .ms-min-switch:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .ms-label-file.active{
+      cursor: default;
+      span{
+        display: none;
+      }
+    }
+
+    .ms-label-file {
+      text-indent: -999999px;
+      cursor: default;
+    }
+    .richText:before {
+      width: 100%;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+}
+
+a.sub-items.item_nav.ico-my-agents:before {
+  content: "\e90d";
+  display: inline-block;
+  font-family: "crm-icons"!important;
+  font-weight: normal;
+}
+
+.showprofile-mx{
+  width:100%; 
+  max-width: 650px;
+  .form-item{
+    &.ms-full{
+      &.ms-flex{
+        justify-content: space-between !important;
+      }
+    }
+  }
+
+  .icon-eye{
+    display: none;
+  }
+
+  .select2-container{
+    &:before{
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+    .select2-selection{
+      background-color: #ebebe4 !important;
+    }
+  }
+}
+
+$ms-success-color: #379922;
+$ms-info-color: #42a3d9;
+$ms-warning-color: #ffd460;
+$ms-danger-color: #d83a4c;
+
+.color-danger{ color: $ms-danger-color; }
+.color-info{ color: $ms-info-color; }
+.color-warning{ color: $ms-warning-color; }
+.color-success{ color: $ms-success-color; }
+
+.crm-ico-ms-ok{
+	&:before{
+		content: "\e904";
+		font-family: 'icomoon'!important;
+		font-weight: 700;
+		font-size: 65px;
+	}
+}
+
+.modal{
+	.modal-dialog{
+		width: 96%;
+	}
+	
+	.modal-content{
+		.modal-body{
+			.ms-title{
+				font-weight: 700;
+				font-size: 15px;
+			}
+
+			&.ms-message-content{
+				text-align: center;
+			
+				[class^="crm-ico-"],
+				[class*=" crm-ico-"]{
+					border-radius: 100%;
+					width: 110px;
+					height: 110px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border: 8px solid #333;
+					font-size: 50px;
+					margin: 15px auto;
+					position: relative;
+			
+					&.color-danger{
+						border-color: $ms-danger-color;
+					}
+					&.color-info{
+						border-color: $ms-info-color;
+					}
+					&.color-warning{
+						border-color: $ms-warning-color;
+					}
+					&.color-success{
+						border-color: $ms-success-color;
+					}
+					&.color-boost{
+						border: none;
+						background-image: linear-gradient(to right,#fa6630,#af0e66);
+						&:before{
+							z-index: 2;
+							background-image: linear-gradient(to right,#fa6630,#af0e66);
+							-webkit-background-clip: text;
+							background-clip: text;
+							-webkit-text-fill-color: transparent;
+							color: transparent!important;
+						}
+
+						&:after{
+							content: "";
+							display: block;
+							width: calc(100% - 16px);
+							height: calc(100% - 16px);
+							position: absolute;
+							top: 50% !important;
+							left: 50%;
+							transform: translate(-50%,-50%);
+							background-color: #FFF;
+							border-radius: 100%;
+						}
+					}
+				}
+			
+				.ms-title{
+					color: #2a273c;
+					font-weight: 600;
+					font-size: 22px;
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+			
+				.ms-sub-title{
+					font-size: 14px;
+					color: #2a273c;
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+			
+				p{
+					font-size: 14px;
+					color: #979797;
+				}
+
+				.ms-wrap-btn{
+					justify-content: center;
+					flex-direction: column;
+					@media screen and (min-width: 480px){
+						flex-direction: row;
+					}
+
+					.btn{
+						margin: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px){
+	.ms-hidden-menu{
+		.rs-sidebar{
+			overflow: hidden !important;
+			width: 56px;
+			>ul>li{
+				>a{
+					text-indent: -999999999px;
+					width: 100%;
+					padding: 0;
+					position: relative;
+					span.gb{
+						display: none;
+					}
+
+					&:before{
+						text-indent: 0;
+						width: 100% !important;
+						height: 100% !important;
+						display: flex !important;
+						align-items: center !important;
+						position: absolute !important;
+						justify-content: center !important;
+						top: 0 !important;
+						left: 0 !important;
+						transform: none !important;
+					}
+				}
+
+				.sub_item_nav{
+					display: none !important; 
+				}
+			}
+
+			&:after {
+				width: 56px;
+			}
+		}
+
+		.rs-content-wrapper {
+			margin-left: 56px;
+		}
+	}
+}
+
+.rs-navbar{
+	/*border-bottom: 0 !important;
+	@media screen and (min-width: 769px){
+		border-bottom: 1px solid #e1e8ed !important;
+	}*/
+	nav{
+		.logo{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.ms-hidden-menu-btn{
+		width: 40px;
+		height: 40px;
+		//background-color: aqua;
+		text-indent: -999999px;
+		overflow: hidden;
+		position: relative;
+		display: none;
+		margin-left: 15px;
+		background-color: transparent;
+		@media (min-width: 769px){
+			display: block;
+		}
+		
+		span{
+			width: 24px;
+			height: 2px;
+			position: absolute;
+			margin: 0 auto;
+			background-color: #989898;
+			text-indent: 0;
+			display: block;
+			top: 50%;
+			left: 50%;
+			margin-top: -1px;
+			margin-left: -12px;
+			transition: all .3s;
+			&:after,
+			&:before{
+				content: "";
+				width: 24px;
+				height: 2px;
+				position: absolute;
+				margin: 0 auto;
+				background-color: #989898;
+				text-indent: 0;
+				display: block;
+				left: 50%;
+				margin-left: -12px;
+				transition: all .3s;
+			}
+	
+			&:before{
+				top: -5px;
+			}
+	
+			&:after{
+				top: 5px;
+			}
+		}
+
+		&.active,
+		&:hover{
+			span, span:before, span:after{
+				background-color: #ca315c;
+			}
+		}
+	}
+}
+
+/******************************************************************/
+.tooltip.top .tooltip-arrow {
+	border-top-color: #dc4c5c;
+}
+
+.tooltip-inner {
+	@extend .gradient;
+}
+
+.ms-tool-item{
+	position: relative;
+	&:before{
+		content: attr(data-tool);
+		padding: 3px 5px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 4px;
+		display: inline-block;
+		text-indent: 0;
+		font-weight: normal;
+		font-size: 12px;
+		color: #FFF !important;
+		min-width: 90px;
+		width: max-content;
+		margin-top: -27px;
+		opacity: 0;
+		transition: opacity .3s;
+		@extend .gradient;
+	}
+
+	&:after{
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #d6364b;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+		margin-top: -4px;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&:hover{
+		&:before, &:after{
+			opacity: 1;
+		}
+	}
+}
+
+/******************************************************************/
+/*.rs-content-wrapper.ms-crm-page{
+	background-color: #f2f2f2;
+	AQUI
+	min-height: calc(100vh - 61px);
+	@media screen and (min-width: 991px){
+		min-height: calc(100vh - 88px);
+	}
+}*/
+
+.ms-ellipsis-text{
+	display: block;
+	width: 90%;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+}
+
+.ms-smt-text{
+	font-size: 13px;
+	color: #979797 !important;
+	font-weight: normal !important;
+}
+
+.ms-lead-body{
+	.ms-lead-item{
+		.ms-lastvisit{
+			.ms-icon-td{
+				padding-left: 20px;
+				&:before {
+					top: 0px;
+					font-size: 13px;
+				}
+
+				&.ms-view:before {
+					top: -2px;
+					font-size: 16px;
+				}
+
+				&.ms-favorite:before {
+					top: 3px;
+				}
+
+				&.ms-registered:before{
+					top: -2px;
+					font-size: 25px;
+					left: 0;
+				}
+
+				&.ms-drip{
+					text-indent: 0;
+					width: auto;
+					display: block;
+					border: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px){
+	.ms-lead-body{
+		.ms-lead-item{
+			.ms-activity{
+				order: 1 !important;
+			}
+
+			.ms-registered{
+				order: 2 !important;
+			}
+
+			.ms-lastvisit{
+				order: 3 !important;
+			}
+
+			.ms-wrap.ms-actions{
+				order: 4 !important;
+			}
+
+			.ms-buckets{
+				order: 5 !important;
+			}
+
+			.ms-drip{
+				order: 6 !important;
+			}
+
+			.ms-communication{
+				order: 7 !important;
+			}
+
+			.ms-activity-actions.ms-todo{
+				order: 8 !important;
+			}
+
+			.ms-assigned{
+				order: 9 !important;
+			}
+		}
+	}
+}
+
+.timeline{
+	.ms-item-icon{
+		&:hover{
+			.ms-tool-item{
+				&:before, &:after{
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+		}
+
+		.ms-tool-item{
+			&:before{
+				margin-top: -50px;
+				z-index: 1;
+			}
+
+			&:after{
+				margin-left: -4px;
+				margin-top: -27px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+#ms-text-logo{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/*.ms-wrap-table-crm{
+	@media screen and (min-width: 768px){
+		height: calc(100vh - 306px)
+	}
+
+	@media screen and (min-width: 1024px){
+		height: calc(100vh - 246px)
+	}
+}*/
+
+.ms-info-msg{
+	padding: 15px;
+	font-size: 15px;
+	border-radius: 4px;
+	background-color: #e8e8e8;
+	color: #FFF;
+	@extend .gradient;
+}
+
+
+.ms-agt-deleted{
+	.ms-small-text{
+		font-size: 14px !important;
+		color: #333 !important;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+
+	.ms-wrap-chk{
+		margin-bottom: 15px;
+		.ms-chk-item{
+			margin-bottom: 10px;
+
+			&.ms-rd{
+				label:before {
+					border-radius: 100%;
+				}
+
+				input:checked+label:after {
+					width: 12px;
+					height: 12px;
+					top: 4px;
+					left: 4px;
+					content: "";
+					background-color: #cf344e;
+					border-radius: 100%;
+				}
+			}
+		}
+		label {
+			font-size: 14px;
+			padding: 0;
+		}
+	}
+
+	&.ms-contacts-list{
+		.ms-contacts {
+			max-height: 214px;
+		}
+
+		.ms-agent-list{
+			display: none;
+		}
+	}
+}
+
+.ms-save .ms-property-item .ms-property-info .ms-small {
+	text-align: left;
+}
+
+.mm-modified{
+	&.ms-tool-item{
+		&:before{
+			top: 10px;
+		}
+
+		&:after{
+			margin-top: 6px;
+		}
+	}
+
+	span{
+		border: 0 !important;
+	}
+}
+
+.content_galery_file{
+	width: 100%;
+	.ms-wrap-file{
+		border: 1px solid #ddd;
+		margin: 15px 0;
+		text-align: center;
+		position: relative;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 90px;
+		position: relative;
+		&:before{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 100%;
+			border-right: 1px solid #ddd;
+			background-color: #f1f1f1;
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.ms-icon{
+			width: 100px;
+			height: 100%;
+			min-height: 90px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 0;
+			position: relative;
+			z-index: 2;
+			flex-shrink: 0;
+			&:before{
+				content: "";
+				display: block;
+				background-image: url("../images/cbtns.png");
+			}
+
+			&.icon-fact{
+				&:before{
+					width: 51px;
+					height: 45px;
+					background-position: 0 -341px;
+				}
+			}
+
+			&.icon-brochure{
+				&:before{
+					width: 45px;
+					height: 45px;
+					background-position: 0 -386px;
+				}
+			}
+
+			&.icon-floor{
+				&:before{
+					width: 45px;
+					height: 45px;
+					background-position: 0 -431px;
+				}
+			}
+		}
+
+		.name_file{
+			padding: 15px;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			font-size: 13px;
+			line-height: 1.6;
+			font-family: "Open Sans", sans-serif;
+			font-weight: 600;
+			background-color: #FFF;
+			padding-right: 43px;
+			text-align: left;
+			word-break: break-word;
+			background-color: #FFF;
+		}
+		
+		.remove_file{
+			position: absolute;
+			top: 0;
+			right: 5px;
+			width: 30px;
+			height: 30px;
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 100%;
+			transition: all .3s;
+			border: 1px solid #333;
+			font-family: "Open Sans", sans-serif;
+			cursor: pointer;
+			&:hover{
 				background-color: #FFF;
-				padding: 30px 15px 15px;
-				margin: -15px;
+				color: #333;
+			}
+		}
+	}
+}
+
+.ms-lgh{
+	line-height: 0;
+	*{
+		line-height: normal;
+	}
+
+	label{
+		margin-bottom: 0;
+	}
+}
+
+.ms-wrap-profile .ms-wrap-info .ms-cl-c.ms-actions .ms-btn .ms-badge{
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	top: -8px !important;
+	left: 50% !important;
+}
+
+@media screen and (min-width: 768px){
+	.ms-lead-body .ms-lead-item .ms-lastvisit{
+		span:not(.ms-bg-text),
+		span:not(.ms-icon-td),
+		span:not(.ms-ellipsis-text){
+			order: 10;
+		}
+	}
+}
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* NUEVO TAB
+/*-----------------------------------------------------------------------------------------------------*/
+.ms-new-widget {
+	background: #FFFFFF;
+	//border: 1px solid #ddd;
+	position: relative;
+	padding: 0;
+	//border-radius: 6px;
+	margin-bottom: 1.25rem;
+	width: 100%;
+	.ms-nav-scroll {
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+		top: 0;
+		height: 39px;
+		margin-bottom: -1px;
+		@media screen and (min-width: 768px){
+			height: auto;
+		}
+
+		.ms-wrap-nav {
+			position: relative;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: transparent;
+			//background-color: #f8f9fa;
+			@media (max-width: 767px){
+				.nav{
+					display: flex;
+					width: 100% !important;
+					flex-wrap: nowrap;
+					flex-direction: row !important;
+					border: 0 !important;
+					padding-top: 0 !important;
+					height: auto !important;
+					max-height: 100% !important;
+					border-radius: 0 !important;
+					margin: 0 !important;
+					&.nav-tabs{
+						li{
+							width: auto !important;
+							border-top: 0 !important;
+							border: 1px solid #ddd !important;
+							position: relative !important;
+							height: 56px;
+							&.active{
+								padding: 0 !important;
+								&:before{
+									display: none;
+								}
+								a{
+									background-color: #FFF !important;
+								}
+							}
+
+							a{
+								height: 55px !important;
+								background-color: transparent !important;
+							}
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 768px){
+				height: auto;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.nav-tabs {
+		border: 0;
+		position: relative;
+		padding-top: 0;
+		background-color: transparent !important;
+
+		>li {
+			float: left;
+			margin-bottom: -1px;
+			display: block;
+			position: relative;
+			z-index: 2;
+			border: 1px solid #ddd;
+			background-color: #f8f9fa;
+			margin-right: -1px;
+
+			&:after{
+				content: "";
+				width: 100%;
+				display: block;
+				height: 1px;
+				background-color: #dddddd;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			&.active{
+				&:after{
+					display: none;
+				}
+			}
+
+			>a, button{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0;
+				background-color: transparent;
+				font-size: 14px;
+				color: #aab1b5;
+				border-radius: 0;
+				height: 40px;
+				padding: 0 30px;
+				//margin-top: -1px;
+				//margin-left: -1px;
+				transition: all 0.3s;
+				@media screen and (min-width: 768px){
+					height: 55px;
+				}
+			}
+
+			>li.active>a,
+			>li.active button {
+				border-bottom: 1px solid #FFF;
+				background-color: #FFF !important;
+				color: #333;
+			}
+		}
+	}
+
+	.ms-wrap-nav{
+		.nav {
+			display: flex;
+			width: 100%;
+			flex-direction: row !important;
+
+			@media screen and (min-width: 768px){
+				flex-wrap: wrap;
+			}
+
+			@media screen and (min-width: 991px){
+				width: 100%;
+			}
+		}
+	}
+
+	.tab-padding-content{
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		border-top-left-radius: 0;
+	}
+
+	.nav-tabs>li.active>a, 
+	.nav-tabs>li.active>a:focus, 
+	.nav-tabs>li.active>a:hover {
+		background-color: #fff !important;
+		color: #333 !important;
+	}
+
+	.form-item.full{
+		width: 100% !important;
+		label{
+			font-weight: normal;
+		}
+	}
+
+	.galery_img{
+		height: 215px;
+	}
+
+	.content_galery_img img {
+		height: 58%;
+		object-fit: cover;
+	}
+
+
+	.ms-label-file.active span{
+    width: calc(100% + 2px);
+    margin-bottom: -39px;
+    margin-left: -2px;
+    margin-right: -2px;
+	}
+
+	.ms-label-file.active {
+		border: 1px solid #737477;
+		max-width: 500px;
+		height: 95px;
+		margin-bottom: 40px;
+	}
+}
+
+#photo_profile_crop_preview{
+	&.ms-picture-pf{
+		width: 100% !important;
+		max-width: 200px !important;
+		position: relative !important;
+		border-radius: 100% !important;
+		&:after{
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: cover;
+		}
+	}
+}
+
+
+.ms-min-text.mkx{
+	font-style: italic;
+	color: #a5a5a5;
+	font-weight: normal;
+	font-size: 13px;
+	display: block;
+	text-align: center;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.msHiddenItem{
+	display: none;
+	&.active{
+		display: block !important;
+	}
+}
+
+.ms-wrap-btn-msg{
+	text-align: right;
+	border-top: 1px solid gainsboro;
+	.ms-msg-more{
+    width: auto;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #333;
+    position: relative;
+    padding: 0;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    padding-right: 23px;
+    margin-right: 0;
+		margin-left: auto;
+		
+		&:after{
+			content: "\e901";
+			font-family: 'icomoon'!important;
+			font-size: 10px;
+			transform: rotate(90deg);
+			position: absolute;
+			right: 6px;
+		}
+	}
+}
+
+.ms-msg{
+	.msScroll{
+		overflow: hidden;
+		overflow-x: auto;
+		width: 100%;
+	}
+
+	.ms-msg-title.js-subject-lead{
+		position: relative;
+		padding-right: 95px;
+	}
+
+	.ms-button.crm-ico-reply{
+		font-family: "Open Sans", sans-serif !important;
+    font-weight: 600!important;
+		padding: 0 15px;
+		height: 35px;
+		line-height: 35px;
+		position: absolute;
+		right: 0;
+		&:before{
+			font-family: "crm-icons" !important;
+			margin-right: 5px;
+		}
+	}
+}
+
+.ms-wrap-header-message{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	img{
+		width: 90px;
+		height: 90px;
+		margin-right: 20px;
+		border-radius: 100%;
+		object-fit: cover;
+	}
+
+	.ms-agent-detail{
+		line-height: 0;
+	}
+
+	.ms-agent-name,
+	.ms-agent-title,
+	.ms-agent-phone,
+	.ms-agent-link{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		margin-bottom: 2px;
+		line-height: normal;
+		color: #2f2f2f;
+	}
+
+	.ms-agent-name{
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.ms-agent-link{
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 768px){
+	.rs-navbar{
+		nav{
+			position: relative;
+			/*.header-nav{
+				.search_nav{
+					display: none;
+				}
+			}*/
+			.sub_menu{
+				display: none;
+			}
+
+			/*.logo{
+				margin: 0 auto;
+				padding-right: 60px;
+			}*/
+
+		}
+	}
+}
+
+/*@media screen and (min-width: 769px){
+	.rs-navbar nav .header-nav{
+		align-items: center;
+	}
+	.rs-navbar nav .header-nav{
+		width: auto;
+	}
+}*/
+
+.ms-lead-item{
+	.tooltip-inner{
+		max-width: 100% !important;
+		margin-top: 15px;
+	}
+}
+
+.tooltip.in {
+	opacity: 1 !important;
+}
+
+/*.ms-lead-body .ms-lead-item:nth-child(1){
+	.tooltip{
+		top: -22px !important; 
+	}
+}*/
+
+.gmail_signature{
+	overflow: hidden;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.container{
+	&.basicPage{
+		&.ms-new-basic-form{
+			>.ms-header{
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border: 0;
+				background-color: #FFF;
+				padding: 20px 15px;
+				margin-left: -15px;
+				margin-right: -15px;
+				margin-top: 0;
+				margin-bottom: 20px;
+				border-bottom: 1px solid $border-color;
+				height: 60px;
+				@media screen and (min-width: 768px){
+					padding: 15px;
+					height: auto;
+				}
+
+				.ms-title{
+					font-size: 16px;
+				}
+
+				.ms-wrap-btn{
+					position: fixed;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					z-index: 2;
+					display: flex;
+					justify-content: space-between;
+					transition: width 0.3s ease;
+					.btn{
+						width: 50% !important;
+						border-radius: 0;
+					}
+
+					@media screen and (min-width: 768px){
+						position: relative;
+						width: 330px;
+						.btn{
+							width: 49% !important;
+							border-radius: 4px;
+						}
+					}
+				}
+			}
+
+			.ms-md-7{
+				padding-left: 0;
+			}
+
+			.form-item{
+				&.actions{
+					display: none;
+					margin-top: 0 !important;
+					@media screen and (min-width: 991px){
+						display: block;
+						.btn{
+							margin-top: 0 !important;
+						}
+					}
+				}
+			}
+
+			.ms-rx-radio,
+			.ms-rx-checkbox{
+				input+label{
+					font-size: 14px;
+					margin-top: 3px;
+				}
+			}
+
+			.ms-rx-checkbox{
+				#featured_listings_featuredListingPropertyTypes label:after, 
+				#featured_listings_featuredListingRentalType label:after, 
+				#sold_listings_soldListingPropertyTypes label:after, 
+				#sold_listings_soldListingRentalType label:after{
+					color: #000000;
+					font-size: 14px;
+					content: "\e904" !important;
+					font-family: "icomoon"!important;
+				}
+			}
+
+			.ms-rx-radio{
+				#featured_listings_featuredListingDisplay label, 
+				#featured_listings_featuredListingPropertyTypes label, 
+				#featured_listings_featuredListingRentalType label, 
+				#sold_listings_soldListingDisplay label, 
+				#sold_listings_soldListingPropertyTypes label, 
+				#sold_listings_soldListingRentalType label{
+					&:after{
+						border-radius: 100%;
+						background: $color-b;
+						width: 10px;
+						border-radius: 100%;
+						height: 10px;
+						top: 1px;
+						left: 1px;
+					}
+
+					&:before{
+						border-radius: 100%;
+					}
+				}
+			}
+
+			.form-group{
+				input[type=text]{
+					&:focus{
+						border-color: #a8bcc3 !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.ms-hidden-menu{
+	.container{
+		&.basicPage{
+			&.ms-new-basic-form{
+				>.ms-header{
+					.ms-wrap-btn{
+						@media screen and (min-width: 768px){
+							width: calc(100% - 56px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 769px){
+		.ms-crm-page{
+			#crm_pagination_footer {
+				width: calc(100% - 56px);
+			}
+		}
+	}
+}
+
+.max-width-900{
+	form{
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 1330px){
+	.max-width-900{
+		max-width: 950px;
+		margin-left: 0;
+		margin-right: auto;
+	}
+}
+
+.social-connectors-item{
+	position: relative;
+	&.ms-fb,
+	&.ms-tw,
+	&.ms-gg,
+	&.ms-yt,
+	&.ms-in,
+	&.ms-ln,
+	&.ms-pt,
+	&.ms-tik-tok{
+		input{
+			padding-left: 40px;
+		}
+		&:before{
+			position: absolute;
+			bottom: 24px;
+			left: 12px;
+		}
+	}
+	&:before{
+		font-size: 17px !important;
+	}
+}
+
+.ms-msg-info{
+	max-width: 650px;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 4px;
+	background-color: #dee2e4;
+}
+
+.ms-msg-subtitle{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.timeline{
+	.ms-open-list{
+		.ms-drop-list{
+			&.ms-sv-lt{
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.ms-header-menu{
+		.ms-wrap-btn{
+			//position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			position: relative;
+			//top: 12px;
+			//right: 6px;
+			right: 0 !important;
+			margin-top: 15px !important;
+			padding-top: 10px;
+			border-top: 1px dashed #ccc;
+			@media screen and (min-width: 1200px){
+				position: absolute;
+				top: 0;
+				right: 0 !important;
+				border-top: 0;
+				margin-top: 0 !important;
+				padding-top: 5px;
+			}
+
+			.ms-edit,
+			.ms-close{
+				position: relative;
+				background-color: transparent;
+				top: 0;
+				color: #969695;
+				margin-left: 10px !important;
+				right: auto;
+				&:hover{
+					color: #333;
+				}
+			}
+			.ms-button-switch{
+				height: 22px;
+				//width: 50px;
+				width: 35px;
+				label:before {
+					content: "";
+					width: 16px;
+					height: 16px;
+				}
+
+				label span{
+					font-size: 10px;
+					display: none;
+				}
+
+				input:checked+label:before {
+					//left: 29px;
+					left: 16px;
+				}
+			}
+		}
+
+		.ms-title,
+		.ms-msg-title{
+			padding-right: 110px;
+		}
+	}
+
+	.ms-item{
+		&.ms-save,
+		&.li-market-report{
+			.ms-msg{
+				overflow: visible;
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/***GRILLA EN MODAL***/
+#modal-save-pt{
+	.modal-dialog{
+		max-width: 460px;
+	}
+
+	.ms-wrap-btn{
+		text-align: right;
+	}
+}
+
+.ms-grid-idx{
+	width: 100%;
+	.result-search{
+		width: 100%;
+		position: relative;
+		.propertie{
+			width: 100%;
+			position: relative;
+
+			.features{
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: auto;
+				z-index: 2;
+				padding: 20px;
+				color: #FFF;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+				font-size: 15px;
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				align-items: flex-end;
+				padding-top: 35px;
+				li{
+					position: relative;
+
+					&.price{
+						font-size: 25px;
+						font-weight: 700;
+						position: absolute;
+						top: 0;
+						left: 20px;
+					}
+
+					&.living-size{
+						width: auto;
+					}
+
+					&.address{
+						width: 100%;
+					}
+	
+					&.baths,
+					&.beds{
+						width: auto;
+						padding-right: 15px;
+						&:after{
+							content: "";
+							width: 4px;
+							height: 4px;
+							background-color: #FFF;
+							border-radius: 100%;
+							position: absolute;
+							right: 5px;
+							top: 50%;
+							margin-top: -2px;
+						}
+					}
+
+					&.living-size,
+					&.baths,
+					&.beds{
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						span{
+							margin-top: 0;
+							font-size: 12px;
+							margin-left: 5px;
+						}
+					}
+				}
+			}
+
+			.new-listing{
+				position: absolute;
+				top: 15px;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.6);
+				text-transform: uppercase;
+				color: #FFF;
+				font-size: 11px;
+				z-index: 2;
+				margin: 0;
+				padding: 6px 20px;
+			}
+
+			.wrap-slider{
+				position: relative;
+				width: 100%;
+				background-color: #333;
+				&:after{
+					content: "";
+					display: block;
+					padding-bottom: 60%;
+				}
+
+				&:before{
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					background: linear-gradient(to bottom, rgba(68, 68, 68, 0) 40%, rgba(0, 0, 0, 0.65));
+				}
+
+				img{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+					z-index: 0;
+				}
+			}
+		}
+	}
+}
+
+.ms-group-ft{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	input{
+		border-radius: 0;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+
+	button{
+		width: auto;
+		padding: 0 25px;
+		height: 42px;
+		border: 1px solid #e8e8e8!important;
+		margin: 0;
+		font-size: 13px;
+		font-weight: 600;
+		margin-left: -1px;
+		//text-transform: uppercase;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		transition: all .3s;
+		&:hover{
+			background-color: #7d7d7d;
+			color: #FFF;
+		}
+	}
+}
+
+#modal-edit-alert{
+	@media screen and (min-width: 640px){
+		.ms-wrap-btn {
+			text-align: right;
+		}
+	}
+	.modal-dialog {
+		max-width: 460px;
+	}
+}
+
+@media (max-width: 640px){
+	.timeline{
+		.ms-wrap-item{
+			&.ms-header-menu{
+				.ms-wrap-btn{
+					position: relative;
+					top: 0;
+					margin-top: 10px;
+				}
+
+				.ms-property-info{
+					.ms-small{
+						position: relative;
+						margin-top: 10px;
+					}
+				}
+
+				.ms-msg-title,
+				.ms-title{
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.tab-pane{
+	.js-create-new-alert.btn,
+	.js-create-new-alert-favorite.btn{
+		margin-bottom: 15px;
+		margin-right: 0;
+		margin-left: auto;
+		display: block;
+		min-width: auto;
+		text-transform: capitalize;
+		span{
+			padding: 0 20px;
+		}
+	}
+}
+
+#modal-edit-alert-favorite{
+	.modal-dialog{
+    max-width: 460px;
+	}
+}
+
+.modal{
+	.ui-autocomplete{
+    height: 166px;
+    overflow-y: auto;
+		li{
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.autocomplete-item-type{
+					font-size: 12px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+.ms-ofv{
+	overflow: visible;
+}
+
+.ms-flex.input-480{
+	.ms-mb-cell{
+		.form-control{
+			width: 100% !important;
+		}
+	}
+}
+
+/***CRM FILTROS***/
+.ms-scoll-list{
+	height: auto;
+	max-height: 120px;
+	overflow-y: auto;
+	>li{
+		>a:hover {
+			color: #262626;
+			background-color: #f5f5f5;
+		}
+	}
+}
+
+.ms-lead-list{
+	&.ms-wrap-btn{
+		border-top: 1px solid $border-color;
+		padding-top: 15px;
+		text-align: center;
+		.ms-btn{
+			background-color: #fff;
+			border: 1px solid #dedede;
+			background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+			width: auto;
+			height: 40px;
+			font-weight: 600;
+			border-radius: 4px;
+			font-size: 12px;
+			color: #333;
+			position: relative;
+			padding: 10px 20px;
+			display: inline-block;
+			min-width: auto;
+		}
+	}
+}
+
+.ms-wrap-lead-filters{
+	position: relative;
+	.ms-header-lead-filters{
+		padding: 15px;
+		border-bottom: 1px solid $border-color;
+		.ms-input{
+			border: 1px solid $border-color;
+			border-radius: 4px;
+			height: 40px;
+			padding: 0 15px;
+			position: relative;
+			z-index: 1;
+			background-color: transparent;
+			font-size: 14px;
+			width: 100%;
+		}
+	}
+
+	.ms-wrap-info-filter{
+    margin-top: 63px;
+    margin-bottom: 90px;
+		text-align: center;
+		color: #979797;
+		.ms-icon-filter{
+			&:before{
+				content: "\e904";
+				font-size: 27px;
+				font-family: "crm-icons";
+				display: inline-block;
+			}
+		}
+
+		.ms-title{
+			display: block;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		&.ms-opacity{
+			opacity: 0;
+		}
+	}
+
+	.ui-widget-content{
+		//display: block!important;
+    position: absolute!important;
+    top: 71px!important;
+    //border: 1px solid #cacaca;
+    left: 50%!important;
+    transform: translateX(-50%);
+    overflow: hidden;
+		width: 280px !important;
+		height: auto;
+		max-height: 324px;
+		overflow-y: auto;
+		background-color: #FFF;
+		padding: 0;
+		border: 0;
+		border-bottom: 1px solid #cacaca;
+		z-index: 6;
+		li{
+			border: 1px solid #cacaca !important;
+			margin-bottom: -1px;
+			background: #FFF !important;
+			font-size: 14px;
+			cursor: pointer !important;
+			&:hover{
+				div{
+					background-color: #f5f5f5;
+					color: #157edc;
+				}
+			}
+
+			&.ui-autocomplete-category{
+				background-color: rgb(247, 249, 250) !important;
+				font-weight: bold;
+				color: rgb(109, 130, 145) !important;
+				text-transform: uppercase;
+				font-size: 13px;
+				display: block;
+				padding: 15px;
+				cursor: default !important;
+			}
+
+			&:first-child{
+				margin-top: -1px !important;
+			}
+		}
+	}
+
+	.ms-body-lead-filters{
+		height: auto;
+    max-height: 600px;
+		overflow-y: auto;
+
+		@media (min-width:768px) and (max-height:900px){
+			max-height: 600px;
+		}
+
+		@media (min-width:768px) and (max-height:800px){
+			max-height: 400px;
+		}
+		
+		@media (min-width:768px) and (max-height:700px){
+			max-height: 338px;
+		}
+	}
+}
+
+.ms-wp-ft-ct{
+	width: 100%;
+	border-bottom: 1px solid $border-color;
+	&:last-child{
+		border-bottom: 0;
+	}
+
+	.ms-wp-ft-ct-hd{
+		position: relative;
+		.ms-tb-panel{
+			position: relative;
+			padding: 10px 40px 10px 15px;
+			font-size: 14px;
+			cursor: pointer;
+
+			&:before{
+				content: "\e901";
+				font-family: "icomoon"!important;
+				font-size: 10px;
+				color: #aaaaaa;
+				width: auto;
+				display: inline-block;
+				vertical-align: middle;
+				transform: rotate(90deg);
+				position: absolute;
+				right: 12px;
+				top: 13px;
+			}
+
+			.ms-title{
+				min-width: 0px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.ms-wrap-close{
+			position: absolute;
+			top: 0;
+			right: 23px;
+			display: none;
+			&:before{
+				content: "";
+				background: rgb(255,255,255);
+				background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 37%);
+				width: 50px;
+				height: 100%;
+				top: 0;
+				right: 0;
+				z-index: 1;
+				position: absolute;
+				display: block;
+			}
+			.ms-close-panel{
+				position: relative;
+				width: 30px;
+				height: 40px;
+				display: block;
+				cursor: pointer;
+				color: #aaaaaa;
+				z-index: 2;
+				&:before{
+					content: "\e905";
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					font-size: 10px;
+					font-family: "crm-icons";
+					text-indent: 0;
+					z-index: 2;
+				}
+			}
+		}
+
+		&:hover{
+			.ms-wrap-close{
+				display: block;
+			}
+		}
+	}
+
+	.ms-wp-ft-ct-bd{
+		padding: 5px 15px 15px;
+		position: relative;
+		display: none;
+		.ms-wrap-ck{
+			display: block;
+			position: relative;
+			label{
+				display: inline-block;
+			}
+			.ms-wrap-ft-select-sr{
+				.ft-select-sr{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					display: block;
+					cursor: pointer;
+				}
+		
+				&.active-list{
+					position: relative;
+					flex-wrap: wrap;
+					width: calc(100% - 30px);
+					margin-left: 30px;
+					display: none;
+					.ft-select-sr{
+						position: relative;
+						width: 25px;
+						height: 25px;
+						border-radius: 100%;
+						background-color: $azul;
+						color: #FFF;
+						margin-bottom: 5px;
+						&:before{
+							content: "\e905";
+							font-family: "crm-icons";
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							font-size: 8px;
+							transform: rotate(45deg);
+						}
+					}
+					
+					.ms-ft-tag-item-btn{
+						display: inline-block;
+						color: rgb(54, 70, 80);
+						font-size: 12px;
+						line-height: 12px;
+						padding: 6px 10px;
+						border-radius: 13px;
+						outline: none;
+						margin-right: 5px;
+						margin-bottom: 5px;
+						background-color: rgb(232, 236, 240);
+						border: 1px solid rgb(232, 236, 240);
+						word-break: break-word;
+						cursor: pointer;
+						padding-right: 25px;
+						position: relative;
+						&:before{
+							content: "\e905";
+							font-family: "crm-icons";
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							position: absolute;
+							top: 50%;
+							right: 9px;
+							font-size: 8px;
+							color: #93a5b2;
+							transform: translateY(-50%);
+						}
+					}
+		
+					.ms-wrap-ft-dropdown{
+						.tooltip-inner {
+							width: 80px !important;
+						}
+					}
+				}
+			}
+
+			input:checked{
+				+ label span{
+					display: none;
+				}
+
+				+ label + .ms-any-all{
+					display: inline-block;
+				}
+
+				+ label + .ms-any-all + .ms-wrap-ft-select-sr.active-list{
+					display: flex;
+				}
+
+				+ label + .ms-wrap-contains{
+					display: block;
+					&.ms-flex{
+						display: flex;
+					}
+				}
+			}
+			/*input:checked + label + .ms-any-all + .ms-wrap-ft-select-sr.active-list{
+				display: flex;
+			}
+
+			input:checked + label + .ms-wrap-contains{
+				display: block;
+				&.ms-flex{
+					display: flex;
+				}
+			}*/
+		}
+
+		.ms-wrap-contains{
+			width: calc(100% - 30px);
+			margin-left: 30px;
+			position: relative;
+			padding-bottom: 5px;
+			display: none;
+			input{
+				display: block;
+				width: 100%;
+				height: 35px;
+			}
+
+			&.ms-flex{
+				display: none;
+				justify-content: space-between;
+				.ms-dropdown{
+					width: calc(100% - 75px);
+					position: relative;
+				}
+
+				.ms-input{
+					max-width: 60px;
+					//text-align: center;
+					&.ms-full{
+						max-width: 100%;
+					}
+					&.ms-md{
+						max-width: 48%;
+					}
+				}
+
+				.ms-button{
+					height: 35px;
+					font-weight: 600;
+					font-size: 12px;
+					padding-right: 30px;
+
+					&:after{
+						content: "\e901";
+						font-family: "icomoon"!important;
+						font-size: 10px;
+						color: #333;
+						width: auto;
+						margin-left: 14px;
+						display: inline-block;
+						vertical-align: middle;
+						transform: rotate(90deg);
+						margin-top: 0;
+						position: absolute;
+						right: 13px;
+					}
+				}
+
+				.ms-sp-dp-close{
+					width: 100% !important;
+					min-width: 145px;
+				}
+			}
+		}
+	}
+
+	.tooltip.left .tooltip-arrow {
+		border-left-color: #c0185c;
+	}
+
+	.select2-search__field{
+		display: block;
+	}
+
+	.dropdown-menu{
+		&.ms-dw-ft{
+			width: 215px;
+			padding: 0;
+			overflow: hidden;
+			position: fixed;
+			input{
+				height: 35px;
+				font-size: 14px;
+				display: block;
+			}
+
+			.ms-header-dw-ft{
+				padding: 10px;
+				border-bottom: 1px solid $border-color;
+			}
+
+			.ui-autocomplete{
+				position: relative !important;
+				//display: block !important;
+				width: 100% !important;
+				top: 0 !important;
+				border: 0 !important;
+				max-height: 162px !important;
+				li{
+					border: 0 !important;
+					border-bottom: 1px solid $border-color !important;
+					margin-bottom: 0;
+					&:last-child{
+						border-bottom: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
+	&.active{
+		.ms-wp-ft-ct-bd{
+			display: block;
+		}
+
+		.ms-wp-ft-ct-hd{
+			.ms-tb-panel{
+				&:before {
+					transform: rotate(270deg);
+				}
+			}
+		}
+	}
+
+	.ms-ft-bl-item-btn{
+		display: inline-block;
+		color: rgb(54, 70, 80);
+		font-size: 12px;
+		line-height: 12px;
+		padding: 6px 10px;
+		border-radius: 13px;
+		outline: none;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		background-color: rgb(232, 236, 240);
+		border: 1px solid rgb(232, 236, 240);
+		word-break: break-word;
+		cursor: pointer;
+		padding-right: 25px;
+		position: relative;
+		&:before{
+			content: "\e905";
+			font-family: "crm-icons";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 50%;
+			right: 9px;
+			font-size: 8px;
+			color: #93a5b2;
+			transform: translateY(-50%);
+		}
+	}
+
+	.ms-group-btn{
+		margin-bottom: 5px;
+	}
+
+	.ms-btn-add{
+		position: absolute;
+    width: 41px;
+    height: 35px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		border: 1px solid $border-color;
+		cursor: pointer;
+    background-image: linear-gradient(to bottom, #fff 0, #f1f1f1 100%);
+	}
+
+	.ms-blur-list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.ms-any-all{
+		margin-left: 5px;
+		display: none;
+		.ms-any-all-list{
+			color: $azul;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		&.open{
+			.dropdown-menu{
+				display: block;
+				position: fixed;
+			}
+		}
+	}
+}
+
+.ms-lead-filters{
+	.ms-dropdown-list{
+		width: 280px;
+		padding: 0;
+	}
+}
+
+.ms-wrap-save-fd{
+	text-align: center;
+	padding: 15px;
+	border-top: 1px solid $border-color;
+	margin-top: -1px;
+	display: none;
+	.ms-button{
+		min-width: auto;
+		width: auto;
+		display: inline-block;
+		text-transform: uppercase;
+    font-size: 11px !important;
+    font-weight: 600;
+    height: 35px;
+		line-height: 35px;
+		margin: 0 5px;
+	}
+	span{
+		display: block;
+		padding-top: 3px;
+	}
+}
+
+.ui-helper-hidden-accessible{
+	display: none;
+}
+
+.ms-ft-item.ms-order-10{
+	order: 10 !important;
+}
+
+.ms-dropdown.ms-lead-filters >.ms-button:after{
+	content: "\e901";
+	font-family: "icomoon"!important;
+	font-size: 10px;
+	color: #333;
+	width: auto;
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	transform: rotate(90deg);
+	margin-top: -2px;
+}
+
+#modal-save-filter{
+	.ms-input-search.ms-lp{
+		input{
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.ms-contacts {
+		max-height: 189px !important;
+	}
+}
+
+.ms-button{
+	&.saveFilter{
+    background-color: rgb(51, 51, 51);
+    background-image: linear-gradient(to right, rgb(250, 102, 48), rgb(190, 21, 94));
+    color: rgb(255, 255, 255);
+		color: #FFF !important;
+		border: 0;
+		&:hover{
+			background: rgb(51, 51, 51);
+		}
+	}
+}
+
+#modal-manage-list{
+	.modal-body{
+		padding: 0;
+		.ms-table{
+			thead{
+				th{
+					padding: 10px 15px;
+				}
+			}
+
+			tbody{
+				td{
+					padding-left: 15px;
+					padding-right: 15px;
+					&.ms-text-center{
+						text-align: center;
+					}
+
+					.ms-user-avatar{
+						width: 30px;
+						height: 30px;
+						margin-right: 10px;
+						font-size: 11px !important;
+					}
+
+					.ms-text-name{
+						max-width: 170px;
+						margin: 0;
+						a{
+							color: #157edc;
+							font-weight: 600;
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+
+						p{
+							font-size: 13px;
+							color: #808080;
+						}
+					}
+
+					a{
+						color: #157edc;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+
+					.btn-icon-delete,
+					.btn-icon-edit{
+						position: relative;
+						text-indent: -999999px;
+						overflow: hidden;
+						margin: 0 auto;
+						display: block;
+						background-color: transparent;
+						&:before{
+							content: "\e902";
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							font-size: 19px;
+							font-family: "crm-icons";
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							text-indent: 0;
+						}
+
+						&:hover{
+							color: #157edc;
+						}
+					}
+
+					.btn-icon-delete{
+						&:before{
+							content: "\e91c";
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*ANTIGUO*/
+.ms-warning-message {
+	position: relative;
+	bottom: 0;
+	display: block;
+	text-align: center;
+	padding: 15px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	z-index: 2;
+	font-size: 14px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	order: 10;
+	@extend .gradient;
+	.crm-ico-alert-triangle, 
+	.crm-ico-warning {
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		flex-shrink: 0;
+		border-radius: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #cf2c50;
+		font-size: 24px;
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	@media screen and (min-width: 769px){
+		position: relative;
+		//order: 2;
+		order: 1;
+		border: 0;
+		border-radius: 4px;
+		margin-right: 20px;
+		width: auto;
+		//margin-left: auto;
+		padding: 10px 20px;
+		width: auto;
+		bottom: auto;
+		//max-width: 70%;
+
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 40%;
+	}
+
+	@media screen and (min-width: 991px){
+		width: auto;
+	}
+
+	@media screen and (min-width: 1024px){
+		max-width: 50%;
+	}
+
+	@media screen and (min-width: 1600px){
+		max-width: 74%;
+	}
+}
+
+/*NUEVO
+.ms-warning-message{
+	position: relative;
+	bottom: 0;
+	display: block;
+	text-align: center;
+	padding: 5px 10px;
+	width: 100%;
+	z-index: 2;
+	font-size: 13px;
+	color: #2b3547;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	order: 10;
+	background-color: #e9ebee;
+	min-height: 45px;
+
+	span{
+		padding-left: 25px;
+	}
+
+	a{
+		color: #2b3547;
+		font-weight: 600;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.crm-ico-warning,
+	.crm-ico-alert-triangle{
+		font-family: "Open Sans", sans-serif !important;
+		font-weight: bold !important;
+		@extend .gradient;
+		color: #FFF;
+		position: relative;
+		padding: 11px 15px 10px 35px;
+		&:before{
+			font-family: 'crm-icons' !important;
+			font-weight: 100 !important;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 17px;
+		}
+
+		&:after{
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: 17px solid transparent;
+			border-left: 17px solid #b12964;
+			border-bottom: 17px solid transparent;
+			position: absolute;
+			right: -17px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	@media screen and (min-width: 769px){
+		top: 0;
+		bottom: auto;
+		position: fixed;
+    width: 100%;
+    right: 0;
+		z-index: 2;
+	}
+}
+*/
+
+@media screen and (min-width: 769px){
+	body.ms-alert-sender-active{
+		padding-top: 133px;
+		.rs-navbar {
+			top: 45px;
+		}
+		.rs-wrapper .rs-sidebar {
+			height: calc(100vh - 133px);
+			top: 133px!important;
+		}
+	}
+}
+
+
+.timeline{
+	.ms-wrap-item{
+		.ms-wrap-btn{
+			.ms-close{
+				&:after{
+					content: "\e922";
+				}
+			}
+
+			.ms-edit{
+				&:before{
+					top: 0;
+					font-size: 19px;
+					content: "\e902";
+				}
+			}
+		}
+		@media screen and (min-width: 1600px){
+			padding-left: 20px;
+		}
+	}
+
+	@media screen and (min-width: 640px){
+		.ms-header-menu{
+			.ms-wrap-btn{
+				right: 0;
+			}
+		}
+	}
+}
+
+.ms-wrap-profile{
+	.ms-block-d{
+		.tab-content{
+			.tab-pane{
+				.js-market-report-form{
+					float: right;
+   				margin-left: 15px;
+				}
+			}
+		}
+	}
+}
+
+.ms-table-updates{
+	border: 1px solid #ddd;
+	width: 100%;
+	height: auto;
+	max-height: 400px;
+	overflow-y: auto;
+	.ms-header-table-updates{
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.ms-item{
+				width: 50%;
+				font-weight: 600;
+				font-size: 14px;
+				border-right: 1px solid #ddd;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 45px;
+				background-color: #eaeaea;
+				&:last-child{
+					border-right: 0;
+				}
+			}
+		}
+	}
+	.ms-body-table-updates{
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.ms-item{
+				width: 50%;
+				font-size: 14px;
+				border-right: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 40px;
+				&:last-child{
+					border-right: 0;
+				}
 			}
 		}
 	}

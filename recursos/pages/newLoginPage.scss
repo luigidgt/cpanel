@@ -1,0 +1,634 @@
+.ms-new-login-content{
+  background-color: #2a263b;
+  padding: 30px 0;
+  margin: 0 auto;
+  position: relative;
+  .ms-title-hd{
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .ms-wrapper-login{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 875px;
+    position: relative;
+    
+    .ms-wrapper-el{
+      border-radius: 6px;
+      background-color: #FFF;
+      padding: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ms-wrapper-form{
+      .ms-form-content{
+        padding-top: 40px;
+        width: 90%;
+        margin: 0 auto;
+        .ms-logo{
+          width: 235px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          img{
+            width: 100%;
+          }
+        }
+
+        .ms-title-form{
+          color: #2a263b;
+          font-weight: bold;
+          font-size: 20px;
+          text-align: center;
+          display: block;
+          margin: 20px 0 15px 0;
+        }
+
+        .ms-input-form{
+          margin-bottom: 15px;
+          width: 100%;
+          position: relative;
+          label{
+            font-size: 14px;
+            color: #2a263b;
+            font-weight: 600;
+          }
+
+          input{
+            width: 100%;
+            border: 1px solid #dbdbdb !important;
+            border-radius: 4px;
+            height: 50px;
+            padding: 0 15px;
+            background-color: #f9f8fd;
+            transition: all .3s;
+            &:hover,
+            &:focus{
+              border-color: #979797 !important;
+            }
+          }
+
+          #showpassord{
+            width: 45px !important;
+            height: 50px !important;
+            @media screen and (min-width: 768px){
+              height: 60px !important;
+            }
+          }
+        }
+
+        .ms-input-form{
+          button{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            color: #FFF;
+            font-weight: 600;
+            font-size: 15px;
+            span{
+              position: relative;
+              z-index: 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(to right, #ef3d4e, #ae2865);
+              z-index: 0;
+              transition: all .3s;
+              opacity: 1;
+              top: 0;
+              left: 0;
+              border-radius: 4px;
+            }
+
+            &:before{
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-color: #2a263b;
+              z-index: 0;
+              transition: all .3s;
+              opacity: 0;
+              top: 0;
+              left: 0;
+              border-radius: 4px;
+            }
+
+            &:hover{
+              &:after{
+                opacity: 0;
+              }
+
+              &:before{
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .ms-wrapper-checkbox{
+          text-align: center;
+          margin: 20px 0;
+          label{
+            margin: 0;
+            font-weight: 600;
+            display: inline-block;
+          }
+
+          .chk_content span{
+            border-color: #d0d0d0 !important;
+          }
+        }
+
+        .ms-wrapper-fr{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px 0 20px 0;
+          a{
+            color: #0072ac;
+            font-size: 13px;
+            font-weight: 600;
+            position: relative;
+            &.-register{
+              padding-left: 30px;
+              &:after{
+                content: "";
+                display: block;
+                width: 1px;
+                height: 10px;
+                position: absolute;
+                top: 4px;
+                left: 15px;
+                background-color: #0072ac
+              }
+            }
+
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .ms-wrapper-login{
+          width: 100%;
+          position: relative;
+          .ms-item{
+            width: 100%;
+            .ms-title-account{
+              color: #2a263b;
+              font-weight: bold;
+              font-size: 20px;
+              text-align: center;
+              display: block;
+              margin: 20px 0 15px 0;
+              @media screen and (min-width: 768px){
+                margin: 30px 0 20px 0;
+                text-align: left;
+              }
+            }
+
+            .ms-list{
+              height: auto;
+              max-height: 360px;
+              overflow-y: auto;
+              margin-right: -10px;
+
+              li{
+                margin-bottom: 10px;
+                margin-right: 10px;
+                &:last-child{
+                  margin-bottom: 0;
+                }
+
+                .ms-login-btn{
+                  width: 100%;
+                  border: 1px solid transparent;
+                  border-radius: 4px;
+                  padding: 10px 30px 10px 15px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-size: 13px;
+                  text-align: left;
+                  border: 1px solid #e8e8e8;
+                  position: relative;
+                  background-image: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+                  transition: all .4s;
+                  strong{
+                    font-weight: 600;
+                    font-size: 14px;
+                  }
+
+                  &:after{
+                    content: "\e901";
+                    font-family: icomoon!important;
+                    font-size: 10px;
+                    color: #333;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all .3s;
+                  }
+
+                  &:hover{
+                    border-color: #333;
+                    &:after{
+                      right: 12px;
+                    }
+                  }
+                }
+              }
+
+
+              &::-webkit-scrollbar {
+                width: 6px;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background-color: #ccc;
+              }
+
+              &::-webkit-scrollbar-track {
+                border: 0 solid #000;
+                background-color: rgba(0,0,0,.07);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ms-wrapper-slider{
+      display: none;
+      .slick-slide img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &.accounts{
+      @media screen and (min-width: 768px){
+        min-height: 605px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .ms-wrapper-el{
+        width: 100%;
+        max-width: 430px;
+        min-height: auto;
+        margin: 0 auto;
+        .ms-wrapper-form {
+          @media screen and (min-width: 768px){
+            width: 100%;
+          }
+
+          .ms-form-content{
+            padding: 30px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .ms-copyright{
+    color: #a0a0a0;
+    font-size: 12px;
+    padding: 30px 0;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    a{
+      text-decoration: underline;
+      color: #a0a0a0;
+      transition: all .3s;
+      &:hover{
+        color: #FFF;
+      }
+    }
+  }
+
+  .-icon{
+    display: none;
+    opacity: .3;
+    @media screen and (min-width: 1024px){
+      display: block;
+      position: absolute;
+      z-index: 0;
+
+      &.crm-ico-triangle{
+        color: #ae2865;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent!important;
+        background-image: linear-gradient(to right, #ef3d4e,#ae2865);
+        font-size: 280px;
+        width: 280px;
+        height: 240px;
+        line-height: 240px;
+        top: -120px;
+        left: -140px;
+      }
+
+      &.crm-ico-circle{
+        color: #244e9b;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent!important;
+        background-image: linear-gradient(to right, rgba(38,84,166,1),rgba(34,68,129,1));
+
+        width: 240px;
+        height: 240px;
+        line-height: 240px;
+        bottom: -115px;
+        left: -140px;
+        font-size: 240px;
+      }
+
+      &.crm-ico-square{
+        color: #19a86c;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent!important;
+        background-image: linear-gradient(to right, rgba(47,179,131,1),rgba(24,168,107,1));
+        
+        width: 240px;
+        height: 240px;
+        line-height: 240px;
+        top: -120px;
+        right: -110px;
+        font-size: 240px;
+      }
+
+      &.crm-ico-polygon{
+        color: #fc686f;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent!important;
+        background-image: linear-gradient(to right, rgba(255,147,77,1),#fc686f);
+
+        width: 272px;
+        height: 240px;
+        line-height: 240px;
+        bottom: -115px;
+        right: -140px;
+        font-size: 275px;
+      }
+    }
+
+    @media screen and (min-width: 1440px){
+      zoom: 0.75;
+      &.crm-ico-triangle{
+        font-size: 590px;
+        width: 594px;
+        height: 509px;
+        line-height: 509px;
+        top: 6px;
+        left: -415px;
+      }
+
+      &.crm-ico-circle{
+        width: 540px;
+        height: 540px;
+        line-height: 540px;
+        font-size: 540px;
+        bottom: -145px;
+        left: -200px;
+      }
+
+      &.crm-ico-square{
+        width: 490px;
+        height: 490px;
+        line-height: 490px;
+        font-size: 490px;
+        top: -100px;
+      }
+
+      &.crm-ico-polygon{
+        width: 578px;
+        height: 500px;
+        line-height: 500px;
+        font-size: 578px;
+        right: -315px;
+      }
+    }
+
+    @media screen and (min-width: 1600px){
+      zoom: 1;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    .ms-copyright{
+      position: absolute;
+      bottom: 50px;
+    }
+
+    .ms-wrapper-login{
+      .ms-wrapper-el{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 605px;
+      }
+
+      .ms-wrapper-form{
+        width: 50%;
+        .ms-form-content{
+          padding-top: 60px;
+          max-width: 320px;
+          height: 100%;
+          .ms-title-form {
+            margin: 30px 0 20px 0;
+            text-align: left;
+          }
+
+          .ms-input-form{
+            margin-bottom: 20px;
+            input, button{
+              height: 60px;
+            }
+
+            button{
+              font-size: 17px;
+            }
+          }
+          
+          .ms-wrapper-fr{
+            margin: 30px 0 25px 0;
+          }
+        }
+      }
+
+      .ms-wrapper-slider{
+        width: 50%;
+        display: block;
+        .ms-slider{
+          width: 100%;
+          height: 100%;
+          .ms-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            picture{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 90%;
+              max-width: 100%;
+              margin: 0 auto;
+            }
+
+            .ms-caption{
+              font-size: 24px;
+              font-weight: bold;
+              color: #FFF;
+              font-family: 'Montserrat', sans-serif;
+              text-align: center;
+              max-width: 330px;
+              margin: 20px auto;
+            }
+
+            &.-bg1{
+              background-image: linear-gradient(to right, #ef3d4e, #ae2865);
+              picture{
+                margin-top: -35px;
+              }
+              .ms-caption{
+                margin-top: 10px;
+              }
+            }
+
+            &.-bg2{
+              background-image: linear-gradient(to right, #244e9b, #1d3e77);
+              .ms-caption{
+                max-width: 315px;
+              }
+            }
+
+            &.-bg3{
+              background-image: linear-gradient(to right, #29b07d, #19a86c);
+              picture{
+                margin-top: -35px;
+              }
+              .ms-caption{
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .slick-track,
+          .slick-list{
+            height: 100%;
+          }
+
+          .slick-dots{
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 45px;
+            left: 0;
+            right: 0;
+            button{
+              width: 20px;
+              height: 20px;
+              text-indent: -999999px;
+              overflow: hidden;
+              position: relative;
+              background-color: transparent;
+              &:after{
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: rgba(255,255,255,0.5);
+                text-indent: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -5px;
+                margin-left: -5px;
+                transition: all .3s;
+              }
+            }
+
+            .slick-active{
+              button{
+                &:after{
+                  background-color: #FFF;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px){
+    .ms-wrapper-login{
+      .ms-wrapper-slider{
+        .ms-slider{
+          .ms-item{
+            picture{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ms-userListActions .-icon-ms-update:before {
+  content: "\e90f";
+  font-family: "crm-icons"!important;
+  display: inline-block;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}

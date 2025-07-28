@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    <title>Hello {{ lead_name }}</title>
+    <!--[if gte mso 9]>
+    <style type="text/css" media="all">
+      sup { font-size: 100% !important; }
+    </style>
+    <![endif]-->
+    <style type="text/css" media="screen">
+      table * {font-family: 'Open Sans', sans-serif;}
+      body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#FFFFFF; -webkit-text-size-adjust:none }
+      a { color:#4e54cb; text-decoration:none }
+      p { padding:0 !important; margin:0 !important } 
+      img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+      /* Mobile styles */
+      @media only screen and (max-device-width: 640px), only screen and (max-width: 640px) {
+        .ms-inner-table{ width: 100% !important; max-width: 660px !important}
+        .ms-xl{width: 100% !important}
+        .ms-column-top,
+        .ms-column-empty{ float: left !important; width: 100% !important; display: block !important; }
+        .ms-column-empty { padding-bottom: 10px !important; }
+      }
+    </style>
+  </head>
+  <body class="ms-body"  style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#FFFFFF; -webkit-text-size-adjust:none;">
+    <p style="display: none">Hello {{ lead_name }}, find below some recommended listings for you. Please feel free to contact us if you would like any additional information or call us at {{ setting.phone }}</p>
+    <div style="width: 100%;">
+      <table width="660" border="0" cellspacing="0" cellpadding="0" style="margin: 0 auto; padding: 15px" class="ms-inner-table">
+        <tbody>
+          <tr>
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="top">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #FFFFFF">
+                        <tbody>
+                          <tr>
+                            <td style="padding:15px 0; border-bottom: 6px solid #f2f2f2">
+                              <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;border-spacing: 0;font-family: 'Open Sans', sans-serif;color: #727f80;">
+                                <tbody>
+                                  <tr valign="middle" align="left">
+                                    <td style="width: 120px;"><img src="{{ sf4.agent_photo }}" alt="{{ sf4.first_name }} {{ sf4.last_name }}" width="120" height="120" style="-webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px; -o-object-position:center; object-position:center;"></td>
+                                    <td style="padding-left: 20px; width: 100%; line-height: 0;" valign="center" align="left">
+                                      <h2 style="font-size: 22px;color: #000;margin: 0;margin-bottom: 3px;line-height: normal;font-weight: 600;">{{ sf4.first_name }} {{ sf4.last_name }}</h2>
+                                      <div style="font-size: 14px;color: #2f2f2f;margin: 0;margin-bottom: 5px;line-height: normal;">{{ sf4.agent_title}}</div>
+                                      <div style="font-size: 16px;color: #2f2f2f;margin: 0; margin-bottom: 3px;line-height: normal;font-weight: 600;">T. {{ sf4.phone_number }}</div>
+                                      <div style="font-size:14px; color:#2f2f2f; margin:0;line-height: normal"> <a href="{{ setting.site }}" style="font-size: 14px;color: #2f2f2f;margin: 0;line-height: normal;text-decoration: none;">{{ setting.site }}</a></div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom: 6px solid #f2f2f2;padding-left: 0;padding: 15px 0">
+                              <div style="font-size: 15px; color: #494949;line-height: 1.4">Hello {{ lead_name }}, find below some recommended listings for you. Please feel free to contact us if you would like any additional information or call us at <a href="tel:{{ sf4.phone_number }}" style="text-decoration: none;color: #2463f3;font-weight: 600">{{ sf4.phone_number }}</a></div>
+                            </td>
+                          </tr>
+                          {% if properties.newlisting|length > 0 %}
+                          <tr>
+                            <td align="center" valign="top" style="border-bottom: 6px solid #f2f2f2; padding: 20px 0 0 0">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom: 1px dashed #ddd; max-width: 550px; width: 100%">
+                                <tbody>
+                                  <tr>
+                                    <td align="left" valign="middle" style="padding: 20px 0;font-weight: 600;color: #000; font-size: 20px;">
+                                      New Listings
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% for row in properties.newlisting %}
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding-top: 20px; max-width: 550px">
+                                <tbody>
+                                  <tr>
+                                    <td align="left" valign="middle">
+										
+										<a href="{{ link_view_more }}token_authau={{ alert.token_alert }}&show={{row.mls_num}}" style="display: block; width: 100%; line-height: 0">
+										
+										<img src="{{ row.imagen }}" alt="{{ row.address_large }}" width="100%" height="auto" style="width: 100%;height: auto;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
+											
+											</a>
+									  </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="left" valign="middle">
+                                      <div style="font-size: 15px;color: #171717;display: inline-block;width: auto;font-weight: 700;font-size: 22px; width: 100%">${{ row.price }}</div>
+                                      <div style="font-size: 15px;color: #171717;display: inline-block;width: auto;font-weight: 600;font-size: 14px;padding-bottom: 0px;width: 100%">{{ row.address_large }}</div>
+                                      <span style="font-size: 14px;color: #171717;display:block;width: 100%">
+                                      {{ row.bed }} Beds
+                                      &nbsp;•&nbsp;&nbsp;{{ row.bath }} Baths
+                                      &nbsp;•&nbsp;&nbsp;{{ row.sqft }} sqft
+                                      </span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle" style="padding: 10px 0 20px 0">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                          <tr>
+                                            <th width="260" align="center" bgcolor="#ffffff" class="ms-column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:middle;">
+                                              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 18px;font-weight: 600;background-color: #171717;border: 1px solid #171717;color: #FFFFFF;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td width="100%" height="50" align="center" valign="middle" style="text-decoration: none; color: #FFFFFF"><a href="{{ link_view_more }}token_authau={{ alert.token_alert }}&show={{row.mls_num}}" style="text-decoration: none !important; color: #FFFFFF; display: block; padding: 0 20px !important; height: 50px; line-height: 50px">View Listing</a></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </th>
+                                            <th class="ms-column-empty" width="22" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+                                            <th width="260" align="center" bgcolor="#ffffff" class="ms-column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:middle;">
+                                              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 18px;font-weight: 600;background-color: #FFFFFF;border: 1px solid #171717;color: #171717;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td width="100%" height="50" align="center" valign="middle" style="text-decoration: none; color: #171717"><a href="tel:{{ sf4.phone_number }}" style="text-decoration: none !important; color: #171717; display: block; height: 50px; line-height: 50px; padding: 0 20px !important">Call {{ sf4.phone_number }}</a></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% endfor %}
+                            </td>
+                          </tr>
+                          {% endif %}
+                          {% if properties.price|length > 0 %}
+                          <tr>
+                            <td align="center" valign="top" style="border-bottom: 6px solid #f2f2f2; padding: 20px 0 0 0">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom: 1px dashed #ddd; max-width: 550px; width: 100%">
+                                <tbody>
+                                  <tr>
+                                    <td align="left" valign="middle" style="padding: 20px 0;font-weight: 600;color: #000; font-size: 20px;">
+                                      Recent Price Reductions
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% for row in properties.price %}
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding-top: 20px; max-width: 550px">
+                                <tbody>
+                                  <tr>
+                                    <td align="left" valign="middle"><span style="color: #ec1d1d; font-weight: 600;font-size: 14px;margin-bottom: 5px;display: block">Price Decreased {{ row.reduced_price }}%</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="left" valign="middle"><a href="{{ link_view_more }}token_authau={{ alert.token_alert }}&show={{row.mls_num}}" style="display: block; width: 100%; line-height: 0">
+										
+										<img src="{{ row.imagen }}" alt="{{ row.address_large }}" width="100%" height="auto" style="width: 100%;height: auto;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
+											
+											</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="left" valign="middle">
+                                      <div style="font-size: 15px;color: #171717;display: inline-block;width: auto;font-weight: 700;font-size: 22px; width: 100%">${{ row.price }}</div>
+                                      <div style="font-size: 15px;color: #171717;display: inline-block;width: auto;font-weight: 600;font-size: 14px;padding-bottom: 0px;width: 100%">{{ row.address_large }}</div>
+                                      <span style="font-size: 14px;color: #171717;display:block;width: 100%">
+                                      {{ row.bed }} Beds
+                                      &nbsp;•&nbsp;&nbsp;{{ row.bath }} Baths
+                                      &nbsp;•&nbsp;&nbsp;{{ row.sqft }} sqft
+                                      </span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle" style="padding: 10px 0 20px 0">
+                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                          <tr>
+                                            <th width="260" align="center" bgcolor="#ffffff" class="ms-column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:middle;">
+                                              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 18px;font-weight: 600;background-color: #171717;border: 1px solid #171717;color: #FFFFFF;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td width="100%" height="50" align="center" valign="middle" style="text-decoration: none; color: #FFFFFF"><a href="{{ link_view_more }}token_authau={{ alert.token_alert }}&show={{row.mls_num}}" style="text-decoration: none !important; color: #FFFFFF; display: block; padding: 0 20px !important; height: 50px; line-height: 50px">View Listing</a></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </th>
+                                            <th class="ms-column-empty" width="22" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+                                            <th width="260" align="center" bgcolor="#ffffff" class="ms-column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:middle;">
+                                              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 18px;font-weight: 600;background-color: #FFFFFF;border: 1px solid #171717;color: #171717;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td width="100%" height="50" align="center" valign="middle" style="text-decoration: none; color: #171717"><a href="tel:{{ sf4.phone_number }}" style="text-decoration: none !important; color: #171717; display: block; height: 50px; line-height: 50px; padding: 0 20px !important">Call {{ sf4.phone_number }}</a></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              {% endfor %}
+                            </td>
+                          </tr>
+                          {% endif %}
+                          <tr>
+                            <td align="center" valign="top" style="padding: 30px 0">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" valign="middle">
+                                      <table width="250" border="0" cellpadding="0" cellspacing="0" style="font-size: 18px;font-weight: 600;background-color: #FFF;border: 1px solid #171717;color: #171717;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;">
+                                        <tbody>
+                                          <tr>
+                                            <td width="100%" height="50" align="center" valign="middle" style="text-decoration: none; padding: 0 20px !important"><a href="{{ link_view_more }}token_authau={{ alert.token_alert }}" style="text-decoration: none; color:#171717">See more properties</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle">
+                                      <table width="79%" border="0" cellspacing="0" cellpadding="15" class="ms-xl">
+                                        <tbody>
+                                          <tr>
+                                            <td width="506">
+                                              <p style="font-size: 15px;line-height: 1.4;font-weight: 600; color: #171717; text-align: center">Not seeing your ideal place? Let us know your exact equirements to improve your recommendations.</p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="top" style="padding: 20px 0; background: #f2f2f2">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="15" style="max-width: 350px; font-size: 13px">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <strong>Why work with {{ sf4.first_name }} {{ sf4.last_name }}?</strong>
+                                      <p style="margin:10px 0 !important">• Save you time and money by providing expert guidance on the buying or selling process.</p>
+                                      <p style="margin:10px 0 !important">• Give you access to a wider range of properties or buyers through their professional networks.</p>
+                                      <p style="margin:10px 0 !important">• Help you navigate complex real estate transactions and negotiate favorable terms on your behalf.</p>
+                                      <p style="margin:10px 0 !important">Not seeing your ideal place? <a href="tel:+1{{ sf4.phone_number }}" style="color: #000000"><strong>Schedule a Call</strong></a></p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="top" style="padding-top: 20px">
+                              <table border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;font-family: 'Open Sans', sans-serif;color: #727f80; width: 100%; padding: 30px 0">
+                                <tbody>
+                                  <tr valign="top" align="center">
+                                    <td style="width: 120px;"><img src="{{ sf4.agent_photo }}" alt="{{ sf4.first_name }} {{ sf4.last_name }}" width="120" height="120" style="-webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px; -o-object-position:center; object-position:center;"></td>
+                                  </tr>
+                                  <tr valign="top" align="center">
+                                    <td style="width: 100%; line-height: 0; padding-top: 20px;" valign="center" align="center">
+                                      <h2 style="font-size: 22px;color: #000;margin: 0;margin-bottom: 3px;line-height: normal;font-weight: 600;">{{ sf4.first_name }} {{ sf4.last_name }}</h2>
+                                      <div style="font-size: 14px;color: #2f2f2f;margin: 0;margin-bottom: 5px;line-height: normal;">{{ sf4.agent_title}}</div>
+                                      <div style="font-size: 16px;color: #2f2f2f;margin: 0; margin-bottom: 3px;line-height: normal;font-weight: 600;">T. {{ sf4.phone_number }}</div>
+                                      <div style="font-size:14px; color:#2f2f2f; margin:0;line-height: normal"> <a href="{{ setting.site }}" style="font-size: 14px;color: #2f2f2f;margin: 0;line-height: normal;text-decoration: none;">{{ setting.site }}</a></div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="top" style="padding-bottom: 20px">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="15" style="max-width: 350px; font-size: 13px">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <p><strong>Thinking on unsubscribing?</strong></p>
+                                      <p style="padding-top: 10px !important">
+                                        Not receiving the right properties?<br>
+                                        Let us know your exact requirements to improve your recommendations. 
+                                      </p>
+                                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;font-family: 'Open Sans', sans-serif;color: #727f80">
+                                        <tbody>
+                                          <tr>
+                                            <td align="left" valign="middle" style="padding-top: 10px"><strong><a href="{{ setting.endpoint_update_preference }}" style="text-decoration: none;color:#000000;font-size:13px">Manage Notifications</a></strong></td>
+                                            <td align="right" valign="middle" style="padding-top: 10px"><strong><a href="{{ setting.endpoint_unsubscribe }}" style="text-decoration: none;color:#000000;font-size:13px">Unsubscribe</a></strong></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

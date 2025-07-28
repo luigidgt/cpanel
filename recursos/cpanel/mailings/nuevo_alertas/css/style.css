@@ -1,0 +1,288 @@
+.wrapper {
+  width: 100%; table-layout: fixed;
+}
+
+.wrapper-inner {
+  width: 100%;
+  background-color: #FFF;
+  max-width: 670px;
+  Margin: 0 auto;
+}
+
+table {
+  border-spacing: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #727f80;
+}
+
+table * {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*HEADER*/
+.ms-email-header {
+  width: 100%;
+  max-width: 610px;
+  Margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+.ms-email-header .ms-title {
+  font-size: 24px;
+  color: #171717;
+  font-weight: 600;
+}
+
+.ms-email-header p {
+  font-size: 14px;
+  color: #171717;
+}
+
+.ms-email-header .ms-link {
+  font-size: 14px;
+  color: #3086ae;
+  font-weight: 600;
+  text-decoration: none
+}
+
+/*BODY*/
+.ms-email-body {
+  width: 100%;
+  max-width: 610px;
+  Margin: 0 auto;
+  background-color: #FFFFFF;
+  border-bottom: 6px solid #f2f2f2;
+}
+
+.ms-email-body .ms-text-red {
+  color: #ec1d1d;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block
+}
+
+.ms-email-body .ms-text-black {
+  color: #171717;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: block
+}
+
+.ms-email-body .ms-image {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px
+}
+
+.ms-email-body .ms-item {
+  font-size: 15px;
+  color: #171717;
+  display: inline-block;
+  width: auto
+}
+
+.ms-email-body .ms-bd {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: -5px;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.ms-email-body .ms-item.-lg-text {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.ms-email-body .ms-item.-md-text {
+  font-weight: 600;
+  font-size: 14px;
+  padding-bottom: 0px
+}
+
+.ms-email-body .ms-item.-sm-text {
+  font-size: 14px;
+}
+
+.ms-email-body .ms-item.-sm-text.-no-padding {
+  padding-left: 0
+}
+
+.ms-email-body .ms-wrapper-btn {
+  padding-top: 15px;
+}
+
+.ms-email-body .ms-link {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #171717;
+  color: #FFF;
+  text-align: center;
+  border-radius: 6px;
+  padding: 13px 0px;
+  text-decoration: none;
+}
+
+.ms-email-body .ms-link-line {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #FFF;
+  border: 1px solid #171717;
+  color: #171717;
+  text-align: center;
+  border-radius: 6px;
+  padding: 13px 0px;
+  text-decoration: none;
+}
+
+  .ms-email-body .ms-wrapper-btn .ms-link {
+      margin-right: 0px;
+  }
+
+  .ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+      margin-right: 0px;
+  }
+  
+ .ms-email-body .ms-inner-table {
+      width: 100% !important
+  }
+
+
+.ms-email-body .ms-inner-table {
+  max-width: 550px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+}
+
+.ms-email-body .ms-paragraph {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 30px auto;
+  max-width: 450px;
+  color: #171717;
+}
+
+.ms-email-body .ms-wrapper-info {
+  font-size: 13px;
+  color: #171717;
+  text-align: left;
+  line-height: 1.6;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 0 20px
+}
+
+.ms-email-body .ms-wrapper-info a {
+  color: #171717;
+}
+
+.ms-email-body .ms-wrapper-btn-tree .ms-link-line {
+  font-size: 13px;
+  padding: 6px 0px;
+  width: 31% !important;
+}
+
+.ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+  margin-right: 0px;
+}
+  
+  .ms-link-a{
+  text-decoration: underline
+  }
+  
+  .ms-section-title{
+  max-width: 550px;
+  margin: 0 auto 20px auto;
+  width: 90%;
+  padding: 20px 0 15px 0;
+  border-bottom: 1px dashed #ddd;
+  font-weight: 600;
+  color: #000;
+  font-size: 20px;
+    
+  }
+  
+  .ms-avatar-img{
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px; 
+    object-position:center;
+  }
+  
+  .ms-avatar-title{
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+  margin-bottom: 3px;
+  line-height: normal;
+  font-weight: 600;
+  }
+  
+  .ms-st{
+  font-size: 14px;
+  color: #2f2f2f;
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: normal;
+  }
+  
+  .ms-phone{
+  font-size: 16px;
+  color: #2f2f2f;
+  margin: 0;
+  margin-bottom: 3px;
+  line-height: normal;
+  font-weight: 600;
+  }
+  
+  .ms-avatar-link{
+  font-size: 14px;
+  color: #2f2f2f;
+  margin: 0;
+  line-height: normal;
+  text-decoration: none;
+  }
+  
+  .ms-welcome-msg{
+  font-size: 15px;
+  color: #494949;
+  line-height: 1.6;
+  padding: 10px 0;
+  }
+  
+  .ms-link-phone{
+    text-decoration: none;
+    color: #2463f3;
+    font-weight: 600
+  }
+
+@media screen and (min-width:768px) {
+.ms-email-body .ms-link,
+.ms-email-body .ms-link-line {
+  width: 49% !important;
+}
+
+  .ms-email-body .ms-wrapper-btn .ms-link {
+      margin-right: 4px !important;
+  }
+
+  .ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+      margin-right: 5px !important;
+  }
+  
+ .ms-email-body .ms-inner-table {
+      width: 90% !important
+  }
+}

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta description="Find below some recommended listings for you.">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	
+  <style type="text/css">
+   /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;900&display=swap');*/
+
+	body {
+	  Margin: 0 !important;
+	  padding: 15px;
+	  background-color: #FFF;
+	}
+
+	.wrapper {
+	  width: 100%;
+	  table-layout: fixed;
+	}
+
+	.wrapper-inner {
+	  width: 100%;
+	  background-color: #FFF;
+	  max-width: 670px;
+	  Margin: 0 auto;
+	}
+
+	table {
+	  border-spacing: 0;
+	  font-family: 'Open Sans', sans-serif;
+	  color: #727f80;
+	}
+
+	table * {
+	  font-family: 'Open Sans', sans-serif;
+	}
+
+	/*HEADER*/
+	.ms-email-header {
+	  width: 100%;
+	  max-width: 610px;
+	  Margin: 0 auto;
+	  background-color: #f2f2f2;
+	}
+
+	.ms-email-header .ms-title {
+	  font-size: 24px;
+	  color: #171717;
+	  font-weight: 600;
+	}
+
+	.ms-email-header p {
+	  font-size: 14px;
+	  color: #171717;
+	}
+
+	.ms-email-header .ms-link {
+	  font-size: 14px;
+	  color: #3086ae;
+	  font-weight: 600;
+	  text-decoration: none
+	}
+
+	/*BODY*/
+	.ms-email-body {
+	  width: 100%;
+	  max-width: 610px;
+	  Margin: 0 auto;
+	  background-color: #FFFFFF;
+	  border-bottom: 6px solid #f2f2f2;
+	}
+
+	.ms-email-body .ms-text-red {
+	  color: #ec1d1d;
+	  font-weight: 600;
+	  font-size: 14px;
+	  margin-bottom: 5px;
+	  display: block
+	}
+
+	.ms-email-body .ms-text-black {
+	  color: #171717;
+	  font-weight: 600;
+	  font-size: 14px;
+	  margin-bottom: 10px;
+	  margin-top: 30px;
+	  display: block
+	}
+
+	.ms-email-body .ms-image {
+	  border-radius: 10px;
+	  width: 100%;
+	  height: auto;
+	  margin-bottom: 10px
+	}
+
+	.ms-email-body .ms-item {
+	  font-size: 15px;
+	  color: #171717;
+	  display: inline-block;
+	  width: auto
+	}
+
+	.ms-email-body .ms-bd {
+	  display: inline-block;
+	  font-weight: bold;
+	  font-size: 12px;
+	  margin-top: -5px;
+	  vertical-align: middle;
+	  padding: 0 10px;
+	}
+
+	.ms-email-body .ms-item.-lg-text {
+	  font-weight: 700;
+	  font-size: 22px;
+	}
+
+	.ms-email-body .ms-item.-md-text {
+	  font-weight: 600;
+	  font-size: 14px;
+	  padding-bottom: 0px
+	}
+
+	.ms-email-body .ms-item.-sm-text {
+	  font-size: 14px;
+	}
+
+	.ms-email-body .ms-item.-sm-text.-no-padding {
+	  padding-left: 0
+	}
+
+	.ms-email-body .ms-wrapper-btn {
+	  padding-top: 15px;
+	}
+
+	.ms-email-body .ms-link {
+	  display: inline-block;
+	  width: 100%;
+	  margin-bottom: 10px;
+	  font-size: 18px;
+	  font-weight: 600;
+	  background-color: #171717;
+	  color: #FFF;
+	  text-align: center;
+	  border-radius: 6px;
+	  padding: 13px 0px;
+	  text-decoration: none;
+	}
+
+	.ms-email-body .ms-link-line {
+	  display: inline-block;
+	  width: 100%;
+	  margin-bottom: 5px;
+	  font-size: 18px;
+	  font-weight: 600;
+	  background-color: #FFF;
+	  border: 1px solid #171717;
+	  color: #171717;
+	  text-align: center;
+	  border-radius: 6px;
+	  padding: 13px 0px;
+	  text-decoration: none;
+	}
+
+    .ms-email-body .ms-wrapper-btn .ms-link {
+        margin-right: 0px;
+    }
+
+    .ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+        margin-right: 0px;
+    }
+	  
+	 .ms-email-body .ms-inner-table {
+        width: 100% !important
+    }
+
+
+	.ms-email-body .ms-inner-table {
+	  max-width: 550px;
+	  margin: 0 auto 20px auto;
+	  width: 100%;
+	}
+
+	.ms-email-body .ms-paragraph {
+	  font-size: 15px;
+	  line-height: 1.6;
+	  font-weight: 600;
+	  margin: 30px auto;
+	  max-width: 450px;
+	  color: #171717;
+	}
+
+	.ms-email-body .ms-wrapper-info {
+	  font-size: 13px;
+	  color: #171717;
+	  text-align: left;
+	  line-height: 1.6;
+	  max-width: 350px;
+	  margin: 0 auto;
+	  padding: 0 20px
+	}
+
+	.ms-email-body .ms-wrapper-info a {
+	  color: #171717;
+	}
+
+	.ms-email-body .ms-wrapper-btn-tree .ms-link-line {
+	  font-size: 13px;
+	  padding: 6px 0px;
+	  width: 31% !important;
+	}
+
+	.ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+	  margin-right: 0px;
+	}
+	  
+	  .ms-link-a{
+		text-decoration: underline
+	  }
+	  
+	  .ms-section-title{
+		max-width: 550px;
+		margin: 0 auto 20px auto;
+		width: 90%;
+		padding: 20px 0 15px 0;
+		border-bottom: 1px dashed #ddd;
+		font-weight: 600;
+		color: #000;
+		font-size: 20px;
+		  
+	  }
+	  
+	  .ms-avatar-img{
+		  -webkit-border-radius: 100px;
+		  -moz-border-radius: 100px;
+		  border-radius: 100px; 
+		  object-position:center;
+	  }
+	  
+	  .ms-avatar-title{
+		font-size: 22px;
+		color: #000;
+		margin: 0;
+		margin-bottom: 3px;
+		line-height: normal;
+		font-weight: 600;
+	  }
+	  
+	  .ms-st{
+		font-size: 14px;
+		color: #2f2f2f;
+		margin: 0;
+		margin-bottom: 5px;
+		line-height: normal;
+	  }
+	  
+	  .ms-phone{
+		font-size: 16px;
+		color: #2f2f2f;
+		margin: 0;
+		margin-bottom: 3px;
+		line-height: normal;
+		font-weight: 600;
+	  }
+	  
+	  .ms-avatar-link{
+		font-size: 14px;
+		color: #2f2f2f;
+		margin: 0;
+		line-height: normal;
+		text-decoration: none;
+	  }
+	  
+	  .ms-welcome-msg{
+		font-size: 15px;
+		color: #494949;
+		line-height: 1.6;
+		padding: 10px 0;
+	  }
+	  
+	  .ms-link-phone{
+		  text-decoration: none;
+		  color: #2463f3;
+		  font-weight: 600
+	  }
+
+@media screen and (min-width:768px) {
+	.ms-email-body .ms-link,
+	.ms-email-body .ms-link-line {
+	  width: 49% !important;
+	}
+
+    .ms-email-body .ms-wrapper-btn .ms-link {
+        margin-right: 4px !important;
+    }
+
+    .ms-email-body .ms-wrapper-btn-tree .ms-link-line.-margin {
+        margin-right: 5px !important;
+    }
+	  
+	 .ms-email-body .ms-inner-table {
+        width: 90% !important
+    }
+}
+  </style>
+  </head>
+  <body>
+	 <p style="display: none">Recommended listings for you.</p>
+    <div class="wrapper">
+      <div class="wrapper-inner">
+        <!--EMAIL PROPERTY PRICE REDUCTION-->
+        <table border="0" cellpadding="0" cellspacing="0" class="ms-email-body">
+          <tr>
+            <td>
+              <table width="100%" border="0" cellpadding="15" cellspacing="0" >
+                <tr>
+                  <td style="border-bottom: 6px solid #f2f2f2;">
+					
+						<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+						  <tbody>
+							<tr valign="middle" align="left">
+							  <td style="width: 120px;">
+								<img src="http://dgtsrv5.dgtalliance.com/dev/2019/cpanel/recursos/cpanel/images/avatar.jpg" alt="Alian Oliveros" width="120" height="120" class="ms-avatar-img">
+							  </td>
+							  <td style="padding-left: 20px; width: 100%; line-height: 0;" valign="center" align="left">
+								<h2 class="ms-avatar-title">Alian Oliveros</h2>
+								<div class="ms-st">Luxury Real State - Broker name</div>
+								<div class="ms-phone">T. (305) 888 9874</div>
+								<div style="font-size:14px; color:#2f2f2f; margin:0;line-height: normal">
+								  <a href="#" class="ms-avatar-link">www.alianoliveros.com</a>
+								</div>
+							  </td>
+							</tr>
+						  </tbody>
+						</table>
+					</td>
+                </tr>
+                <tr>
+                  <td style="border-bottom: 6px solid #f2f2f2;padding-left: 0;padding-right: 0;">
+					  <div class="ms-welcome-msg">Hello Daniel Test23, find below some recommended listings for you. Please feel free to contact us if you would like any additional information or call us at <a href="tel:+13059039983" class="ms-link-phone">+1 305.903.9983</a></div>
+				  </td>
+                </tr>
+				  
+                <tr>
+                  <td>
+					<div class="ms-section-title">New Listings</div>
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-inner-table">
+                      <tbody>
+                        <tr>
+                          <td><img src="https://dgtsrv5.dgtalliance.com/dev/2023/images/demo.jpg" width="100%" height="auto" class="ms-image"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-item -lg-text">$10,500,000</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-item -md-text">185400 Collins Avenue Suite 1845</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle">
+							<div class="ms-item -sm-text">
+							  <div class="ms-item -sm-text">4 Beds</div>
+                              <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;3 Baths</div>
+                              <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;1,875 sqft</div>
+							</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-wrapper-btn">
+                              <a href="#" class="ms-link">View Listing</a>
+                              <a href="tel:+13054445547" class="ms-link-line">Call +1 (305) 444 5547</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-inner-table">
+                      <tbody>
+                        <tr>
+                          <td><img src="https://dgtsrv5.dgtalliance.com/dev/2023/images/demo.jpg" width="100%" height="auto" class="ms-image"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-item -lg-text">$10,500,000</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-item -md-text">185400 Collins Avenue Suite 1845</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle">
+							<div class="ms-item -sm-text">
+							  <div class="ms-item -sm-text">4 Beds</div>
+                              <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;3 Baths</div>
+                              <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;1,875 sqft</div>
+							</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-wrapper-btn">
+                              <a href="#" class="ms-link">View Listing</a>
+                              <a href="tel:+13054445547" class="ms-link-line">Call +1 (305) 444 5547</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+					</td>
+                </tr>
+              
+				</table>
+            </td>
+          </tr>
+        </table>
+        <!--EMAIL PROPERTY PRICE REDUCTION-->
+        <!--EMAIL PROPERTY BEST DEALS-->
+        <table border="0" cellpadding="0" cellspacing="0" class="ms-email-body">
+          <tr>
+            <td>
+              <table width="100%" border="0" cellpadding="15" cellspacing="0" >
+                
+				  
+				  <tr>
+                  <td>
+					<div class="ms-section-title">Recent Price Reductions</div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-inner-table">
+                      <tbody>
+                        <tr>
+                          <td><span class="ms-text-red">Price Decreased -5.01%</span> </td>
+                        </tr>
+                        <tr>
+                          <td><img src="https://dgtsrv5.dgtalliance.com/dev/2023/images/demo.jpg" width="100%" height="auto" class="ms-image"></td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle">
+                            <div class="ms-item -lg-text">$10,500,000</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-item -md-text">185400 Collins Avenue Suite 1845</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle">
+                            <div class="ms-item -sm-text">4 Beds</div>
+							<div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;3 Baths</div>
+							<div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;1,875 sqft</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ms-wrapper-btn">
+                              <a href="#" class="ms-link">View Listing</a>
+                              <a href="#" class="ms-link-line">Call +1 (305) 444 5547 </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-inner-table">
+                      <tbody>
+                        <tr>
+                          <td><span class="ms-text-red">Price Decreased -5.01%</span></td>
+                        </tr>
+                        <tr>
+                          <td><img src="https://dgtsrv5.dgtalliance.com/dev/2023/images/demo.jpg" width="100%" height="auto" class="ms-image"></td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle"><div class="ms-item -lg-text">$10,500,000</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="ms-item -md-text">185400 Collins Avenue Suite 1845</div></td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="middle"><div class="ms-item -sm-text">
+                            <div class="ms-item -sm-text">4 Beds</div>
+                            <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;3 Baths</div>
+                            <div class="ms-item -sm-text">&nbsp;•&nbsp;&nbsp;1,875 sqft</div>
+                          </div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="ms-wrapper-btn"> <a href="#" class="ms-link">View Listing</a> <a href="#" class="ms-link-line">Call +1 (305) 444 5547 </a> </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!--EMAIL PROPERTY BEST DEALS-->
+        <!--EMAIl SEE MORE INFO-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="15" class="ms-email-body">
+          <tbody>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-inner-table">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle" style="padding: 30px 0 0">
+                                <a href="#" class="ms-link-line">See more properties</a>
+                                <p class="ms-paragraph">Not seeing your ideal place? Let us know your exact requirements to improve your recommendations.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--EMAIl SEE MORE INFO-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-email-body">
+          <tbody>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #f2f2f2; padding: 30px 0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="ms-wrapper-info">
+                          <strong>Why work with Alian Oliveros?</strong>
+							
+							<p>• Save you time and money by providing expert guidance on the buying or selling process.</p>
+							<p>• Give you access to a wider range of properties or buyers through their professional networks.</p>
+							<p>• Help you navigate complex real estate transactions and negotiate favorable terms on your behalf.</p>
+							
+                          <p>Not seeing your ideal place? <a href="#"><strong>Schedule a Call</strong></a>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--EMAIL GRAY BOX-->
+        <!--EMAIl FOOTER INFO-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="15" class="ms-email-body">
+          <tbody>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td>
+								  <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; padding: 30px 0">
+  <tbody>
+    <tr valign="top" align="center">
+      <td style="width: 120px;">
+        <img src="http://dgtsrv5.dgtalliance.com/dev/2019/cpanel/recursos/cpanel/images/avatar.jpg" alt="John Smithsoniam" style="-webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px; object-position:center;" width="120" height="120">
+      </td>
+    </tr>
+    <tr valign="top" align="center">
+      <td style="width: 100%; line-height: 0; padding-top: 20px;" valign="center" align="center">
+		<h2 class="ms-avatar-title">Alian Oliveros</h2>
+		<div class="ms-st">Luxury Real State - Broker name</div>
+		<div class="ms-phone">T. (305) 888 9874</div>
+		<div style="font-size:14px; color:#2f2f2f; margin:0;line-height: normal">
+		<a href="#" class="ms-avatar-link">www.alianoliveros.com</a>
+		</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+								  
+                                <div class="ms-wrapper-info">
+                                  <p><strong>Thinking on unsubscribing?</strong><br>
+                                    Not receiving the right properties?<br>
+                                    Let us know your exact requirements to improve your recommendations.
+                                  </p>
+
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td align="left" valign="middle"><strong><a href="#" class="ms-link-a">Manage Notifications</a></strong></td>
+                                        <td align="right" valign="middle"><strong><a href="#" class="ms-link-a">Unsubscribe</a></strong></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--EMAIl SEE MORE INFO-->
+      </div>
+    </div>
+  </body>
+</html>

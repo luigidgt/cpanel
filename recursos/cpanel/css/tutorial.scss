@@ -365,3 +365,28 @@ body{
 		}
 	}
 }
+
+.ms-menu-list{
+  .ms-show-arrow{
+    position: relative;
+    &:after {
+      content: "";
+      top: 15px;
+      right: -55px;
+      background: url('../images/tutorial/icons_tutorial.png');
+      background-position: -307px 0px;
+      width: 53px;
+      height: 26px;
+      display: block;
+      position: absolute;
+    }
+
+    /*.item_nav{
+      background: transparent;
+      .gb{
+        background-color: #FFF;
+        color: #be155e;
+      }
+    }*/
+  }
+}

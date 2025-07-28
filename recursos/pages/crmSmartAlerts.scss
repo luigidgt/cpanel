@@ -1,0 +1,196 @@
+.smartAlertList{
+  .table-list{
+    .ms-table{
+      padding-top: 38px;
+      .ms-tr{
+        border: 1px solid $border-color;
+        background-color: #FFF;
+        border-radius: 6px;
+        box-shadow: 0px 2px 4px rgba(31,30,47,0.03);
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        .ms-item{
+          width: 100%;
+          border-bottom: 1px solid $border-color;
+          font-size: 14px;
+          line-height: 1.2;
+          position: relative;
+          &:last-child{
+            border-bottom: 0;
+          }
+
+          .ms-wrapper-item{
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            text-align: center;
+            a{
+              font-weight: 600 !important;
+              color: $azul;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &:not(.-sent-on){
+            display: none;
+            padding-top: 23px;
+            &:before{
+              background-color: #e1e8ed;
+              content: attr(data-label);
+              font-size: 10px;
+              text-transform: uppercase;
+              text-align: center;
+              border-bottom: 1px solid #f6f6f6;
+              display: block;
+              width: 100%;
+              font-weight: 700;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 5px 0;
+            }
+          }
+
+          &.-sent-on{
+            border-bottom: 0;
+          }
+
+          &.-notification,
+          &.-frequency{
+            width: 50%;
+          }
+
+          &.-frequency{
+            border-right: 1px solid $border-color;
+          }
+
+          .ms-show-more{
+            display: block;
+            width: 40px;
+            height: 100%;
+            text-indent: -999999px;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            &:before{
+              content: "\e901";
+              font-family: icomoon !important;
+              font-size: 16px;
+              position: absolute;
+              transform: rotate(90deg);
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-indent: 0;
+            }
+          }
+        }
+
+        &.active{
+          .ms-item{
+            &:not(.-sent-on){
+              display: block;
+            }
+            .ms-show-more{
+              &:before{
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+
+        &:first-child{
+          .ms-item{
+            &.-sent-on{
+              &:before{
+                content: attr(data-label);
+                font-size: 10px;
+                text-transform: uppercase;
+                text-align: left;
+                display: block;
+                width: 100%;
+                font-weight: 700;
+                position: absolute;
+                top: -23px;
+                left: 0;
+                padding: 5px 0;
+              } 
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 769px){
+      width: calc(100vw + 300px);
+      .ms-table{
+        padding-right: 15px;
+        .ms-tr{
+          flex-wrap: nowrap;
+          .ms-item{
+            &:not(.-sent-on){
+              display: block;
+              padding-top: 0;
+              border-left: 1px solid $border-color;
+              border-bottom: 0;
+              &:before{
+                display: none;
+              }
+            }
+
+            &.-frequency{
+              border-right: 0;
+            }
+
+            .ms-wrapper-item{
+              min-height: 70px;
+            }
+
+            .ms-show-more{
+              display: none;
+            }
+
+            &.-date,
+            &.-contact{
+              width: 16.61%;
+            }
+
+            &.-frequency,
+            &.-notification{
+              width: 8.30%;
+            }
+          }
+
+          &:first-child{
+            .ms-item{
+              &:not(.-sent-on){
+                &:before{
+                  display: block;
+                  background-color: transparent;
+                  text-align: center;
+                  border-bottom: 0;
+                  top: -23px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1300px){
+      width: 100%;
+    }
+  }
+}

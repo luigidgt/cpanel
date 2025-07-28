@@ -1,17 +1,25 @@
 /* Fonts */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/OpenSans-SemiBold.eot");
-  src: local("Open Sans Semibold"), local("OpenSans-Bold"), url("./fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("./fonts/OpenSans-SemiBold.woff2") format("woff2"), url("./fonts/OpenSans-SemiBold.woff") format("woff"), url("./fonts/OpenSans-SemiBold.ttf") format("truetype"), url("./fonts/OpenSans-SemiBold.svg#OpenSans-Bold") format("svg");
-  font-weight: 600;
-  font-style: normal; }
-
+/*@font-face {
+	font-family: 'Open Sans';
+	src: url('./fonts/OpenSans-SemiBold.eot');
+	src: local('Open Sans Semibold'), local('OpenSans-Bold'),
+			url('./fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/OpenSans-SemiBold.woff2') format('woff2'),
+			url('./fonts/OpenSans-SemiBold.woff') format('woff'),
+			url('./fonts/OpenSans-SemiBold.ttf') format('truetype'),
+			url('./fonts/OpenSans-SemiBold.svg#OpenSans-Bold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}*/
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.mb-3 {
+  margin-bottom: 30px; }
+
 /* Buttons */
-.btn {
+.cp-btn {
   background-color: #2d2d2d;
   border: 0;
   border-radius: 4px;
@@ -32,30 +40,23 @@
   min-width: 120px;
   width: 100%; }
 
-.btn span {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+/*.cp-btn span {
   align-items: center;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
   padding: 0 15px;
   position: relative;
   width: 100%;
-  z-index: 2; }
-
-.btn:hover {
+  z-index: 2;
+}*/
+.cp-btn:hover {
   background-color: #000;
   color: #fff; }
 
-.btn + .btn:not(.btn-option) {
+.cp-btn + .cp-btn:not(.btn-option) {
   margin-top: 6px; }
 
 .btn-action {
@@ -96,15 +97,30 @@
   background: linear-gradient(#fff, #f7f7f7);
   border: 1px solid #e1e8ed;
   color: #3f3f3f;
-  font-size: 17px;
+  font-size: 14px;
   height: 80px;
   margin-bottom: 6px;
   position: relative;
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
   min-width: 300px;
-  width: 100%; }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 90px;
+  padding-right: 15px;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+  @media screen and (min-width: 768px) {
+    .btn-option {
+      width: 49%;
+      min-width: auto; } }
 
 .btn-option:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#fff));
@@ -121,6 +137,12 @@
   content: "";
   position: absolute; }
 
+.account-container:before {
+  left: 0;
+  width: 80px;
+  height: 70px;
+  top: 0; }
+
 .btn-option.gmail:before,
 .account-container.gmail:before {
   background-position: -10px 3px;
@@ -129,6 +151,8 @@
   top: calc(50% - 30px);
   width: 60px; }
 
+.btn-option.outlook:before,
+.account-container.outlook:before,
 .btn-option.office365:before,
 .account-container.office365:before {
   background-position: -10px -64px;
@@ -146,6 +170,7 @@
   width: 52px; }
 
 .account-container.gmail:before,
+.account-container.outlook:before,
 .account-container.office365:before,
 .account-container.custom:before {
   left: 0; }
@@ -153,6 +178,11 @@
 .wrapper {
   margin: 0 auto;
   width: 100%; }
+
+@media screen and (min-width: 992px) {
+  .wrapper.smtp-settings {
+    margin-left: 0;
+    max-width: 520px; } }
 
 .title_section .subtitle {
   display: block;
@@ -193,7 +223,6 @@
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 20px;
-  overflow: hidden;
   padding-left: 72px;
   position: relative; }
 
@@ -204,7 +233,10 @@
   font-weight: 600; }
 
 .account-email {
-  font-size: 17px; }
+  font-size: 17px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
 
 .account-status-success,
 .account-status-danger {
@@ -239,28 +271,22 @@
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 991px) {
   .title_section .subtitle {
     font-size: 14px; } }
 
 @media screen and (min-width: 992px) {
-  .btn {
+  .cp-btn {
     height: 48px;
     min-width: 120px; }
-  .btn + .btn:not(.btn-option) {
+  .cp-btn + .cp-btn:not(.btn-option) {
     margin-top: 0;
     margin-left: 6px; }
   .btn-action {
     background: #a2a2a2 !important;
     min-width: 172px; }
   .btn-option {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(50% - 3px);
-    flex: 0 0 calc(50% - 3px);
-    height: 96px;
-    margin-bottom: 6px;
-    min-width: auto;
-    width: calc(50% - 3px); }
+    height: 89px; }
   .account {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -296,22 +322,100 @@
   .account-container {
     width: 44%; }
   .account-actions {
-    width: auto; } }
+    width: auto; }
+  .btn-option {
+    width: 32%; } }
 
 @media screen and (min-width: 1400px) {
-  .btn {
+  .cp-btn {
     min-width: 150px; }
-  .btn-option {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(25% - 3px);
+  /*.btn-option {
     flex: 0 0 calc(25% - 3px);
     padding-left: 40px;
-    width: calc(25% - 3px); }
+    width: calc(25% - 3px);    
+  }*/
   .btn-option + .btn-option {
-    margin-left: 6px; }
-  .btn-action {
-    min-width: 248px; }
+    margin-left: 16px; }
+  /*.btn-action {
+    min-width: 248px;
+  }*/
   .sender-email-options {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; } }
+
+.cp-form-control label {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0;
+  margin-top: 20px;
+  width: 100%; }
+
+.cp-form-control input {
+  border-radius: 4px;
+  border: 1px solid #c7c7c7;
+  font-size: 14px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 10px;
+  width: 100%; }
+
+@media (max-width: 480px) {
+  .cp-form-control label {
+    font-size: 15px;
+    margin: 6px 0; } }
+
+.dialog {
+  position: fixed; }
+
+.dialog-header {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom: none;
+  padding: 24px 24px 16px; }
+
+.dialog-title {
+  font-size: 18px;
+  font-weight: 600; }
+
+.dialog-content {
+  padding: 0 24px; }
+
+.dialog-footer {
+  border-top: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 24px; }
+
+.dialog-footer-actions {
+  text-align: right; }
+
+.dialog-btn {
+  font-weight: 400;
+  height: 32px;
+  margin: 0;
+  min-width: auto; }
+
+#cpanelbundle_smtp_save,
+#cpanelbundle_smtp_cancel {
+  width: 100%; }
+
+#cpanelbundle_smtp_save {
+  color: #fff;
+  z-index: 3; }
+
+#cpanelbundle_smtp_save:before,
+#cpanelbundle_smtp_save:after {
+  z-index: -1; }
+
+.smtp-settings > form > div:last-of-type,
+.smtp-settings > form > div:nth-last-of-type(2) {
+  width: 49%;
+  display: inline-block;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none; }
+
+.smtp-settings > form > div:last-of-type {
+  margin-left: 6px; }

@@ -23,7 +23,10 @@ $(document).ready(function() {
 
 	/*MOSTRAR Y OCULTAR SUB-ITEMS DEL MENU LATERAL*/
 	$('.item_nav').click(function(e) {
-		e.preventDefault();
+		if ($(this).attr('href') === '#') {
+			e.preventDefault();
+		}
+
 		var $this = $(this);
 			$('.item_nav').removeClass('active');
 			$this.addClass('active');
@@ -47,24 +50,71 @@ $(document).ready(function() {
 	
 	/*SELECTS CON SELECT2*/
 	var $selector = $("select");
-    if(typeof($selector) != 'undefined'){
+  if(typeof($selector) != 'undefined'){
 		
 		$selector.each(function(){
 			var $placeholder = $(this).attr('placeholder');
-			$(this).select2({
-			  placeholder: $placeholder,
-			});
+			var $modalParent = $(this).parent();//.attr("id");
+
+			if(typeof($modalParent) != 'undefined'){
+				//var $parentDrop =  $('#'+$modalParent);
+				var $parentDrop =  $modalParent;
+			}else{
+				var $parentDrop = "";
+			}
+
+			// console.log("parent="+$modalParent);
+
+			if(!$(this).hasClass("ui-datepicker-year") && !$(this).hasClass("ui-datepicker-month")){
+				$(this).select2({
+					placeholder: $placeholder,
+					minimumResultsForSearch: Infinity,
+					dropdownParent : $parentDrop
+				});
+			}
 		});
 	}
+
+	/*
+	var parents = "";
+	var $selector = $("select");
+    if(typeof($selector) != 'undefined'){
+		$selector.each(function(){
+			parents = $(this).parents("#wapperCalendar");
+
+			if(parents == 'undefined' || parents == ''){
+
+				var $placeholder = $(this).attr('placeholder');
+				var $modalParent = $(this).parent();//.attr("id");
+
+				if(typeof($modalParent) != 'undefined'){
+					//var $parentDrop =  $('#'+$modalParent);
+					var $parentDrop =  $modalParent;
+				}else{
+					var $parentDrop = "";
+				}
+
+				$(this).select2({
+					placeholder: $placeholder,
+					minimumResultsForSearch: Infinity,
+					dropdownParent : $parentDrop
+				});
+			}
+			parents = "";
+		});
+	}
+	*/
+
 	var $selectorTag = $(".tagselect");
     if(typeof($selectorTag) != 'undefined'){
 		
 		$selectorTag.each(function(){
 			var $placeholder = $(this).attr('placeholder');
 			$(this).select2({
-			  placeholder: $placeholder,
-			  tags: true,
-			  tokenSeparators: [','],
+				placeholder: $placeholder,
+				tags: true,
+				tokenSeparators: [','],
+				minimumResultsForSearch: Infinity
 			});
 		});
 	}
@@ -91,6 +141,53 @@ $(document).ready(function() {
   /*** FUNCION PARA CERRAR EL MODAL ****/
   $(document).on('click', '.idx-close-modal', function() {
     $('body').removeClass('idx-active-modal');
-  });
-
+  });  
 });
+
+/*** Funcion para formatear #s de Telefonos ****/
+    function phoneFormatMain(element) {
+        element.on({
+            keypress: function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                var curchr = this.value.length;
+                var curval = $(this).val();
+                if (curchr == 3 && curval.indexOf("(") <= -1) {
+                    $(this).val("(" + curval + ")" + " ");
+                } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                    $(this).val(curval + ") ");
+                } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                    $(this).val(curval + " ");
+                } else if (curchr == 9) {
+                    $(this).val(curval + "-");
+                    $(this).attr('maxlength', '14');
+                }
+            }
+        });
+    }
+    
+/*** Funcion para formatear #s de Telefonos ****/
+    function ccFormatMain(element) {
+        element.on({
+            keypress: function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                var curchr = this.value.length;
+                var curval = $(this).val();
+                if (curchr == 3 && curval.indexOf("(") <= -1) {
+                    $(this).val("(" + curval + ")" + " ");
+                } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                    $(this).val(curval + ") ");
+                } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                    $(this).val(curval + " ");
+                } else if (curchr == 9) {
+                    $(this).val(curval + "-");
+                    $(this).attr('maxlength', '14');
+                }
+            }
+        });
+    }
+    
+    

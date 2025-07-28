@@ -17,48 +17,18 @@
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link id="page_favicon" type="image/x-icon" rel="icon" href="../../img/favicon.png">
+    <style>
+      #modal-create-ticket .modal-dialog {
+        max-width: 540px !important;
+      }
+      body{
+        padding-top: 0;
+      }
+    </style>
   </head>
-  <body class="modal-open">
+  <body>
     <div class="rs-wrapper ms-bg-gray">
-      <header class="rs-navbar">
-        <h1>Flexidx Cutting-Edge MLS/IDX Search for Wordpress</h1>
-        <nav>
-          <div class="logo">
-            <a href="#" title="Flexidx">
-            <img src="https://www.idxboost.com/bundles/website/images/logo.png" title="Flexidx" alt="Cutting-Edge MLS/IDX Search for Wordpress">
-            </a>
-          </div>
-          <div class="header-nav">
-            
-            <div class="user_nav" style="margin-left: auto">
-              <a href="javascript:void(0)" title="Harold Gracía" id="user-avatar">
-                <span class="gb">4</span>
-                <div class="user_avatar">
-                  <img src="http://www.viewsonyou.com/img/avatar/Avatar4.png">
-                </div>
-                <h2>Harold Gracía</h2>
-                <span>GARY HENNES REALTORS</span>
-              </a>
-              <ul id="userList">
-                <li><a href="#" title="Leads">Notificatons <span class="gb">4</span></a></li>
-                <li><a href="#" title="Leads">Leads</a></li>
-                <li><a href="#" title="Filters">Filters</a></li>
-                <li><a href="#" title="Listings">Listings</a></li>
-                <li><a href="#" title="Account Setup">Account Setup</a></li>
-                <li><a href="#" title="Analytics">Analytics</a></li>
-                <li><a href="#" title="Log out">Log out</a></li>
-              </ul>
-            </div>
-            <div class="search_nav">
-              <button id="help" class="btn-help">Help</button>
-              <button id="serch" class="btn-serach">Search</button>
-            </div>
-          </div>
-          <button class="main_menu" id=mainMene>Main Menu <span></span></button>
-          <button class="sub_menu" id="subMenu">Sub Menu <span></span></button>
-        </nav>
-      </header>
-
+      <!--INICIO TAG
       <aside class="rs-sidebar">
         <div class="title-rs-sidebar">Main menu</div>
         <button id="closeMenu">Close</button>
@@ -92,80 +62,681 @@
           </li>
           <li><a href="#" title="IDX Analytics" class="item_nav ico-analytics">IDX Analytics</a></li>
         </ul>
-      </aside>
+      </aside>-->
 
       <div class="rs-content-wrapper ms-crm-profile">
 
         <ul class="ms-flex ms-test">
+          <!--INICIO TAG-->
           <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-todo">
-              <span>Modal TO-DO</span>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-tag">
+              <span>Add Tag</span>
             </button>
           </li>
           <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-email">
-              <span>Modal Email</span>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-remove-tag">
+              <span>Remove Tag</span>
             </button>
           </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-sms">
-              <span>Modal SMS</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-call">
-              <span>Modal Call</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-note">
-              <span>Add Note</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-qualifications">
-              <span>Qualifications</span>
-            </button>
-          </li>
+          <!--INICIO BUCKET-->
           <li>
             <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-bucket">
               <span>Bucket</span>
             </button>
           </li>
           <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-email">
-              <span>Email Template</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-sms">
-              <span>SMS Template</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-tag">
-              <span>Add Tag</span>
-            </button>
-          </li>
-
-          <li>
             <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-create-bucket">
               <span>Create Bucket</span>
             </button>
           </li>
-
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-edit-bucket">
+              <span>Edit Bucket</span>
+            </button>
+          </li>
+          <!--INICIO DRIPS-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-active-drips">
+              <span>Active Drips</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-edit-drips">
+              <span>Edit Drips</span>
+            </button>
+          </li>
+          <!--INICIO NOTE-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-note">
+              <span>Add Note</span>
+            </button>
+          </li>
+          <!--INICIO AGENT-->
           <li>
             <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-add-contact">
               <span>Add Agent</span>
             </button>
           </li>
-
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-agent-assignment">
+              <span>Agent Assignment</span>
+            </button>
+          </li>
           <li>
             <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-add-group">
               <span>Add Group</span>
             </button>
           </li>
+          <!--INICIO TODO-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-todo">
+              <span>Modal TO-DO</span>
+            </button>
+          </li>
+          <!--INICIO EMAIL-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-email">
+              <span>Modal Email</span>
+            </button>
+          </li>
+          <!--INICIO SMS-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-sms">
+              <span>Modal SMS</span>
+            </button>
+          </li>
+          <!--INICIO CALL-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-call">
+              <span>Modal Call</span>
+            </button>
+          </li>
+          <!--INICIO QL-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-qualifications">
+              <span>Qualifications</span>
+            </button>
+          </li>
+          <!--INICIO EMAIL TEMPLATE-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-email">
+              <span>Email Template</span>
+            </button>
+          </li>
+          <!--INICIO SMS TEMPLATE-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-sms">
+              <span>SMS Template</span>
+            </button>
+          </li>
+
+          <!--INICIO ALERTA # 3-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-alerta3">
+              <span>Modal Delete + Options</span>
+            </button>
+          </li> 
+
+          <!--INICIO ALERTA # 2-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-alerta2">
+              <span>Modal Confirmation</span>
+            </button>
+          </li>
+
+          <!--INICIO ALERTA # 4-->
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-alerta4">
+              <span>Modal Warning</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-loading">
+              <span>Modal loading</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-alerta5">
+              <span>Modal Error</span>
+            </button>
+          </li>
+          
+          <!--<li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-create-alerta">
+              <span>Modal Alerta</span>
+            </button>
+          </li>-->
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-save-pt">
+              <span>Modal save</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-edit-alert">
+              <span>Modal edit alert</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-template-alerta1">
+              <span>Modal Delete</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-information">
+              <span>Modal Info</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-antony">
+              <span>Modal Add listing to your building</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-new-building">
+              <span>Modal new building</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-launch-website">
+              <span>Modal Launch website</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#synchronizeModal">
+              <span>Synchronize my Wordpress</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-account-act">
+              <span>Account Activation Modal</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#ruben-modal-2">
+              <span>Modal Alerta #3</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-comercial-alert">
+              <span>Commercial Alert</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-create-ticket">
+              <span>Create Ticket</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modal-confirm-ticket-created">
+              <span>Confirm Create Ticket</span>
+            </button>
+          </li>
+
+          <li>
+            <button type="button" class="btn ms-button" data-toggle="modal" data-target="#modalCityZipFilter">
+              <span>City and Zip Code</span>
+            </button>
+          </li>
         </ul>
+
+    
+        <!-- MODAL LAUNCH WEBSITE -->
+        <div class="modal fade in" id="modal-launch-website" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header">
+                <h4 class="ms-title"><span>Launch Website</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="ms-wrap-img">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1q8Ek439lE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="ms-wrap-detail">
+                      <span class="ms-title">DNS Settings</span>
+                      <div class="ms-wrap-table">
+                        <ul class="ms-header-wrap-table">
+                          <li>Host / Alias</li>
+                          <li>Record Type</li>
+                          <li>Value</li>
+                        </ul>
+                        <ul class="ms-body-wrap-table">
+                          <li data-header="Host / Alias">www</li>
+                          <li data-header="Record Type">CNAME</li>
+                          <li data-header="Value">@</li>
+                        </ul>
+                        <ul class="ms-body-wrap-table">
+                          <li data-header="Host / Alias">@</li>
+                          <li data-header="Record Type">A</li>
+                          <li data-header="Value">18.223.228.101</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row ms-new-form ms-crm-form">
+                  <div class="form-item col-md-6">
+                    <label for="domain-name">Domain</label>
+                    <input type="text" id="domain-name" name="domain-name" required="required" placeholder="Eg. www.mydomain.com">
+                  </div>
+                  <div class="form-item col-md-6">
+                    <label for="provider-name">Provider</label>
+                    <input type="text" id="provider-name" name="provider-name" required="required" placeholder="Eg. GoDaddy">
+                  </div>
+
+                  <div class="form-item col-md-12" style="text-align: right;">
+                    <button class="btn btn-dgt-def">
+                      <span>Create Ticket</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MODAL LAUNCH WEBSITE -->
+
+        <!-- MODAL ALERTA -->
+        <div class="modal fade" id="modal-create-alerta" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header">
+                <h4 class="ms-title"><span>Create Alert</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body">
+                <div class="container basicPage ms-new-basic-form" id="createMapSearchFilter">
+                  <form class="ms-row">
+                    <div class="ms-md-2">
+                      <div class="ms-sticky">
+                        <div class="widget ms-shadown-none ms-border">
+                          <div class="ms-widget padding-none">
+                            <div class="ms-body-widget">
+                              <div class="ms-filter-count">36,547</div>
+                              <div class="ms-box">
+                                <div class="ms-xl-title">Properties <span>Generated by this filter</span></div>
+                                <div class="ms-min-text">Maximum Filter size: 1,500 Listings</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ms-md-7">
+                      <div class="widget ms-shadown-none ms-border">
+                        <div class="ms-wrap-widget border-bottom">
+                          <div class="ms-widget">
+                            <div class="form-group">
+                              <label for="filterName" class="ms-lg-title">Filter Name</label>
+                              <input type="text" class="form-control" id="filterName">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-wrap-widget border-bottom">
+                          <div class="ms-widget">
+
+                            <div class="ms-flex input-480">
+                              <label class="margin-bottom ms-lg-title" style="width: 100%;">Filter Location</label>
+                              <select id="select-filter-location" name="select-filter-location" class="select2">
+                                <option value="1">By Draw Map</option>
+                                <option value="2">By City/Zipcode</option>
+                              </select>
+                              <input type="text" class="form-control ms-hidden" id="filterGeolocation" placeholder="Enter address, city, zip or mls">
+                            </div>
+
+                            <div class="form-group ms-map-ct">
+                              <div id="googleMap" class="ms-map mapFilterAdd"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-wrap-widget border-bottom" id="section-1">
+                          <div class="ms-widget">
+                            <div class="row">
+                              <div class="form-group col-xs-12 col-sm-3">
+                                <label class="margin-bottom">Sale Type</label>
+                                <div class="ms-wrap-radio">
+                                  <input type="radio" name="name2" id="item-13">
+                                  <label for="item-13">For Sale</label>
+                                </div>
+                                <div class="ms-wrap-radio">
+                                  <input type="radio" name="name2" id="item-14">
+                                  <label for="item-14">For Rent</label>
+                                </div>
+                              </div>
+                              <div class="form-group col-xs-12 col-sm-3">
+                                <label class="margin-bottom">Property type</label>
+                                <div class="ms-wrap-checkbox">
+                                  <input type="checkbox" name="name" id="item-1">
+                                  <label for="item-1">Single Family Homes</label>
+                                </div>
+                                <div class="ms-wrap-checkbox">
+                                  <input type="checkbox" name="name" id="item-2">
+                                  <label for="item-2">Condominiums</label>
+                                </div>
+                                <div class="ms-wrap-checkbox">
+                                  <input type="checkbox" name="name" id="item-3">
+                                  <label for="item-3">Townhouses</label>
+                                </div>
+                                <div class="ms-wrap-checkbox">
+                                  <input type="checkbox" name="name" id="item-4">
+                                  <label for="item-4">Multi-Family</label>
+                                </div>
+                                <div class="ms-wrap-checkbox">
+                                  <input type="checkbox" name="name" id="item-5">
+                                  <label for="item-5">Vacant Land</label>
+                                </div>
+                              </div>
+                              <div class="form-group col-xs-12 col-sm-3 ms-col-sp">
+                                <div class="ms-col">
+                                  <label class="margin-bottom">Sort Default</label>
+                                  <select id="search_filter_sortType" name="search_filter[sortType]" class="select2">
+                                    <option value="">Select any sort type</option>
+                                    <option value="list_date-desc" selected="selected">Newest Listings</option>
+                                    <option value="price-desc">Highest Price</option>
+                                    <option value="price-asc">Lowest Price</option>
+                                    <option value="sqft-desc">Highest Sqft</option>
+                                    <option value="sqft-asc">Lowest Sqft</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group col-xs-12 col-sm-3 ms-col-hidden">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-wrap-widget border-bottom" id="section-2">
+                          <div class="ms-widget">
+                            <div class="row select-list">
+                              <div class="col-sm-6 col-md-6 form-group">
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Sales Price Ranges</label>
+                                  <select id="featured_listings_minSalePriceFeatured" name="featured_listings[minSalePriceFeatured]" class="select2">
+                                    <option value="">Min Price</option>
+                                    <option value="0">$0</option>
+                                    <option value="50000">$50,000</option>
+                                    <option value="100000">$100,000</option>
+                                    <option value="150000">$150,000</option>
+                                    <option value="200000">$200,000</option>
+                                    <option value="250000">$250,000</option>
+                                  </select>
+                                  <select id="featured_listings_maxSalePriceFeatured" name="featured_listings[maxSalePriceFeatured]" class="select2">
+                                    <option value="">Max Price</option>
+                                    <option value="0">$0</option>
+                                    <option value="50000">$50,000</option>
+                                    <option value="100000">$100,000</option>
+                                    <option value="150000">$150,000</option>
+                                    <option value="200000">$200,000</option>
+                                    <option value="250000">$250,000</option>
+                                  </select>
+                                </div>
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Rental Price Ranges</label>
+                                  <select id="featured_listings_minRentPriceFeatured" name="featured_listings[minRentPriceFeatured]" class="select2">
+                                    <option value="">Min Price</option>
+                                    <option value="0">$0</option>
+                                    <option value="500">$500</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="1500">$1,500</option>
+                                    <option value="2000">$2,000</option>
+                                    <option value="2500">$2,500</option>
+                                  </select>
+                                  <select id="featured_listings_maxRentPriceFeatured" name="featured_listings[maxRentPriceFeatured]" class="select2">
+                                    <option value="">Max Price</option>
+                                    <option value="0">$0</option>
+                                    <option value="500">$500</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="1500">$1,500</option>
+                                    <option value="2000">$2,000</option>
+                                    <option value="2500">$2,500</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-6 form-group">
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Bedrooms</label>
+                                  <select id="search_filter_minBeds" name="search_filter[minBeds]" class="select2">
+                                    <option value="">Min Beds</option>
+                                    <option value="0">Studio</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">5+</option>
+                                  </select>
+                                  <select id="search_filter_maxBeds" name="search_filter[maxBeds]" class="select2">
+                                    <option value="">Max Beds</option>
+                                    <option value="0">Studio</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">5+</option>
+                                  </select>
+                                </div>
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Bathrooms</label>
+                                  <select id="search_filter_minBaths" name="search_filter[minBaths]" class="select2">
+                                    <option value="">Min Baths</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">5+</option>
+                                  </select>
+                                  <select id="search_filter_maxBaths" name="search_filter[maxBaths]" class="select2">
+                                    <option value="">Max Baths</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">5+</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-wrap-widget border-bottom" id="section-3">
+                          <div class="ms-widget">
+                            <div class="form-group">
+                              <label class="margin-bottom">Features</label>
+                              <div class="ms-flex row ms-features-list">
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="features-1">
+                                  <label for="features-1">Swimming Pool</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="golf-1">
+                                  <label for="golf-1">Golf Course</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="tennis-1">
+                                  <label for="tennis-1">Tennis Courts</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="gated-1">
+                                  <label for="gated-1">Gated Community</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="penthouse-1">
+                                  <label for="penthouse-1">Penthouse</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="water-1">
+                                  <label for="water-1">Water Front</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="pets-1">
+                                  <label for="pets-1">Pets</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="furnished-1">
+                                  <label for="furnished-1">Furnished</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="equestrian-1">
+                                  <label for="equestrian-1">Equestrian</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="boat-1">
+                                  <label for="boat-1">Boat Dock</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="short-1">
+                                  <label for="short-1">Short Sales</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="foreclosures-1">
+                                  <label for="foreclosures-1">Foreclosures</label>
+                                </div>
+                                <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                                  <input type="checkbox" name="features" id="housing-1">
+                                  <label for="housing-1">Housing Older Persons</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ms-wrap-widget" id="section-4">
+                          <div class="ms-widget">
+                            <div class="row">
+                              <div class="form-group col-xs-12 col-sm-4">
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Living Size</label>
+                                  <select id="search_filter_minLivingSize" name="search_filter[minLivingSize]" class="select2">
+                                    <option value="">Min Living Size</option>
+                                    <option value="0">0</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                  </select>
+                                  <select id="search_filter_maxLivingSize" name="search_filter[maxLivingSize]" class="select2">
+                                    <option value="">Max Living Size</option>
+                                    <option value="0">0</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                  </select>
+                                </div>
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Lot Size</label>
+                                  <select id="search_filter_minLotSize" name="search_filter[minLotSize]" class="select2">
+                                    <option value="">Min Lot size</option>
+                                    <option value="0">0</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                  </select>
+                                  <select id="search_filter_maxLotSize" name="search_filter[maxLotSize]" class="select2">
+                                    <option value="">Max Lot Size</option>
+                                    <option value="0">0</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group col-xs-12 col-sm-4">
+                                <div class="ms-flex input-480">
+                                  <label class="margin-bottom">Year Built</label>
+                                  <select id="search_filter_minYear" name="search_filter[minYear]" class="select2">
+                                    <option value="">Min Year</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                  </select>
+                                  <select id="search_filter_maxYear" name="search_filter[maxYear]" class="select2">
+                                    <option value="">Max Year</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                  </select>
+                                </div>
+                                <div class="ms-flex">
+                                  <label class="margin-bottom">Parking Options</label>
+                                  <select id="search_filter_parkingOptions" name="search_filter[parkingOptions]" class="select2">
+                                    <option value="">Any</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">5+</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group col-xs-12 col-sm-4 ms-col">
+                                <div class="form-group">
+                                  <label class="margin-bottom">Waterfront Options</label>
+                                  <select id="search_filter_waterfrontOptions" name="search_filter[waterfrontOptions]" class="select2">
+                                    <option value="">Any</option>
+                                    <option value="bay">Bay Front</option>
+                                    <option value="canal">Canal</option>
+                                    <option value="fixed-bridge">Fixed Bridge</option>
+                                    <option value="intracoastal">Intracoastal</option>
+                                    <option value="lake">Lake Front</option>
+                                    <option value="ocean-access">Ocean Access</option>
+                                    <option value="ocean-front">Ocean Front</option>
+                                    <option value="point-lot">Point Lot</option>
+                                    <option value="river">River Front</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="form-item actions">
+                      <a class="btn btn-dgt-grs" href="/"><span>Cancel</span></a>
+                      <button type="submit" class="btn btn-dgt-def"><span>Save</span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- CREATE BUCKET -->
         <div class="modal fade" id="modal-create-bucket" tabindex="-1" role="dialog">
@@ -200,7 +771,7 @@
                     </select>
                   </div>
                   <div class="ms-wrap-btn">
-                    <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
                     <button class="btn btn-dgt-def"><span>Save Bucket</span></button>
                   </div>
                 </form>  
@@ -209,7 +780,7 @@
           </div>
         </div>
 
-        <!-- MODAL TO-DO -->
+        <!-- MODAL TO-DO 
         <div class="modal fade" id="modal-todo" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -299,7 +870,7 @@
                   </div>
 
                   <div class="ms-wrap-btn">
-                    <a href="#" class="btn btn-dgt-grs">
+                    <a href="#" class="btn btn-dgt-grs"  data-dismiss="modal">
                       <span>Cancel</span>
                     </a>
                     <button class="btn btn-dgt-def">
@@ -310,7 +881,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
 
         <!-- MODAL EMAIL -->
         <div class="modal fade" id="modal-email" tabindex="-1" role="dialog">
@@ -540,7 +1111,7 @@
                     <textarea class="add-comments" id="add-notes" placeholder=""></textarea>
                   </div>
                   <div class="ms-wrap-btn ms-full">
-                    <a href="#" class="btn btn-dgt-grs">
+                    <a href="#" class="btn btn-dgt-grs"  data-dismiss="modal">
                       <span>Cancel</span>
                     </a>
                     <button class="btn btn-dgt-def">
@@ -613,7 +1184,7 @@
                   </div>
 
                   <div class="ms-wrap-btn ms-full">
-                    <a href="#" class="btn btn-dgt-grs">
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
                       <span>Cancel</span>
                     </a>
                     <button class="btn btn-dgt-def">
@@ -672,7 +1243,7 @@
                   </div>
 
                   <div class="ms-wrap-btn">
-                    <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
                     <button class="btn btn-dgt-def">
                       <span>Save</span>
                     </button>
@@ -730,7 +1301,7 @@
                   </div>
 
                   <div class="ms-wrap-btn">
-                    <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
                     <button class="btn btn-dgt-def">
                       <span>Save</span>
                     </button>
@@ -755,7 +1326,7 @@
                   <input type="text" name="ms-tag-name" id="ms-tag-name" data-role="tagsinput">
                 </div>
                 <div class="ms-wrap-btn ms-full">
-                  <a href="#" class="btn btn-dgt-grs">
+                  <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
                     <span>Cancel</span>
                   </a>
                   <button class="btn btn-dgt-def">
@@ -865,9 +1436,84 @@
           </div>
         </div>
 
+        <!-- MODAL ANTONY -->
+        <div class="modal fade" id="modal-antony" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header ms-modal-header">
+                <h4 class="ms-title"><span>Modal</span></h4>
+                <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+              </div>
+              <div class="modal-body">
+                <form class="ms-crm-form">
+                  <div class="form-item">
+                    <label for="streetNumber">Street Number</label>
+                    <input type="text" id="streetNumber" name="streetNumber">
+                  </div>
+                  <div class="form-item">
+                    <label for="streetName">Street Name</label>
+                    <input type="text" id="streetName" name="streetName">
+                  </div>
+                  <div class="form-item">
+                    <label for="developmentSubdivision">Development/Subdivision Name</label>
+                    <div class="ms-group-ft">
+                      <input type="text" id="developmentSubdivision" name="developmentSubdivision">
+                      <button type="button">Add</button>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" id="zipCode" name="zipCode">
+                  </div>
+                  <div class="form-item ms-full">
+                    <ul class="ms-list-tag">
+                      <li>
+                        <h4 class="ms-tag">Loren Ipsum <buton class="ms-close">Close</buton></h4>
+                      </li>
+                      <li>
+                        <h4 class="ms-tag">Loren<buton class="ms-close">Close</buton></h4>
+                      </li>
+                      <li>
+                        <h4 class="ms-tag">Loren<buton class="ms-close">Close</buton></h4>
+                      </li>
+                      <li>
+                        <h4 class="ms-tag">Loren Ipsum <buton class="ms-close">Close</buton></h4>
+                      </li>
+                      <li>
+                        <h4 class="ms-tag">Loren Ipsum <buton class="ms-close">Close</buton></h4>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="form-item ms-full">
+                    <img src="images/info-banner.jpg" alt="idxboost" style="width: 100%;">
+                  </div>
+                  <div class="form-item">
+                    <label class="margin-bottom">Property Type</label>
+                    <div class="ms-wrap-checkbox">
+                      <input type="checkbox" name="name" id="item-pt-1">
+                      <label for="item-pt-1">Condominiums</label>
+                    </div>
+                    <div class="ms-wrap-checkbox">
+                      <input type="checkbox" name="name" id="item-pt-2">
+                      <label for="item-pt-2">Single Family Homes</label>
+                    </div>
+                  </div>
+                  <div class="ms-wrap-btn ms-full">
+                    <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
+                      <span>Cancel</span>
+                    </a>
+                    <button class="btn btn-dgt-def">
+                      <span>Save</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
 
     <!-- MODAL FIND AGENT -->
     <div class="modal fade ms-contacts-list" id="modal-add-contact" tabindex="-1" role="dialog">
@@ -908,7 +1554,7 @@
             </ul>
 
             <div class="ms-wrap-btn">
-              <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
               <button class="btn btn-dgt-def">
                 <span>Save</span>
               </button>
@@ -919,7 +1565,7 @@
     </div>
 
     <!-- MODAL ADD GROUP -->
-    <div class="modal fade ms-contacts-list" id="modal-add-group" tabindex="-1" role="dialog">
+    <div class="modal fade ms-contacts-list ms-xl" id="modal-add-group" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header ms-modal-header ms-header-list">
@@ -963,7 +1609,7 @@
             <div class="ms-wrap-items">
               
               <div class="ms-item">
-                <input type="radio" name="ms-item" value="1" id="ms-item-1">
+                <input type="radio" name="ms-item" value="1" id="ms-item-1" class="js-active-claim" checked>
                 <label class="ms-item-wrap" for="ms-item-1">
                   <span class="ms-sub-title">Round Robin</span>
                   <span>Evenly distributes leads to agents in sequential order</span>
@@ -971,7 +1617,7 @@
               </div>
               
               <div class="ms-item">
-                <input type="radio" name="ms-item" value="2" id="ms-item-2">
+                <input type="radio" name="ms-item" value="2" id="ms-item-2" class="js-active-claim">
                 <label class="ms-item-wrap" for="ms-item-2">
                   <span class="ms-sub-title">First to Claim</span>
                   <span>Multiple agents contacted, first to claim lead wins</span>
@@ -979,8 +1625,100 @@
               </div>
             </div>
 
+            <div class="ms-wrap-filtes ms-hidden">
+              <span>If not claimed after</span>
+              <input type="text" class="ms-count-mt">
+              <span>minute(s), assign to</span>
+              <div class="ms-dropdown">
+                <a href="#" class="ms-button btn" type="button" data-toggle="dropdown" aria-expanded="true">
+                  <span class="ms-ellipsis">Select fallback</span>
+                </a>
+                <span class="ms-info-sp" data-toggle="tooltip" data-placement="top" title="When the time specified expires for a lead to be claimed this selected fallback behavior will trigger">i</span>
+                <div class="ms-dropdown-list dropdown-menu">
+                  <div class="ms-header-filter"><input type="text" class="ms-item-filter"></div>
+                  <ul class="ms-list-result">
+                    <li>
+                      <span class="ms-title-section">Lorem Ipsum</span>
+                      <ul>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="ms-title-section">Lorem Ipsum</span>
+                      <ul>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                        <li><a href="#" class="ms-select-item js-filter-name-selected" data-text="Lorem Ipsum"><div class="ms-wrap-avatar">AB</div> <span class="ms-ellipsis">Lorem Ipsum</span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div class="ms-wrap-btn">
-              <a href="#" class="btn btn-dgt-grs"><span>Cancel</span></a>
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Save</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL AGENT ASSIGNMENT-->
+    <div class="modal fade ms-contacts-list" id="modal-agent-assignment" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title ms-icon-groups"><span>Agent Assignment</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body ms-crm-form">
+            <div class="ms-input-search">
+              <input type="search" class="ms-search" placeholder="Search for an agent or group">
+              <button class="ms-btn-search">Search</button>
+            </div>
+
+            <ul class="ms-contacts">
+              <li class="ms-disabled"><h3 class="ms-title">GROUPS</h3></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li class="ms-disabled"><h3 class="ms-title">AGENTS</h3></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+              <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+            </ul>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
               <button class="btn btn-dgt-def">
                 <span>Save</span>
               </button>
@@ -990,9 +1728,1716 @@
       </div>
     </div>
 
+    <!-- MODAL REMOVE TAG -->
+    <div class="modal fade ms-contacts-list" id="modal-remove-tag" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title ms-icon-tag"><span>Remove Tags</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body ms-crm-form">
+            <div class="ms-input-search">
+              <input type="search" class="ms-search" placeholder="Search remove tag">
+              <button class="ms-btn-search">Search remove tag</button>
+            </div>
+
+            <ul class="ms-contacts ms-ls-list">
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item01">
+                  <label for="item01">33130</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item02">
+                  <label for="item02">Lorem Ipsum</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item03">
+                  <label for="item03">33530</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item04">
+                  <label for="item04">Lorem Ipsum</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item05">
+                  <label for="item05">30130</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item06">
+                  <label for="item06">Lorem Ipsum</label>
+                </div>
+              </li>
+              <li>
+                <div class="ms-chk-item">
+                  <input type="checkbox" name="remove-tag" id="item07">
+                  <label for="item07">32130</label>
+                </div>
+              </li>
+            </ul>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Remove Tag</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT BUCKET-->
+    <div class="modal fade ms-contacts-list" id="modal-edit-bucket" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title ms-icon-bucket"><span>Edit Bucket</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body ms-crm-form">
+            <div class="ms-input-search">
+              <input type="search" class="ms-search" placeholder="Search for an bucket">
+              <button class="ms-btn-search">Search for an bucket</button>
+            </div>
+
+            <ul class="ms-contacts">
+              <li>
+                <input type="checkbox" name="edit-bucket" id="bt01">
+                <label class="ms-add-agent ms-bt-ed" for="bt01">
+                <span class="ms-wrap-avatar">B</span> Bucket Test 01</label>
+              </li>
+
+              <li>
+                <input type="checkbox" name="edit-bucket" id="bt02">
+                <label class="ms-add-agent ms-bt-ed" for="bt02">
+                <span class="ms-wrap-avatar">B</span> Bucket Test 02</label>
+              </li>
+            </ul>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Save</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT DRIPS-->
+    <div class="modal fade ms-contacts-list" id="modal-edit-drips" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title ms-rocket"><span>Edit Drips</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body ms-crm-form">
+            <div class="ms-input-search">
+              <input type="search" class="ms-search" placeholder="Search for a drip">
+              <button class="ms-btn-search">Search for a drip</button>
+            </div>
+
+            <ul class="ms-contacts">
+              <li>
+                <input type="checkbox" name="edit-bucket" id="dt01">
+                <label class="ms-add-agent ms-bt-ed" for="dt01">
+                <span class="ms-wrap-avatar">B</span> Bucket Test 01</label>
+              </li>
+
+              <li>
+                <input type="checkbox" name="edit-bucket" id="dt02">
+                <label class="ms-add-agent ms-bt-ed" for="dt02">
+                <span class="ms-wrap-avatar">B</span> Bucket Test 02</label>
+              </li>
+            </ul>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Save</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ACTIVE DRIP -->
+    <div class="modal fade" id="modal-active-drips" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title ms-rocket"><span>Drip Plan: Lorem Ipsum</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body">
+
+            <table class="ms-table">
+              <tbody>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-a">
+                        <label for="running-drip-a">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-b">
+                        <label for="running-drip-b">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-c">
+                        <label for="running-drip-c">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-d">
+                        <label for="running-drip-d">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-e">
+                        <label for="running-drip-e">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-f">
+                        <label for="running-drip-f">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 class="ms-title">Lorem ipsum lorem</h3> 
+                    <span class="ms-min-date">Step 2 of 4 (Sent on 06/22/02)</span>
+                  </td>
+                  <td>
+                    <div class="ms-action">
+                      <div class="ms-button-switch">
+                        <input type="checkbox" id="running-drip-g">
+                        <label for="running-drip-g">
+                          <span>ON</span>
+                          <span>OFF</span>
+                        </label>
+                      </div>
+                      <button class="ms-delete">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-template-alerta1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-ms-trash color-boost"></span>
+                <h3 class="ms-title">Are you sure?</h3>
+                <p>Are you sure you want to delete?</p>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Yes, delete it!</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-template-alerta2" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-ms-ok color-boost"></span>
+                <h3 class="ms-title">Deleted!</h3>
+                <p>The Bucket has been deleted.</p>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-def" data-dismiss="modal">
+                <span>Confirm</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-template-alerta5" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-ms-close color-boost"></span>
+                <h3 class="ms-title">Error!</h3>
+                <p>Lorem ipsum ipsum lorem.</p>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-def" data-dismiss="modal">
+                <span>Confirm</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list ms-agt-deleted" id="modal-template-alerta3" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="ms-message-content">
+                <span class="crm-ico-ms-trash color-boost"></span>
+                <h3 class="ms-title">Are you sure?</h3>
+                <p>Are you sure you want to delete?</p>
+                <p class="ms-small-text">When you delete a user, you can reassign all leads and tasks to another agent. If you reassign to a broker, only the leads will be reassigned.</p>
+                <div class="ms-wrap-chk">
+                  <div class="ms-chk-item ms-rd">
+                    <input type="radio" name="remove" id="rmv_item01" value="1">
+                    <label for="rmv_item01">Reassign to an Agent</label>
+                  </div>
+                  <div class="ms-chk-item ms-rd">
+                    <input type="radio" name="remove" id="rmv_item02" value="2">
+                    <label for="rmv_item02">Reassign to Broker</label>
+                  </div>
+                </div>
+                <div class="ms-agent-list ms-crm-form">
+                  <div class="ms-input-search">
+                    <input type="search" class="ms-search" placeholder="Find the agent(s)">
+                    <button class="ms-btn-search">Search</button>
+                  </div>
+                  <ul class="ms-contacts">
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB</div> Lorem ipsum</button></li>
+                    <li><button class="ms-add-agent" data-user=""><div class="ms-wrap-avatar">AB<img src="https://idxboost.s3.amazonaws.com/236/agent/20/image/login.jpg"></div> Lorem ipsum</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Yes, delete it!</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>|
+
+    <div class="modal fade ms-contacts-list" id="modal-template-alerta4" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-alert-triangle color-boost"></span>
+                <h3 class="ms-title">Warning!</h3>
+                <p>You must set up your <strong>email sender</strong> <br>to set up your account</p>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-def" data-dismiss="modal">
+                <span>Click Here to set up your email sender</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL SAVE -->
+    <div class="modal fade" id="modal-save-pt" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title"><span>Add Favorite</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+            <div id="form-new-bucket" class="ms-new-form ms-crm-form">
+              <div class="form-item ms-full">
+                <label for="bucket-name">Enter MLS number</label>
+                <div class="ms-group-ft">
+                  <input type="text" id="mls-code" name="mls-code" placeholder="Enter MLS number" required="required">
+                  <button id="filter-mls">Search</button>
+                </div>
+              </div>
+
+              <div class="form-item ms-full" id="ms-grid">
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT ALERTA-->
+    <div class="modal fade ms-edit-alert" id="modal-edit-alert" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title"><span>Edit Alert</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="modal-body ms-crm-form">
+            <div class="form-item">
+              <label for="ms-search-name">Search name</label>
+              <input id="ms-search-name" type="text" class="ms-search" placeholder="Search name">
+            </div>
+
+            <div class="form-item">
+              <label for="select-campaing">Email Updates</label>
+              <select class="ms-select" placeholder="Select email updates" name="email_updates" id="email_updates">
+                <option></option>
+                <option value="0">Lorem ipsum A</option>
+                <option value="1">Lorem ipsum A</option>
+                <option value="2">Lorem ipsum A</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label class="margin-bottom">Only Update Me On</label>
+              <div class="ms-wrap-checkbox">
+                <input type="checkbox" name="name" id="item-up-1">
+                <label for="item-up-1">New Listing (Always)</label>
+              </div>
+              <div class="ms-wrap-checkbox">
+                <input type="checkbox" name="name" id="item-up-2">
+                <label for="item-up-2">Price Changes</label>
+              </div>
+              <div class="ms-wrap-checkbox">
+                <input type="checkbox" name="name" id="item-up-3">
+                <label for="item-up-3">Status Changes</label>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Update Search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL CREAR NUEVO -->
+    <div class="modal fade" id="modal-new-building" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title">
+              <span>New Building</span>
+            </h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+
+          <div class="ms-sticky" style="margin-top: -1px">
+            <div class="widget ms-shadown-none ms-border" style="border-radius: 0;margin-bottom: 0;">
+              <div class="ms-widget padding-none">
+                <div class="ms-body-widget ms-alert-mode" style="background-color: #ffffff;">
+                  <strong>FOR SALE</strong> <span class="ms-filter-count">(10004)</span> / 
+                  <strong>FOR RENT</strong> <span class="ms-filter-count">(10004)</span>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <div class="ms-wrap-body">
+              <div id="tabsFilters">
+                <form name="cpanelbundle_buildingx" method="post" id="_import_buildings_form" class="building_form_cl" enctype="multipart/form-data">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#generalTab" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
+                    <li role="presentation"><a href="#filterTab" aria-controls="filter" role="tab" data-toggle="tab">Filter</a></li>
+                    <li role="presentation"><a href="#imageTab" aria-controls="image" role="tab" data-toggle="tab">Images</a></li>
+                    <li role="presentation"><a href="#floorplanTab" aria-controls="floorplan" role="tab" data-toggle="tab">FloorPlan</a></li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="generalTab">
+                      <div class="ms-crm-form ms-wrap-form">
+                        <div class="form-item">
+                          <label for="cpanelbundle_building_name">Building Name*</label>
+                          <input type="text" id="cpanelbundle_building_name" name="cpanelbundle_building[name]" placeholder="Enter a Building Name" required="required">
+                        </div>
+
+                        <div class="form-item">
+                          <label for="ms-name">Building Address for Map Marker</label>
+                          <div class="input-group">
+                            <input type="text" class="add_input_address_gen" name="add_input_address_gen" placeholder="Enter Building Address">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-dgt-grs add_input_address_gen">Add</button>
+                            </div>
+                          </div>
+
+                          <ul class="cont_itemaddressGen">
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(0)"></span>
+                              <span>sdsd</span>
+                            </li>
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(1)"></span>
+                              <span>sdsdsd</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="cpanelbundle_building_beds" class="ms-flex">Bedrooms <span class="ms-small">(Example: 1 to 5 + Penthouses)</span></label>
+                          <input type="text" id="cpanelbundle_building_beds" name="cpanelbundle_building[beds]" placeholder="Select Bedrooms">
+                        </div>
+
+                        <div class="form-item">
+                          <label for="cpanelbundle_building">Board</label>
+                          <select name="cpanelbundle_building[board]" id="cpanelbundle_building_board" class="ms-select" placeholder="Select Board">
+                            <option></option>
+                            <option value="1">Lorem Ipsum</option>
+                            <option value="2">Lorem Ipsum</option>
+                            <option value="3">Lorem Ipsum</option>
+                          </select>
+                        </div>
+
+                        <div class="form-item ms-full ms-flex">
+                          <div class="ms-item">
+                            <label for="cpanelbundle_building_year">Year Built</label>
+                            <input type="text" id="cpanelbundle_building_year" name="cpanelbundle_building[year]" placeholder="Enter Year Built">
+                          </div>
+
+                          <div class="ms-item">
+                            <label for="cpanelbundle_building_floors">Number of Floors</label>
+                            <input type="text" id="cpanelbundle_building_floors" name="cpanelbundle_building[floors]" placeholder="Enter Number of Floors">
+                          </div>
+
+                          <div class="ms-item">
+                            <label for="cpanelbundle_building_unitBuilding">Number of Units</label>
+                            <input type="text" id="cpanelbundle_building_unitBuilding" name="cpanelbundle_building[unitBuilding]" placeholder="Enter Number of Units">
+                          </div>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="cpanelbundle_building_name">City</label>
+                          <select name="cpanelbundle_building[name]" id="cpanelbundle_building_name" class="ms-select" placeholder="Select City">
+                            <option></option>
+                            <option value="1">Lorem Ipsum</option>
+                            <option value="2">Lorem Ipsum</option>
+                            <option value="3">Lorem Ipsum</option>
+                          </select>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="ms-name">Amenities</label>
+                          <div class="input-group">
+                            <input type="text" class="add_input_address_gen" name="add_input_address_gen" placeholder="Enter Amenities">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-dgt-grs add_input_address_gen">Add</button>
+                            </div>
+                          </div>
+
+                          <ul class="cont_itemaddressGen">
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(0)"></span>
+                              <span>sdsd</span>
+                            </li>
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(1)"></span>
+                              <span>sdsdsd</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="form-item ms-full ms-flex">
+                          <div class="ms-item">
+                            <div class="ms-wrap-checkbox">
+                              <input type="checkbox" name="cpanelbundle_building[isForceRegistration]" id="cpanelbundle_building_isForceRegistration" value="1">
+                              <label for="cpanelbundle_building_isForceRegistration">Force Registration</label>
+                            </div>
+                          </div>
+
+                          <div class="ms-item">
+                            <label for="cpanelbundle_building_rangePriceBuilding">Building Pre-Construction</label>
+                            <input type="text" id="cpanelbundle_building_rangePriceBuilding" name="cpanelbundle_building[rangePriceBuilding]" placeholder="Exp: $3.9 to $40 Million">
+                          </div>
+
+                          <div class="ms-item">
+                            <label for="cpanelbundle_building_idHackbox">BoostBox</label>
+                            <select name="cpanelbundle_building[idHackbox]" id="cpanelbundle_building_idHackbox" class="ms-select" placeholder="Select BoostBox">
+                              <option value="0" selected>None</option>
+                              <option value="1">Lorem Ipsum</option>
+                              <option value="2">Lorem Ipsum</option>
+                              <option value="3">Lorem Ipsum</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-item ms-full">
+                          <label for="cpanelbundle_building_description">Building Description or Enter HTML</label>
+                          <div>
+                            <textarea id="cpanelbundle_building_description" name="cpanelbundle_building[description]"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane" id="filterTab">
+                      <div class="ms-crm-form ms-wrap-form">
+                        <div class="form-item ms-full" id="idx-information-tab">
+                          <strong class="ms-title">Add listing to your building</strong>
+                          <p><strong>Create your IDX Filter by adding the building’s Street Name, Street Address and Zip Code.</strong> Some building may have more than one address, check adding all building address for more results on your filter.</p>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="street_number">Street Number</label>
+                          <input type="text" id="street_number" name="street_data">
+                          <span class="info-bubble">?
+                            <span class="bubble-box">
+                              <span class="bubble-info">Only number</span>
+                            </span>
+                          </span>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="street_name">Street Name</label>
+                          <input type="text" id="street_name" name="street_data">
+                          <span class="info-bubble">?
+                            <span class="bubble-box">
+                              <span class="bubble-info">It must not contain special characters or numbers.</span>
+                            </span>
+                          </span>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="development_data">Development/Subdivision Name</label>
+                          <input type="text" id="development_data" name="street_data">
+                          <span class="info-bubble">?
+                            <span class="bubble-box">
+                              <span class="bubble-info">It must not contain special characters or numbers.</span>
+                            </span>
+                          </span>
+                        </div>
+
+                        <div class="form-item">
+                          <label for="cpanelbundle_building_zipCode">Zip Code</label>
+                          <input type="text" id="cpanelbundle_building_zipCode" name="cpanelbundle_building[zipCode]" required="required" class="zipcode_input">
+                        </div>
+
+                        <div class="form-item ms-full" style="text-align: right;">
+                          <a href="#" class="btn btn-dgt-grs" id="add_address_building"><span>Add</span></a>
+                        </div>
+
+                        <div class="form-item ms-full">
+                          <ul class="cont_itemaddressGen" id="cont_itemamenities">
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(0)"></span>
+                              <span>sdsd</span>
+                            </li>
+                            <li class="item_amenities">
+                              <span class="fa fa-close" onclick="deleteAddressGen(1)"></span>
+                              <span>sdsdsd</span>
+                            </li>
+                          </ul>
+                        </div>
+
+
+                        <div class="form-item ms-full">
+                          <img src="/bundles/cpanel/images/info-banner.jpg">
+                        </div>
+
+                        <div id="idxboost_propertys_views" class="form-item ms-full">
+                          <span class="sublist-title">Property Type</span>
+                          <div class="ms-wrap-checkbox">
+                            <input type="checkbox" id="cpanelbundle_building_propertyType_0" name="cpanelbundle_building[propertyType][]" value="1" />
+                            <label for="cpanelbundle_building_propertyType_0">Condominiums</label>
+                          </div>
+                          <div class="ms-wrap-checkbox">
+                            <input type="checkbox" id="cpanelbundle_building_propertyType_1" name="cpanelbundle_building[propertyType][]" value="2" />
+                            <label for="cpanelbundle_building_propertyType_1">Single Family Homes</label>
+                          </div>
+
+                          <div class="ms-sub-wrap">
+                            <span class="sublist-title">Property display active</span>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" id="opt_1" name="optresult" value="1">
+                              <label for="opt_1">Gallery View</label>
+                            </div>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" id="opt_2" name="optresult" value="2">
+                              <label for="opt_2">List View</label>
+                            </div>
+                            <br>
+                            <span class="sublist-title">Property display sold</span>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" id="cpanelbundle_building_propertyDisplayActive_0" name="cpanelbundle_building[propertyDisplayActive]" value="1">
+                              <label for="cpanelbundle_building_propertyDisplayActive_0">Gallery View</label>
+                            </div>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" id="cpanelbundle_building_propertyDisplaySold" name="cpanelbundle_building[propertyDisplayActive]" value="2">
+                              <label for="cpanelbundle_building_propertyDisplaySold">List View</label>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane" id="imageTab">
+                      <div class="content new-building-content">
+                        <div class="content_galery">
+                          <div class="content_galery_div">
+                            <label>
+                              <div class="content_galery_button">
+                                <div id="input_image_gallery_import" class="input_image_gallery_import">Import</div>
+                              </div>
+                            </label>
+                            <label>
+                              <div class="content_galery_button"><input type="file" id="input_image_gallery" name="input_image_gallery" class="input_image_gallery" accept="image/*" multiple="">Upload</div>
+                            </label>
+                          </div>
+                          <p>Maximum image size 900px / 650px | max 1Mb</p>
+                          <div class="content_galery_img ui-sortable"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="floorplanTab">
+                      <div class="ms-crm-form ms-wrap-form">
+                        <div class="form-item ms-full ms-flex">
+                          <div class="ms-item">
+                            <div class="ms-wrap-checkbox">
+                              <input type="radio" id="cpanelbundle_building_floorPlan_0" name="cpanelbundle_building[floorPlan]" required="required" value="0" checked="checked">
+                              <label for="cpanelbundle_building_floorPlan_0">None</label>
+                            </div>
+                          </div>
+
+                          <div class="ms-item">
+                            <div class="ms-wrap-checkbox">
+                              <input type="radio" id="cpanelbundle_building_floorPlan_1" name="cpanelbundle_building[floorPlan]" required="required" value="1">
+                              <label for="cpanelbundle_building_floorPlan_1">Thumbs</label>
+                            </div>
+                          </div>
+
+                          <div class="ms-item">
+                            <div class="ms-wrap-checkbox">
+                              <input type="radio" id="cpanelbundle_building_floorPlan_2" name="cpanelbundle_building[floorPlan]" required="required" value="1">
+                              <label for="cpanelbundle_building_floorPlan_2">Grid</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="content new-building-content">
+                        <ul class="itemfloorPlanDetailt itemfloorPlanThumbs">
+                          <div class="content_galery">
+                            <div class="content_gallery_header">
+                              <p class="info">Max size 900x650 Max 1MB</p>
+                              <div class="content_galery_div">
+                                <label>
+                                  <div class="content_galery_button">
+                                    <input type="file" id="input_image_gallery_floor_plan" name="input_image_gallery_floor_plan" class="input_image_gallery_floor_plan" accept="image/*" multiple=""> 
+                                    <span class="icon-nube"></span> Upload Images
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="content_galery_floor_plan ui-sortable"></div>
+                          </div>
+                        </ul>
+
+                        <ul class="itemfloorPlanDetailt itemfloorPlanGrid">
+                          <div class="content_galery_key">
+                            <div class="content_galery_key_header">
+                              <p class="info">Max size 900x650 Max 1MB</p>
+                              <div class="content_galery_div_key">
+                                <label>
+                                  <div class="content_galery_button">
+                                    <input type="file" id="add_floor_plan_grid_key_plan" name="add_floor_plan_grid_key_plan" class="add_floor_plan_grid_key_plan" accept="image/*">
+                                    <span class="icon-nube"></span> Upload Image
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="content_galery_keyplan"></div>
+                          </div>
+
+                          <div class="content_floorplan">
+                            <div class="content_floorplan_header">
+                              <p>Grid Floor Plan</p>
+                              <div class="add_floor_plan_grid add_street_address" id="add_floor_plan_grid">Add</div>
+                            </div>
+                            <div class="content_floor_plan_grid"></div>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ms-wrap-btn ms-full">
+                    <a class="btn btn-dgt-grs" data-dismiss="modal">
+                      <span>Cancel</span>
+                    </a>
+                    <button class="btn btn-dgt-def" type="submit">
+                      <span>Save</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-template-loading" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-hourglass color-boost ms-spin"></span>
+
+                <div class="ms-wrapper-loader">
+                  <span style="--i:1;"></span>
+                  <span style="--i:2;"></span>
+                  <span style="--i:3;"></span>
+                  <span style="--i:4;"></span>
+                  <span style="--i:5;"></span>
+                  <span style="--i:6;"></span>
+                  <span style="--i:7;"></span>
+                  <span style="--i:8;"></span>
+                  <span style="--i:9;"></span>
+                  <span style="--i:10;"></span>
+                  <span style="--i:11;"></span>
+                  <span style="--i:12;"></span>
+                  <span style="--i:13;"></span>
+                  <span style="--i:14;"></span>
+                  <span style="--i:15;"></span>
+                  <span style="--i:16;"></span>
+                  <span style="--i:17;"></span>
+                  <span style="--i:18;"></span>
+                  <span style="--i:19;"></span>
+                  <span style="--i:20;"></span>
+                  <div class="ms-rocket-loader"><i class="crm-ico-rocket_only"></i></div>
+                </div>
+
+                <h3 class="ms-title">Loading!</h3>
+                <p>Lorem ipsum ipsum ipsum ipsum ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-spw" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content ms-ft-a">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title">Add New Single Property Website</h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="ms-info-modal">
+              <p>Enter a name for your new <strong>Single Property Website</strong></p>
+              <span>ONE - Single Property Website Creator</span>
+              <div class="ms-input-form">
+                <label for="streetInput">Spaces will be replaces by “-”. Do not use special characters.</label>
+                <input type="text" placeholder="e.g. 321 MainSteet" id="streetInput">
+              </div>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn ms-link" data-dismiss="modal">Cancel</a>
+              <button class="btn btn-dgt-def" aria-label="Continue">
+                <span>Continue</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="synchronizeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-header-list">
+            <h4 class="ms-title"><span>Synchronize my Wordpress</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form ms-message-content">
+            <span class="crm-ico-ms-update color-boost"></span>
+            <div class="ms-wrapper-detail">
+              <p><strong>Important!</strong> Some edits from the Control Panel need to synchronized with your Wordpress dashboard to reflect in your website:</p>
+              <ul class="ms-dtl">
+                <li>All edits of personal information from My Account (Phone, email, etc...)</li>
+                <li>New Filter Pages & Building Pages (Only the first time your create them, edits do not require synchronization.</li>
+              </ul>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
+                <span>Cancel</span>
+              </a>
+              <button class="btn btn-dgt-def">
+                <span>Sync</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ACCOUNT ACTIVATION -->
+    <div class="modal fade" id="modal-account-act" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title"><span>Connect Your CRM With Your Email Account</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-crm-form">
+            <div class="ms-widget">
+              <div class="wrapper smtp-settings">
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Host</label>
+                  <input type="text" id="cpanelbundle_imap_host" name="cpanelbundle_smtp[smtp]" required="required" placeholder="SMTP Host" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Transport</label>
+                  <select name="cpanelbundle_smtp[transport]">
+                    <option value="">none</option>
+                    <option value="ssl">SSL</option>
+                    <option value="tls">TLS</option>
+                  </select>
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Port</label>
+                  <input type="text" value="587" id="cpanelbundle_imap_port" name="cpanelbundle_smtp[port]" required="required" placeholder="Port" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">SMTP Email</label>
+                  <input type="text" id="cpanelbundle_imap_email" name="cpanelbundle_smtp[email]" required="required" placeholder="Email" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control mb-3">
+                  <label class="title_content_tab">SMTP Password</label>
+                  <input type="password" id="cpanelbundle_imap_passwd" name="cpanelbundle_smtp[passwd]" required="required" placeholder="Password" class="classmlsPasswd">
+                  <span class="ms-shop-password"></span>
+                </div>
+              </div>
+              <div>
+                <h2 class="title_section">IMAP Account Settings</h2>
+              </div>
+              <div class="wrapper smtp-settings">
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Host</label>
+                  <input type="text" id="cpanelbundle_imap_host" name="cpanelbundle_imap[host]" required="required" placeholder="IMAP Host" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Port</label>
+                  <input type="text" value="143" id="cpanelbundle_imap_port" name="cpanelbundle_imap[post]" required="required" placeholder="Port" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control">
+                  <label class="title_content_tab">IMAP Email</label>
+                  <input type="text" id="cpanelbundle_imap_email" name="cpanelbundle_imap[email]" required="required" placeholder="Email" class="classmlsSmtp">
+                </div>
+                <div class="cp-form-control mb-3">
+                  <label class="title_content_tab">IMAP Password</label>
+                  <input type="password" id="cpanelbundle_imap_passwd" name="cpanelbundle_imap[passwd]" required="required" placeholder="Password" class="classmlsPasswd">
+                  <span class="ms-shop-password"></span>
+                </div>
+              </div>
+              <div class="ms-wrap-btn">
+                <a href="#" class="btn btn-dgt-grs" data-dismiss="modal">
+                  <span>Cancel</span>
+                </a>
+                <button class="btn btn-dgt-def" id="cpanelbundle_smtp_save" name="cpanelbundle_smtp[save]">
+                  <span>Sync</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade modal-todo" id="modal-todo" tab-index="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title ms-icon-todo js-title-todo">
+              <span>To Do </span>
+            </h4>
+            <button class="close ms-close" type="button" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+       
+            <div class="ms-contacts-list">
+              <div class="ms-input-search">
+                <input type="search" class="ms-search" placeholder="Search lead">
+                <button class="ms-btn-search">Search lead</button>
+              </div>
+              <ul class="ms-contacts">
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead01">
+                  <label class="ms-add-agent ms-bt-ed" for="lead01">
+                  <span class="ms-wrap-avatar">B <img src="https://idxboost.s3.amazonaws.com/525/profile/605/image/aislin_spaman_brg_international4.jpg" style="cursor: default;"></span> Lead 01</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead02">
+                  <label class="ms-add-agent ms-bt-ed" for="lead02">
+                  <span class="ms-wrap-avatar">B</span> Lead 02</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead03">
+                  <label class="ms-add-agent ms-bt-ed" for="lead03">
+                  <span class="ms-wrap-avatar">B</span> Lead 03</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead04">
+                  <label class="ms-add-agent ms-bt-ed" for="lead04">
+                  <span class="ms-wrap-avatar">B</span> Lead 04</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead05">
+                  <label class="ms-add-agent ms-bt-ed" for="lead05">
+                  <span class="ms-wrap-avatar">B</span> Lead 05</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="edit-bucket" id="lead06">
+                  <label class="ms-add-agent ms-bt-ed" for="lead06">
+                  <span class="ms-wrap-avatar">B</span> Lead 06</label>
+                </li>
+              </ul>
+            </div>
+
+            <form name="form-new-todo" id="form-new-todo" class="ms-crm-form">
+              <ul class="nav nav-tabs js-tab-todo" role="tablist">
+                <li role="presentation" class="js-todo-sub-menu-tab active" tab_menu="quick_action">
+                  <a href="#quickTab" aria-controls="general" role="tab" data-toggle="tab" aria-expanded="true">Quick Action</a>
+                </li>
+                <li role="presentation" class="js-todo-sub-menu-tab" tab_menu="custom_action">
+                  <a href="#customTab" aria-controls="filter" role="tab" data-toggle="tab" aria-expanded="false">Custom Action</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="quickTab">
+                  <div class="ms-crm-form ms-wrap-form">
+                    <div class="form-item ms-full ms-flex">
+                      <label for="select-when">Follow Up</label>
+                      <select name="js-todo-follow-when" class="js-todo-follow-when">
+                        <option value="1">1 Day Follow Up</option>
+                        <option value="3">3 Day Follow Up</option>
+                        <option value="7">1 Week Follow Up</option>
+                        <option value="14">2 Week Follow Up</option>
+                        <option value="30">1 Month Follow Up</option>
+                        <option value="90">3 Month Follow Up</option>
+                        <option value="180">6 Month Follow Up</option>
+                        <option value="360">12 Month Follow Up</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="customTab">
+                  <div class="ms-crm-form ms-wrap-form">
+                    <div class="form-item ms-full ms-flex">
+                      <label for="">Action Name</label>
+                      <input type="text" class="js-todo-custom-message" placeholder="e.g. Call Jhon">
+                    </div>
+                    <div class="form-item ms-full">
+                      <label for="">When</label>
+                      <ul class="ms-flex">
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-td" checked value="0">
+                          <label for="custom-date-td">Today</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-tm" value="1">
+                          <label for="custom-date-tm">Tomorrow</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-2d" value="2">
+                          <label for="custom-date-2d">2 Days</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-3d" value="3">
+                          <label for="custom-date-3d">3 Days</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-1w" value="7">
+                          <label for="custom-date-1w">1 Week</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-2w" value="14">
+                          <label for="custom-date-2w">2 Weeks</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-3w" value="21">
+                          <label for="custom-date-3w">3 Weeks</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-1m" value="30">
+                          <label for="custom-date-1m">1 Month</label>
+                        </li>
+                        <li class="opt-custom-date js-opt-custom-date">
+                          <input type="radio" name="custom-date" class="js-todo-custom-when" id="custom-date-cd" value="custom">
+                          <label class="js-custom-date" for="custom-date-cd">Custom Date</label>
+                        </li>
+                        <li class="opt-custom-date-content js-custom-date-content inactive">
+                          <div class="ms-date" id="dateParent">
+                            <input type="text" id="datepicker" class="ib-todo-custom-date" placeholder="Date" autocomplete="off">
+                          </div>
+                          <div class="ms-date ms-date-time">
+                            <input type="text" id="custom-time" class="ib-todo-custom-date" placeholder="Time" autocomplete="off">
+                            <span class="custom-time-select select2-results">
+                              <ul class="custom-time-select-wrap select2-results__options" role="tree" aria-expanded="true" aria-hidden="false">
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">Time</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:00 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:30 AM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">12:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">1:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">2:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">3:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">4:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">5:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">6:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">7:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">8:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">9:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">10:30 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:00 PM</li>
+                                <li class="custom-time-select-item" role="treeitem" aria-selected="false">11:30 PM</li>
+                              </ul>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ms-wrap-btn">
+                <a class="btn btn-dgt-grs" data-dismiss="modal" aria-label="Close">
+                <span>Cancel</span>
+                </a>
+                <button class="btn btn-dgt-def">
+                <span>Save</span>
+                </button>
+              </div>
+              <input type="hidden" name="action" value="step_1">
+              <input type="hidden" name="lead_id" class="lead_id" value="">
+              <input type="hidden" name="cpanelbundle_crmleadtodo[customPeriod]" class="to-do-custom-period">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-information" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-info1 color-boost"></span>
+                <p>You need to activate your IDX Integration to be able to use the IDXBoost Box Ads</p>
+              </div>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Click here to Activate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list in" id="ruben-modal-2" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-ms-trash color-boost"></span>
+                <h4 class="ms-title" style="font-size: 18px;line-height: 1.2;margin-bottom: 15px;">Are you  sure you want to cancel your Lead Generation & Tools Module?</h4>
+                <span class="ms-info-label">Your next bill will reflect this changes</span>
+              </div>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Yes, Cancel It</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- COMERCIAL ALERT MODAL -->
+    <div class="modal fade ms-modal-alert-edit" id="modal-comercial-alert" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header ms-mho">
+            <h4 class="ms-title ms-icon-alert">
+              <span>Alert Commercial</span>
+            </h4>
+            <button class="btn btn-dgt-def ms-form-active activeSave">
+              <span>Save</span>
+            </button>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+            <div class="container ms-new-basic-form" id="createMapSearchFilter">
+              <form class="ms-row" id="flex_idx_search_filter_form">
+                <div class="ms-md-7">
+                  <div class="widget ms-shadown-none ms-border">
+                    <div class="ms-wrap-widget border-bottom">
+                      <div class="ms-widget">
+                        <div class="ms-sp-row">
+                          <div class="form-group">
+                            <label for="filterName">Filter Name</label>
+                            <input type="text" class="form-control js-edit-filterName" id="filterName" name="filterName" required="" autocomplete="off">
+                          </div>
+                          <div class="form-group">
+                            <label class="margin-bottom">Sale Type</label>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" name="radioButtom" id="radioButtom1" value="0" checked>
+                              <label for="radioButtom1">For Sale</label>
+                            </div>
+                            <div class="ms-wrap-radio">
+                              <input type="radio" name="radioButtom" id="radioButtom2" value="1">
+                              <label for="radioButtom2">For Lease</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="ms-map-ct">
+                          <div id="googleMapCommercial" class="ms-map mapFilterAdd"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ms-wrap-widget border-bottom" id="section-3">
+                      <div class="ms-widget">
+                        <div class="form-group">
+                          <label class="margin-bottom">Features</label>
+                          <div class="ms-flex row ms-features-list">
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType1" value="1">
+                              <label for="chkType1">Agricultural</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType2" value="2">
+                              <label for="chkType2">Automotive</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType3" value="3">
+                              <label for="chkType3">Bar/Lounge Only</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType4" value="4">
+                              <label for="chkType4">Beauty/Barber Shop</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType5" value="5">
+                              <label for="chkType5">Church</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType6" value="6">
+                              <label for="chkType6">Commercial</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType7" value="7">
+                              <label for="chkType7">Commercial / Business / Agricultural / Industrial Land</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType8" value="8">
+                              <label for="chkType8">Duplex / Quad Plex / Triplex</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType9" value="9">
+                              <label for="chkType9">Franchise</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType10" value="10">
+                              <label for="chkType10">GasStation</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType11" value="11">
+                              <label for="chkType11">Manufacturing</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType12" value="12">
+                              <label for="chkType12">Marine</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType13" value="13">
+                              <label for="chkType13">Medical</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType14" value="14">
+                              <label for="chkType14">Multifamily</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType15" value="15">
+                              <label for="chkType15">Office</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType16" value="16">
+                              <label for="chkType16">Professional</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType17" value="17">
+                              <label for="chkType17">Restaurant / Food Beverage</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType18" value="18">
+                              <label for="chkType18">Retail</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType19" value="19">
+                              <label for="chkType19">School</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType20" value="20">
+                              <label for="chkType20">Storage</label>
+                            </div>
+                            <div class="ms-wrap-checkbox col-xs-6 col-sm-2">
+                              <input type="checkbox" name="chkType" id="chkType21" value="21">
+                              <label for="chkType21">Store</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ms-wrap-widget border-bottom" id="section-2">
+                      <div class="ms-widget">
+                        <div class="row select-list">
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Price Ranges</label>
+                              <input type="text" class="form-control number-separator" id="minPrice" name="minPrice" placeholder="Min Price" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="maxPrice" name="maxPrice" placeholder="Max Price">
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Units / Beds Range</label>
+                              <input type="text" class="form-control number-separator" id="minBeds" name="minBeds" placeholder="Min Units" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="maxBeds" name="maxBeds" placeholder="Max Units">
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Year Build</label>
+                              <div class="ms-flex input-480">
+                                <select id="minYear" name="minYear" class="select2">
+                                  <option value="">Min Year</option>
+                                  <option value="2022">2022</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2020">2020</option>
+                                  <option value="2019">2019</option>
+                                  <option value="2018">2018</option>
+                                  <option value="2017">2017</option>
+                                  <option value="2016">2016</option>
+                                  <option value="2015">2015</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2012">2012</option>
+                                  <option value="2011">2011</option>
+                                  <option value="2010">2010</option>
+                                  <option value="2009">2009</option>
+                                  <option value="2008">2008</option>
+                                  <option value="2007">2007</option>
+                                  <option value="2006">2006</option>
+                                </select>
+                                <select id="maxYear" name="maxYear" class="select2">
+                                  <option value="">Max Year</option>
+                                  <option value="2022">2022</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2020">2020</option>
+                                  <option value="2019">2019</option>
+                                  <option value="2018">2018</option>
+                                  <option value="2017">2017</option>
+                                  <option value="2016">2016</option>
+                                  <option value="2015">2015</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2012">2012</option>
+                                  <option value="2011">2011</option>
+                                  <option value="2010">2010</option>
+                                  <option value="2009">2009</option>
+                                  <option value="2008">2008</option>
+                                  <option value="2007">2007</option>
+                                  <option value="2006">2006</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ms-wrap-widget border-bottom section-2" id="section-5">
+                      <div class="ms-widget">
+                        <div class="row select-list">
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Space Size (SF)</label>
+                              <input type="text" class="form-control number-separator" id="minSfPrice" name="minSfPrice" placeholder="Min Size" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="minSfPrice" name="minSfPrice" placeholder="Max Size">
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Total Building Size (SF)</label>
+                              <input type="text" class="form-control number-separator" id="minTbBeds" name="minTbBeds" placeholder="Min Size" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="maxTbBeds" name="maxTbBeds" placeholder="Max Size">
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Total Lot Size Range</label>
+                              <input type="text" class="form-control number-separator" id="minLotBeds" name="minLotBeds" placeholder="Min Size" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="maxLotBeds" name="maxLotBeds" placeholder="Max Size">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ms-wrap-widget section-2" id="section-6">
+                      <div class="ms-widget">
+                        <div class="row select-list">
+                          <div class="col-sm-6 col-md-6 form-group">
+                            <label class="margin-bottom">Property Status</label>
+                            <div class="ms-wrap-checkbox">
+                              <input type="checkbox" name="checkPropertyStatus" id="checkPropertyStatus1" value="1">
+                              <label for="checkPropertyStatus1">Vacant</label>
+                            </div>
+                            <div class="ms-wrap-checkbox">
+                              <input type="checkbox" name="checkPropertyStatus" id="checkPropertyStatus2" value="2">
+                              <label for="checkPropertyStatus2">Foreclosure</label>
+                            </div>
+                            <div class="ms-wrap-checkbox">
+                              <input type="checkbox" name="checkPropertyStatus" id="checkPropertyStatus3" value="3">
+                              <label for="checkPropertyStatus3">Occupied</label>
+                            </div>
+                            <div class="ms-wrap-checkbox">
+                              <input type="checkbox" name="checkPropertyStatus" id="checkPropertyStatus4" value="4">
+                              <label for="checkPropertyStatus4">Short Sale</label>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6 col-md-6 form-group -spft">
+                            <div class="ms-flex">
+                              <label class="margin-bottom">Cap Rate Range (%).?</label>
+                              <input type="text" class="form-control number-separator" id="minCRBeds" name="minCRBeds" placeholder="Min Range" style="margin-bottom: 15px;">
+                              <input type="text" class="form-control number-separator" id="maxCRBeds" name="maxCRBeds" placeholder="Max Range">
+                              <span>
+                                May buy:<br>
+                                4% in high demand areas<br>
+                                10% (or even higher) in low-demand areas
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="ms-wrap-btn ms-full">
+                  <a class="btn btn-dgt-grs" data-dismiss="modal">
+                    <span>Cancel</span>
+                  </a>
+                  <button class="btn btn-dgt-def js-save-alert" type="submit">
+                    <span>Save</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-create-ticket" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title ms-icon-tag"><span>Create Ticket</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body">
+            <form class="ms-crm-form">
+              <div class="form-item ms-full ms-flex">
+                <label for="send-to">Subject:</label>
+                <span class="ms-text-small">Membership Support - Membership : {membershipID}</span>
+              </div>
+              <div class="form-item ms-full">
+                <label for="add-notes">Comments</label>
+                <textarea class="add-comments" id="add-notes" placeholder=""></textarea>
+              </div>
+              <div class="ms-wrap-btn ms-full">
+                <a href="#" class="btn btn-dgt-grs"  data-dismiss="modal">
+                  <span>Cancel</span>
+                </a>
+                <button class="btn btn-dgt-def">
+                  <span>Save</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade ms-contacts-list" id="modal-confirm-ticket-created" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body ms-message-content">
+
+            <div class="ms-wrap-body">
+              <div class="modal-body ms-message-content">
+                <span class="crm-ico-ms-ok color-boost"></span>
+                <h3 class="ms-title">Your Ticket!</h3>
+                <p>has been created, You will receive updates soon</p>
+              </div>
+            </div>
+
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-def" data-dismiss="modal">
+                <span>Confirm</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalCityZipFilter" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ms-modal-header">
+            <h4 class="ms-title"><span>Search for City of Zip Code</span></h4>
+            <button type="button" class="close ms-close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+          <div class="modal-body ms-message-content">
+            <div class="ms-wrap-body">
+              <div class="ms-message-content">
+                <div class="ms-wrap-chk">
+                  <div class="ms-chk-item">
+                    <input type="radio" class="ms-filter-by" data-filter="-filterCity" name="filterby" id="filterCity" value="1" checked>
+                    <label for="filterCity">City</label>
+                  </div>
+                  <div class="ms-chk-item">
+                    <input type="radio" class="ms-filter-by" data-filter="-filterZipcode" name="filterby" id="filterZipcode" value="2">
+                    <label for="filterZipcode">Zip Code</label>
+                  </div>
+                </div>
+                <div class="ms-crm-form">
+                  <div class="ms-input-search -filterCity">
+                    <input type="search" class="ms-search" placeholder="Enter City">
+                    <button class="ms-btn-search">Search</button>
+                  </div>
+                  <div class="ms-input-search -filterZipcode ms-hidden">
+                    <input type="search" class="ms-search" placeholder="Enter Zip Code">
+                    <button class="ms-btn-search">Search</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ms-wrap-btn">
+              <a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>
+              <button class="btn btn-dgt-def">
+                <span>Search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="rs-screen-overlay"></div>
     <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cpanel.idxboost.dev/bundles/cpanel/js/jquery-ui.js"></script>
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/bootstrap-tagsinput.min.js"></script>
     <script type="text/javascript" src="../../js/select2.min.js"></script>
@@ -1000,7 +3445,129 @@
     <script type="text/javascript" src="../../js/jquery.richtext.min.js"></script>
     <script type="text/javascript">
 
-      jQuery("#datepicker").datepicker().datepicker("setDate", new Date());
+  
+
+      jQuery(document).on("click", ".ms-filter-by", function () {
+        jQuery(this).parents(".modal-body").find(".ms-input-search").addClass("ms-hidden");
+        if (jQuery(this).prop("checked")) {
+          jQuery("."+jQuery(this).attr("data-filter")).removeClass("ms-hidden");
+        }
+      });
+
+      //STAR COMERCIAL ALERT MODAL
+      var commaCounter = 10;
+      function numberSeparator(Number) {
+        Number += '';
+
+        for (var i = 0; i < commaCounter; i++) {
+            Number = Number.replace(',', '');
+        }
+
+        x = Number.split('.');
+        y = x[0];
+        z = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+
+        while (rgx.test(y)) {
+            y = y.replace(rgx, '$1' + ',' + '$2');
+        }
+        commaCounter++;
+        return y + z;
+      }
+
+      jQuery(document).on('keypress , paste', '.number-separator', function (e) {
+        if (/^-?\d*[,.]?(\d{0,3},)*(\d{3},)?\d{0,3}$/.test(e.key)) {
+          jQuery('.number-separator').on('input', function () {
+            e.target.value = numberSeparator(e.target.value);
+          });
+        } else {
+          e.preventDefault();
+          return false;
+        }
+      });
+      //END COMERCIAL ALERT MODAL
+
+
+      jQuery('[data-toggle="tooltip"]').tooltip();
+
+      /*FILTRO GRIDS*/
+      jQuery(document).on('click', '#filter-mls', function () {
+        ajaxLoadProperty();
+      });
+
+      jQuery(document).on('keypress',function(e) {
+        if(e.which == 13) {
+          ajaxLoadProperty();
+        }
+      });
+
+      function ajaxLoadProperty(){
+        
+        var htmlGrid = '<div class="gs-wrapper-content ms-grid-idx">'+
+          '<ul class="result-search slider-generator">'+
+            '<li class="propertie" data-id="A10688890" data-mls="A10688890" data-counter="0">'+
+              '<ul class="features">'+
+                '<li class="address">601 Ne 27th St #PH 1901</li>'+
+                '<li class="price">$6,000</li>'+
+                '<li class="beds">3 <span>Bed(s)</span></li>'+
+                '<li class="baths">2 <span>Bath(s)</span></li>'+
+                '<li class="living-size">1625 <span>Sq.Ft.</span></li>'+
+              '</ul>'+
+              '<span class="new-listing">pending!</span>'+
+              '<div class="wrap-slider">'+
+                '<img alt="601 Ne 27th St #PH 1901 Miami, FL 33137" src="https://retsimages.s3.amazonaws.com/90/A10688890_1.jpg">'+
+              '</div>'+
+            '</li>'+
+          '</ul>'+
+        '</div>'+
+        '<div class="ms-wrap-btn" style="padding-top: 15px">'+
+          '<a href="#" class="btn btn-dgt-grs" data-dismiss="modal"><span>Cancel</span></a>'+
+          '<button class="btn btn-dgt-def"><span>Add Favorite</span></button>'+
+        '</div>';
+
+        jQuery("#ms-grid").empty().html(htmlGrid);
+      }
+
+    
+      /*MAPA PARA EL FILTRO*/
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+          center: {lat: 43.5293, lng: -5.6773},
+          zoom: 13,
+          draggable: false
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 43.542194, lng: -5.676875},
+          map: map,
+          title: 'Acuario de Gijón'
+        });
+      }
+
+      jQuery(document).on('change', '#select-filter-location', function () {
+        var valueSelect = (jQuery(this).val()) * 1;
+
+        if(valueSelect == 1){
+          jQuery("#filterGeolocation").addClass("ms-hidden");
+          jQuery(".ms-map-ct").removeClass("ms-hidden");
+        }else{
+          jQuery("#filterGeolocation").removeClass("ms-hidden");
+          jQuery(".ms-map-ct").addClass("ms-hidden");
+        }
+      });
+
+
+      /*INPUT RADIO SHOW AGENT LIST*/
+      jQuery(".ms-agt-deleted input[name=remove]:radio").click(function () {
+        if (jQuery('input[name=remove]:checked').val() == 1) {
+          jQuery('.ms-agent-list').show();
+          jQuery('.ms-agt-deleted .ms-search').focus();
+        } else{
+          jQuery('.ms-agt-deleted .ms-agent-list').hide();
+        }
+      });
+
+      //jQuery("#datepicker").datepicker().datepicker("setDate", new Date());
 
       jQuery(document).on('change', '#select-when', function () {
         if(jQuery(this).val() == "ms-custom"){
@@ -1021,7 +3588,6 @@
       jQuery("#compose-email").richText();
       jQuery("#compose-email-template").richText();
 
-
       jQuery(document).on('click', '.ms-active-bucket', function () {
         var parent = jQuery(this).parents('tr');
         if(parent.hasClass("active")) {
@@ -1031,6 +3597,81 @@
           jQuery(this).parents('tr').addClass('active');
           jQuery(this).parents('tr').find('.ms-title').after("<p>Assigned to Bucket</p>");
         }
+      });
+
+
+      /** FUNCIONALIDADES PARA EL MODAL CON LA OPCION DE CLAIM **/
+      jQuery(document).on('change', '.js-active-claim', function () {
+        var valueItem = jQuery(this).val();
+        if(valueItem == 1){
+          jQuery(this).parents(".modal").find(".ms-wrap-filtes").addClass("ms-hidden");
+        }else{
+          jQuery(this).parents(".modal").find(".ms-wrap-filtes").removeClass("ms-hidden");
+        }
+      });
+
+      jQuery(document).on('click', '.js-filter-name-selected', function (event) {
+        event.preventDefault();
+        var valueItem = jQuery(this).attr("data-text");
+        jQuery(this).parents(".ms-dropdown").find(".ms-button span").html(valueItem);
+      });
+
+
+      /********************************************/
+      jQuery("#datepicker").datepicker({
+        beforeShow:function(textbox, instance){
+          jQuery("#dateParent").append(jQuery("#ui-datepicker-div"));
+        }
+      });
+
+      jQuery(document).on('change', '#select-when', function () {
+        if (jQuery(this).val() == "ms-custom") {
+          jQuery(this).parents('.modal').addClass('active');
+        } else {
+          jQuery(this).parents('.modal').removeClass('active');
+        }
+      });
+
+      jQuery(document).on('change', '#select-action', function () {
+        if (jQuery(this).val() == "ms-custom") {
+          jQuery('#custom-action').addClass('active');
+        } else {
+          jQuery('#custom-action').removeClass('active');
+        }
+      });
+
+      jQuery('.js-opt-custom-date label').on('click', function () {
+        if (jQuery(this).hasClass('js-custom-date')) {
+          jQuery('.js-custom-date-content').removeClass('inactive');
+        } else {
+          jQuery('.js-custom-date-content').addClass('inactive');
+        }
+      });
+
+      jQuery(document).mouseup(function (e) {
+        var container = jQuery(".ms-date-time");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          jQuery('.custom-time-select').removeClass('show');
+        }
+      });
+
+      jQuery(document).on('click', ".custom-time-select-item", function () {
+        jQuery('.custom-time-select-item').attr('aria-selected', 'false');
+        jQuery(this).attr('aria-selected', 'true');
+        jQuery('#custom-time').val(jQuery(this).text());
+        jQuery('.custom-time-select').removeClass('show');
+
+        var timeToDo = "";
+        $('.custom-time-select-wrap .custom-time-select-item').each(function () {
+          if ($(this).attr("aria-selected") == "true") {
+            timeToDo = $(this).text();
+          }
+        });
+        jQuery('.to-do-custom-period').val(jQuery("#datepicker").val() + ' ' + timeToDo);
+      });
+
+      jQuery(".ms-date-time").on('click', function () {
+        jQuery('.custom-time-select').addClass('show');
       });
 
     </script>

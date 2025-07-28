@@ -1,0 +1,374 @@
+body{
+  padding-top: 0;
+}
+
+.ms-wrapper-alert-editor{
+  .ms-wrapper-alert-editor-menu{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: sticky;
+    background-color: #FFF;
+    box-shadow: 0 2px 10px 0 rgba(51, 51, 51, 0.15);
+    .ms-wrapper-alert-editor-menu-list{
+      display: flex;
+      padding: 15px;
+      .ms-item{
+        padding-right: 10px;
+        position: relative;
+        &.-dropdown{
+          .ms-fixed-layout{
+            top: 100%;
+            position: absolute;
+            .ms-dropdown-close{
+              display: none;
+            }
+
+            .ms-dropdown-menu{
+              height: auto;
+              font-size: 14px;
+              border-radius: 6px;
+              transition: all 0.3s;
+              background-color: #FFF;
+              border: 1px solid #e8e8e8;
+              box-shadow: 0 2px 2px rgba(31, 30, 47, 0.15);
+              width: auto;
+              min-width: 220px;
+              ul{
+                width: 100%;
+                li{
+                  position: relative;
+                  border-bottom: 1px solid #e8e8e8;
+                  &:last-child{
+                    border-bottom: 0;
+                  }
+                  label{
+                    font-weight: normal;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    margin-bottom: 0;
+                    cursor: pointer;
+                  }
+                  &.-flex{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          .ms-btn-action{
+            padding: 10px 35px 10px 20px;
+            background-position: calc(100% - 10px) center !important;
+            background: #FFF url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzEwcHgnIHdpZHRoPScxMHB4JyB2aWV3Qm94PScwIDAgMTYgMTYnIGZpbGw9JyMwMDAwMDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcuMjQ3IDExLjE0IDIuNDUxIDUuNjU4QzEuODg1IDUuMDEzIDIuMzQ1IDQgMy4yMDQgNGg5LjU5MmExIDEgMCAwIDEgLjc1MyAxLjY1OWwtNC43OTYgNS40OGExIDEgMCAwIDEtMS41MDYgMHonLz48L3N2Zz4=) no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .ms-btn-action{
+    flex-grow: 1;
+    height: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: all 0.3s;
+    background-color: #FFF;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 2px rgba(31, 30, 47, 0.15);
+    &.active{
+      color: #c52f70;
+      border-color: #c52f70;
+      background-color: #FFF;
+    }
+
+    &:hover {
+      box-shadow: none;
+      border-color: #cfcfcf;
+      background-color: #f5f5f5;
+    }
+  }
+
+  .ms-wrapper-radio-button{
+    label{
+      padding-left: 40px;
+      position: relative;
+      margin-bottom: 0;
+      cursor: pointer;
+      transition: all .3s;
+      &:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #d5d5d5;
+        left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        left: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #c52f70;
+        transition: all .3s;
+        opacity: 0;
+      }
+
+      &:hover{
+        background-color: #f9f9f9;
+      }
+    }
+    input{
+      display: none;
+      &:checked + label:after{
+        opacity: 1;
+      }
+    }
+  }
+
+  .ms-wrapper-checkbox-button{
+    label{
+      padding-left: 40px;
+      position: relative;
+      margin-bottom: 0;
+      cursor: pointer;
+      transition: all .3s;
+      font-weight: normal;
+      &:before{
+        top: 50%;
+        left: 10px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 4px;
+        transform: translateY(-50%);
+        border: 1px solid #d5d5d5;
+      }
+      &:after{
+        top: 50%;
+        left: 10px;
+        opacity: 0;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        color: #c52f70;
+        content: "\e90c";
+        position: absolute;
+        border-radius: 100%;
+        transition: all .3s;
+        transform: translateY(-50%);
+        font-family: "icomoon" !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:hover{
+        background-color: #f9f9f9;
+      }
+    }
+
+    input{
+      display: none;
+      &:checked + label:after{
+        opacity: 1;
+      }
+    }
+  }
+
+  .ms-wrapper-padding{
+    display: flex;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    input{
+      width: 40px;
+      height: 30px;
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .ms-small-text{
+      display: block;
+      padding: 5px 0;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+      color: #626262;
+    }
+
+    .ms-item{
+      padding-right: 0 !important;
+      padding-left: 5px;
+    }
+  }
+
+  .color_container{
+    position: relative;
+    .clr-picker{
+      top: 100% !important;
+      right: 0 !important;
+      left: auto !important;
+      &.clr-polaroid{
+        &:before{
+          left: auto;
+          right: 17px;
+        }
+      }
+    }
+
+    .clr-field{
+      input{
+        display: none;
+      }
+      button{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-image: none;
+        &:after{
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .ms-thumbnail-options{
+    padding: 15px;
+    min-width: 280px;
+    .ms-flex{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ms-label{
+        width: auto !important;
+        margin-bottom: 0;
+      }
+    }
+
+    .ms-group{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 10px 0;
+      .ms-wrapper-radio-button{
+        padding: 0;
+        label{
+          width: 30px !important;
+          height: 30px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          font-size: 12px !important;
+          font-weight: 600 !important;
+          padding: 0 !important;
+          border: 1px solid #e8e8e8;
+          border-radius: 4px;
+          margin-left: 5px;
+          &:after, &:before{
+            display: none;
+          }
+
+          &:hover {
+            box-shadow: none;
+            border-color: #cfcfcf;
+            background-color: #f5f5f5;
+          }
+        }
+
+        input:checked + label{
+          color: #c52f70;
+          border-color: #c52f70;
+          background-color: #FFF;
+        }
+      }
+    }
+
+    .ms-item-title{
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #c7c7c7;
+    }
+
+    .ms-input{
+      width: 40px;
+      height: 30px;
+      padding: 0 5px;
+      text-align: center;
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .ms-wrapper-thumbnail-type{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ms-item{
+        width: 48%;
+        padding: 0;
+      }
+    }
+
+    .ms-wrapper-thumbnail-btn{
+      margin-bottom: 15px;
+      label{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100px !important;
+        border-radius: 6px;
+        background-color: red;
+        margin-bottom: 0;
+      }
+    }
+
+    .ms-wrapper-checkbox-button{
+      label {
+        padding-left: 30px;
+        height: 30px !important;
+        background-color: transparent !important;
+        &:before, &:after{
+          left: 0;
+        }
+      }
+    }
+
+    .wrapperLabelColor{
+      label{
+        height: auto !important;
+      }
+      .clr-picker{
+        right: -14px !important;
+      }
+    }
+  }
+}
